@@ -4,7 +4,7 @@ title: "Case Warren"
 author: "Davi"
 categories: case
 tags: [case,sample]
-image: mountains.jpg
+image: case-vida.png
 ---
 
 # A mais avançada
