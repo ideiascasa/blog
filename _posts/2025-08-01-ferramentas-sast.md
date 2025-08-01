@@ -104,23 +104,24 @@ Essencial para times que usam Infraestrutura como Código, prevenindo desastres 
 
 Essas avaliações ajudam a escolher a ferramenta ideal para o estágio e perfil do time, sabendo exatamente no que cada uma se destaca e onde complementá-las para uma estratégia de DevSecOps madura.
 
-[1] https://cycode.com/blog/semgrep-vs-snyk-vs-cycode-a-comparison-cycode/
-[2] https://www.aikido.dev/blog/snyk-vs-semgrep
-[3] https://www.peerspot.com/products/semgrep-pros-and-cons
-[4] https://www.mend.io/blog/best-sast-solutions-how-to-choose-between-the-top-11-tools-in-2025/
-[5] https://www.aikido.dev/blog/sonarqube-vs-veracode
-[6] https://cycode.com/blog/snyk-vs-sonarqube-vs-cycode/
-[7] https://www.sonarsource.com/learn/sonarqube-best-sast-tool/
-[8] https://github.blog/enterprise-software/secure-software-development/the-architecture-of-sast-tools-an-explainer-for-developers/
-[9] https://dev.to/0xog_pg/codeql-the-github-sast-tool-to-sniff-vulnerabilities-in-your-code-2mb1
-[10] https://blog.doyensec.com/2022/10/06/semgrep-codeql.html
-[11] https://bito.ai/blog/owasp-dependency-check/
-[12] https://www.hackerone.com/knowledge-center/owasp-dependency-check-how-it-works-benefits-and-proscons
-[13] https://finitestate.io/blog/owasp-dependency-check-upgrade/
-[14] https://www.appknox.com/blog/the-ultimate-guide-to-mobile-security-framework-mobsf
-[15] https://www.appknox.com/blog/why-is-mobsf-never-enough-for-your-mobile-app-security-testing
-[16] https://dev.to/ahmed_a_o/applying-checkov-static-application-security-testing-sast-to-infrastructure-as-code-with-203d
-[17] https://www.jit.io/resources/appsec-tools/top-10-infrastructure-as-code-security-tools-for-2024
-[18] https://semgrep.dev
-[19] https://semgrep.dev/blog/2025/security-research-comparing-semgrep-community-edition-and-semgrep-code-for-static-analysis
-[20] https://spectralops.io/blog/top-10-static-application-security-testing-sast-tools-in-2025/
+### Fontes:
+- [1] https://cycode.com/blog/semgrep-vs-snyk-vs-cycode-a-comparison-cycode/
+- [2] https://www.aikido.dev/blog/snyk-vs-semgrep
+- [3] https://www.peerspot.com/products/semgrep-pros-and-cons
+- [4] https://www.mend.io/blog/best-sast-solutions-how-to-choose-between-the-top-11-tools-in-2025/
+- [5] https://www.aikido.dev/blog/sonarqube-vs-veracode
+- [6] https://cycode.com/blog/snyk-vs-sonarqube-vs-cycode/
+- [7] https://www.sonarsource.com/learn/sonarqube-best-sast-tool/
+- [8] https://github.blog/enterprise-software/secure-software-development/the-architecture-of-sast-tools-an-explainer-for-developers/
+- [9] https://dev.to/0xog_pg/codeql-the-github-sast-tool-to-sniff-vulnerabilities-in-your-code-2mb1
+- [10] https://blog.doyensec.com/2022/10/06/semgrep-codeql.html
+- [11] https://bito.ai/blog/owasp-dependency-check/
+- [12] https://www.hackerone.com/knowledge-center/owasp-dependency-check-how-it-works-benefits-and-proscons
+- [13] https://finitestate.io/blog/owasp-dependency-check-upgrade/
+- [14] https://www.appknox.com/blog/the-ultimate-guide-to-mobile-security-framework-mobsf
+- [15] https://www.appknox.com/blog/why-is-mobsf-never-enough-for-your-mobile-app-security-testing
+- [16] https://dev.to/ahmed_a_o/applying-checkov-static-application-security-testing-sast-to-infrastructure-as-code-with-203d
+- [17] https://www.jit.io/resources/appsec-tools/top-10-infrastructure-as-code-security-tools-for-2024
+- [18] https://semgrep.dev
+- [19] https://semgrep.dev/blog/2025/security-research-comparing-semgrep-community-edition-and-semgrep-code-for-static-analysis
+- [20] https://spectralops.io/blog/top-10-static-application-security-testing-sast-tools-in-2025/

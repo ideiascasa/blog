@@ -77,17 +77,18 @@ Aqui está uma análise clara das semelhanças, diferenças, prós e contras ent
 
 A escolha depende do seu objetivo: pesquisa ampla (Perplexity), automação Google multimídia (Gems) ou automação hiperpersonalizada (Custom GPTs/OpenAI)[1][2][3][5][6].
 
-[1] https://www.youtube.com/watch?v=5pTEMqGxQ-o
-[2] https://www.geeky-gadgets.com/perplexity-spaces-vs-custom-gpt/
-[3] https://www.youtube.com/watch?v=dfkIHqeO4co
-[4] https://www.reddit.com/r/ClaudeAI/comments/1hf4om7/will_claude_have_bots_similar_to_chatgpt_gpts_or/
-[5] https://gaper.io/perplexity-ai-vs-google-gemini-vs-chatgpt/
-[6] https://www.linkedin.com/posts/brayjaks_gemini-gems-vs-gpts-i-spent-2-hours-testing-activity-7236702424705490944-7l5X
-[7] https://www.youtube.com/watch?v=wkfBlYxBgeo
-[8] https://www.reddit.com/r/perplexity_ai/comments/1l4va7f/whats_the_1_reason_to_use_perplexity_over_chatgpt/
-[9] https://www.linkedin.com/posts/recordsage_ai-showdown-perplexity-spaces-vs-gemini-activity-7311411967590551554-0ED-
-[10] https://freshvanroot.com/blog/best-ai-assistants-compared-2024/
-[11] https://www.reddit.com/r/ThinkingDeeplyAI/comments/1la4h5v/ive_been_using_all_the_ai_workspace_tools_heres/
-[12] https://www.linkedin.com/pulse/battle-search-engines-google-vs-chatgpt-perplexity-bing-pmp-cbap-knk9c
-[13] https://www.enago.com/academy/ai-in-academia-chatgpt-deepseek-perplexity-gemini/
-[14] https://www.pcmag.com/comparisons/chatgpt-vs-gemini-which-ai-chatbot-is-actually-smarter
+### Fontes:
+- [1] https://www.youtube.com/watch?v=5pTEMqGxQ-o
+- [2] https://www.geeky-gadgets.com/perplexity-spaces-vs-custom-gpt/
+- [3] https://www.youtube.com/watch?v=dfkIHqeO4co
+- [4] https://www.reddit.com/r/ClaudeAI/comments/1hf4om7/will_claude_have_bots_similar_to_chatgpt_gpts_or/
+- [5] https://gaper.io/perplexity-ai-vs-google-gemini-vs-chatgpt/
+- [6] https://www.linkedin.com/posts/brayjaks_gemini-gems-vs-gpts-i-spent-2-hours-testing-activity-7236702424705490944-7l5X
+- [7] https://www.youtube.com/watch?v=wkfBlYxBgeo
+- [8] https://www.reddit.com/r/perplexity_ai/comments/1l4va7f/whats_the_1_reason_to_use_perplexity_over_chatgpt/
+- [9] https://www.linkedin.com/posts/recordsage_ai-showdown-perplexity-spaces-vs-gemini-activity-7311411967590551554-0ED-
+- [10] https://freshvanroot.com/blog/best-ai-assistants-compared-2024/
+- [11] https://www.reddit.com/r/ThinkingDeeplyAI/comments/1la4h5v/ive_been_using_all_the_ai_workspace_tools_heres/
+- [12] https://www.linkedin.com/pulse/battle-search-engines-google-vs-chatgpt-perplexity-bing-pmp-cbap-knk9c
+- [13] https://www.enago.com/academy/ai-in-academia-chatgpt-deepseek-perplexity-gemini/
+- [14] https://www.pcmag.com/comparisons/chatgpt-vs-gemini-which-ai-chatbot-is-actually-smarter
