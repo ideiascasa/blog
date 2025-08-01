@@ -6,7 +6,7 @@
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
 #google-ID: 'UA-112060364-1'
 
-#menu:
+menu:
 - {name: 'Sobre',   url: 'about.html'}
 #- {name: 'Writing', url: 'writing.html'}
 #- {name: 'Contact', url: 'contact.html'}
