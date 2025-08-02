@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Bem vindo
+title: Sobre
 permalink: /about
 ---
 
