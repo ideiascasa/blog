@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: page
 title: Legal
 permalink: /legal
 ---
@@ -151,10 +151,7 @@ Garantimos que não utilizamos componentes que violem direitos de propriedade in
 - **Telefone**: +55 11 92004-4039
 - **Horário**: Comercial (Segunda a Sexta, 9h às 18h)
 
-### 11.2 Endereço Comercial
-- **************
-
-### 11.3 Autoridade Nacional de Proteção de Dados
+### 11.2 Autoridade Nacional de Proteção de Dados
 Para reclamações relacionadas ao tratamento de dados pessoais:
 - **Site**: https://www.gov.br/anpd
 - **Canal do Cidadão ANPD**

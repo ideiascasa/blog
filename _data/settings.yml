@@ -8,8 +8,8 @@
 
 menu:
 - {name: 'Sobre',   url: 'about.html'}
+- {name: 'Tempo', url: 'archive.html'}
 - {name: 'Legal', url: 'legal.html'}
-#- {name: 'Contact', url: 'contact.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
