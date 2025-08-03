@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Case Warren"
+title: "Classificação de Imagens NSFW"
 author: "Davi"
 categories: blog
 tags: [blog,tech]
@@ -168,12 +168,16 @@ Com o avanço contínuo da inteligência artificial e o crescimento exponencial 
 
 *Este projeto representa um exemplo prático de como a tecnologia pode ser utilizada para promover segurança digital. Ao experimentar e aprender com implementações como esta, desenvolvedores contribuem para um ecossistema online mais seguro e responsável para todos.*
 
+
+## Fontes:
+
 **Recursos Úteis:**
 - [Repositório Original](https://github.com/frkr/nsfw-classifier)
 - [Documentação do NudeNet](https://github.com/platelminto/NudeNetClassifier)
 - [Boas Práticas em Moderação de Conteúdo](https://www.tspa.org/curriculum/ts-fundamentals/content-moderation-and-operations/what-is-content-moderation/)
 
-## Fontes:
+---
+
 - [1] https://github.com/platelminto/NudeNetClassifier
 - [2] https://ourcodeworld.com/articles/read/1347/how-to-detect-nudity-nudity-detection-nsfw-content-with-machine-learning-using-nudenet-in-python
 - [3] https://arxiv.org/html/2312.16338v1
