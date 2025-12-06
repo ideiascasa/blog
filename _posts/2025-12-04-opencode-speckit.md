@@ -1100,4 +1100,22 @@ Comece hoje com o comando de uma linha acima! 🚀
 ----
 ### Fontes:
 
-- https://www.perplexity.ai/search/speckit-opencode-_WCd1FmvQNGctq9kGDg1vA?sm=d#0
+- https://github.com/github/spec-kit
+- https://developer.microsoft.com/blog/spec-driven-development-spec-kit
+- https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/
+- https://www.tabnews.com.br/n0n3br/spec-kit-desenvolvimento-de-software-orientado-por-especificacoes-sdd-com-ia
+- https://www.youtube.com/watch?v=AJdCEAW31dM
+- https://ainativedev.io/news/a-look-at-spec-kit-githubs-spec-driven-software-development-toolkit
+- https://specmatic.io/article/spec-driven-development-api-design-first-with-github-spec-kit-and-specmatic-mcp/
+- https://mcpmarket.com/server/spec-kit-1
+- http://mcpmarket.cn/server/6906e139944e98de23a593b2
+- https://glama.ai/mcp/servers/@anyiba/spec-kit-mcp
+- https://github.com/specmatic/specmatic-mcp-sample-with-spec-kit
+- https://opencode.ai
+- https://opencode.ai/docs/mcp-servers/
+- https://github.com/frap129/opencode-mcp-tool
+- https://opencode.ai/docs/
+- https://github.com/sst/opencode/issues/2530
+- https://github.com/sst/opencode/issues/1101
+- https://x.com/burkeholland/status/1969059352276353080
+- https://appwrite.io/docs/tooling/mcp/opencode  
