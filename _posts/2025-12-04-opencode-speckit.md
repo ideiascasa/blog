@@ -1096,3 +1096,8 @@ Este guia abrangente permite desenvolvimento completo de um **Sistema de Control
 **Fator de Aceleração**: 20-40x mais rápido que desenvolvimento humano tradicional.
 
 Comece hoje com o comando de uma linha acima! 🚀
+
+----
+### Fontes:
+
+- https://www.perplexity.ai/search/speckit-opencode-_WCd1FmvQNGctq9kGDg1vA?sm=d#0
