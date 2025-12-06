@@ -907,3 +907,23 @@ Para mais informações, consulte:
 - [Podman Documentation](https://podman.io/)
 
 ---
+### Fontes:
+
+- https://www.linkedin.com/posts/edithpuclla_kubernetes-opensource-databases-activity-7384183105047171072-vp3_
+- https://forums.percona.com/t/postgres-operator-cluster-deletion/15830
+- https://palark.com/blog/running-mongodb-in-kubernetes/
+- https://www.percona.com/blog/percona-server-for-mysql-automatic-cloud-deployment-with-terraform/
+- https://palark.com/blog/comparing-kubernetes-operators-for-postgresql/
+- https://severalnines.com/blog/overview-percona-mongodb-kubernetes-operator/
+- https://developer.hashicorp.com/terraform/cloud-docs/integrations/kubernetes
+- https://forums.percona.com/t/users-not-being-created/35575
+- https://learn.microsoft.com/pt-br/azure/aks/deploy-mongodb-cluster
+- https://severalnines.com/blog/overview-percona-xtradb-cluster-kubernetes-operator/
+- https://www.percona.com/blog/run-postgresql-in-kubernetes-solutions-pros-and-cons/
+- https://www.youtube.com/watch?v=2IjsTeq3Wtg
+- https://www.percona.com/blog/multi-tenant-kubernetes-cluster-with-percona-operators/
+- https://percona.github.io/percona-helm-charts/
+- https://docs.percona.com/percona-operator-for-mongodb/helm.html
+- https://docs.percona.com/percona-operator-for-mongodb/aks.html
+- https://artifacthub.io/packages/helm/percona/pg-operator
+- https://github.com/percona/percona-helm-charts
