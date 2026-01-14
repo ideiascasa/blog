@@ -219,6 +219,7 @@ export async function runCLI(): Promise<void> {
 Componente React para GUI:
 
 ```typescript
+{% raw %}
 import React, { useEffect, useState } from 'react';
 import { getHelloWorld, executeTask } from '../shared/utils';
 
@@ -384,6 +385,7 @@ const styles: Record<string, React.CSSProperties> = {
     color: '#6b7280',
   },
 };
+{% endraw %}
 ```
 
 
@@ -802,6 +804,7 @@ Você precisará de uma máquina Windows ou usar um serviço de CI/CD como GitHu
 ## 💡 Dica Pro: GitHub Actions para Builds Automáticas
 
 ```yaml
+{% raw %}
 # .github/workflows/build.yml
 name: Build Multi-Platform
 
@@ -837,6 +840,7 @@ jobs:
       - uses: softprops/action-gh-release@v1
         with:
           files: dist/**/*
+{% endraw %}
 ```
 
 Assim você constrói para todas as plataformas automaticamente!
@@ -1350,6 +1354,7 @@ if (document.readyState === 'loading') {
 Componente React principal com interface moderna:
 
 ```typescript
+{% raw %}
 /**
  * Componente React principal da aplicação Desktop
  * Interface moderna com logs em tempo real e botões de ação
@@ -1777,6 +1782,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: '0.875rem',
   },
 };
+{% endraw %}
 ```
 
 
@@ -2210,6 +2216,7 @@ docker run -v $(pwd)/dist:/app/dist my-portable-app-builder
 Configure CI/CD automático:
 
 ```yaml
+{% raw %}
 # .github/workflows/build.yml
 name: Build Multi-Platform
 
@@ -2248,6 +2255,7 @@ jobs:
           files: dist/**/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+{% endraw %}
 ```
 
 Quando você fazer push de uma tag `v1.0.0`, isso automaticamente compila e publica os binários!
