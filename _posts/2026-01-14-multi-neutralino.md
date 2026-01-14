@@ -584,88 +584,6 @@ Seja criativo! Você pode expandir isso com:
 - Logging persistente
 - Auto-updates
 
-Happy coding! 🚀
-
-***
-
-**Gostou deste tutorial?** Deixe um comentário ou abra uma issue se tiver dúvidas sobre implementação!
-<span style="display:none">[^1_1][^1_10][^1_11][^1_12][^1_13][^1_14][^1_15][^1_16][^1_17][^1_18][^1_19][^1_2][^1_20][^1_21][^1_22][^1_23][^1_24][^1_25][^1_26][^1_27][^1_28][^1_29][^1_3][^1_30][^1_31][^1_32][^1_33][^1_4][^1_5][^1_6][^1_7][^1_8][^1_9]</span>
-
-<div align="center">⁂</div>
-
-[^1_1]: https://arxiv.org/abs/2411.09607
-
-[^1_2]: https://www.semanticscholar.org/paper/5bb1bf39cc8b20edbcf141fe1d81c9e21e5f80d5
-
-[^1_3]: https://ieeexplore.ieee.org/document/10756687/
-
-[^1_4]: https://arxiv.org/abs/2408.15729
-
-[^1_5]: https://aclanthology.org/2024.semeval-1.60
-
-[^1_6]: https://ijsir.org/index.php/IJSIR/article/view/14
-
-[^1_7]: https://link.springer.com/10.1007/978-3-031-70359-1
-
-[^1_8]: https://link.aps.org/doi/10.1103/PhysRevD.110.043528
-
-[^1_9]: https://doi.apa.org/doi/10.1037/tra0001724
-
-[^1_10]: https://www.semanticscholar.org/paper/1d63c032d905ec3632a0d61588bd0cf24a2daff1
-
-[^1_11]: http://link.aps.org/pdf/10.1103/PhysRevD.109.103037
-
-[^1_12]: https://www.epj-conferences.org/articles/epjconf/pdf/2024/05/epjconf_chep2024_05015.pdf
-
-[^1_13]: https://arxiv.org/pdf/0909.1492.pdf
-
-[^1_14]: http://arxiv.org/pdf/1211.4873.pdf
-
-[^1_15]: http://arxiv.org/abs/2410.05380
-
-[^1_16]: http://arxiv.org/pdf/2501.04309.pdf
-
-[^1_17]: https://escholarship.org/content/qt20v0155k/qt20v0155k.pdf?t=r6fjkq
-
-[^1_18]: https://arxiv.org/abs/0708.3342
-
-[^1_19]: https://www.typescriptlang.org/pt/play/javascript/javascript-essentials/hello-world.ts.html
-
-[^1_20]: https://www.youtube.com/watch?v=VDgihqrZUQg
-
-[^1_21]: https://franciscochaves.com.br/blog/hello-world-em-typescript/
-
-[^1_22]: https://www.youtube.com/watch?v=akze3iCZa2U
-
-[^1_23]: https://www.youtube.com/watch?v=TyqaIE_g1x4
-
-[^1_24]: https://neutralino.js.org
-
-[^1_25]: https://stackoverflow.com/questions/71705998/is-there-a-way-to-create-a-neutralinojs-project-based-on-svelte-and-typescript
-
-[^1_26]: https://www.reddit.com/r/programming/comments/xrxb23/build_lightweight_crossplatform_desktop_apps_with/
-
-[^1_27]: https://learn.microsoft.com/pt-pt/dotnet/csharp/tour-of-csharp/tutorials/hello-world
-
-[^1_28]: https://github.com/neutralinojs/neutralinojs/releases
-
-[^1_29]: https://neutralino.js.org/docs/release-notes/cli/
-
-[^1_30]: https://dev.to/ajeebkp23/neutralinojs-for-lightweight-crossplatform-applications-2odn
-
-[^1_31]: https://www.youtube.com/watch?v=GuDUgnitWEA
-
-[^1_32]: https://codezri.org/blog/neutralinojs-2024-roadmap/
-
-[^1_33]: https://neutralino.js.org/docs/cli/neu-cli/
-
-
----
-
-# é possivel compilar as versoes windows e linux usando meu mac ?
-
-Sim, é totalmente possível compilar para Windows e Linux usando seu Mac! Neutralino suporta **cross-compilation** nativamente. Vou detalhar as opções:
-
 ## ✅ Cross-Compilation no Mac
 
 ### Opção 1: Usando Neutralino CLI (Recomendado)
@@ -2585,3 +2503,68 @@ Essa abordagem é ideal para:
 - 🔧 Utilitários de sistema
 - 🌐 Sincronização de dados
 
+[^1_1]: https://arxiv.org/abs/2411.09607
+
+[^1_2]: https://www.semanticscholar.org/paper/5bb1bf39cc8b20edbcf141fe1d81c9e21e5f80d5
+
+[^1_3]: https://ieeexplore.ieee.org/document/10756687/
+
+[^1_4]: https://arxiv.org/abs/2408.15729
+
+[^1_5]: https://aclanthology.org/2024.semeval-1.60
+
+[^1_6]: https://ijsir.org/index.php/IJSIR/article/view/14
+
+[^1_7]: https://link.springer.com/10.1007/978-3-031-70359-1
+
+[^1_8]: https://link.aps.org/doi/10.1103/PhysRevD.110.043528
+
+[^1_9]: https://doi.apa.org/doi/10.1037/tra0001724
+
+[^1_10]: https://www.semanticscholar.org/paper/1d63c032d905ec3632a0d61588bd0cf24a2daff1
+
+[^1_11]: http://link.aps.org/pdf/10.1103/PhysRevD.109.103037
+
+[^1_12]: https://www.epj-conferences.org/articles/epjconf/pdf/2024/05/epjconf_chep2024_05015.pdf
+
+[^1_13]: https://arxiv.org/pdf/0909.1492.pdf
+
+[^1_14]: http://arxiv.org/pdf/1211.4873.pdf
+
+[^1_15]: http://arxiv.org/abs/2410.05380
+
+[^1_16]: http://arxiv.org/pdf/2501.04309.pdf
+
+[^1_17]: https://escholarship.org/content/qt20v0155k/qt20v0155k.pdf?t=r6fjkq
+
+[^1_18]: https://arxiv.org/abs/0708.3342
+
+[^1_19]: https://www.typescriptlang.org/pt/play/javascript/javascript-essentials/hello-world.ts.html
+
+[^1_20]: https://www.youtube.com/watch?v=VDgihqrZUQg
+
+[^1_21]: https://franciscochaves.com.br/blog/hello-world-em-typescript/
+
+[^1_22]: https://www.youtube.com/watch?v=akze3iCZa2U
+
+[^1_23]: https://www.youtube.com/watch?v=TyqaIE_g1x4
+
+[^1_24]: https://neutralino.js.org
+
+[^1_25]: https://stackoverflow.com/questions/71705998/is-there-a-way-to-create-a-neutralinojs-project-based-on-svelte-and-typescript
+
+[^1_26]: https://www.reddit.com/r/programming/comments/xrxb23/build_lightweight_crossplatform_desktop_apps_with/
+
+[^1_27]: https://learn.microsoft.com/pt-pt/dotnet/csharp/tour-of-csharp/tutorials/hello-world
+
+[^1_28]: https://github.com/neutralinojs/neutralinojs/releases
+
+[^1_29]: https://neutralino.js.org/docs/release-notes/cli/
+
+[^1_30]: https://dev.to/ajeebkp23/neutralinojs-for-lightweight-crossplatform-applications-2odn
+
+[^1_31]: https://www.youtube.com/watch?v=GuDUgnitWEA
+
+[^1_32]: https://codezri.org/blog/neutralinojs-2024-roadmap/
+
+[^1_33]: https://neutralino.js.org/docs/cli/neu-cli/
