@@ -11,7 +11,7 @@ Olá! Neste post vamos criar uma aplicação portable e multifuncional usando **
 
 ## 🎯 O Conceito
 
-Imagine você tendo:
+Imagine você tendo: 
 
 - Um `app.exe` (ou `app-linux`) que pode ser executado na máquina local e abre uma interface React bonita
 - O mesmo executável copiado para um servidor Linux, rodando via cron com parâmetro `--run` para execução headless
