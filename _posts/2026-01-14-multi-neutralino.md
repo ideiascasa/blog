@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "Construindo uma Aplicação Multiplataforma com Neutralino, React e TypeScript"
+title: "Multiplataforma com Neutralino"
 author: "Davi"
 categories: blog
 tags: [blog,tech]
 image: neutra.png
 ---
+
+# Construindo uma Aplicação Multiplataforma com Neutralino, React e TypeScript
 
 Olá! Neste post vamos criar uma aplicação portable e multifuncional usando **Neutralino** como base. A ideia é simples, mas poderosa: um único executável que funciona tanto como **GUI desktop (Windows, macOS, Linux)** quanto como **CLI (especialmente no Linux com cron)**.
 
