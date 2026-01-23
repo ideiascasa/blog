@@ -260,22 +260,9 @@ O ranking das IAs para engenharia de software em 2026 não é um ranking linear.
 
 Se você é um desenvolvedor individual, comece com **Gemini 2.5 Pro** e economize $500/ano. Se você gerencia um time, faça as contas com os números acima. Se você tem compliance/privacidade rigorosos, faça o download de **Llama 4 ou GLM-4.7** e hospede você mesmo.
 
-2026 é o ano em que escolher a IA certa deixou de ser um hobby e virou uma decisão de negócio.
-
----
-
-**Data de publicação**: 23 de janeiro de 2026  
-**Modelos analisados**: 13 modelos principais  
-**Benchmarks**: SWE-Bench Verified, Humanity's Last Exam, GPQA Diamond, AIME 2025  
-**Metodologia**: Dados de Z.ai, Artificial Analysis, LLM Stats, comunidades públicas
-
----
-
 ## Apêndice: Tabelas de Referência Rápida
 
 ### Tabela A: Ranking por SWE-Bench (Performance Pura)
-
-Copie e cole se você só se importa com "qual modelo resolve mais problemas":
 
 | Rank | Modelo | SWE % | Custo/1M |
 |---|---|---|---|
@@ -294,8 +281,6 @@ Copie e cole se você só se importa com "qual modelo resolve mais problemas":
 | 13 | DeepSeek-R1 | 49.2% | $0.69 |
 
 ### Tabela B: Ranking por Eficiência (Melhor Custo-Benefício)
-
-Copie e cole se você se importa com ROI:
 
 | Rank | Modelo | SWE % | Eficiência | Categoria |
 |---|---|---|---|---|
