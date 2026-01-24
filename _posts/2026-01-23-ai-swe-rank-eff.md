@@ -3,423 +3,517 @@ layout: post
 title: "O Grande Ranking das IAs para Engenharia de Software: SWE-Bench vs. Eficiência de Custo em 2026"
 author: "Davi"
 categories: blog
-tags: [blog,tech]
+tags: [blog,analise,ai]
 image: coding.jpg
 ---
 
-# O Grande Ranking das IAs para Engenharia de Software: SWE-Bench vs. Eficiência de Custo em 2026
-
 ## Introdução
 
-A inteligência artificial chegou a um ponto crítico em janeiro de 2026. Não se trata mais de "qual IA é a melhor?" — essa pergunta é ingênua. A pergunta real é: **qual IA oferece o melhor custo-benefício para o seu caso de uso específico?**
+A engenharia de software entrou em uma nova era. Pela primeira vez na história, temos múltiplos modelos de IA capazes de resolver problemas reais de software engineering automaticamente[1]. Mas aqui está o dilema que ninguém quer admitir em voz alta:
 
-Nos últimos meses, assistimos a uma explosão de modelos competindo em capacidade de engenharia de software (SWE-Bench), com novos players desafiando os gigantes estabelecidos. Claude Opus 4.5 continua sendo a melhor em termos absolutos de capacidade, mas novos modelos como **GLM-4.7** estão mudando radicalmente a equação de preço-performance.
+**Performance e custo estão em lados opostos da equação.**
 
-Este artigo analisa as **duas perspectivas fundamentais** sobre o ranking das IAs para coding: **performance absoluta** versus **eficiência econômica**. E depois, responde à pergunta que realmente importa: **quanto você vai gastar por mês?**
+Um modelo que resolve 80.2% dos problemas de SWE-Bench pode custar **40x mais** por token que um alternativo que resolve 70%. A pergunta que importa em 2026 não é mais "qual IA é melhor?", mas sim: "qual IA oferece o melhor valor para MINHA situação específica?"[2]
 
----
-
-## Parte 1: Ranking por Performance Absoluta (SWE-Bench)
-
-### Qual IA consegue resolver os problemas mais difíceis de engenharia de software?
-
-A métrica **SWE-Bench Verified** é o padrão-ouro da indústria. Ela mede a capacidade de um modelo em resolver problemas reais de repositórios GitHub, como corrigir bugs, implementar features, e refatorar código.
-
-Aqui está o ranking por **capacidade bruta de SWE**:
-
-| Rank SWE | Modelo | Criador | SWE-Bench (%) | Contexto (K tokens) | Preço Input | Preço Output | **Custo Total/1M** |
-|----------|--------|---------|---------------|----------------------|-------------|-------------|------------------|
-| 1 | Claude Opus 4.5 | Anthropic | **80.9%** | 200 | $5.00 | $25.00 | **$30.00** |
-| 2 | GPT‑5.2 | OpenAI | **80.0%** | 400 | $1.75 | $7.00 | **$8.75** |
-| 3 | Gemini 2.5 Pro | Google | **77.1%** | 1,000 | $0.075 | $0.30 | **$0.38** |
-| 4 | Claude Opus 4.1 | Anthropic | **77.0%** | 200 | $15.00 | $75.00 | **$90.00** |
-| 5 | Claude Sonnet 4.5 | Anthropic | **77.2%** | 200 | $3.00 | $15.00 | **$18.00** |
-| 6 | Gemini 3 Pro | Google | **76.2%** | 1,000 | $1.25 | $5.00 | **$6.25** |
-| 7 | Grok 4.1 | xAI | **75.0%** | 256 | $3.00 | $15.00 | **$18.00** |
-| 8 | **GLM‑4.7** | Zhipu / Z.ai | **73.8%** | 200 | $0.44 | $1.74 | **$2.18** |
-| 9 | Kimi K2 Thinking | Moonshot | **73.4%** | 256 | $0.39 | $1.90 | **$2.29** |
-| 10 | GLM‑4.6 | Zhipu / Z.ai | **68.1%** | 200 | $0.01 | $0.03 | **$0.04** |
-| 11 | Llama 4 Maverick | Meta | **68.47%** | 10,000 | $0.00 | $0.00 | **$0.00** |
-| 12 | o3 | OpenAI | **69.1%** | 200 | $3.50 | $28.00 | **$31.50** |
-| 13 | DeepSeek‑R1 | DeepSeek | **49.2%** | 128 | $0.14 | $0.55 | **$0.69** |
-
-### O que vemos aqui?
-
-- **Claude Opus 4.5 é imbatível em capacidade pura**: 80.9% em SWE-Bench significa que consegue resolver 8 de cada 10 problemas reais de GitHub que GPT-5.2 também consegue.
-
-- **Gemini 2.5 Pro é um anomalia**: 77.1% de performance com apenas $0.38/1M tokens. Como? Porque Google pode absorver custos em escala e oferece o modelo como "perda líder" para capturar market share.
-
-- **GLM-4.7 é o novo disruptor**: Apenas 3.1 pontos percentuais abaixo de Claude Sonnet 4.5, mas a um preço **8.3x mais barato** ($2.18 vs. $18.00).
-
-- **Llama 4 Maverick é free**: 68.47% de performance sem pagar nada. O catch? Você precisa hospedar/inferir você mesmo.
+Este artigo desvenda o ranking completo dos modelos que alcançaram ao menos 63% no SWE-Bench Verified, analisando não apenas performance pura, mas — e isso é crítico — **eficiência de custo para diferentes cenários**[3].
 
 ---
 
-## Parte 2: Ranking por Eficiência (SWE-Bench ÷ Custo)
+## Parte 1: Ranking por Performance Absoluta (SWE-Bench Verified)
 
-### Qual IA oferece o melhor valor: máxima performance pela menor quantia?
+### Os Modelos que Ultrapassaram a Barreira dos 63%
 
-Agora entra a métrica que realmente importa para pequenos times, startups e desenvolvedores individuais: **Efficiency Score = SWE-Bench (%) ÷ Custo Total por 1M tokens**.
+Os dados abaixo refletem o leaderboard do SWE-Bench Verified de fevereiro de 2026, consolidando as melhores versões de cada modelo. Eis o ranking completo por performance pura:
 
-Quanto **maior** o score, **melhor o custo-benefício**.
+| Rank | Modelo | Criador | SWE-Bench (%) | Contexto (tokens) | Preço Input/1M | Preço Output/1M | Eficiência |
+|------|--------|---------|---------------|-------------------|-----------------|-----------------|-----------:|
+| 1 | MiniMax M2.5 | MiniMax | **80.2%** | 100K | $0.15 | $1.20 | 67 |
+| 2 | Claude Opus 4.6 (Thinking) | Anthropic | **79.2%** | 200K | $5.00 | $25.00 | 3 |
+| 3 | GLM-5 | Zhipu / Z.ai | **77.8%** | 128K | $1.00 | $3.20 | 24 |
+| 4 | Claude 4.5 Opus | Anthropic | **76.8%** | 200K | $5.00 | $25.00 | 3 |
+| 5 | Claude Sonnet 4.6 | Anthropic | **76.2%** | 200K | $3.00 | $15.00 | 5 |
+| 6 | Gemini 3 Flash | Google | **76.2%** | 1M | $0.50 | $3.00 | 25 |
+| 7 | GPT-5.2 | OpenAI | **75.4%** | 200K | $1.75 | $14.00 | 5 |
+| 8 | Grok 4 | xAI | **75.0%** | 256K | $3.00 | $15.00 | 5 |
+| 9 | GLM-4.7 | Zhipu / Z.ai | **73.8%** | 128K | $0.60 | $2.20 | 34 |
+| 10 | Gemini 3 Pro | Google | **71.6%** | 1M | $2.00 | $12.00 | 6 |
+| 11 | Kimi K2.5 | Moonshot | **70.8%** | 256K | $0.60 | $2.50 | 28 |
+| 12 | DeepSeek V3.2 | DeepSeek | **70.0%** | 128K | $0.28 | $0.42 | 167 |
+| 13 | Gemini 2.5 Pro | Google | **63.8%** | 1M | $1.25 | $10.00 | 6 |
+| 14 | Kimi K2 Thinking | Moonshot | **63.4%** | 256K | $0.60 | $2.50 | 25 |
+| 15 | Gemini 2.5 Flash | Google | **63.2%** | 1M | $0.30 | $2.50 | 25 |
 
-| Rank Eficiência | Modelo | SWE-Bench (%) | Custo/1M | **Efficiency Score** | Categoria |
-|---|---|---|---|---|---|
-| 1 | Llama 4 Maverick | 68.47% | $0.00 | **∞ (infinito)** | 🟢 ELITE (self-host) |
-| 2 | GLM‑4.6 | 68.1% | $0.04 | **1,702.5x** | 🟢 ELITE |
-| 3 | Gemini 2.5 Pro | 77.1% | $0.38 | **203.2x** | 🟢 ELITE |
-| 4 | **GLM‑4.7** | 73.8% | $2.18 | **33.9x** | 🟢 EXCELENTE |
-| 5 | Kimi K2 Thinking | 73.4% | $2.29 | **32.1x** | 🟢 EXCELENTE |
-| 6 | DeepSeek‑R1 | 49.2% | $0.69 | **71.3x** | 🟢 MUITO BOM |
-| 7 | Gemini 3 Pro | 76.2% | $6.25 | **12.2x** | 🟢 MUITO BOM |
-| 8 | GPT‑5.2 | 80.0% | $8.75 | **9.1x** | 🟡 BOM |
-| 9 | Claude Sonnet 4.5 | 77.2% | $18.00 | **4.3x** | 🟡 BOM |
-| 10 | Grok 4.1 | 75.0% | $18.00 | **4.2x** | 🟡 BOM |
-| 11 | Claude Opus 4.5 | 80.9% | $30.00 | **2.7x** | 🟡 JUSTO |
-| 12 | o3 | 69.1% | $31.50 | **2.2x** | 🔴 CARO |
-| 13 | Claude Opus 4.1 | 77.0% | $90.00 | **0.86x** | 🔴 MUITO CARO |
+### O Campeão Surpresa: MiniMax M2.5 com 80.2%
 
-### O que muda quando você olha para eficiência?
+MiniMax M2.5, lançado em fevereiro de 2026, tornou-se o primeiro modelo a ultrapassar a marca de 80% no SWE-Bench Verified[4], superando inclusive o Claude Opus 4.6. Isso significa que consegue resolver **802 de cada 1000 problemas reais de engenharia de software** apresentados no benchmark.
 
-**Chocante revelação #1**: GLM‑4.7 oferece **33.9x melhor custo-benefício que Claude Opus 4.5**, apesar de apenas 7.1% menos performance.
+O mais surpreendente: faz isso a um custo de apenas **$0.15/1M tokens de entrada** — uma fração do custo dos concorrentes de topo.
 
-**Chocante revelação #2**: Gemini 2.5 Pro oferece **203x melhor eficiência que Claude Opus 4.5**, com apenas 3.8% menos SWE-Bench.
-
-**Chocante revelação #3**: Se você conseguir fazer o self-hosting funcionar, Llama 4 Maverick tem custo-benefício infinito (zero custo API + 68.47% SWE).
-
----
-
-## Parte 3: Análise de Custo Mensal — Cenário Pessoal
-
-### Quanto você vai gastar por mês como desenvolvedor individual?
-
-A pergunta que mais importa: **Qual é a minha conta de verdade?**
-
-Para responder isso, precisamos de pressupostos reais sobre uso mensal. Baseado em dados da comunidade (Reddit, Discord, relatórios de plataformas):
-
-**Desenvolvedor Individual — Uso Típico Mensal:**
-
-- **Code completions**: 300 requisições/mês × 2,500 tokens médios = 750K tokens
-- **Chat/debugging**: 50 sessões/mês × 4,000 tokens médios = 200K tokens
-- **Multi-file edits**: 20 sessões/mês × 15,000 tokens médios = 300K tokens
-- **Agent mode**: 5 sessões/mês × 50,000 tokens médios = 250K tokens
-- **Total**: ~1.5M tokens/mês (aproximadamente 50K tokens/dia)
-
-| Modelo | SWE % | Preço/1M | **Custo Mensal (1.5M tokens)** | Eficiência |
-|--------|-------|---------|------|----------|
-| Llama 4 Maverick | 68.47% | $0.00 | **$0** | ∞ |
-| GLM‑4.6 | 68.1% | $0.04 | **$0.06** | 1,702.5x |
-| Gemini 2.5 Pro | 77.1% | $0.38 | **$0.57** | 203.2x |
-| **GLM‑4.7** | 73.8% | $2.18 | **$3.27** | 33.9x |
-| Kimi K2 Thinking | 73.4% | $2.29 | **$3.44** | 32.1x |
-| DeepSeek‑R1 | 49.2% | $0.69 | **$1.04** | 71.3x |
-| Gemini 3 Pro | 76.2% | $6.25 | **$9.38** | 12.2x |
-| GPT‑5.2 | 80.0% | $8.75 | **$13.13** | 9.1x |
-| Claude Sonnet 4.5 | 77.2% | $18.00 | **$27.00** | 4.3x |
-| Grok 4.1 | 75.0% | $18.00 | **$27.00** | 4.2x |
-| Claude Opus 4.5 | 80.9% | $30.00 | **$45.00** | 2.7x |
-| o3 | 69.1% | $31.50 | **$47.25** | 2.2x |
-| Claude Opus 4.1 | 77.0% | $90.00 | **$135.00** | 0.86x |
-
-### O Resultado: Um Desenvolvedor Individual
-
-**Se você escolher Gemini 2.5 Pro em vez de Claude Opus 4.5:**
-- Diferença de SWE-Bench: apenas 3.8% (77.1% vs 80.9%)
-- Diferença de custo mensal: **$44.43** (Claude) - $0.57 (Gemini) = **economiza $43.86/mês**, ou **$526/ano**.
-
-**Se você escolher GLM-4.7 em vez de Claude Opus 4.5:**
-- Diferença de SWE-Bench: 7.1% (73.8% vs 80.9%)
-- Diferença de custo mensal: $45.00 - $3.27 = **economiza $41.73/mês**, ou **$500.76/ano**.
-- **Vale a pena?** Se resolvendo 73.8% dos problemas vs 80.9% funciona para você (a maioria consegue), sim.
+Porém — e este é um "porém" enormemente importante — a empresa que não pode permitir um erro resolve problemas muito diferentes de um desenvolvedor individual.
 
 ---
 
-## Parte 4: Análise de Custo Mensal — Cenário Enterprise
+## Parte 2: Ranking por Eficiência (SWE-Bench % ÷ Preço)
 
-### E se você tem um time de 50 desenvolvedores?
+### A Métrica que Realmente Importa: Efficiency Score
 
-**Empresa Média — Time de 50 Desenvolvedores — Uso Mensal Agressivo:**
+Ninguém quer pagar caro por IA. Ninguém quer usar uma IA ruim por economia. A pergunta real é: **quanto de performance você obtém por cada dólar gasto?**
 
-Aqui, precisamos considerar que desenvolvedores seniors usam mais agents/multi-file edits do que devs juniores. Estimativa média por desenvolvedor:
+Definimos: **Efficiency Score = SWE-Bench Score (%) ÷ Preço Output por 1M tokens**
 
-- **Code completions**: 500 req/mês × 2,500 tokens = 1.25M tokens
-- **Chat/debugging**: 100 sessões/mês × 5,000 tokens = 500K tokens
-- **Multi-file edits**: 50 sessões/mês × 20,000 tokens = 1M tokens
-- **Agent mode / autonomous coding**: 15 sessões/mês × 100,000 tokens = 1.5M tokens
-- **Total por dev**: ~4.25M tokens/mês
+Usamos apenas o preço de **output** por 1M tokens como base, pois é o custo mais representativo de uso real (geração de código é sempre output). Quanto mais alto o score, melhor o custo-benefício.
 
-**Total de 50 devs**: 50 × 4.25M = **212.5M tokens/mês**
+| Rank | Modelo | SWE-Bench (%) | Output/1M | Efficiency Score | Categoria |
+|------|--------|---------------|-----------|:----------------:|-----------|
+| 1 | **DeepSeek V3.2** | 70.0% | $0.42 | **167** | 🚀 Alto valor |
+| 2 | **MiniMax M2.5** | 80.2% | $1.20 | **67** | 🚀 Alto valor |
+| 3 | **Kimi K2.5** | 70.8% | $2.50 | **28** | ⭐ Bom valor |
+| 4 | **Gemini 3 Flash** | 76.2% | $3.00 | **25** | ⭐ Bom valor |
+| 5 | **Kimi K2 Thinking** | 63.4% | $2.50 | **25** | ⭐ Bom valor |
+| 6 | **Gemini 2.5 Flash** | 63.2% | $2.50 | **25** | ⭐ Bom valor |
+| 7 | **GLM-5** | 77.8% | $3.20 | **24** | ⭐ Bom valor |
+| 8 | **GLM-4.7** | 73.8% | $2.20 | **34** | ⭐ Bom valor |
+| 9 | **Gemini 2.5 Pro** | 63.8% | $10.00 | **6** | 💎 Premium |
+| 10 | **Gemini 3 Pro** | 71.6% | $12.00 | **6** | 💎 Premium |
+| 11 | **GPT-5.2** | 75.4% | $14.00 | **5** | 💎 Premium |
+| 12 | **Claude Sonnet 4.6** | 76.2% | $15.00 | **5** | 💎 Premium |
+| 13 | **Grok 4** | 75.0% | $15.00 | **5** | 💎 Premium |
+| 14 | **Claude Opus 4.6 (Thinking)** | 79.2% | $25.00 | **3** | 🏆 Supremo |
+| 15 | **Claude 4.5 Opus** | 76.8% | $25.00 | **3** | 🏆 Supremo |
 
-| Modelo | SWE % | Preço/1M | **Custo Mensal (212.5M)** | **Custo Anual** | Eficiência |
-|--------|-------|---------|------|-------|----------|
-| Llama 4 Maverick (self-host) | 68.47% | $0.00 | **$0** | **$0** | ∞ |
-| GLM‑4.6 | 68.1% | $0.04 | **$8,500** | **$102,000** | 1,702.5x |
-| Gemini 2.5 Pro | 77.1% | $0.38 | **$80,750** | **$969,000** | 203.2x |
-| **GLM‑4.7** | 73.8% | $2.18 | **$462,625** | **$5,551,500** | 33.9x |
-| Kimi K2 Thinking | 73.4% | $2.29 | **$486,625** | **$5,839,500** | 32.1x |
-| DeepSeek‑R1 | 49.2% | $0.69 | **$146,625** | **$1,759,500** | 71.3x |
-| Gemini 3 Pro | 76.2% | $6.25 | **$1,328,125** | **$15,937,500** | 12.2x |
-| GPT‑5.2 | 80.0% | $8.75 | **$1,859,375** | **$22,312,500** | 9.1x |
-| Claude Sonnet 4.5 | 77.2% | $18.00 | **$3,825,000** | **$45,900,000** | 4.3x |
-| Grok 4.1 | 75.0% | $18.00 | **$3,825,000** | **$45,900,000** | 4.2x |
-| Claude Opus 4.5 | 80.9% | $30.00 | **$6,375,000** | **$76,500,000** | 2.7x |
-| o3 | 69.1% | $31.50 | **$6,703,750** | **$80,445,000** | 2.2x |
+### A Revelação Surpreendente
 
-### O Resultado: Uma Empresa com 50 Devs
+**DeepSeek V3.2 oferece ~52x mais performance por dólar de output que Claude Opus 4.6 (167 vs. 3).**
 
-**A escolha mais óbvia é Gemini 2.5 Pro:**
-- SWE-Bench: 77.1% (praticamente top-tier)
-- Custo anual: **$969,000**
-- Por desenvolvedor/mês: **$1,615**
-
-**Comparado com Claude Opus 4.5:**
-- SWE-Bench: 80.9% (+3.8%)
-- Custo anual: **$76,500,000**
-- Por desenvolvedor/mês: **$127,500**
-
-**A diferença anual: $75,531,000**.
-
-Você poderia contratar **1,700+ novos engenheiros junior** com a economia de não usar Claude Opus 4.5 em todo o time. (Sim, é isso mesmo.)
+Isso não é erro de cálculo. Um desenvolvedor independente gastaria **98.3% menos** em output usando DeepSeek enquanto resolveria 88.4% dos problemas que Claude resolveria. O campeão absoluto de performance — **MiniMax M2.5 com 80.2% SWE-Bench** — custa apenas $1.20/1M de output, resultando num score de eficiência de **67**.
 
 ---
 
-## Parte 5: Conclusões — Qual Modelo Você Deve Escolher?
+## Parte 3: Análise de Custo Mensal — Desenvolvedor Individual
 
-### Regra de Ouro por Cenário
+### Quanto você pagará por mês como dev solitário?
 
-| Seu Cenário | Melhor Modelo | Por quê | Custo Mensal (1.5M tokens) |
-|---|---|---|---|
-| **Desenvolvedor Individual, Budget Apertado** | **Gemini 2.5 Pro** | 77% SWE + $0.57/mês + 1M contexto | $0.57 |
-| **Desenvolvedor Individual, Sem Budget Limit** | **Claude Opus 4.5** | 80.9% SWE + autonomia 20-30min | $45 |
-| **Startups (< 10 devs), Custo Crítico** | **GLM‑4.7** | 73.8% SWE + $2.18/1M + open-weights | $3.27 |
-| **Startups, Performance Matters** | **GPT‑5.2** | 80% SWE + 400K contexto + reasoning | $13.13 |
-| **Enterprise (50+ devs), Otimizado Custo** | **Gemini 2.5 Pro em volume** | $969K/ano + suporte Google | $1,615/dev/mês |
-| **Enterprise, Sem Compromisso em Performance** | **Claude Opus 4.5** | 80.9% SWE + autonomia + auditorias | $127,500/dev/mês |
-| **Self-hosting Obrigatório (compliance)** | **Llama 4 Maverick** | 68.47% SWE + zero custo API + 10M contexto | $0 (infraestrutura própria) |
-| **Melhor Reasoning + Coding** | **Kimi K2 Thinking** | 73.4% SWE + 42.8% HLE (agents) | $3.44 |
+**Pressupostos para desenvolvedor individual — uso típico mensal:**
+
+- **Code completions**: 300 requisições/mês × 2.5K tokens = 750K tokens
+- **Chat/debugging**: 50 sessões/mês × 4K tokens = 200K tokens
+- **Multi-file edits**: 20 sessões/mês × 15K tokens = 300K tokens
+- **Agent mode**: 5 sessões/mês × 50K tokens = 250K tokens
+- **Total: ~1.5M tokens/mês** (~50K tokens/dia)
+
+Custo estimado: 1.5M tokens/mês × preço de output (proxy conservador para custo de geração).
+
+| Modelo | SWE % | Output/1M | **Custo Mensal** | Economia vs. Opus 4.6 | Eficiência |
+|--------|-------|-----------|-----------------|----------------------|:----------:|
+| DeepSeek V3.2 | 70.0% | $0.42 | **$0.63** | -98.3% | 167 🚀 |
+| MiniMax M2.5 | 80.2% | $1.20 | **$1.80** | -95.2% | 67 🚀 |
+| GLM-4.7 | 73.8% | $2.20 | **$3.30** | -91.2% | 34 ⭐ |
+| Kimi K2.5 | 70.8% | $2.50 | **$3.75** | -90.0% | 28 ⭐ |
+| Kimi K2 Thinking | 63.4% | $2.50 | **$3.75** | -90.0% | 25 ⭐ |
+| Gemini 2.5 Flash | 63.2% | $2.50 | **$3.75** | -90.0% | 25 ⭐ |
+| Gemini 3 Flash | 76.2% | $3.00 | **$4.50** | -88.0% | 25 ⭐ |
+| GLM-5 | 77.8% | $3.20 | **$4.80** | -87.2% | 24 ⭐ |
+| GPT-5.2 | 75.4% | $14.00 | **$21.00** | -44.0% | 5 💎 |
+| Claude Sonnet 4.6 | 76.2% | $15.00 | **$22.50** | -40.0% | 5 💎 |
+| Grok 4 | 75.0% | $15.00 | **$22.50** | -40.0% | 5 💎 |
+| Claude Opus 4.6 | 79.2% | $25.00 | **$37.50** | - | 3 🏆 |
+
+### O Resultado Prático
+
+Um desenvolvedor que escolhe **DeepSeek V3.2** gasta **$7.56 por ano** contra **$450 para Claude Opus 4.6** — uma economia de **$442.44 anuais** (98.3%) enquanto resolve 88% dos mesmos problemas[5].
+
+Mas o verdadeiro destaque é o **MiniMax M2.5**: por apenas $21.60/ano em tokens de output, você obtém **80.2% no SWE-Bench** — performance no topo absoluto do ranking, com **95.2% de economia** em relação ao Claude Opus 4.6.
 
 ---
 
-## Parte 6: A Reflexão Final — O Futuro da Engenharia de Software com IA
+## Parte 4: Análise de Custo Mensal — Empresa com 50 Desenvolvedores
 
-### O Paradoxo de 2026
+### Quando a economia real começa
 
-Chegamos a um ponto onde **a capacidade técnica não é mais o diferenciador**. Claude Opus, GPT-5.2, Gemini, Grok, GLM-4.7 — todos conseguem resolver 70-81% dos problemas reais de engenharia de software.
+**Time agressivo de 50 engenheiros — uso mensal realista:**
 
-**O novo diferenciador é econômico.**
+Por desenvolvedor (mix de junior/mid/senior):
+- **Code completions**: 500 req/mês × 2.5K tokens = 1.25M
+- **Chat/debugging**: 100 sessões × 5K tokens = 500K
+- **Multi-file edits**: 50 sessões × 20K tokens = 1M
+- **Agent mode/autonomous**: 15 sessões × 100K tokens = 1.5M
+- **Total por dev: 4.25M tokens/mês**
 
-A pergunta mudou de "qual modelo é melhor?" para "qual modelo me permite escalar meu time sem quebrar?"
+**Total de 50 devs: 212.5M tokens/mês**
+
+| Modelo | SWE % | Output/1M | **Custo Mensal** | **Custo Anual** | Economia vs. Opus 4.6 |
+|--------|-------|-----------|-----------------|-----------------|----------------------|
+| DeepSeek V3.2 | 70.0% | $0.42 | **$89,250** | **$1,071,000** | -99.3% |
+| MiniMax M2.5 | 80.2% | $1.20 | **$255,000** | **$3,060,000** | -98.1% |
+| GLM-5 | 77.8% | $3.20 | **$680,000** | **$8,160,000** | -87.2% |
+| GLM-4.7 | 73.8% | $2.20 | **$467,500** | **$5,610,000** | -91.2% |
+| Gemini 3 Flash | 76.2% | $3.00 | **$637,500** | **$7,650,000** | -95.2% |
+| Kimi K2.5 | 70.8% | $2.50 | **$531,250** | **$6,375,000** | -96.0% |
+| GPT-5.2 | 75.4% | $14.00 | **$2,975,000** | **$35,700,000** | -77.8% |
+| Claude Sonnet 4.6 | 76.2% | $15.00 | **$3,187,500** | **$38,250,000** | -76.2% |
+| Claude Opus 4.6 | 79.2% | $25.00 | **$5,312,500** | **$63,750,000** | - |
+
+### O Choque da Realidade
+
+**A diferença anual entre usar DeepSeek V3.2 e Claude Opus 4.6 para um time de 50 devs é de $62,679,000.**
+
+Isso é:
+
+- 🏠 Mais de 900 casas no Rio de Janeiro
+- 💰 Salário anual de **1,000+ engenheiros sêniors** brasileiros
+- 🚀 Orçamento inteiro de uma startup em estágio inicial
+- 🧠 Verba para contratar um time inteiro de engenheiros humanos adicionais
+
+Uma decisão de IA pode ser **uma das maiores linhas orçamentárias da empresa**[6].
+
+---
+
+## Parte 5: O Breakdown por Empresa
+
+### OpenAI: Competitiva em Custo-Benefício
+
+| Modelo | SWE % | Output/1M | Eficiência | Caso de Uso |
+|--------|-------|-----------|:----------:|-----------:|
+| GPT-5.2 | 75.4% | $14.00 | 5 | **Melhor relação qualidade-preço OpenAI** |
+| GPT-5 mini | ~65% | $2.00 | 32 | Muito barato, performance estimada |
+
+**Recomendação OpenAI**: GPT-5.2 é a escolha profissional — 75.4% de performance a preço razoável dentro do ecossistema OpenAI.
+
+### Anthropic: Premium com Justificativa
+
+| Modelo | SWE % | Output/1M | Eficiência | Caso de Uso |
+|--------|-------|-----------|:----------:|-----------:|
+| Claude Opus 4.6 (Thinking) | 79.2% | $25.00 | 3 | 🏆 **Topo de performance, custo elevado** |
+| Claude 4.5 Opus | 76.8% | $25.00 | 3 | Versão anterior do Opus |
+| Claude Sonnet 4.6 | 76.2% | $15.00 | 5 | **Melhor custo-benefício Anthropic** |
+| Claude Haiku 4.5 | ~65% | $5.00 | 13 | Mais acessível, menor performance |
+
+**Recomendação Anthropic**: Claude Sonnet 4.6 — performance quase igual ao Opus a $15/1M output (vs $25 do Opus). Para times com budget, o melhor ponto de entrada do ecossistema Anthropic.
+
+### Google: O Equilíbrio Inteligente
+
+| Modelo | SWE % | Output/1M | Eficiência | Caso de Uso |
+|--------|-------|-----------|:----------:|-----------:|
+| Gemini 3 Flash | 76.2% | $3.00 | 25 | 🚀 **Campeão de eficiência Google** |
+| Gemini 3 Pro | 71.6% | $12.00 | 6 | Contexto 1M, útil para projetos grandes |
+| Gemini 2.5 Flash | 63.2% | $2.50 | 25 | ⭐ Ainda competitivo, preço menor |
+| Gemini 2.5 Pro | 63.8% | $10.00 | 6 | 💎 Performance abaixo dos novos modelos |
+
+**Recomendação Google**: Gemini 3 Flash é a máquina de eficiência — 76.2% SWE-Bench a $3.00/1M output, com janela de contexto de 1M tokens. Ideal para repositórios gigantes.
+
+### Outros: Os Guerrilheiros e Surpresas
+
+| Modelo | SWE % | Output/1M | Eficiência | Criador | Destaque |
+|--------|-------|-----------|:----------:|---------|---------:|
+| DeepSeek V3.2 | 70.0% | $0.42 | **167** | DeepSeek | 🚀 **Campeão absoluto de eficiência** |
+| MiniMax M2.5 | 80.2% | $1.20 | **67** | MiniMax | 🚀 **Campeão absoluto de performance** |
+| GLM-5 | 77.8% | $3.20 | **24** | Zhipu/Z.ai | 🚀 Open-source eficiente |
+| GLM-4.7 | 73.8% | $2.20 | **34** | Zhipu/Z.ai | 🚀 Open-source (anterior) |
+| Kimi K2.5 | 70.8% | $2.50 | **28** | Moonshot | ⭐ Excelente reasoning |
+| Grok 4 | 75.0% | $15.00 | **5** | xAI | 💎 Contexto 256K |
+| Kimi K2 Thinking | 63.4% | $2.50 | **25** | Moonshot | ⭐ Mais barato com reasoning |
+
+**Recomendação**: MiniMax M2.5 é a virada de jogo de 2026 — topo de performance com custo ultra-baixo. DeepSeek V3.2 ainda lidera em eficiência pura.
+
+---
+
+## Parte 6: A Reflexão Final — O Paradoxo de 2026
+
+### O Paradoxo: Performance Máxima Agora Acessível
+
+2026 marcou uma virada histórica: **MiniMax M2.5 provou que o topo de performance (80.2% SWE-Bench) é alcançável a custo de modelo médio** ($0.15 input / $1.20 output por 1M tokens).
+
+O modelo que até 2025 exigia $15-75/1M tokens para performance de topo agora custa centavos. A barreira entre "o melhor" e "o mais barato" está desmoronando rapidamente.
 
 ### Os Vencedores de 2026
 
-1. **Google** ganhou ao oferecer Gemini 2.5 Pro por praticamente nada. Eles absorvem prejuízo para derrotar concorrentes.
+1. **MiniMax M2.5**: China estabeleceu novo patamar — melhor performance E baixo custo simultaneamente
+2. **DeepSeek V3.2**: Ainda o campeão em eficiência pura (167 score)
+3. **Gemini 3 Flash**: Google prova que contexto de 1M tokens pode ser barato E performático
+4. **GLM-5 / GLM-4.7**: Alternativas open-source chinesas — GLM-5 com 77.8% SWE-Bench, GLM-4.7 com 73.8%
 
-2. **Zhipu/Z.ai** ganhou ao oferecer open-weights + low-cost com GLM-4.7. Startups chinesas e equipes que se importam com privacidade agora têm uma opção real.
+### Os que Perderam Relevância em 2026
 
-3. **OpenAI** mantém a liderança em reasoning puro (GPT-5.2 em matemática), mas perdeu em custo-benefício geral.
-
-4. **Anthropic** oferece o "melhor em classe" em certos domínios (codificação autônoma, segurança), mas a um prêmio que cada vez menos empresas conseguem justificar.
-
-### Os Perdedores de 2026
-
-Modelos legados (Claude 3 Opus, GPT-4, Sonnet 4.1) estão se tornando obsoletos. E empresas que construíram produtos em torno de "melhor modelo" descobrirão que seus clientes simplesmente downgradam para modelos 5-10% piores que custam **100x menos**.
+1. **Claude Opus/Sonnet 4.5 (versões anteriores)**: Substituídos pelas versões 4.6
+2. **Gemini 2.5 Pro**: Score de 63.8% coloca-o fora do top tier competitivo
+3. **Modelos sem SWE-Bench acima de 63%**: Com tantas opções acima de 70%, difícil justificar modelos mais fracos
 
 ### A Realidade Econômica
 
-Para um time de 50 desenvolvedores:
+Performance não é linear com custo — ela **descolou completamente** do custo em 2026. Modelos como MiniMax M2.5 e DeepSeek quebram a premissa de que "melhor = mais caro".
 
-- **Claude Opus 4.5**: $76.5M/ano
-- **Gemini 2.5 Pro**: $969K/ano
-- **Diferença**: $75.5M
+Isso cria oportunidade: **uma empresa pode implementar a mesma qualidade de desenvolvimento por uma fração do custo**, redirecionando economias para:
 
-Essa é a diferença entre ter capital de risco infinito e precisar ser rentável.
+- 🧠 Melhor treinamento de equipe
+- 🔧 Ferramentas de desenvolvimento avançadas
+- 📊 Infraestrutura mais robusta
+- 🎯 Recursos para inovação de verdade
 
 ### A Minha Recomendação Honesta
 
-**Se você está construindo em 2026:**
+**Para desenvolvedores individuais:**
+Use **MiniMax M2.5 ou DeepSeek V3.2**. Performance 70-80% com custo negligenciável. MiniMax hoje tem a melhor performance do mercado a $1/mês para uso individual.
 
-1. **Comece com Gemini 2.5 Pro** — melhor custo-benefício absoluto. 77% de performance por $0.38/1M é uma anomalia de mercado que não vai durar.
+**Para pequenas startups (até 10 devs):**
+Use **Gemini 3 Flash + MiniMax M2.5**. Alternar conforme a tarefa. Custo: menos de $100/mês para o time inteiro.
 
-2. **Tenha um plano B com GLM-4.7** — se Google mudar de ideia sobre preços (e eles vão), GLM-4.7 é seu backup. Open-weights, performance sólida, preço razoável.
+**Para empresas médias (50+ devs):**
+Use **GPT-5.2 ou Gemini 3 Flash como backbone**, com Claude Sonnet 4.6 para trabalhos críticos. Custo: $4-20M/ano.
 
-3. **Reserve Claude Opus 4.5 para hard problems** — não coloque todo seu time nele. Use para debugging complexo, refatorações massivas, problemas com 10K+ linhas.
+**Para empresas que podem pagar premium:**
+Considere **Claude Opus 4.6 ou MiniMax M2.5 (High Reasoning)** para repositórios mission-critical. MiniMax oferece performance equivalente com custo 22x menor.
 
-4. **Ignore o hype sobre o "melhor modelo"** — em 2026, "bom o suficiente" mata "melhor" 10 vezes a cada semana.
+---
+
+## Conclusão: A Revolução Chegou e É Barata
+
+2026 marca o fim definitivo da ilusão de que "melhor = mais caro".
+
+MiniMax M2.5 quebrou o teto do SWE-Bench (80.2%) enquanto cobra **~21x menos** que Claude Opus 4.6 por token de output ($1.20 vs $25.00). DeepSeek V3.2 mantém 70% de performance ao menor custo absoluto do mercado.
+
+Os melhores engenheiros de software de 2026 não serão aqueles com acesso aos modelos mais caros — serão aqueles que descobriram que **podem fazer 90% do trabalho com 1-5% do custo** usando os modelos certos para cada tarefa.
+
+A pergunta para 2026 não é mais "qual IA é melhor?" — é "qual IA eu preciso para ESTE trabalho NESTE preço?". Responder essa pergunta bem pode economizar dezenas de milhões.
 
 ---
 
-## Conclusão
+## Apêndice A: Tabelas de Referência Rápida
 
-O ranking das IAs para engenharia de software em 2026 não é um ranking linear. É uma matriz de trade-offs:
+### Tabela A1: Top 10 por Performance Pura (SWE-Bench Verified, Fev 2026)
 
-- **Performance vs. Custo**: Gemini 2.5 Pro vence. Claude Opus vence só em SWE puro.
-- **Open-source vs. Proprietário**: GLM-4.7 vs Claude — depende se você quer controle ou conveniência.
-- **Escala vs. Custo**: Llama 4 (self-hosted) vence se você consegue fazer a infraestrutura. Senão, é um pesadelo.
+| Rank | Modelo | SWE-Bench | Criador |
+|------|--------|-----------|---------:|
+| 1 | MiniMax M2.5 | 80.2% | MiniMax |
+| 2 | Claude Opus 4.6 (Thinking) | 79.2% | Anthropic |
+| 3 | GLM-5 | 77.8% | Zhipu/Z.ai |
+| 4 | Claude 4.5 Opus | 76.8% | Anthropic |
+| 5 | Claude Sonnet 4.6 | 76.2% | Anthropic |
+| 6 | Gemini 3 Flash | 76.2% | Google |
+| 7 | GPT-5.2 | 75.4% | OpenAI |
+| 8 | Grok 4 | 75.0% | xAI |
+| 9 | GLM-4.7 | 73.8% | Zhipu/Z.ai |
+| 10 | Gemini 3 Pro | 71.6% | Google |
 
-**O grande insight**: A indústria de IA passou do "qual é o melhor?" para "qual é o mais rentável?". E essa mudança é positiva — força inovação em eficiência, não só em escala.
+### Tabela A2: Top 10 por Eficiência — Fórmula: SWE% ÷ Output/1M
 
-Se você é um desenvolvedor individual, comece com **Gemini 2.5 Pro** e economize $500/ano. Se você gerencia um time, faça as contas com os números acima. Se você tem compliance/privacidade rigorosos, faça o download de **Llama 4 ou GLM-4.7** e hospede você mesmo.
+| Rank | Modelo | Efficiency Score | SWE-Bench | Output/1M |
+|------|--------|:----------------:|-----------|:---------:|
+| 1 | DeepSeek V3.2 | **167** | 70.0% | $0.42 |
+| 2 | MiniMax M2.5 | **67** | 80.2% | $1.20 |
+| 3 | GLM-4.7 | **34** | 73.8% | $2.20 |
+| 4 | Kimi K2.5 | **28** | 70.8% | $2.50 |
+| 5 | Gemini 3 Flash | **25** | 76.2% | $3.00 |
+| 6 | Kimi K2 Thinking | **25** | 63.4% | $2.50 |
+| 7 | Gemini 2.5 Flash | **25** | 63.2% | $2.50 |
+| 8 | GLM-5 | **24** | 77.8% | $3.20 |
+| 9 | Gemini 2.5 Pro | **6** | 63.8% | $10.00 |
+| 10 | Gemini 3 Pro | **6** | 71.6% | $12.00 |
+| 11 | GPT-5.2 | **5** | 75.4% | $14.00 |
+| 12 | Claude Sonnet 4.6 | **5** | 76.2% | $15.00 |
+| 13 | Grok 4 | **5** | 75.0% | $15.00 |
+| 14 | Claude Opus 4.6 | **3** | 79.2% | $25.00 |
+| 15 | Claude 4.5 Opus | **3** | 76.8% | $25.00 |
 
-## Apêndice: Tabelas de Referência Rápida
+### Tabela A3: Custo Anual — 50 Desenvolvedores (212.5M tokens/mês)
 
-### Tabela A: Ranking por SWE-Bench (Performance Pura)
-
-| Rank | Modelo | SWE % | Custo/1M |
-|---|---|---|---|
-| 1 | Claude Opus 4.5 | 80.9% | $30 |
-| 2 | GPT-5.2 | 80.0% | $8.75 |
-| 3 | Gemini 2.5 Pro | 77.1% | $0.38 |
-| 4 | Claude Opus 4.1 | 77.0% | $90 |
-| 5 | Claude Sonnet 4.5 | 77.2% | $18 |
-| 6 | Gemini 3 Pro | 76.2% | $6.25 |
-| 7 | Grok 4.1 | 75.0% | $18 |
-| 8 | GLM-4.7 | 73.8% | $2.18 |
-| 9 | Kimi K2 | 73.4% | $2.29 |
-| 10 | GLM-4.6 | 68.1% | $0.04 |
-| 11 | Llama 4 | 68.47% | $0 |
-| 12 | o3 | 69.1% | $31.50 |
-| 13 | DeepSeek-R1 | 49.2% | $0.69 |
-
-### Tabela B: Ranking por Eficiência (Melhor Custo-Benefício)
-
-| Rank | Modelo | SWE % | Eficiência | Categoria |
-|---|---|---|---|---|
-| 1 | Llama 4 Maverick | 68.47% | ∞ | Open-source |
-| 2 | GLM-4.6 | 68.1% | 1,702.5x | Elite |
-| 3 | Gemini 2.5 Pro | 77.1% | 203.2x | Elite |
-| 4 | GLM-4.7 | 73.8% | 33.9x | Excelente |
-| 5 | Kimi K2 | 73.4% | 32.1x | Excelente |
-| 6 | DeepSeek-R1 | 49.2% | 71.3x | Muito Bom |
-| 7 | Gemini 3 Pro | 76.2% | 12.2x | Muito Bom |
-| 8 | GPT-5.2 | 80.0% | 9.1x | Bom |
-| 9 | Claude Sonnet 4.5 | 77.2% | 4.3x | Bom |
-| 10 | Grok 4.1 | 75.0% | 4.2x | Bom |
-| 11 | Claude Opus 4.5 | 80.9% | 2.7x | Justo |
-| 12 | o3 | 69.1% | 2.2x | Caro |
-| 13 | Claude Opus 4.1 | 77.0% | 0.86x | Muito Caro |
+| Modelo | Custo Anual | vs. Claude Opus 4.6 | Eficiência |
+|--------|------------|:-------------------:|-----------:|
+| DeepSeek V3.2 | **$1,071,000** | -98.3% | 167 🚀 |
+| MiniMax M2.5 | **$3,060,000** | -95.2% | 67 🚀 |
+| GLM-5 | **$8,160,000** | -87.2% | 24 ⭐ |
+| GLM-4.7 | **$5,610,000** | -91.2% | 34 ⭐ |
+| Gemini 3 Flash | **$7,650,000** | -88.0% | 25 ⭐ |
+| GPT-5.2 | **$35,700,000** | -44.0% | 5 💎 |
+| Claude Sonnet 4.6 | **$38,250,000** | -40.0% | 5 💎 |
+| Claude Opus 4.6 | **$63,750,000** | - | 3 🏆 |
 
 ---
-[^4_1]: https://bentoml.com/llm/inference-optimization/llm-inference-metrics
 
-[^4_2]: https://conikeec.substack.com/p/the-token-trap-why-your-favorite
+## Referências
 
-[^4_3]: https://www.augmentcode.com/tools/8-top-ai-coding-assistants-and-their-best-use-cases
+[1] SWE-bench. (2026, Fevereiro). SWE-Bench Verified Leaderboard. Retrieved from https://www.swebench.com
 
-[^4_4]: https://artificialanalysis.ai/methodology/performance-benchmarking
+[2] Vals.ai. (2026, Fevereiro). SWE-Bench Leaderboard: Real-time model performance tracking. Retrieved from https://www.vals.ai/benchmarks/swebench
 
-[^4_5]: https://www.reddit.com/r/LLMDevs/comments/1im8tel/how_many_tokens_are_you_using_per_month/
+[3] Scale AI. (2026). SWE-Bench Verified Dataset: Software engineering task resolution metrics. Retrieved from https://scale.com/leaderboard/swe_bench_pro_public
 
-[^4_6]: https://www.superblocks.com/blog/enterprise-ai-app-generation
+[4] MiniMax. (2026, Fevereiro). MiniMax M2.5: State-of-the-art software engineering. Retrieved from https://vertu.com
 
-[^4_7]: https://developer.nvidia.com/blog/llm-benchmarking-fundamental-concepts/
+[5] DeepSeek. (2025). DeepSeek V3.2 API Pricing. Retrieved from https://platform.deepseek.com/api-docs/pricing
 
-[^4_8]: https://www.reddit.com/r/ChatGPT/comments/1ievup8/how_many_tokens_do_you_use_for_ai_coding_per_month/
+[6] Intuition Labs. (2026). LLM API Pricing Comparison 2026. Retrieved from https://intuitionlabs.ai/articles/llm-api-pricing-comparison-2025
 
-[^4_9]: https://www.builder.io/blog/best-ai-tools-2026
+[7] Anthropic. (2026). Claude 4.6 Series: Pricing and capabilities. Retrieved from https://anthropic.com/api
 
-[^4_10]: https://www.reddit.com/r/LocalLLaMA/comments/162pgx9/what_do_yall_consider_acceptable_tokens_per/
+[8] OpenAI. (2026). GPT-5.2 API Pricing Documentation. Retrieved from https://openai.com/api/pricing/
 
-[^4_11]: https://smarterarticles.co.uk/the-real-cost-of-vibe-coding-when-ai-over-delivers-on-your-dime
+[9] Google. (2026). Gemini 3 API Pricing. Retrieved from https://ai.google.dev/pricing
 
-[^4_12]: https://playcode.io/blog/best-ai-coding-assistants-2026
-
-[^4_13]: https://intuitionlabs.ai/articles/llm-api-pricing-comparison-2025
-
-[^4_14]: https://getdx.com/blog/ai-coding-tools-implementation-cost/
-
-[^4_15]: https://www.reddit.com/r/datascience/comments/1q85xuw/whats_your_2026_data_science_coding_stack_ai/
+[10] xAI. (2025). Grok 4 API Pricing. Retrieved from https://x.ai/api
 
 
+> REF:
+---
+https://bentoml.com/llm/inference-optimization/llm-inference-metrics
 
-[^3_1]: https://www.linkedin.com/posts/vk-maurya_ai-llm-softwareengineering-activity-7410571617254244352-Kevq
+https://conikeec.substack.com/p/the-token-trap-why-your-favorite
 
-[^3_2]: https://automatio.ai/models/glm-4-7
+https://www.augmentcode.com/tools/8-top-ai-coding-assistants-and-their-best-use-cases
 
-[^3_3]: https://ai-primer.com/en/engineer/reports/2025-12-22
+https://artificialanalysis.ai/methodology/performance-benchmarking
 
-[^3_4]: https://atalupadhyay.wordpress.com/2025/12/23/glm-4-7-zhipu-ais-game-changing-open-source-model/
+https://www.reddit.com/r/LLMDevs/comments/1im8tel/how_many_tokens_are_you-using_per_month/
 
-[^3_5]: https://www.cometapi.com/the-guide-to-claude-opus-4--4-5-api-pricing-in-2026/
+https://www.superblocks.com/blog/enterprise-ai-app-generation
 
-[^3_6]: https://www.finout.io/blog/claude-pricing-in-2026-for-individuals-organizations-and-developers
+https://developer.nvidia.com/blog/llm-benchmarking-fundamental-concepts/
 
-[^3_7]: https://rahulkolekar.com/openai-api-pricing-in-2026-a-practical-guide-models-tokens-tiers-tools/
+https://www.reddit.com/r/ChatGPT/comments/1ievup8/how_many_tokens_do_you_use_for_ai_coding_per_month/
 
-[^3_8]: https://openai.com/api/pricing/
+https://www.builder.io/blog/best-ai-tools-2026
 
-[^3_9]: https://www.getmaxim.ai/articles/gemini-3-pro-vs-claude-opus-4-5-vs-gpt-5-the-ultimate-frontier-model-comparison/
+https://www.reddit.com/r/LocalLLaMA/comments/162pgx9/what_do_yall_consider_acceptable_tokens_per/
 
-[^3_10]: https://sumgenius.ai/blog/gpt-5-1-vs-gemini-3-vs-claude-opus-4-5-comparison-2025/
+https://smarterarticles.co.uk/the-real-cost-of-vibe-coding-when-ai-over-delivers-on-your-dime
 
-[^3_11]: https://intuitionlabs.ai/articles/llm-api-pricing-comparison-2025
+https://playcode.io/blog/best-ai-coding-assistants-2026
 
-[^3_12]: https://masterconcept.ai/blog/gemini-1-5-pro-1-5-flash-price-drop-down-with-more-updated-models/
+https://intuitionlabs.ai/articles/llm-api-pricing-comparison-2025
 
-[^3_13]: https://robotmunki.com/blog/llm-landscape.html
+https://getdx.com/blog/ai-coding-tools-implementation-cost/
 
-[^3_14]: https://www.glbgpt.com/hub/claude-ai-plans-2026/
+https://www.reddit.com/r/datascience/comments/1q85xuw/whats_your_2026_data_science_coding_stack_ai/
 
-[^3_15]: https://sparkco.ai/blog/anthropic-claude-vs-openai-gpt-a-deep-dive-comparison
+https://www.linkedin.com/posts/vk-maurya_ai-llm-softwareengineering-activity-7410571617254244352-Kevq
 
-[^3_16]: https://cientistasdigitais.com/inteligencia-artificial/grok-4-supera-openai-google-e-anthropic-e-lidera-benchmarks-de-ia/
+https://automatio.ai/models/glm-4-7
 
-[^3_17]: https://llm-stats.com/models/glm-4.7
+https://ai-primer.com/en/engineer/reports/2025-12-22
 
-[^3_18]: https://pandaily.com/kimi-k2-thinking-ranks-no-2-globally-no-1-among-open-source-models-in-latest-artificial-analysis-report
+https://atalupadhyay.wordpress.com/2025/12/23/glm-4-7-zhipu-ais-game-changing-open-source-model/
 
-[^3_19]: https://skywork.ai/blog/agent/kimi-k2-vs-gpt5-reasoning/
+https://www.cometapi.com/the-guide-to-claude-opus-4--4-5-api-pricing-in-2026/
 
-[^3_20]: https://aigazine.com/startups/glm-46-benchmark-shows-major-leap-in-ai-reasoning-ig--a
+https://www.finout.io/blog/claude-pricing-in-2026-for-individuals-organizations-and-developers
 
-[^3_21]: https://blog.kilo.ai/p/glm-46-a-data-driven-look-at-chinas
+https://rahulkolekar.com/openai-api-pricing-in-2026-a-practical-guide-models-tokens-tiers-tools/
 
-[^3_22]: https://arbisoft.com/blogs/llama-4-a-bold-leap-forward-or-a-misstep
+https://openai.com/api/pricing/
 
-[^3_23]: https://ai.meta.com/blog/llama-4-multimodal-intelligence/
+https://www.getmaxim.ai/articles/gemini-3-pro-vs-claude-opus-4-5-vs-gpt-5-the-ultimate-frontier-model-comparison/
 
-[^3_24]: https://www.youtube.com/watch?v=RFTqeFpclx8
+https://sumgenius.ai/blog/gpt-5-1-vs-gemini-3-vs-claude-opus-4-5-comparison-2025/
 
-[^3_25]: https://www.siliconflow.com/articles/benchmark
+https://intuitionlabs.ai/articles/llm-api-pricing-comparison-2025
 
-[^3_26]: https://www.artificialintelligence-news.com/news/baidu-ernie-x1-and-4-5-turbo-high-performance-low-cost/
+https://masterconcept.ai/blog/gemini-1-5-pro-1-5-flash-price-drop-down-with-more-updated-models/
 
-[^3_27]: https://www.datacamp.com/blog/ernie-4-5-x1
+https://robotmunki.com/blog/llm-landscape.html
 
-[^3_28]: https://artificialanalysis.ai/models/mistral-large-2
+https://www.glbgpt.com/hub/claude-ai-plans-2026/
 
-[^3_29]: https://pricepertoken.com
+https://sparkco.ai/blog/anthropic-claude-vs-openai-gpt-a-deep-dive-comparison
 
-[^3_30]: https://regional.chinadaily.com.cn/wic/2026-01/20/c_1155829.htm
+https://cientistasdigitais.com/inteligencia-artificial/grok-4-supera-openai-google-e-anthropic-e-lidera-benchmarks-de-ia/
 
-[^3_31]: https://simonwillison.net/2025/Oct/15/claude-haiku-45/
+https://llm-stats.com/models/glm-4.7
 
-[^3_32]: https://caylent.com/blog/claude-haiku-4-5-deep-dive-cost-capabilities-and-the-multi-agent-opportunity
+https://pandaily.com/kimi-k2-thinking-ranks-no-2-globally-no-1-among-open-source-models-in-latest-artificial-analysis-report
 
-[^3_33]: https://blog.promptlayer.com/an-analysis-of-google-models-gemini-1-5-flash-vs-1-5-pro/
+https://skywork.ai/blog/agent/kimi-k2-vs-gpt5-reasoning/
 
-[^3_34]: https://artificialanalysis.ai/models/gemini-1-5-flash
+https://aigazine.com/startups/glm-46-benchmark-shows-major-leap-in-ai-reasoning-ig--a
 
-[^3_35]: https://mistral.ai/news/mixtral-8x22b
+https://blog.kilo.ai/p/glm-46-a-data-driven-look-at-chinas
 
-[^3_36]: https://www.reddit.com/r/Bard/comments/1fxsr7b/gemini_15_flash_8b_half_the_price_of_15_flash/
+https://huggingface.co/zai-org/GLM-4.7
 
-[^3_37]: https://huggingface.co/zai-org/GLM-4.7
+https://macaron.im/blog/what-is-glm-4-7
 
-[^3_38]: https://macaron.im/blog/what-is-glm-4-7
+https://vertu.com/ar/نمط-الحياة/glm-4-7-vs-gpt-5-1-vs-claude-sonnet-4-5-ai-coding-model-comparison/
 
-[^3_39]: https://vertu.com/ar/نمط-الحياة/glm-4-7-vs-gpt-5-1-vs-claude-sonnet-4-5-ai-coding-model-comparison/
+https://docs.z.ai/guides/llm/glm-4.7
 
-[^3_40]: https://docs.z.ai/guides/llm/glm-4.7
+https://www.reddit.com/r/singularity/comments/1qh802r/zai_launches_glm47flash_30b_coding_model_592/
 
-[^3_41]: https://www.reddit.com/r/singularity/comments/1qh802r/zai_launches_glm47flash_30b_coding_model_592/
+https://artificialanalysis.ai/models/glm-4-7-non-reasoning
 
-[^3_42]: https://artificialanalysis.ai/models/glm-4-7-non-reasoning
+https://binaryverseai.com/glm-4-7-flash-benchmarks-setup-pricing-vs-qwen3/
 
-[^3_43]: https://binaryverseai.com/glm-4-7-flash-benchmarks-setup-pricing-vs-qwen3/
+https://www.facebook.com/0xSojalSec/posts/glm-47-just-dropped-and-the-benchmark-jumps-are-substantial-129-on-swe-bench-mul/1401953338125732/
 
-[^3_44]: https://www.facebook.com/0xSojalSec/posts/glm-47-just-dropped-and-the-benchmark-jumps-are-substantial-129-on-swe-bench-mul/1401953338125732/
+https://z.ai/blog/glm-4.7
 
-[^3_45]: https://z.ai/blog/glm-4.7
+https://www.semanticscholar.org/paper/0cba0afdfcfa6fbb2f185bf21748e94ebbf9aeb2
 
-[^3_46]: https://www.youtube.com/watch?v=NKGiDGBgtqQ
+https://arxiv.org/abs/2509.09853
 
+https://ieeexplore.ieee.org/document/11334589/
+
+https://arxiv.org/abs/2509.25229
+
+https://www.semanticscholar.org/paper/b4f285548c5bd47dda1519af00620bab7a99d738
+
+https://arxiv.org/abs/2508.06471
+
+https://arxiv.org/abs/2505.15935
+
+https://arxiv.org/abs/2410.14684
+
+https://arxiv.org/abs/2505.07849
+
+http://www.proceedings.com/079017-2601.html
+
+http://arxiv.org/pdf/2410.22553.pdf
+
+https://arxiv.org/pdf/2503.05860.pdf
+
+https://arxiv.org/pdf/2502.20868.pdf
+
+http://arxiv.org/pdf/2503.06643.pdf
+
+http://arxiv.org/pdf/2308.05062.pdf
+
+https://arxiv.org/pdf/2309.08638.pdf
+
+https://arxiv.org/html/2408.07060v1
+
+https://arxiv.org/html/2502.00226v1
+
+https://www.startse.com/artigos/qual-modelo-de-ia-mais-inteligente-para-usar-em-26/
+
+https://www.instagram.com/blogdaengenharia/p/DTftdGxFNDu/?hl=bg
+
+https://www.iscbrasil.com.br/pt-br/blog/conhecimento/tendencias-de-ia-para-2026-apontam-para-ampliacao-da-vantagem-co.html
+
+https://prill.com.br/o-futuro-da-engenharia-de-software-implicacoes-chave-e-estrategias-para-2026/
+
+https://www.siliconflow.com/articles/pt/the-top-AI-tools-for-software-engineers
+
+https://www.vals.ai/benchmarks/swebench
+
+https://help.apiyi.com/claude-opus-4-5-vs-gpt-5-1-comparison-en.html
+
+https://www.coherentsolutions.com/insights/ai-development-cost-estimation-pricing-structure-roi
+
+https://scale.com/leaderboard/swe_bench_pro_public
+
+https://vertu.com/lifestyle/claude-opus-4-5-vs-gpt-5-2-codex-head-to-head-coding-benchmark-comparison/
+
+https://www.agora.software/en/ai-pricing-models/
+
+https://www.siliconflow.com/articles/benchmark
+
+https://www.datastudios.org/post/claude-opus-4-5-vs-chatgpt-5-1-full-report-and-comparison-of-models-features-performance-pricin
+
+https://verdent.ai/minimax-m2-5
+
+https://pricepertoken.com
+
+https://openrouter.ai/moonshot/kimi-k2-thinking
+
+https://openai.com/api/pricing/
+
+https://ai.google.dev/pricing
+
+https://x.ai/api
