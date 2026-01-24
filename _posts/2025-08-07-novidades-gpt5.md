@@ -3,7 +3,7 @@ layout: post
 title: "Novidades do GPT-5"
 author: "Davi"
 categories: blog
-tags: [blog,tech]
+tags: [blog,ai]
 image: gpt5.jpg
 ---
 

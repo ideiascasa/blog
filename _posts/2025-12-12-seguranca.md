@@ -3,7 +3,7 @@ layout: post
 title: "Violações da LGPD e Proteção de Dados no Mundo: O Desafio Global da IA"
 author: "Davi"
 categories: blog
-tags: [blog,tech]
+tags: [blog,sec]
 image: secperson.jpg
 ---
 

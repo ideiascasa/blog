@@ -3,7 +3,7 @@ layout: post
 title: "Jules + Render - Fluxo Completo Automatizado"
 author: "Davi"
 categories: blog
-tags: [blog,tech]
+tags: [blog,analise,sample]
 image: codes-computer.jpg
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Ferramentas SAST"
 author: "Davi"
 categories: blog
-tags: [blog,tech]
+tags: [blog,sec]
 image: spools.jpg
 ---
 

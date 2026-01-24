@@ -3,7 +3,7 @@ layout: post
 title: "Criando Apps Desktop Ultra-Leves com Deno: Adeus Electron, Olá Performance"
 author: "Davi"
 categories: blog
-tags: [blog,tech]
+tags: [blog,sample]
 image: codes-computer.jpg
 ---
 

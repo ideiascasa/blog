@@ -3,7 +3,7 @@ layout: post
 title: "Multiplataforma com Neutralino"
 author: "Davi"
 categories: blog
-tags: [blog,tech]
+tags: [blog,sample]
 image: neutra.png
 ---
 

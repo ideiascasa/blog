@@ -3,7 +3,7 @@ layout: post
 title: "Protocolo de Agentes Coral"
 author: "Davi"
 categories: blog
-tags: [blog,tech]
+tags: [blog,analise,ai]
 image: multiai.png
 ---
 

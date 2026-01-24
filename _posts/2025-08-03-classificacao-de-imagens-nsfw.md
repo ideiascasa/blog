@@ -3,7 +3,7 @@ layout: post
 title: "Classificação de Imagens NSFW"
 author: "Davi"
 categories: blog
-tags: [blog,tech]
+tags: [blog,sample]
 image: protec-smartphones.jpg
 ---
 

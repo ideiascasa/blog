@@ -3,7 +3,7 @@ layout: post
 title: "OpenCode, Speckit e IA Multi-Agentes: Guia Completo de Workflow CI/CD"
 author: "Davi"
 categories: blog
-tags: [blog,tech]
+tags: [blog,sample]
 image: industry-coding.webp
 ---
 
