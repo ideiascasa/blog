@@ -5,10 +5,9 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1600px;
   width: 100%;
-  padding-left: clamp(20px, 4vw, 50px);
-  padding-right: clamp(20px, 4vw, 50px);
+  padding-left: clamp(20px, 5vw, 100px);
+  padding-right: clamp(20px, 5vw, 100px);
   box-sizing: border-box;
 }
 
