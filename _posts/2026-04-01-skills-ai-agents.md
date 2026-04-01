@@ -136,7 +136,7 @@ HHH000104: firstResult/maxResults specified with collection fetch; applying in m
 
 Isso essencialmente significa que o Hibernate carregará todas as entidades na memória e depois aplicará a paginação. Isso resultará em baixo desempenho e até exceções `OutOfMemory` se houver um grande número de linhas na tabela `posts`.
 
-<video src="/assets/img/skills-ai-junie-without.webm" width="500" height="500" autoplay loop muted playsinline></video>
+<video src="/assets/img/skills-ai-junie-without.webm" width="740" autoplay loop muted playsinline></video>
 
 Uma skill de Spring Data JPA previne ambos os problemas fornecendo ao agente diretrizes explícitas e um exemplo de código funcional.
 
@@ -250,7 +250,7 @@ public class PostService {
 }
 ```
 
-<video src="/assets/img/skills-ai-claude-demo.webm" width="500" height="500" autoplay loop muted playsinline></video>
+<video src="/assets/img/skills-ai-claude-demo.webm" width="740" autoplay loop muted playsinline></video>
 
 Com esta implementação, apenas os IDs dos Posts da página desejada serão carregados primeiro, e depois uma lista de posts junto com seus comentários será buscada em uma consulta separada. Isso corrigirá o problema de paginação em memória.
 
@@ -262,7 +262,7 @@ Você pode usar o agente [JetBrains Junie](https://junie.jetbrains.com/) para ge
 
 O agente Junie carregou a skill `spring-data-jpa` com base na tarefa fornecida e aplicou as diretrizes. Você também pode observar que o Junie executa automaticamente os testes relevantes para verificar se o código gerado está funcionando ou não e itera até que os testes sejam aprovados.
 
-<video src="/assets/img/skills-ai-junie-with.webm" width="500" height="500" autoplay loop muted playsinline></video>
+<video src="/assets/img/skills-ai-junie-with.webm" width="740" autoplay loop muted playsinline></video>
 
 No repositório de exemplo [https://github.com/sivaprasadreddy/agent-skills-demo](https://github.com/sivaprasadreddy/agent-skills-demo), você pode encontrar as seguintes branches para experimentar a Agent Skill `spring-data-jpa`:
 
