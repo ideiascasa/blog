@@ -14,7 +14,7 @@ Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding
 `eficiencia = coding^α / preço^β`
 
 ```text
-com α = {{ site.data.leaderboard.coding_alpha }} e β = {{ site.data.leaderboard.price_beta }} (razão α/β ≈ 14.5). A calibração faz com que +3 pontos de coding equivalam a cerca de +$0.50 de preço — assim um modelo como Luna (71 @ $0.70) fica acima de Gemini (76 @ $2.25).
+com α = {{ site.data.leaderboard.coding_alpha }} e β = {{ site.data.leaderboard.price_beta }} (razão α/β ≈ 14.5). A calibração faz com que +3 pontos de coding equivalam a cerca de +$0.50 de preço.
 ```
 
 - **Coding**: índice de coding da Artificial Analysis via OpenRouter.
