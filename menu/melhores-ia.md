@@ -7,7 +7,6 @@ permalink: /melhores-ia
 Ranking de modelos de IA para coding (Artificial Analysis via OpenRouter), ordenado por Coding Index.
 
 Atualizado em: {{ site.data.leaderboard.updated_at }}
-{% if site.data.leaderboard.as_of %} · Dados em: {{ site.data.leaderboard.as_of }}{% endif %}
 {% if site.data.leaderboard.source_url %} · [Fonte]({{ site.data.leaderboard.source_url }}){% endif %}
 
 <table>

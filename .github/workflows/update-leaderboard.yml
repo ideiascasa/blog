@@ -3,6 +3,7 @@ name: Atualizar Leaderboard
 on:
   schedule:
     - cron: '0 15 * * *'
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 jobs:
@@ -17,8 +18,6 @@ jobs:
 
       - name: Configurar Python
         uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
 
       - name: Instalar dependências
         run: pip install pyyaml requests
