@@ -7,7 +7,18 @@ permalink: /melhores-ia
 Aqui listamos as melhores IAs para código, ranqueadas por critérios internos como eficiência e custo — priorizando modelos com bom desempenho em coding e melhor relação preço por ponto de capacidade.
 
 Atualizado em: {{ site.data.leaderboard.updated_at }}
-- [Fonte]({{ site.data.leaderboard.source_url }}){% endif %}
+- [Fonte]({{ site.data.leaderboard.source_url }})
+
+Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding_index }}. O ranking usa a **eficiência**:
+
+`eficiencia = coding^α / preço^β`
+
+com α = {{ site.data.leaderboard.coding_alpha }} e β = {{ site.data.leaderboard.price_beta }} (razão α/β ≈ 14.5). A calibração faz com que +3 pontos de coding equivalam a cerca de +$0.50 de preço — assim um modelo como Luna (71 @ $0.70) fica acima de Gemini (76 @ $2.25).
+
+- **Coding**: índice de coding da Artificial Analysis via OpenRouter.
+- **Preço**: soma de input + output por milhão de tokens.
+- **Gasto**: preço dividido pelo índice de coding.
+- **Eficiência**: a fórmula acima; maior valor = melhor posição.
 
 <table>
   <thead>
