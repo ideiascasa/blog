@@ -4,10 +4,10 @@ title: Melhores IA
 permalink: /melhores-ia
 ---
 
-Ranking de modelos de IA para coding (Artificial Analysis via OpenRouter), ordenado por Coding Index.
+Aqui listamos as melhores IAs para código, ranqueadas por critérios internos como eficiência e custo — priorizando modelos com bom desempenho em coding e melhor relação preço por ponto de capacidade.
 
 Atualizado em: {{ site.data.leaderboard.updated_at }}
-{% if site.data.leaderboard.source_url %} · [Fonte]({{ site.data.leaderboard.source_url }}){% endif %}
+- [Fonte]({{ site.data.leaderboard.source_url }}){% endif %}
 
 <table>
   <thead>
@@ -15,11 +15,10 @@ Atualizado em: {{ site.data.leaderboard.updated_at }}
       <th>Rank</th>
       <th>Modelo</th>
       <th>Slug</th>
-      <th>Coding Index</th>
-      <th>Intelligence</th>
-      <th>Agentic</th>
-      <th>Input/1M</th>
-      <th>Output/1M</th>
+      <th>Coding</th>
+      <th>Preço</th>
+      <th>Gasto</th>
+      <th>Eficiencia</th>
     </tr>
   </thead>
   <tbody>
@@ -29,10 +28,9 @@ Atualizado em: {{ site.data.leaderboard.updated_at }}
       <td>{{ item.model }}</td>
       <td><code>{{ item.model_id }}</code></td>
       <td>{{ item.coding_index }}</td>
-      <td>{% if item.intelligence_index %}{{ item.intelligence_index }}{% else %}—{% endif %}</td>
-      <td>{% if item.agentic_index %}{{ item.agentic_index }}{% else %}—{% endif %}</td>
-      <td>{% if item.price_input %}${{ item.price_input }}{% else %}—{% endif %}</td>
-      <td>{% if item.price_output %}${{ item.price_output }}{% else %}—{% endif %}</td>
+      <td>{% if item.price %}${{ item.price }}{% else %}—{% endif %}</td>
+      <td>{{ item.gasto_por_coding }}</td>
+      <td>{{ item.eficiencia }}</td>
     </tr>
     {% endfor %}
   </tbody>

@@ -6,3 +6,6 @@ Gemfile.lock
 .DS_Store
 .jekyll-cache
 .idea/
+teste.md
+openrouter-response.json
+openrouter-display-names.txt
