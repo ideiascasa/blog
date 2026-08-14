@@ -26,11 +26,9 @@ PARAMS = {
     "task_type": "coding",
 }
 MIN_CODING_INDEX = 40.0
-# eficiencia = coding^α / price^β
-# Calibrado para: +3 pontos de coding ≈ +$0.50 de preço
-# (razão α/β ≈ 14.5). Mantém Luna (71@$0.70) acima de Gemini (76@$2.25).
-PRICE_BETA = 0.11
-CODING_ALPHA = 1.6
+# eficiencia = coding - POINTS_PER_DOLLAR * price
+# +$1.00 de preço ⇔ +5 pontos de coding. Empate: menor gasto (price/coding).
+POINTS_PER_DOLLAR = 5
 
 
 def _require_api_key() -> str:
@@ -53,25 +51,31 @@ def _price_per_million(value: Any) -> float | None:
 def _sum_price(price_input: float | None, price_output: float | None) -> float | None:
     if price_input is None and price_output is None:
         return None
-    return round((price_input or 0.0) + (price_output or 0.0), 2)
+    return round((price_input or 0.0) + (price_output or 0.0), 3)
 
 
 def _fmt_index(value: Any) -> str:
     if value is None or value == "":
         return "—"
-    return str(int(round(float(value))))
+    return f"{float(value):.1f}"
 
 
 def _fmt_price(value: Any) -> str:
     if value is None or value == "":
         return "—"
-    return f"${float(value):.2f}"
+    return f"${float(value):.3f}"
 
 
 def _fmt_gasto(value: Any) -> str:
     if value is None or value == "":
         return "—"
-    return f"{float(value):.2f}"
+    return f"{float(value):.3f}"
+
+
+def _fmt_eficiencia(value: Any) -> str:
+    if value is None or value == "":
+        return "—"
+    return f"{float(value):.3f}"
 
 
 def fetch_benchmarks(api_key: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
@@ -107,26 +111,28 @@ def to_items(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
         price = _sum_price(price_input, price_output)
         if price is None or price <= 0:
             continue
-        coding_index = round(float(row["coding_index"]))
+        coding_index = round(float(row["coding_index"]), 1)
         if coding_index <= 0:
             continue
-        gasto = round(price / coding_index, 2)
-        eficiencia = round(coding_index**CODING_ALPHA / price**PRICE_BETA)
+        gasto = round(price / coding_index, 3)
+        eficiencia = round(coding_index - POINTS_PER_DOLLAR * price, 3)
         items.append(
             {
                 "rank": 0,
                 "model": row.get("display_name") or slug,
                 "model_id": slug,
-                "coding_index": coding_index,
-                "price": f"{price:.2f}",
-                "gasto_por_coding": f"{gasto:.2f}",
-                "eficiencia": eficiencia,
+                "coding_index": f"{coding_index:.1f}",
+                "price": f"{price:.3f}",
+                "gasto_por_coding": f"{gasto:.3f}",
+                "eficiencia": f"{eficiencia:.3f}",
             }
         )
 
     items.sort(
-        key=lambda item: (item["eficiencia"], item["coding_index"]),
-        reverse=True,
+        key=lambda item: (
+            -float(item["eficiencia"]),
+            float(item["gasto_por_coding"]),
+        ),
     )
     for rank, item in enumerate(items, start=1):
         item["rank"] = rank
@@ -141,7 +147,7 @@ def write_preview(payload: dict[str, Any]) -> None:
         f"as_of: {payload.get('as_of')}",
         f"source: {payload.get('source')} / {payload.get('task_type')}",
         f"filtro: coding_index >= {MIN_CODING_INDEX}",
-        f"eficiencia: coding^{CODING_ALPHA} / price^{PRICE_BETA}",
+        f"eficiencia: coding - {POINTS_PER_DOLLAR} * price (empate: menor gasto)",
         "",
         "| Rank | Modelo | Slug | Coding Index | Price | Gasto por Coding | Eficiencia |",
         "| ---: | --- | --- | ---: | ---: | ---: | ---: |",
@@ -155,7 +161,7 @@ def write_preview(payload: dict[str, Any]) -> None:
                 coding=_fmt_index(item.get("coding_index")),
                 price=_fmt_price(item.get("price")),
                 gasto=_fmt_gasto(item.get("gasto_por_coding")),
-                eficiencia=item.get("eficiencia"),
+                eficiencia=_fmt_eficiencia(item.get("eficiencia")),
             )
         )
     PREVIEW.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -172,8 +178,7 @@ def main() -> None:
         "source": "artificial-analysis",
         "task_type": "coding",
         "min_coding_index": MIN_CODING_INDEX,
-        "price_beta": PRICE_BETA,
-        "coding_alpha": CODING_ALPHA,
+        "points_per_dollar": POINTS_PER_DOLLAR,
         "as_of": meta.get("as_of"),
         "citation": meta.get("citation"),
         "source_url": meta.get("source_url") or "https://openrouter.ai/rankings",

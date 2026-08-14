@@ -11,15 +11,15 @@ Atualizado em: {{ site.data.leaderboard.updated_at }}
 
 Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding_index }}. O ranking usa a **eficiência**:
 
-`eficiencia = coding^α / preço^β`
+`eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço`
 
 ```text
-com α = {{ site.data.leaderboard.coding_alpha }} e β = {{ site.data.leaderboard.price_beta }} (razão α/β ≈ 14.5). A calibração faz com que +3 pontos de coding equivalam a cerca de +$0.50 de preço.
++$1.00 de preço vale +{{ site.data.leaderboard.points_per_dollar }} pontos de coding. Em caso de empate no score, vence o menor gasto (preço / coding).
 ```
 
 - **Coding**: índice de coding da Artificial Analysis via OpenRouter.
 - **Preço**: soma de input + output por milhão de tokens.
-- **Gasto**: preço dividido pelo índice de coding.
+- **Gasto**: preço dividido pelo índice de coding (desempate; menor = melhor).
 - **Eficiência**: a fórmula acima; maior valor = melhor posição.
 
 <table>
