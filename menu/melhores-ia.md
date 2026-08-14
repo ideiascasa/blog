@@ -8,6 +8,7 @@ Aqui listamos as melhores IAs para código, ranqueadas por critérios internos c
 
 Atualizado em: {{ site.data.leaderboard.updated_at }}
 - [Fonte]({{ site.data.leaderboard.source_url }})
+- [Fonte](https://openrouter.ai/benchmarks)
 
 Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding_index }}. O ranking usa a **eficiência**:
 
