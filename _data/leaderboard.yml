@@ -1,113 +1,907 @@
-updated_at: 'America/Sao Paulo - 15:05'
+updated_at: America/Sao Paulo - 14:12
 source: artificial-analysis
 task_type: coding
-source_url: https://openrouter.ai/rankings
+as_of: '2026-08-14T00:00:32.218Z'
+citation: 'Source: Artificial Analysis (artificialanalysis.ai) via OpenRouter (openrouter.ai/rankings).'
+source_url: https://artificialanalysis.ai
 items:
 - rank: 1
-  model: MiniMax M2.5
-  creator: minimax
-  model_id: minimax/minimax-m2.5
-  coding_index: 80.2
-  intelligence_index: null
-  agentic_index: null
-  price_input: 0.15
-  price_output: 1.2
+  model: GPT-5.6 Sol (xhigh)
+  creator: openai
+  model_id: openai/gpt-5.6-sol-20260709
+  coding_index: 78.3
+  intelligence_index: 59
+  agentic_index: 53.6
+  price_input: 2.5
+  price_output: 15.0
 - rank: 2
-  model: Claude Opus 4.6 (Thinking)
+  model: Claude Opus 5 (Adaptive Reasoning, Max Effort)
   creator: anthropic
-  model_id: anthropic/claude-opus-4.6
-  coding_index: 79.2
-  intelligence_index: null
-  agentic_index: null
+  model_id: anthropic/claude-opus-5-20260723
+  coding_index: 78.0
+  intelligence_index: 63.1
+  agentic_index: 59.2
   price_input: 5.0
   price_output: 25.0
 - rank: 3
-  model: GLM-5
+  model: Grok 4.6 (high)
+  creator: x-ai
+  model_id: x-ai/grok-4.6-20260810
+  coding_index: 76.8
+  intelligence_index: 60.9
+  agentic_index: 58.7
+  price_input: 2.0
+  price_output: 6.0
+- rank: 4
+  model: GPT-5.6 Terra (max)
+  creator: openai
+  model_id: openai/gpt-5.6-terra-20260709
+  coding_index: 76.7
+  intelligence_index: 56.6
+  agentic_index: 50.2
+  price_input: 1.0
+  price_output: 6.0
+- rank: 5
+  model: Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)
+  creator: anthropic
+  model_id: anthropic/claude-5-fable-20260609
+  coding_index: 76.5
+  intelligence_index: 62.1
+  agentic_index: 56.6
+  price_input: 10.0
+  price_output: 50.0
+- rank: 6
+  model: Kimi K3 (max)
+  creator: moonshotai
+  model_id: moonshotai/kimi-k3-20260715
+  coding_index: 76.2
+  intelligence_index: 59.7
+  agentic_index: 54.3
+  price_input: 2.85
+  price_output: 14.25
+- rank: 7
+  model: Gemini 3.7 Flash (high)
+  creator: google
+  model_id: google/gemini-3.7-flash-20260813
+  coding_index: 76.1
+  intelligence_index: 56
+  agentic_index: 45.1
+  price_input: 0.375
+  price_output: 1.875
+- rank: 8
+  model: GPT-5.5 (xhigh)
+  creator: openai
+  model_id: openai/gpt-5.5-20260423
+  coding_index: 74.9
+  intelligence_index: 56.3
+  agentic_index: 47.4
+  price_input: 2.5
+  price_output: 15.0
+- rank: 9
+  model: Claude Opus 4.8 (Adaptive Reasoning, Max Effort)
+  creator: anthropic
+  model_id: anthropic/claude-4.8-opus-20260528
+  coding_index: 74.3
+  intelligence_index: 57.3
+  agentic_index: 49.4
+  price_input: 5.0
+  price_output: 25.0
+- rank: 10
+  model: Claude Opus 4.7 (Adaptive Reasoning, Max Effort)
+  creator: anthropic
+  model_id: anthropic/claude-4.7-opus-20260416
+  coding_index: 73.6
+  intelligence_index: 55
+  agentic_index: 46.3
+  price_input: 5.0
+  price_output: 25.0
+- rank: 11
+  model: Grok 4.5 (high)
+  creator: x-ai
+  model_id: x-ai/grok-4.5-20260708
+  coding_index: 72.4
+  intelligence_index: 55.8
+  agentic_index: 48.9
+  price_input: 2.0
+  price_output: 6.0
+- rank: 12
+  model: Qwen3.8 Max
+  creator: qwen
+  model_id: qwen/qwen3.8-max-20260803
+  coding_index: 71.8
+  intelligence_index: 58.1
+  agentic_index: 58.4
+  price_input: 2.0
+  price_output: 6.0
+- rank: 13
+  model: Claude Sonnet 5 (Adaptive Reasoning, Max Effort)
+  creator: anthropic
+  model_id: anthropic/claude-sonnet-5-20260630
+  coding_index: 71.5
+  intelligence_index: 55.3
+  agentic_index: 49.7
+  price_input: 2.0
+  price_output: 10.0
+- rank: 14
+  model: GPT-5.6 Luna (max)
+  creator: openai
+  model_id: openai/gpt-5.6-luna-20260709
+  coding_index: 71.4
+  intelligence_index: 52.3
+  agentic_index: 46.9
+  price_input: 0.1
+  price_output: 0.6
+- rank: 15
+  model: Muse Spark 1.1 (xhigh)
+  creator: meta
+  model_id: meta/muse-spark-1.1-20260709
+  coding_index: 71.3
+  intelligence_index: 53.2
+  agentic_index: 39.7
+  price_input: 1.25
+  price_output: 4.25
+- rank: 16
+  model: GPT-5.4 (xhigh)
+  creator: openai
+  model_id: openai/gpt-5.4-20260305
+  coding_index: 71.1
+  intelligence_index: 53.1
+  agentic_index: 44.2
+  price_input: 2.5
+  price_output: 15.0
+- rank: 17
+  model: Gemini 3.5 Flash (high)
+  creator: google
+  model_id: google/gemini-3.5-flash-20260519
+  coding_index: 70.1
+  intelligence_index: 52
+  agentic_index: 39.7
+  price_input: 1.5
+  price_output: 9.0
+- rank: 18
+  model: Gemini 3.6 Flash (high)
+  creator: google
+  model_id: google/gemini-3.6-flash-20260721
+  coding_index: 69.2
+  intelligence_index: 51.6
+  agentic_index: 40.5
+  price_input: 0.75
+  price_output: 3.75
+- rank: 19
+  model: DeepSeek V4 Flash 0731 (Reasoning, Max Effort)
+  creator: deepseek
+  model_id: deepseek/deepseek-v4-flash-20260731
+  coding_index: 69.1
+  intelligence_index: 51.8
+  agentic_index: 48.4
+  price_input: 0.2
+  price_output: 0.4
+- rank: 20
+  model: GLM-5.2 (max)
   creator: z-ai
-  model_id: z-ai/glm-5
-  coding_index: 77.8
+  model_id: z-ai/glm-5.2-20260616
+  coding_index: 68.8
+  intelligence_index: 52.6
+  agentic_index: 45.7
+  price_input: 1.4
+  price_output: 4.4
+- rank: 21
+  model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
+  creator: deepseek
+  model_id: deepseek/deepseek-v4-pro-20260813
+  coding_index: 68.8
+  intelligence_index: 53.2
+  agentic_index: 49.6
+  price_input: 1.32
+  price_output: 3.96
+- rank: 22
+  model: Gemini 3.1 Pro Preview
+  creator: google
+  model_id: google/gemini-3.1-pro-preview-20260219
+  coding_index: 68.8
+  intelligence_index: 47.7
+  agentic_index: 23
+  price_input: 2.0
+  price_output: 12.0
+- rank: 23
+  model: Qwen3.7 Max
+  creator: qwen
+  model_id: qwen/qwen3.7-max-20260520
+  coding_index: 66.0
+  intelligence_index: 46.7
+  agentic_index: 30.9
+  price_input: 1.475
+  price_output: 4.425
+- rank: 24
+  model: Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)
+  creator: anthropic
+  model_id: anthropic/claude-4.6-sonnet-20260217
+  coding_index: 63.0
+  intelligence_index: 48.4
+  agentic_index: 42.1
+  price_input: 3.0
+  price_output: 15.0
+- rank: 25
+  model: Kimi K2.6
+  creator: moonshotai
+  model_id: moonshotai/kimi-k2.6-20260420
+  coding_index: 61.8
+  intelligence_index: 45.1
+  agentic_index: 31.2
+  price_input: 0.95
+  price_output: 4.0
+- rank: 26
+  model: Kimi K2.7 Code
+  creator: moonshotai
+  model_id: moonshotai/kimi-k2.7-code-20260612
+  coding_index: 60.8
+  intelligence_index: 43
+  agentic_index: 30.3
+  price_input: 0.95
+  price_output: 4.0
+- rank: 27
+  model: MiMo-V2.5-Pro
+  creator: xiaomi
+  model_id: xiaomi/mimo-v2.5-pro-20260422
+  coding_index: 60.2
+  intelligence_index: 42.9
+  agentic_index: 29.5
+  price_input: 0.435
+  price_output: 0.87
+- rank: 28
+  model: KAT Coder Pro V2
+  creator: kwaipilot
+  model_id: kwaipilot/kat-coder-pro-v2-20260327
+  coding_index: 59.5
+  intelligence_index: null
+  agentic_index: null
+  price_input: 0.3
+  price_output: 1.2
+- rank: 29
+  model: Nex-N2-Pro
+  creator: nex-agi
+  model_id: nex-agi/nex-n2-pro
+  coding_index: 59.1
+  intelligence_index: null
+  agentic_index: null
+  price_input: 0.25
+  price_output: 1.0
+- rank: 30
+  model: Hy3
+  creator: tencent
+  model_id: tencent/hy3-preview-20260421
+  coding_index: 58.8
+  intelligence_index: 42.2
+  agentic_index: 31.4
+  price_input: 0.063
+  price_output: 0.21
+- rank: 31
+  model: MiniMax-M3
+  creator: minimax
+  model_id: minimax/minimax-m3-20260531
+  coding_index: 58.6
+  intelligence_index: 45.4
+  agentic_index: 36.1
+  price_input: 0.3
+  price_output: 1.2
+- rank: 32
+  model: MiMo-V2.5
+  creator: xiaomi
+  model_id: xiaomi/mimo-v2.5-20260422
+  coding_index: 56.8
+  intelligence_index: 38
+  agentic_index: 24.4
+  price_input: 0.4
+  price_output: 2.0
+- rank: 33
+  model: GPT-5.4 nano (xhigh)
+  creator: openai
+  model_id: openai/gpt-5.4-nano-20260317
+  coding_index: 56.1
+  intelligence_index: 39.7
+  agentic_index: 29.7
+  price_input: 0.1
+  price_output: 0.625
+- rank: 34
+  model: GPT-5.4 mini (xhigh)
+  creator: openai
+  model_id: openai/gpt-5.4-mini-20260317
+  coding_index: 56.1
+  intelligence_index: 40.9
+  agentic_index: 31.5
+  price_input: 0.375
+  price_output: 2.25
+- rank: 35
+  model: Qwen3.7 Plus
+  creator: qwen
+  model_id: qwen/qwen3.7-plus-20260602
+  coding_index: 55.9
+  intelligence_index: 39.4
+  agentic_index: 20.7
+  price_input: 0.32
+  price_output: 1.28
+- rank: 36
+  model: GLM-5.1 (Reasoning)
+  creator: z-ai
+  model_id: z-ai/glm-5.1-20260406
+  coding_index: 55.8
+  intelligence_index: 41
+  agentic_index: 30.6
+  price_input: 1.38
+  price_output: 4.4
+- rank: 37
+  model: Qwen3.6 Plus
+  creator: qwen
+  model_id: qwen/qwen3.6-plus-04-02
+  coding_index: 54.5
+  intelligence_index: 40.5
+  agentic_index: 29
+  price_input: 0.325
+  price_output: 1.95
+- rank: 38
+  model: Qwen3.6 27B (Reasoning)
+  creator: qwen
+  model_id: qwen/qwen3.6-27b-20260422
+  coding_index: 53.7
+  intelligence_index: 37.7
+  agentic_index: 27.5
+  price_input: 0.3
+  price_output: 3.2
+- rank: 39
+  model: Inkling Small
+  creator: thinkingmachines
+  model_id: thinkingmachines/inkling-small-20260730
+  coding_index: 52.9
+  intelligence_index: 41.2
+  agentic_index: 31.9
+  price_input: 0.5
+  price_output: 1.2
+- rank: 40
+  model: Solar Pro 4
+  creator: upstage
+  model_id: upstage/solar-pro4-20260810
+  coding_index: 52.7
+  intelligence_index: 41.6
+  agentic_index: 33.6
+  price_input: 0.03
+  price_output: 0.12
+- rank: 41
+  model: MiniMax-M2.7
+  creator: minimax
+  model_id: minimax/minimax-m2.7-20260318
+  coding_index: 52.6
+  intelligence_index: 38.9
+  agentic_index: 25.9
+  price_input: 0.27
+  price_output: 1.08
+- rank: 42
+  model: Inkling (xhigh)
+  creator: thinkingmachines
+  model_id: thinkingmachines/inkling-20260715
+  coding_index: 52.1
+  intelligence_index: 42.3
+  agentic_index: 34.1
+  price_input: 0.95
+  price_output: 4.05
+- rank: 43
+  model: Claude 4.5 Sonnet (Reasoning)
+  creator: anthropic
+  model_id: anthropic/claude-4.5-sonnet-20250929
+  coding_index: 52.1
+  intelligence_index: 37.4
+  agentic_index: 26.4
+  price_input: 3.3
+  price_output: 16.5
+- rank: 44
+  model: Grok Build 0.1 0616
+  creator: x-ai
+  model_id: x-ai/grok-build-0.1-20260520
+  coding_index: 51.5
+  intelligence_index: 40.7
+  agentic_index: 28.9
+  price_input: 1.0
+  price_output: 2.0
+- rank: 45
+  model: Ling-3.0-flash
+  creator: inclusionai
+  model_id: inclusionai/ling-3.0-flash-20260723
+  coding_index: 50.6
+  intelligence_index: 37.8
+  agentic_index: 29.3
+  price_input: 0.06
+  price_output: 0.18
+- rank: 46
+  model: MiMo-V2-Flash (Non-reasoning)
+  creator: xiaomi
+  model_id: xiaomi/mimo-v2-flash-20251210
+  coding_index: 49.8
+  intelligence_index: null
+  agentic_index: null
+  price_input: null
+  price_output: null
+- rank: 47
+  model: GPT-5.1 (high)
+  creator: openai
+  model_id: openai/gpt-5.1-20251113
+  coding_index: 49.4
+  intelligence_index: 37.5
+  agentic_index: 21.6
+  price_input: 1.25
+  price_output: 10.0
+- rank: 48
+  model: Gemini 3.5 Flash-Lite
+  creator: google
+  model_id: google/gemini-3.5-flash-lite-20260721
+  coding_index: 49.3
+  intelligence_index: 37.4
+  agentic_index: 27.2
+  price_input: 0.3
+  price_output: 2.5
+- rank: 49
+  model: Nemotron 3 Ultra 550B A55B (Reasoning)
+  creator: nvidia
+  model_id: nvidia/nemotron-3-ultra-550b-a55b-20260604
+  coding_index: 49.3
+  intelligence_index: 38.3
+  agentic_index: 27.5
+  price_input: 0.6
+  price_output: 2.4
+- rank: 50
+  model: Qwen3.5 397B A17B (Reasoning)
+  creator: qwen
+  model_id: qwen/qwen3.5-397b-a17b-20260216
+  coding_index: 48.2
+  intelligence_index: 34.3
+  agentic_index: 19.8
+  price_input: 0.45
+  price_output: 3.0
+- rank: 51
+  model: Mistral Medium 3.5
+  creator: mistralai
+  model_id: mistralai/mistral-medium-3.5-20260430
+  coding_index: 46.9
+  intelligence_index: 30.4
+  agentic_index: 19.2
+  price_input: 1.5
+  price_output: 7.5
+- rank: 52
+  model: Kimi K2.5 (Reasoning)
+  creator: moonshotai
+  model_id: moonshotai/kimi-k2.5-0127
+  coding_index: 46.8
+  intelligence_index: 36
+  agentic_index: 21.7
+  price_input: 0.56
+  price_output: 3.5
+- rank: 53
+  model: Gemini 2.5 Pro Preview (Mar' 25)
+  creator: google
+  model_id: google/gemini-2.5-pro-exp-03-25
+  coding_index: 46.7
+  intelligence_index: null
+  agentic_index: null
+  price_input: null
+  price_output: null
+- rank: 54
+  model: GLM-4.6 (Reasoning)
+  creator: z-ai
+  model_id: z-ai/glm-4.6
+  coding_index: 45.8
+  intelligence_index: 29.3
+  agentic_index: 18.6
+  price_input: 0.55
+  price_output: 2.2
+- rank: 55
+  model: Qwen3.5 122B A10B (Reasoning)
+  creator: qwen
+  model_id: qwen/qwen3.5-122b-a10b-20260224
+  coding_index: 45.7
+  intelligence_index: 32.8
+  agentic_index: 21.3
+  price_input: 0.26
+  price_output: 2.08
+- rank: 56
+  model: GLM-4.7 (Reasoning)
+  creator: z-ai
+  model_id: z-ai/glm-4.7-20251222
+  coding_index: 45.3
+  intelligence_index: 34.5
+  agentic_index: 26.2
+  price_input: 0.6
+  price_output: 2.2
+- rank: 57
+  model: DeepSeek V3.2 (Reasoning)
+  creator: deepseek
+  model_id: deepseek/deepseek-v3.2-20251201
+  coding_index: 44.2
   intelligence_index: null
   agentic_index: null
   price_input: 1.0
-  price_output: 3.2
-- rank: 4
-  model: Claude 4.5 Opus
+  price_output: 1.0
+- rank: 58
+  model: Claude 4.5 Haiku (Reasoning)
   creator: anthropic
-  model_id: anthropic/claude-opus-4.5
-  coding_index: 76.8
+  model_id: anthropic/claude-4.5-haiku-20251001
+  coding_index: 43.9
+  intelligence_index: 29.9
+  agentic_index: 16.5
+  price_input: 1.1
+  price_output: 5.5
+- rank: 59
+  model: DeepSeek V3.1 Terminus (Reasoning)
+  creator: deepseek
+  model_id: deepseek/deepseek-v3.1-terminus
+  coding_index: 43.5
+  intelligence_index: null
+  agentic_index: null
+  price_input: 0.27
+  price_output: 0.95
+- rank: 60
+  model: Gemma 4 31B (Reasoning)
+  creator: google
+  model_id: google/gemma-4-31b-it-20260402
+  coding_index: 43.4
+  intelligence_index: 29.7
+  agentic_index: 14.4
+  price_input: 0.1
+  price_output: 0.34
+- rank: 61
+  model: Ring-2.6-1T
+  creator: inclusionai
+  model_id: inclusionai/ring-2.6-1t-20260508
+  coding_index: 42.8
+  intelligence_index: null
+  agentic_index: null
+  price_input: 0.075
+  price_output: 0.625
+- rank: 62
+  model: Grok 4.3 (high)
+  creator: x-ai
+  model_id: x-ai/grok-4.3-20260430
+  coding_index: 42.2
+  intelligence_index: 37.9
+  agentic_index: 24.2
+  price_input: 1.25
+  price_output: 2.5
+- rank: 63
+  model: Qwen3.6 35B A3B (Reasoning)
+  creator: qwen
+  model_id: qwen/qwen3.6-35b-a3b-20260415
+  coding_index: 41.9
+  intelligence_index: 32.1
+  agentic_index: 21.6
+  price_input: 0.2
+  price_output: 1.6
+- rank: 64
+  model: o1
+  creator: openai
+  model_id: openai/o1-2024-12-17
+  coding_index: 39.7
+  intelligence_index: null
+  agentic_index: null
+  price_input: 15.0
+  price_output: 60.0
+- rank: 65
+  model: Step 3.7 Flash
+  creator: stepfun
+  model_id: stepfun/step-3.7-flash-20260528
+  coding_index: 39.6
+  intelligence_index: 30.9
+  agentic_index: 21.7
+  price_input: 0.2
+  price_output: 1.15
+- rank: 66
+  model: Gemma 4 26B A4B (Reasoning)
+  creator: google
+  model_id: google/gemma-4-26b-a4b-it-20260403
+  coding_index: 39.3
+  intelligence_index: 26.1
+  agentic_index: 11
+  price_input: 0.13
+  price_output: 0.4
+- rank: 67
+  model: GPT-5 (high)
+  creator: openai
+  model_id: openai/gpt-5-2025-08-07
+  coding_index: 37.8
+  intelligence_index: 35.3
+  agentic_index: 26.5
+  price_input: 1.25
+  price_output: 10.0
+- rank: 68
+  model: NVIDIA Nemotron 3 Super 120B A12B (Reasoning)
+  creator: nvidia
+  model_id: nvidia/nemotron-3-super-120b-a12b-20230311
+  coding_index: 37.7
+  intelligence_index: 25.7
+  agentic_index: 8.8
+  price_input: 0.3
+  price_output: 0.9
+- rank: 69
+  model: Claude 4 Sonnet (Reasoning)
+  creator: anthropic
+  model_id: anthropic/claude-4-sonnet-20250522
+  coding_index: 37.6
+  intelligence_index: 29.8
+  agentic_index: 17.6
+  price_input: 3.0
+  price_output: 15.0
+- rank: 70
+  model: Qwen3.5 35B A3B (Non-reasoning)
+  creator: qwen
+  model_id: qwen/qwen3.5-35b-a3b-20260224
+  coding_index: 37.0
+  intelligence_index: 24.3
+  agentic_index: 11.8
+  price_input: 0.225
+  price_output: 1.8
+- rank: 71
+  model: North Mini Code
+  creator: cohere
+  model_id: cohere/north-mini-code-20260617
+  coding_index: 36.5
+  intelligence_index: 20.2
+  agentic_index: 3.1
+  price_input: 0.0
+  price_output: 0.0
+- rank: 72
+  model: Qwen3 Coder Next
+  creator: qwen
+  model_id: qwen/qwen3-coder-next-2025-02-03
+  coding_index: 36.2
+  intelligence_index: 21.3
+  agentic_index: 8.9
+  price_input: 0.2
+  price_output: 1.5
+- rank: 73
+  model: Gemini 3.1 Flash-Lite
+  creator: google
+  model_id: google/gemini-3.1-flash-lite-preview-20260303
+  coding_index: 34.7
+  intelligence_index: 25.6
+  agentic_index: 6.5
+  price_input: 0.25
+  price_output: 1.5
+- rank: 74
+  model: Gemini 2.5 Pro
+  creator: google
+  model_id: google/gemini-2.5-pro
+  coding_index: 33.3
+  intelligence_index: 25.9
+  agentic_index: 7.2
+  price_input: 1.25
+  price_output: 10.0
+- rank: 75
+  model: Devstral 2
+  creator: mistralai
+  model_id: mistralai/devstral-2512
+  coding_index: 31.3
+  intelligence_index: 19.2
+  agentic_index: 10.6
+  price_input: null
+  price_output: null
+- rank: 76
+  model: Mercury 2
+  creator: inception
+  model_id: inception/mercury-2-20260304
+  coding_index: 31.1
+  intelligence_index: 21.9
+  agentic_index: 9.5
+  price_input: 0.25
+  price_output: 0.75
+- rank: 77
+  model: gpt-oss-120b (high)
+  creator: openai
+  model_id: openai/gpt-oss-120b
+  coding_index: 30.4
+  intelligence_index: 24.1
+  agentic_index: 13.4
+  price_input: 0.15
+  price_output: 0.6
+- rank: 78
+  model: Claude 3.5 Sonnet (Oct '24)
+  creator: anthropic
+  model_id: anthropic/claude-3.5-sonnet
+  coding_index: 30.2
+  intelligence_index: null
+  agentic_index: null
+  price_input: null
+  price_output: null
+- rank: 79
+  model: Devstral Small 2
+  creator: mistralai
+  model_id: mistralai/devstral-small-2507
+  coding_index: 29.3
+  intelligence_index: 17.7
+  agentic_index: 10.8
+  price_input: null
+  price_output: null
+- rank: 80
+  model: Qwen3.5 9B (Reasoning)
+  creator: qwen
+  model_id: qwen/qwen3.5-9b-20260310
+  coding_index: 28.7
+  intelligence_index: 21.8
+  agentic_index: 7
+  price_input: 0.1
+  price_output: 0.15
+- rank: 81
+  model: Command A+
+  creator: cohere
+  model_id: cohere/command-a-03-2025
+  coding_index: 27.8
+  intelligence_index: 22.8
+  agentic_index: 9.2
+  price_input: 2.5
+  price_output: 10.0
+- rank: 82
+  model: Nemotron 3.5 Lightning
+  creator: nvidia
+  model_id: nvidia/nemotron-3.5-lightning-20260807
+  coding_index: 26.8
+  intelligence_index: 23.6
+  agentic_index: 13.8
+  price_input: 0.0
+  price_output: 0.0
+- rank: 83
+  model: Mistral Small 4 (Reasoning)
+  creator: mistralai
+  model_id: mistralai/mistral-small-2603
+  coding_index: 26.6
+  intelligence_index: 19.7
+  agentic_index: 4.6
+  price_input: 0.1875
+  price_output: 0.75
+- rank: 84
+  model: Ling 3.0 Tiny
+  creator: inclusionai
+  model_id: inclusionai/ling-3.0-tiny-20260806
+  coding_index: 26.5
+  intelligence_index: 24.5
+  agentic_index: 16
+  price_input: null
+  price_output: null
+- rank: 85
+  model: Mistral Small 3.1
+  creator: mistralai
+  model_id: mistralai/mistral-small
+  coding_index: 26.3
+  intelligence_index: 14.9
+  agentic_index: 5.3
+  price_input: null
+  price_output: null
+- rank: 86
+  model: Claude 3.5 Sonnet (June '24)
+  creator: anthropic
+  model_id: anthropic/claude-3.5-sonnet-20240620
+  coding_index: 26.0
+  intelligence_index: null
+  agentic_index: null
+  price_input: null
+  price_output: null
+- rank: 87
+  model: Trinity Large Thinking
+  creator: arcee-ai
+  model_id: arcee-ai/trinity-large-thinking
+  coding_index: 25.8
+  intelligence_index: null
+  agentic_index: null
+  price_input: 0.25
+  price_output: 0.8
+- rank: 88
+  model: Ling 2.6 Flash
+  creator: inclusionai
+  model_id: inclusionai/ling-2.6-flash-20260421
+  coding_index: 25.3
+  intelligence_index: 14.2
+  agentic_index: 2.3
+  price_input: 0.01
+  price_output: 0.03
+- rank: 89
+  model: DeepSeek R1 (Jan '25)
+  creator: deepseek
+  model_id: deepseek/deepseek-r1
+  coding_index: 24.6
+  intelligence_index: 18.6
+  agentic_index: 3.1
+  price_input: 0.7
+  price_output: 2.5
+- rank: 90
+  model: GPT-4o (May '24)
+  creator: openai
+  model_id: openai/gpt-4o-2024-05-13
+  coding_index: 24.2
   intelligence_index: null
   agentic_index: null
   price_input: 5.0
-  price_output: 25.0
-- rank: 5
-  model: Claude Sonnet 4.6
-  creator: anthropic
-  model_id: anthropic/claude-sonnet-4.6
-  coding_index: 76.2
-  intelligence_index: null
-  agentic_index: null
-  price_input: 3.0
   price_output: 15.0
-- rank: 6
-  model: Gemini 3 Flash
+- rank: 91
+  model: Gemini 1.5 Pro (Sep '24)
   creator: google
-  model_id: google/gemini-3-flash
-  coding_index: 76.2
+  model_id: google/gemini-pro-1.5
+  coding_index: 23.6
   intelligence_index: null
   agentic_index: null
-  price_input: 0.5
-  price_output: 3.0
-- rank: 7
-  model: GPT-5.2
+  price_input: null
+  price_output: null
+- rank: 92
+  model: DeepSeek V3 (Dec '24)
+  creator: deepseek
+  model_id: deepseek/deepseek-chat
+  coding_index: 23.0
+  intelligence_index: 14.2
+  agentic_index: 1.6
+  price_input: null
+  price_output: null
+- rank: 93
+  model: Nova 2.0 Lite (high)
+  creator: amazon
+  model_id: amazon/nova-2-lite-v1
+  coding_index: 23.0
+  intelligence_index: null
+  agentic_index: null
+  price_input: 0.3
+  price_output: 2.5
+- rank: 94
+  model: Qwen3 235B A22B 2507 (Reasoning)
+  creator: qwen
+  model_id: qwen/qwen3-235b-a22b-thinking-2507
+  coding_index: 22.1
+  intelligence_index: 19.9
+  agentic_index: 3.8
+  price_input: 0.23
+  price_output: 2.3
+- rank: 95
+  model: GPT-4 Turbo
   creator: openai
-  model_id: openai/gpt-5.2
-  coding_index: 75.4
+  model_id: openai/gpt-4-turbo
+  coding_index: 21.5
   intelligence_index: null
   agentic_index: null
-  price_input: 1.75
-  price_output: 14.0
-- rank: 8
-  model: Grok 4
-  creator: x-ai
-  model_id: x-ai/grok-4
-  coding_index: 75.0
-  intelligence_index: null
-  agentic_index: null
-  price_input: 3.0
-  price_output: 15.0
-- rank: 9
-  model: GLM-4.7
-  creator: z-ai
-  model_id: z-ai/glm-4.7
-  coding_index: 73.8
-  intelligence_index: null
-  agentic_index: null
-  price_input: 0.6
-  price_output: 2.2
-- rank: 10
-  model: Gemini 3 Pro
-  creator: google
-  model_id: google/gemini-3-pro
-  coding_index: 71.6
-  intelligence_index: null
-  agentic_index: null
-  price_input: 2.0
-  price_output: 12.0
-- rank: 11
-  model: Kimi K2.5
+  price_input: 10.0
+  price_output: 30.0
+- rank: 96
+  model: DeepSeek V3 0324
+  creator: deepseek
+  model_id: deepseek/deepseek-chat-v3-0324
+  coding_index: 21.2
+  intelligence_index: 15.2
+  agentic_index: 1.6
+  price_input: 0.27
+  price_output: 1.12
+- rank: 97
+  model: K2 Think V2
   creator: moonshotai
-  model_id: moonshotai/kimi-k2.5
-  coding_index: 70.8
+  model_id: moonshotai/kimi-k2-thinking-20251106
+  coding_index: 21.0
   intelligence_index: null
   agentic_index: null
   price_input: 0.6
   price_output: 2.5
-- rank: 12
-  model: DeepSeek V3.2
-  creator: deepseek
-  model_id: deepseek/deepseek-v3.2
-  coding_index: 70.0
-  intelligence_index: null
-  agentic_index: null
-  price_input: 0.28
-  price_output: 0.42
+- rank: 98
+  model: gpt-oss-20b (high)
+  creator: openai
+  model_id: openai/gpt-oss-20b
+  coding_index: 20.7
+  intelligence_index: 15.2
+  agentic_index: 3.1
+  price_input: 0.03
+  price_output: 0.15
+- rank: 99
+  model: Mistral Medium 3.1
+  creator: mistralai
+  model_id: mistralai/mistral-medium-3.1
+  coding_index: 20.5
+  intelligence_index: 14.7
+  agentic_index: 6.1
+  price_input: 0.4
+  price_output: 2.0
+- rank: 100
+  model: GPT-4.1 mini
+  creator: openai
+  model_id: openai/gpt-4.1-mini-2025-04-14
+  coding_index: 20.2
+  intelligence_index: 14.8
+  agentic_index: 1.8
+  price_input: 0.4
+  price_output: 1.6
