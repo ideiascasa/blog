@@ -25,7 +25,7 @@ PARAMS = {
     "source": "artificial-analysis",
     "task_type": "coding",
 }
-MIN_CODING_INDEX = 50.0
+MIN_CODING_INDEX = 40.0
 # eficiencia = coding^α / price^β
 # Calibrado para: +3 pontos de coding ≈ +$0.50 de preço
 # (razão α/β ≈ 14.5). Mantém Luna (71@$0.70) acima de Gemini (76@$2.25).
