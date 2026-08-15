@@ -1,0 +1,561 @@
+{
+  "updated_at": "America/Sao Paulo - 18:51",
+  "source": "artificial-analysis",
+  "task_type": "coding",
+  "min_coding_index": 40.0,
+  "points_per_dollar": 5,
+  "as_of": "2026-08-14T00:00:32.218Z",
+  "citation": "Source: Artificial Analysis (artificialanalysis.ai) via OpenRouter (openrouter.ai/rankings).",
+  "source_url": "https://artificialanalysis.ai",
+  "items": [
+    {
+      "rank": 1,
+      "model": "GPT-5.6 Luna (max)",
+      "model_id": "openai/gpt-5.6-luna-20260709",
+      "coding_index": "71.4",
+      "price": "0.700",
+      "gasto_por_coding": "0.010",
+      "eficiencia": "67.900"
+    },
+    {
+      "rank": 2,
+      "model": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
+      "model_id": "deepseek/deepseek-v4-flash-20260731",
+      "coding_index": "69.1",
+      "price": "0.600",
+      "gasto_por_coding": "0.009",
+      "eficiencia": "66.100"
+    },
+    {
+      "rank": 3,
+      "model": "Gemini 3.7 Flash (high)",
+      "model_id": "google/gemini-3.7-flash-20260813",
+      "coding_index": "76.1",
+      "price": "2.250",
+      "gasto_por_coding": "0.030",
+      "eficiencia": "64.850"
+    },
+    {
+      "rank": 4,
+      "model": "Hy3",
+      "model_id": "tencent/hy3-preview-20260421",
+      "coding_index": "58.8",
+      "price": "0.780",
+      "gasto_por_coding": "0.013",
+      "eficiencia": "54.900"
+    },
+    {
+      "rank": 5,
+      "model": "Nex-N2-Pro",
+      "model_id": "nex-agi/nex-n2-pro",
+      "coding_index": "59.1",
+      "price": "1.250",
+      "gasto_por_coding": "0.021",
+      "eficiencia": "52.850"
+    },
+    {
+      "rank": 6,
+      "model": "GPT-5.4 nano (xhigh)",
+      "model_id": "openai/gpt-5.4-nano-20260317",
+      "coding_index": "56.1",
+      "price": "0.725",
+      "gasto_por_coding": "0.013",
+      "eficiencia": "52.475"
+    },
+    {
+      "rank": 7,
+      "model": "KAT Coder Pro V2",
+      "model_id": "kwaipilot/kat-coder-pro-v2-20260327",
+      "coding_index": "59.5",
+      "price": "1.500",
+      "gasto_por_coding": "0.025",
+      "eficiencia": "52.000"
+    },
+    {
+      "rank": 8,
+      "model": "Solar Pro 4",
+      "model_id": "upstage/solar-pro4-20260810",
+      "coding_index": "52.7",
+      "price": "0.150",
+      "gasto_por_coding": "0.003",
+      "eficiencia": "51.950"
+    },
+    {
+      "rank": 9,
+      "model": "MiniMax-M3",
+      "model_id": "minimax/minimax-m3-20260531",
+      "coding_index": "58.6",
+      "price": "1.500",
+      "gasto_por_coding": "0.026",
+      "eficiencia": "51.100"
+    },
+    {
+      "rank": 10,
+      "model": "Ling-3.0-flash",
+      "model_id": "inclusionai/ling-3.0-flash-20260723",
+      "coding_index": "50.6",
+      "price": "0.240",
+      "gasto_por_coding": "0.005",
+      "eficiencia": "49.400"
+    },
+    {
+      "rank": 11,
+      "model": "Qwen3.7 Plus",
+      "model_id": "qwen/qwen3.7-plus-20260602",
+      "coding_index": "55.9",
+      "price": "1.600",
+      "gasto_por_coding": "0.029",
+      "eficiencia": "47.900"
+    },
+    {
+      "rank": 12,
+      "model": "Gemini 3.6 Flash (high)",
+      "model_id": "google/gemini-3.6-flash-20260721",
+      "coding_index": "69.2",
+      "price": "4.500",
+      "gasto_por_coding": "0.065",
+      "eficiencia": "46.700"
+    },
+    {
+      "rank": 13,
+      "model": "MiniMax-M2.7",
+      "model_id": "minimax/minimax-m2.7-20260318",
+      "coding_index": "52.6",
+      "price": "1.500",
+      "gasto_por_coding": "0.029",
+      "eficiencia": "45.100"
+    },
+    {
+      "rank": 14,
+      "model": "MiMo-V2.5",
+      "model_id": "xiaomi/mimo-v2.5-20260422",
+      "coding_index": "56.8",
+      "price": "2.400",
+      "gasto_por_coding": "0.042",
+      "eficiencia": "44.800"
+    },
+    {
+      "rank": 15,
+      "model": "Inkling Small",
+      "model_id": "thinkingmachines/inkling-small-20260730",
+      "coding_index": "52.9",
+      "price": "1.700",
+      "gasto_por_coding": "0.032",
+      "eficiencia": "44.400"
+    },
+    {
+      "rank": 16,
+      "model": "Muse Spark 1.1 (xhigh)",
+      "model_id": "meta/muse-spark-1.1-20260709",
+      "coding_index": "71.3",
+      "price": "5.500",
+      "gasto_por_coding": "0.077",
+      "eficiencia": "43.800"
+    },
+    {
+      "rank": 17,
+      "model": "Qwen3.6 Plus",
+      "model_id": "qwen/qwen3.6-plus-04-02",
+      "coding_index": "54.5",
+      "price": "2.275",
+      "gasto_por_coding": "0.042",
+      "eficiencia": "43.125"
+    },
+    {
+      "rank": 18,
+      "model": "GPT-5.4 mini (xhigh)",
+      "model_id": "openai/gpt-5.4-mini-20260317",
+      "coding_index": "56.1",
+      "price": "2.625",
+      "gasto_por_coding": "0.047",
+      "eficiencia": "42.975"
+    },
+    {
+      "rank": 19,
+      "model": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
+      "model_id": "deepseek/deepseek-v4-pro-20260813",
+      "coding_index": "68.8",
+      "price": "5.280",
+      "gasto_por_coding": "0.077",
+      "eficiencia": "42.400"
+    },
+    {
+      "rank": 20,
+      "model": "Gemma 4 31B (Reasoning)",
+      "model_id": "google/gemma-4-31b-it-20260402",
+      "coding_index": "43.4",
+      "price": "0.440",
+      "gasto_por_coding": "0.010",
+      "eficiencia": "41.200"
+    },
+    {
+      "rank": 21,
+      "model": "MiMo-V2.5-Pro",
+      "model_id": "xiaomi/mimo-v2.5-pro-20260422",
+      "coding_index": "60.2",
+      "price": "4.000",
+      "gasto_por_coding": "0.066",
+      "eficiencia": "40.200"
+    },
+    {
+      "rank": 22,
+      "model": "GLM-5.2 (max)",
+      "model_id": "z-ai/glm-5.2-20260616",
+      "coding_index": "68.8",
+      "price": "5.800",
+      "gasto_por_coding": "0.084",
+      "eficiencia": "39.800"
+    },
+    {
+      "rank": 23,
+      "model": "Ring-2.6-1T",
+      "model_id": "inclusionai/ring-2.6-1t-20260508",
+      "coding_index": "42.8",
+      "price": "0.700",
+      "gasto_por_coding": "0.016",
+      "eficiencia": "39.300"
+    },
+    {
+      "rank": 24,
+      "model": "DeepSeek V3.1 Terminus (Reasoning)",
+      "model_id": "deepseek/deepseek-v3.1-terminus",
+      "coding_index": "43.5",
+      "price": "1.270",
+      "gasto_por_coding": "0.029",
+      "eficiencia": "37.150"
+    },
+    {
+      "rank": 25,
+      "model": "Kimi K2.6",
+      "model_id": "moonshotai/kimi-k2.6-20260420",
+      "coding_index": "61.8",
+      "price": "4.950",
+      "gasto_por_coding": "0.080",
+      "eficiencia": "37.050"
+    },
+    {
+      "rank": 26,
+      "model": "Grok 4.6 (high)",
+      "model_id": "x-ai/grok-4.6-20260810",
+      "coding_index": "76.8",
+      "price": "8.000",
+      "gasto_por_coding": "0.104",
+      "eficiencia": "36.800"
+    },
+    {
+      "rank": 27,
+      "model": "Grok Build 0.1 0616",
+      "model_id": "x-ai/grok-build-0.1-20260520",
+      "coding_index": "51.5",
+      "price": "3.000",
+      "gasto_por_coding": "0.058",
+      "eficiencia": "36.500"
+    },
+    {
+      "rank": 28,
+      "model": "Qwen3.7 Max",
+      "model_id": "qwen/qwen3.7-max-20260520",
+      "coding_index": "66.0",
+      "price": "5.900",
+      "gasto_por_coding": "0.089",
+      "eficiencia": "36.500"
+    },
+    {
+      "rank": 29,
+      "model": "Qwen3.6 27B (Reasoning)",
+      "model_id": "qwen/qwen3.6-27b-20260422",
+      "coding_index": "53.7",
+      "price": "3.500",
+      "gasto_por_coding": "0.065",
+      "eficiencia": "36.200"
+    },
+    {
+      "rank": 30,
+      "model": "Kimi K2.7 Code",
+      "model_id": "moonshotai/kimi-k2.7-code-20260612",
+      "coding_index": "60.8",
+      "price": "4.950",
+      "gasto_por_coding": "0.081",
+      "eficiencia": "36.050"
+    },
+    {
+      "rank": 31,
+      "model": "Gemini 3.5 Flash-Lite",
+      "model_id": "google/gemini-3.5-flash-lite-20260721",
+      "coding_index": "49.3",
+      "price": "2.800",
+      "gasto_por_coding": "0.057",
+      "eficiencia": "35.300"
+    },
+    {
+      "rank": 32,
+      "model": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "coding_index": "49.3",
+      "price": "3.000",
+      "gasto_por_coding": "0.061",
+      "eficiencia": "34.300"
+    },
+    {
+      "rank": 33,
+      "model": "DeepSeek V3.2 (Reasoning)",
+      "model_id": "deepseek/deepseek-v3.2-20251201",
+      "coding_index": "44.2",
+      "price": "2.000",
+      "gasto_por_coding": "0.045",
+      "eficiencia": "34.200"
+    },
+    {
+      "rank": 34,
+      "model": "Qwen3.5 122B A10B (Reasoning)",
+      "model_id": "qwen/qwen3.5-122b-a10b-20260224",
+      "coding_index": "45.7",
+      "price": "2.340",
+      "gasto_por_coding": "0.051",
+      "eficiencia": "34.000"
+    },
+    {
+      "rank": 35,
+      "model": "Qwen3.6 35B A3B (Reasoning)",
+      "model_id": "qwen/qwen3.6-35b-a3b-20260415",
+      "coding_index": "41.9",
+      "price": "1.800",
+      "gasto_por_coding": "0.043",
+      "eficiencia": "32.900"
+    },
+    {
+      "rank": 36,
+      "model": "Grok 4.5 (high)",
+      "model_id": "x-ai/grok-4.5-20260708",
+      "coding_index": "72.4",
+      "price": "8.000",
+      "gasto_por_coding": "0.110",
+      "eficiencia": "32.400"
+    },
+    {
+      "rank": 37,
+      "model": "GLM-4.6 (Reasoning)",
+      "model_id": "z-ai/glm-4.6",
+      "coding_index": "45.8",
+      "price": "2.750",
+      "gasto_por_coding": "0.060",
+      "eficiencia": "32.050"
+    },
+    {
+      "rank": 38,
+      "model": "Qwen3.8 Max",
+      "model_id": "qwen/qwen3.8-max-20260803",
+      "coding_index": "71.8",
+      "price": "8.000",
+      "gasto_por_coding": "0.111",
+      "eficiencia": "31.800"
+    },
+    {
+      "rank": 39,
+      "model": "GLM-4.7 (Reasoning)",
+      "model_id": "z-ai/glm-4.7-20251222",
+      "coding_index": "45.3",
+      "price": "2.800",
+      "gasto_por_coding": "0.062",
+      "eficiencia": "31.300"
+    },
+    {
+      "rank": 40,
+      "model": "Qwen3.5 397B A17B (Reasoning)",
+      "model_id": "qwen/qwen3.5-397b-a17b-20260216",
+      "coding_index": "48.2",
+      "price": "3.450",
+      "gasto_por_coding": "0.072",
+      "eficiencia": "30.950"
+    },
+    {
+      "rank": 41,
+      "model": "Inkling (xhigh)",
+      "model_id": "thinkingmachines/inkling-20260715",
+      "coding_index": "52.1",
+      "price": "5.000",
+      "gasto_por_coding": "0.096",
+      "eficiencia": "27.100"
+    },
+    {
+      "rank": 42,
+      "model": "GLM-5.1 (Reasoning)",
+      "model_id": "z-ai/glm-5.1-20260406",
+      "coding_index": "55.8",
+      "price": "5.780",
+      "gasto_por_coding": "0.104",
+      "eficiencia": "26.900"
+    },
+    {
+      "rank": 43,
+      "model": "Kimi K2.5 (Reasoning)",
+      "model_id": "moonshotai/kimi-k2.5-0127",
+      "coding_index": "46.8",
+      "price": "4.060",
+      "gasto_por_coding": "0.087",
+      "eficiencia": "26.500"
+    },
+    {
+      "rank": 44,
+      "model": "Grok 4.3 (high)",
+      "model_id": "x-ai/grok-4.3-20260430",
+      "coding_index": "42.2",
+      "price": "3.750",
+      "gasto_por_coding": "0.089",
+      "eficiencia": "23.450"
+    },
+    {
+      "rank": 45,
+      "model": "Gemini 3.5 Flash (high)",
+      "model_id": "google/gemini-3.5-flash-20260519",
+      "coding_index": "70.1",
+      "price": "10.500",
+      "gasto_por_coding": "0.150",
+      "eficiencia": "17.600"
+    },
+    {
+      "rank": 46,
+      "model": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)",
+      "model_id": "anthropic/claude-sonnet-5-20260630",
+      "coding_index": "71.5",
+      "price": "12.000",
+      "gasto_por_coding": "0.168",
+      "eficiencia": "11.500"
+    },
+    {
+      "rank": 47,
+      "model": "Claude 4.5 Haiku (Reasoning)",
+      "model_id": "anthropic/claude-4.5-haiku-20251001",
+      "coding_index": "43.9",
+      "price": "6.600",
+      "gasto_por_coding": "0.150",
+      "eficiencia": "10.900"
+    },
+    {
+      "rank": 48,
+      "model": "Mistral Medium 3.5",
+      "model_id": "mistralai/mistral-medium-3.5-20260430",
+      "coding_index": "46.9",
+      "price": "9.000",
+      "gasto_por_coding": "0.192",
+      "eficiencia": "1.900"
+    },
+    {
+      "rank": 49,
+      "model": "GPT-5.6 Terra (max)",
+      "model_id": "openai/gpt-5.6-terra-20260709",
+      "coding_index": "76.7",
+      "price": "15.400",
+      "gasto_por_coding": "0.201",
+      "eficiencia": "-0.300"
+    },
+    {
+      "rank": 50,
+      "model": "Gemini 3.1 Pro Preview",
+      "model_id": "google/gemini-3.1-pro-preview-20260219",
+      "coding_index": "68.8",
+      "price": "14.000",
+      "gasto_por_coding": "0.203",
+      "eficiencia": "-1.200"
+    },
+    {
+      "rank": 51,
+      "model": "GPT-5.1 (high)",
+      "model_id": "openai/gpt-5.1-20251113",
+      "coding_index": "49.4",
+      "price": "11.250",
+      "gasto_por_coding": "0.228",
+      "eficiencia": "-6.850"
+    },
+    {
+      "rank": 52,
+      "model": "GPT-5.6 Sol (xhigh)",
+      "model_id": "openai/gpt-5.6-sol-20260709",
+      "coding_index": "78.3",
+      "price": "17.500",
+      "gasto_por_coding": "0.223",
+      "eficiencia": "-9.200"
+    },
+    {
+      "rank": 53,
+      "model": "Kimi K3 (max)",
+      "model_id": "moonshotai/kimi-k3-20260715",
+      "coding_index": "76.2",
+      "price": "17.100",
+      "gasto_por_coding": "0.224",
+      "eficiencia": "-9.300"
+    },
+    {
+      "rank": 54,
+      "model": "GPT-5.5 (xhigh)",
+      "model_id": "openai/gpt-5.5-20260423",
+      "coding_index": "74.9",
+      "price": "17.500",
+      "gasto_por_coding": "0.234",
+      "eficiencia": "-12.600"
+    },
+    {
+      "rank": 55,
+      "model": "GPT-5.4 (xhigh)",
+      "model_id": "openai/gpt-5.4-20260305",
+      "coding_index": "71.1",
+      "price": "17.500",
+      "gasto_por_coding": "0.246",
+      "eficiencia": "-16.400"
+    },
+    {
+      "rank": 56,
+      "model": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
+      "model_id": "anthropic/claude-4.6-sonnet-20260217",
+      "coding_index": "63.0",
+      "price": "18.000",
+      "gasto_por_coding": "0.286",
+      "eficiencia": "-27.000"
+    },
+    {
+      "rank": 57,
+      "model": "Claude 4.5 Sonnet (Reasoning)",
+      "model_id": "anthropic/claude-4.5-sonnet-20250929",
+      "coding_index": "52.1",
+      "price": "19.800",
+      "gasto_por_coding": "0.380",
+      "eficiencia": "-46.900"
+    },
+    {
+      "rank": 58,
+      "model": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+      "model_id": "anthropic/claude-opus-5-20260723",
+      "coding_index": "78.0",
+      "price": "30.000",
+      "gasto_por_coding": "0.385",
+      "eficiencia": "-72.000"
+    },
+    {
+      "rank": 59,
+      "model": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
+      "model_id": "anthropic/claude-4.8-opus-20260528",
+      "coding_index": "74.3",
+      "price": "30.000",
+      "gasto_por_coding": "0.404",
+      "eficiencia": "-75.700"
+    },
+    {
+      "rank": 60,
+      "model": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
+      "model_id": "anthropic/claude-4.7-opus-20260416",
+      "coding_index": "73.6",
+      "price": "30.000",
+      "gasto_por_coding": "0.408",
+      "eficiencia": "-76.400"
+    },
+    {
+      "rank": 61,
+      "model": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
+      "model_id": "anthropic/claude-5-fable-20260609",
+      "coding_index": "76.5",
+      "price": "60.000",
+      "gasto_por_coding": "0.784",
+      "eficiencia": "-223.500"
+    }
+  ]
+}

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 import sys
 from datetime import datetime
@@ -15,6 +16,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "_data" / "leaderboard.yml"
+OUTPUT_JSON = ROOT / "_data" / "leaderboard.json"
 PREVIEW = ROOT / "teste.md"
 SAO_PAULO = ZoneInfo("America/Sao_Paulo")
 
@@ -195,6 +197,9 @@ def main() -> None:
             sort_keys=False,
         )
 
+    with OUTPUT_JSON.open("w", encoding="utf-8") as handle:
+        json.dump(payload, handle, ensure_ascii=False, indent=2)
+
     write_preview(payload)
 
     with_score = [r for r in rows if r.get("coding_index") is not None]
@@ -207,7 +212,7 @@ def main() -> None:
         print(
             f"Faixa eficiencia: {items[0]['eficiencia']} .. {items[-1]['eficiencia']}"
         )
-    print(f"Gravados em {OUTPUT}")
+    print(f"Gravados em {OUTPUT} e {OUTPUT_JSON}")
     print(f"Preview em {PREVIEW}")
 
 
