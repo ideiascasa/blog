@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 18:13
+updated_at: America/Sao Paulo - 00:42
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -172,9 +172,9 @@ items:
   model: DeepSeek V3.1 Terminus (Reasoning)
   model_id: deepseek/deepseek-v3.1-terminus
   coding_index: '43.5'
-  price: '1.220'
-  gasto_por_coding: '0.028'
-  eficiencia: '37.400'
+  price: '1.270'
+  gasto_por_coding: '0.029'
+  eficiencia: '37.150'
 - rank: 25
   model: Kimi K2.6
   model_id: moonshotai/kimi-k2.6-20260420
