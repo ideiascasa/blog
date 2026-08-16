@@ -6,7 +6,7 @@ permalink: /melhores-ia
 
 Aqui listamos as melhores IAs para código, ranqueadas por critérios internos como eficiência e custo — priorizando modelos com bom desempenho em coding e melhor relação preço por ponto de capacidade.
 
-Atualizado em: {{ site.data.leaderboard.updated_at }}
+- Atualizado em: {{ site.data.leaderboard.updated_at }}
 - {{ site.data.leaderboard.citation }}
 
 Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding_index }}. O ranking usa a **eficiência**:
