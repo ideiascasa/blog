@@ -11,9 +11,9 @@ Aqui listamos as melhores IAs para código, ranqueadas por critérios internos c
 
 Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding_index }}. O ranking usa a **eficiência**:
 
-`eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço`
-
 ```text
+eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço
+
 +$1.00 de preço vale +{{ site.data.leaderboard.points_per_dollar }} pontos de coding. Em caso de empate no score, vence o menor gasto (preço / coding).
 ```
 
