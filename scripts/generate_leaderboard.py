@@ -176,7 +176,7 @@ def main() -> None:
 
     now_sp = datetime.now(SAO_PAULO)
     payload = {
-        "updated_at": now_sp.strftime("America/Sao Paulo - %H:%M"),
+        "updated_at": now_sp.strftime("America/Sao Paulo - %d/%m/%Y %H:%M"),
         "source": "artificial-analysis",
         "task_type": "coding",
         "min_coding_index": MIN_CODING_INDEX,
