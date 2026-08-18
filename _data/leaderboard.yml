@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 18/08/2026 00:48
+updated_at: America/Sao Paulo - 18/08/2026 12:37
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -309,26 +309,26 @@ items:
   gasto_por_coding: '0.062'
   eficiencia: '31.300'
 - rank: 44
-  model: Qwen3.5 397B A17B (Reasoning)
-  model_id: qwen/qwen3.5-397b-a17b-20260216
-  coding_index: '48.2'
-  price: '3.450'
-  gasto_por_coding: '0.072'
-  eficiencia: '30.950'
-- rank: 45
   model: DeepSeek V4 Pro (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-pro-20260423
   coding_index: '59.4'
   price: '5.740'
   gasto_por_coding: '0.097'
   eficiencia: '30.700'
-- rank: 46
+- rank: 45
   model: Kimi K2.5 (Reasoning)
   model_id: moonshotai/kimi-k2.5-0127
   coding_index: '46.8'
   price: '3.857'
   gasto_por_coding: '0.082'
   eficiencia: '27.515'
+- rank: 46
+  model: Qwen3.5 397B A17B (Reasoning)
+  model_id: qwen/qwen3.5-397b-a17b-20260216
+  coding_index: '48.2'
+  price: '4.200'
+  gasto_por_coding: '0.087'
+  eficiencia: '27.200'
 - rank: 47
   model: Inkling (xhigh)
   model_id: thinkingmachines/inkling-20260715
