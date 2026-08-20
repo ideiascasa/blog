@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 19/08/2026 12:36
+updated_at: America/Sao Paulo - 20/08/2026 00:49
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -29,19 +29,19 @@ items:
   gasto_por_coding: '0.030'
   eficiencia: '64.850'
 - rank: 4
-  model: DeepSeek V4 Flash (Reasoning, Max Effort)
-  model_id: deepseek/deepseek-v4-flash-20260423
-  coding_index: '56.2'
-  price: '0.252'
-  gasto_por_coding: '0.004'
-  eficiencia: '54.940'
-- rank: 5
   model: Hy3
   model_id: tencent/hy3-preview-20260421
   coding_index: '58.8'
   price: '0.780'
   gasto_por_coding: '0.013'
   eficiencia: '54.900'
+- rank: 5
+  model: DeepSeek V4 Flash (Reasoning, Max Effort)
+  model_id: deepseek/deepseek-v4-flash-20260423
+  coding_index: '56.2'
+  price: '0.336'
+  gasto_por_coding: '0.006'
+  eficiencia: '54.520'
 - rank: 6
   model: Nex-N2-Pro
   model_id: nex-agi/nex-n2-pro
@@ -81,9 +81,9 @@ items:
   model: Ling-3.0-flash
   model_id: inclusionai/ling-3.0-flash-20260723
   coding_index: '50.6'
-  price: '0.084'
-  gasto_por_coding: '0.002'
-  eficiencia: '50.180'
+  price: '0.168'
+  gasto_por_coding: '0.003'
+  eficiencia: '49.760'
 - rank: 12
   model: Qwen3.8 27B
   model_id: qwen/qwen3.8-27b-20260814
