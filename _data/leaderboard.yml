@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 21/08/2026 12:38
+updated_at: America/Sao Paulo - 22/08/2026 00:44
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -18,9 +18,9 @@ items:
   model: DeepSeek V4 Flash 0731 (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-flash-20260731
   coding_index: '69.1'
-  price: '0.420'
-  gasto_por_coding: '0.006'
-  eficiencia: '67.000'
+  price: '0.206'
+  gasto_por_coding: '0.003'
+  eficiencia: '68.070'
 - rank: 3
   model: GPT-5.6 Luna (max)
   model_id: openai/gpt-5.6-luna-20260709
@@ -71,26 +71,26 @@ items:
   gasto_por_coding: '0.024'
   eficiencia: '51.700'
 - rank: 10
+  model: DeepSeek V4 Pro (Reasoning, Max Effort)
+  model_id: deepseek/deepseek-v4-pro-20260423
+  coding_index: '59.4'
+  price: '1.572'
+  gasto_por_coding: '0.026'
+  eficiencia: '51.540'
+- rank: 11
+  model: Qwen3.8 27B
+  model_id: qwen/qwen3.8-27b-20260814
+  coding_index: '68.1'
+  price: '3.400'
+  gasto_por_coding: '0.050'
+  eficiencia: '51.100'
+- rank: 12
   model: GLM-5.2 (max)
   model_id: z-ai/glm-5.2-20260616
   coding_index: '68.8'
   price: '3.650'
   gasto_por_coding: '0.053'
   eficiencia: '50.550'
-- rank: 11
-  model: Qwen3.8 27B
-  model_id: qwen/qwen3.8-27b-20260814
-  coding_index: '68.1'
-  price: '3.650'
-  gasto_por_coding: '0.054'
-  eficiencia: '49.850'
-- rank: 12
-  model: DeepSeek V4 Pro (Reasoning, Max Effort)
-  model_id: deepseek/deepseek-v4-pro-20260423
-  coding_index: '59.4'
-  price: '1.977'
-  gasto_por_coding: '0.033'
-  eficiencia: '49.515'
 - rank: 13
   model: Ling-3.0-flash
   model_id: inclusionai/ling-3.0-flash-20260723
