@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 22/08/2026 00:44
+updated_at: America/Sao Paulo - 22/08/2026 12:26
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -50,33 +50,33 @@ items:
   gasto_por_coding: '0.013'
   eficiencia: '54.900'
 - rank: 7
+  model: DeepSeek V4 Pro (Reasoning, Max Effort)
+  model_id: deepseek/deepseek-v4-pro-20260423
+  coding_index: '59.4'
+  price: '1.268'
+  gasto_por_coding: '0.021'
+  eficiencia: '53.060'
+- rank: 8
   model: KAT Coder Pro V2
   model_id: kwaipilot/kat-coder-pro-v2-20260327
   coding_index: '59.5'
   price: '1.500'
   gasto_por_coding: '0.025'
   eficiencia: '52.000'
-- rank: 8
+- rank: 9
   model: Solar Pro 4
   model_id: upstage/solar-pro4-20260810
   coding_index: '52.7'
   price: '0.150'
   gasto_por_coding: '0.003'
   eficiencia: '51.950'
-- rank: 9
+- rank: 10
   model: MiniMax-M3
   model_id: minimax/minimax-m3-20260531
   coding_index: '58.6'
   price: '1.380'
   gasto_por_coding: '0.024'
   eficiencia: '51.700'
-- rank: 10
-  model: DeepSeek V4 Pro (Reasoning, Max Effort)
-  model_id: deepseek/deepseek-v4-pro-20260423
-  coding_index: '59.4'
-  price: '1.572'
-  gasto_por_coding: '0.026'
-  eficiencia: '51.540'
 - rank: 11
   model: Qwen3.8 27B
   model_id: qwen/qwen3.8-27b-20260814
