@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 22/08/2026 12:26",
+  "updated_at": "America/Sao Paulo - 23/08/2026 00:53",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -22,9 +22,9 @@
       "model": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-flash-20260731",
       "coding_index": "69.1",
-      "price": "0.206",
+      "price": "0.197",
       "gasto_por_coding": "0.003",
-      "eficiencia": "68.070"
+      "eficiencia": "68.115"
     },
     {
       "rank": 3,
@@ -49,9 +49,9 @@
       "model": "DeepSeek V4 Flash (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-flash-20260423",
       "coding_index": "56.2",
-      "price": "0.252",
-      "gasto_por_coding": "0.004",
-      "eficiencia": "54.940"
+      "price": "0.176",
+      "gasto_por_coding": "0.003",
+      "eficiencia": "55.320"
     },
     {
       "rank": 6,
@@ -280,21 +280,21 @@
     },
     {
       "rank": 31,
+      "model": "Qwen3.6 35B A3B (Reasoning)",
+      "model_id": "qwen/qwen3.6-35b-a3b-20260415",
+      "coding_index": "41.9",
+      "price": "0.770",
+      "gasto_por_coding": "0.018",
+      "eficiencia": "38.050"
+    },
+    {
+      "rank": 32,
       "model": "LongCat 2.0",
       "model_id": "meituan/longcat-2.0-20260720",
       "coding_index": "45.3",
       "price": "1.500",
       "gasto_por_coding": "0.033",
       "eficiencia": "37.800"
-    },
-    {
-      "rank": 32,
-      "model": "Qwen3.6 35B A3B (Reasoning)",
-      "model_id": "qwen/qwen3.6-35b-a3b-20260415",
-      "coding_index": "41.9",
-      "price": "0.830",
-      "gasto_por_coding": "0.020",
-      "eficiencia": "37.750"
     },
     {
       "rank": 33,
