@@ -1,10 +1,10 @@
 {
-  "updated_at": "America/Sao Paulo - 24/08/2026 00:57",
+  "updated_at": "America/Sao Paulo - 24/08/2026 12:29",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
   "points_per_dollar": 5,
-  "as_of": "2026-08-19T12:00:03.775Z",
+  "as_of": "2026-08-24T12:00:07.239Z",
   "citation": "Source: Artificial Analysis (artificialanalysis.ai) via OpenRouter (openrouter.ai/rankings).",
   "source_url": "https://artificialanalysis.ai",
   "items": [
@@ -22,9 +22,9 @@
       "model": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-flash-20260731",
       "coding_index": "69.1",
-      "price": "0.420",
-      "gasto_por_coding": "0.006",
-      "eficiencia": "67.000"
+      "price": "0.197",
+      "gasto_por_coding": "0.003",
+      "eficiencia": "68.115"
     },
     {
       "rank": 3,
@@ -91,6 +91,15 @@
     },
     {
       "rank": 10,
+      "model": "DeepSeek V4 Pro (Reasoning, Max Effort)",
+      "model_id": "deepseek/deepseek-v4-pro-20260423",
+      "coding_index": "59.4",
+      "price": "1.572",
+      "gasto_por_coding": "0.026",
+      "eficiencia": "51.540"
+    },
+    {
+      "rank": 11,
       "model": "Qwen3.8 27B",
       "model_id": "qwen/qwen3.8-27b-20260814",
       "coding_index": "68.1",
@@ -99,7 +108,7 @@
       "eficiencia": "51.100"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "model": "GLM-5.2 (max)",
       "model_id": "z-ai/glm-5.2-20260616",
       "coding_index": "68.8",
@@ -108,7 +117,7 @@
       "eficiencia": "50.550"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "model": "Ling-3.0-flash",
       "model_id": "inclusionai/ling-3.0-flash-20260723",
       "coding_index": "50.6",
@@ -117,7 +126,7 @@
       "eficiencia": "49.400"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "model": "GPT-5.4 nano (xhigh)",
       "model_id": "openai/gpt-5.4-nano-20260317",
       "coding_index": "56.1",
@@ -126,7 +135,7 @@
       "eficiencia": "48.850"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "model": "Qwen3.7 Plus",
       "model_id": "qwen/qwen3.7-plus-20260602",
       "coding_index": "55.9",
@@ -135,7 +144,7 @@
       "eficiencia": "47.900"
     },
     {
-      "rank": 15,
+      "rank": 16,
       "model": "MiniMax-M2.7",
       "model_id": "minimax/minimax-m2.7-20260318",
       "coding_index": "52.6",
@@ -144,7 +153,7 @@
       "eficiencia": "46.350"
     },
     {
-      "rank": 16,
+      "rank": 17,
       "model": "GLM-5.3 (max)",
       "model_id": "z-ai/glm-5.3-20260816",
       "coding_index": "74.8",
@@ -153,7 +162,7 @@
       "eficiencia": "45.800"
     },
     {
-      "rank": 17,
+      "rank": 18,
       "model": "MiMo-V2.5",
       "model_id": "xiaomi/mimo-v2.5-20260422",
       "coding_index": "56.8",
@@ -162,7 +171,7 @@
       "eficiencia": "44.800"
     },
     {
-      "rank": 18,
+      "rank": 19,
       "model": "Muse Spark 1.2 (xhigh)",
       "model_id": "meta/muse-spark-1.2-20260805",
       "coding_index": "72.2",
@@ -171,7 +180,7 @@
       "eficiencia": "44.700"
     },
     {
-      "rank": 19,
+      "rank": 20,
       "model": "Inkling Small",
       "model_id": "thinkingmachines/inkling-small-20260730",
       "coding_index": "52.9",
@@ -180,7 +189,7 @@
       "eficiencia": "44.650"
     },
     {
-      "rank": 20,
+      "rank": 21,
       "model": "Gemini 3.6 Flash (high)",
       "model_id": "google/gemini-3.6-flash-20260721",
       "coding_index": "69.2",
@@ -189,7 +198,7 @@
       "eficiencia": "44.450"
     },
     {
-      "rank": 21,
+      "rank": 22,
       "model": "Nex-N2-Pro",
       "model_id": "nex-agi/nex-n2-pro",
       "coding_index": "59.1",
@@ -198,7 +207,7 @@
       "eficiencia": "44.100"
     },
     {
-      "rank": 22,
+      "rank": 23,
       "model": "Muse Spark 1.1 (xhigh)",
       "model_id": "meta/muse-spark-1.1-20260709",
       "coding_index": "71.3",
@@ -207,7 +216,7 @@
       "eficiencia": "43.800"
     },
     {
-      "rank": 23,
+      "rank": 24,
       "model": "Qwen3.6 Plus",
       "model_id": "qwen/qwen3.6-plus-04-02",
       "coding_index": "54.5",
@@ -216,7 +225,7 @@
       "eficiencia": "43.125"
     },
     {
-      "rank": 24,
+      "rank": 25,
       "model": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-pro-20260813",
       "coding_index": "68.8",
@@ -225,7 +234,7 @@
       "eficiencia": "42.400"
     },
     {
-      "rank": 25,
+      "rank": 26,
       "model": "Qwen3.6 27B (Reasoning)",
       "model_id": "qwen/qwen3.6-27b-20260422",
       "coding_index": "53.7",
@@ -234,7 +243,7 @@
       "eficiencia": "42.200"
     },
     {
-      "rank": 26,
+      "rank": 27,
       "model": "Kimi K2.6",
       "model_id": "moonshotai/kimi-k2.6-20260420",
       "coding_index": "61.8",
@@ -243,22 +252,13 @@
       "eficiencia": "40.550"
     },
     {
-      "rank": 27,
+      "rank": 28,
       "model": "Kimi K2.7 Code",
       "model_id": "moonshotai/kimi-k2.7-code-20260612",
       "coding_index": "60.8",
       "price": "4.080",
       "gasto_por_coding": "0.067",
       "eficiencia": "40.400"
-    },
-    {
-      "rank": 28,
-      "model": "Ring-2.6-1T",
-      "model_id": "inclusionai/ring-2.6-1t-20260508",
-      "coding_index": "42.8",
-      "price": "0.700",
-      "gasto_por_coding": "0.016",
-      "eficiencia": "39.300"
     },
     {
       "rank": 29,
@@ -352,15 +352,6 @@
     },
     {
       "rank": 39,
-      "model": "DeepSeek V4 Pro (Reasoning, Max Effort)",
-      "model_id": "deepseek/deepseek-v4-pro-20260423",
-      "coding_index": "59.4",
-      "price": "5.070",
-      "gasto_por_coding": "0.085",
-      "eficiencia": "34.050"
-    },
-    {
-      "rank": 40,
       "model": "Qwen3.5 122B A10B (Reasoning)",
       "model_id": "qwen/qwen3.5-122b-a10b-20260224",
       "coding_index": "45.7",
@@ -369,7 +360,7 @@
       "eficiencia": "34.000"
     },
     {
-      "rank": 41,
+      "rank": 40,
       "model": "Gemini 3.5 Flash-Lite",
       "model_id": "google/gemini-3.5-flash-lite-20260721",
       "coding_index": "49.3",
@@ -378,7 +369,7 @@
       "eficiencia": "33.900"
     },
     {
-      "rank": 42,
+      "rank": 41,
       "model": "GLM-4.6 (Reasoning)",
       "model_id": "z-ai/glm-4.6",
       "coding_index": "45.8",
@@ -387,7 +378,7 @@
       "eficiencia": "33.300"
     },
     {
-      "rank": 43,
+      "rank": 42,
       "model": "Kimi K2.5 (Reasoning)",
       "model_id": "moonshotai/kimi-k2.5-0127",
       "coding_index": "46.8",
@@ -396,7 +387,7 @@
       "eficiencia": "33.300"
     },
     {
-      "rank": 44,
+      "rank": 43,
       "model": "GLM-5.1 (Reasoning)",
       "model_id": "z-ai/glm-5.1-20260406",
       "coding_index": "55.8",
@@ -405,7 +396,7 @@
       "eficiencia": "33.050"
     },
     {
-      "rank": 45,
+      "rank": 44,
       "model": "Grok 4.5 (high)",
       "model_id": "x-ai/grok-4.5-20260708",
       "coding_index": "72.4",
@@ -414,7 +405,7 @@
       "eficiencia": "32.400"
     },
     {
-      "rank": 46,
+      "rank": 45,
       "model": "Qwen3.8 2.4T A95B",
       "model_id": "qwen/qwen3.8-2.4t-a95b-20260812",
       "coding_index": "71.9",
@@ -423,7 +414,7 @@
       "eficiencia": "31.900"
     },
     {
-      "rank": 47,
+      "rank": 46,
       "model": "Qwen3.8 Max",
       "model_id": "qwen/qwen3.8-max-20260803",
       "coding_index": "71.8",
@@ -432,7 +423,7 @@
       "eficiencia": "31.800"
     },
     {
-      "rank": 48,
+      "rank": 47,
       "model": "Qwen3.5 397B A17B (Reasoning)",
       "model_id": "qwen/qwen3.5-397b-a17b-20260216",
       "coding_index": "48.2",
@@ -441,7 +432,7 @@
       "eficiencia": "30.950"
     },
     {
-      "rank": 49,
+      "rank": 48,
       "model": "GPT-5.4 mini (xhigh)",
       "model_id": "openai/gpt-5.4-mini-20260317",
       "coding_index": "56.1",
@@ -450,7 +441,7 @@
       "eficiencia": "29.850"
     },
     {
-      "rank": 50,
+      "rank": 49,
       "model": "Inkling (xhigh)",
       "model_id": "thinkingmachines/inkling-20260715",
       "coding_index": "52.1",
@@ -459,7 +450,7 @@
       "eficiencia": "27.100"
     },
     {
-      "rank": 51,
+      "rank": 50,
       "model": "Grok 4.3 (high)",
       "model_id": "x-ai/grok-4.3-20260430",
       "coding_index": "42.2",
@@ -468,7 +459,7 @@
       "eficiencia": "23.450"
     },
     {
-      "rank": 52,
+      "rank": 51,
       "model": "Gemini 3.5 Flash (high)",
       "model_id": "google/gemini-3.5-flash-20260519",
       "coding_index": "70.1",
@@ -477,7 +468,7 @@
       "eficiencia": "12.350"
     },
     {
-      "rank": 53,
+      "rank": 52,
       "model": "Claude 4.5 Haiku (Reasoning)",
       "model_id": "anthropic/claude-4.5-haiku-20251001",
       "coding_index": "43.9",
@@ -486,7 +477,7 @@
       "eficiencia": "10.900"
     },
     {
-      "rank": 54,
+      "rank": 53,
       "model": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)",
       "model_id": "anthropic/claude-sonnet-5-20260630",
       "coding_index": "71.5",
@@ -495,7 +486,7 @@
       "eficiencia": "5.500"
     },
     {
-      "rank": 55,
+      "rank": 54,
       "model": "Mistral Medium 3.5",
       "model_id": "mistralai/mistral-medium-3.5-20260430",
       "coding_index": "46.9",
@@ -504,7 +495,7 @@
       "eficiencia": "1.900"
     },
     {
-      "rank": 56,
+      "rank": 55,
       "model": "GPT-5.6 Terra (max)",
       "model_id": "openai/gpt-5.6-terra-20260709",
       "coding_index": "76.7",
@@ -513,7 +504,7 @@
       "eficiencia": "-0.300"
     },
     {
-      "rank": 57,
+      "rank": 56,
       "model": "Gemini 3.1 Pro Preview",
       "model_id": "google/gemini-3.1-pro-preview-20260219",
       "coding_index": "68.8",
@@ -522,7 +513,7 @@
       "eficiencia": "-1.200"
     },
     {
-      "rank": 58,
+      "rank": 57,
       "model": "Kimi K3 (max)",
       "model_id": "moonshotai/kimi-k3-20260715",
       "coding_index": "76.2",
@@ -531,7 +522,7 @@
       "eficiencia": "-7.800"
     },
     {
-      "rank": 59,
+      "rank": 58,
       "model": "GPT-5.1 (high)",
       "model_id": "openai/gpt-5.1-20251113",
       "coding_index": "49.4",
@@ -540,7 +531,7 @@
       "eficiencia": "-12.475"
     },
     {
-      "rank": 60,
+      "rank": 59,
       "model": "GPT-5.4 (xhigh)",
       "model_id": "openai/gpt-5.4-20260305",
       "coding_index": "71.1",
@@ -549,7 +540,7 @@
       "eficiencia": "-25.150"
     },
     {
-      "rank": 61,
+      "rank": 60,
       "model": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
       "model_id": "anthropic/claude-4.6-sonnet-20260217",
       "coding_index": "63.0",
@@ -558,7 +549,7 @@
       "eficiencia": "-36.000"
     },
     {
-      "rank": 62,
+      "rank": 61,
       "model": "Claude 4.5 Sonnet (Reasoning)",
       "model_id": "anthropic/claude-4.5-sonnet-20250929",
       "coding_index": "52.1",
@@ -567,7 +558,7 @@
       "eficiencia": "-46.900"
     },
     {
-      "rank": 63,
+      "rank": 62,
       "model": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
       "model_id": "anthropic/claude-opus-5-20260723",
       "coding_index": "78.0",
@@ -576,7 +567,7 @@
       "eficiencia": "-87.000"
     },
     {
-      "rank": 64,
+      "rank": 63,
       "model": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
       "model_id": "anthropic/claude-4.8-opus-20260528",
       "coding_index": "74.3",
@@ -585,7 +576,7 @@
       "eficiencia": "-90.700"
     },
     {
-      "rank": 65,
+      "rank": 64,
       "model": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
       "model_id": "anthropic/claude-4.7-opus-20260416",
       "coding_index": "73.6",
@@ -594,7 +585,7 @@
       "eficiencia": "-91.400"
     },
     {
-      "rank": 66,
+      "rank": 65,
       "model": "GPT-5.6 Sol (xhigh)",
       "model_id": "openai/gpt-5.6-sol-20260709",
       "coding_index": "78.3",
@@ -603,7 +594,7 @@
       "eficiencia": "-114.200"
     },
     {
-      "rank": 67,
+      "rank": 66,
       "model": "GPT-5.5 (xhigh)",
       "model_id": "openai/gpt-5.5-20260423",
       "coding_index": "74.9",
@@ -612,7 +603,7 @@
       "eficiencia": "-117.600"
     },
     {
-      "rank": 68,
+      "rank": 67,
       "model": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
       "model_id": "anthropic/claude-5-fable-20260609",
       "coding_index": "76.5",
