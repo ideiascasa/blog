@@ -9,19 +9,6 @@ Aqui listamos as melhores IAs para código, ranqueadas por critérios internos c
 - Atualizado em: {{ site.data.leaderboard.updated_at }}
 - {{ site.data.leaderboard.citation }}
 
-Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding_index }}. O ranking usa a **eficiência**:
-
-```text
-eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço
-
-+$1.00 de preço vale +{{ site.data.leaderboard.points_per_dollar }} pontos de coding. Em caso de empate no score, vence o menor gasto (preço / coding).
-```
-
-- **Coding**: índice de coding da Artificial Analysis via OpenRouter.
-- **Preço**: soma de input + output por milhão de tokens.
-- **Gasto**: preço dividido pelo índice de coding (desempate; menor = melhor).
-- **Eficiência**: a fórmula acima; maior valor = melhor posição.
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <div markdown="0" style="position: relative; background: #ffffff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); color: #222;">
@@ -202,6 +189,19 @@ plugins: [quadrantsPlugin]
 });
 });
 </script>
+
+Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding_index }}. O ranking usa a **eficiência**:
+
+```text
+eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço
+
++$1.00 de preço vale +{{ site.data.leaderboard.points_per_dollar }} pontos de coding. Em caso de empate no score, vence o menor gasto (preço / coding).
+```
+
+- **Coding**: índice de coding da Artificial Analysis via OpenRouter.
+- **Preço**: soma de input + output por milhão de tokens.
+- **Gasto**: preço dividido pelo índice de coding (desempate; menor = melhor).
+- **Eficiência**: a fórmula acima; maior valor = melhor posição.
 
 <table>
   <thead>
