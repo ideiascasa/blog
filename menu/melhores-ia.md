@@ -188,21 +188,6 @@ plugins: [quadrantsPlugin]
 });
 </script>
 
-Aqui listamos as melhores IAs para código, ranqueadas por critérios internos como eficiência e custo — priorizando modelos com bom desempenho em coding e melhor relação preço por ponto de capacidade.
-
-Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding_index }}. O ranking usa a **eficiência**:
-
-```text
-eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço
-
-+$1.00 de preço vale +{{ site.data.leaderboard.points_per_dollar }} pontos de coding. Em caso de empate no score, vence o menor gasto (preço / coding).
-```
-
-- **Coding**: índice de coding da Artificial Analysis via OpenRouter.
-- **Preço**: soma de input + output por milhão de tokens.
-- **Gasto**: preço dividido pelo índice de coding (desempate; menor = melhor).
-- **Eficiência**: a fórmula acima; maior valor = melhor posição.
-
 <table>
   <thead>
     <tr>
@@ -229,3 +214,18 @@ eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço
     {% endfor %}
   </tbody>
 </table>
+
+Aqui listamos as melhores IAs para código, ranqueadas por critérios internos como eficiência e custo — priorizando modelos com bom desempenho em coding e melhor relação preço por ponto de capacidade.
+
+Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding_index }}. O ranking usa a **eficiência**:
+
+```text
+eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço
+
++$1.00 de preço vale +{{ site.data.leaderboard.points_per_dollar }} pontos de coding. Em caso de empate no score, vence o menor gasto (preço / coding).
+```
+
+- **Coding**: índice de coding da Artificial Analysis via OpenRouter.
+- **Preço**: soma de input + output por milhão de tokens.
+- **Gasto**: preço dividido pelo índice de coding (desempate; menor = melhor).
+- **Eficiência**: a fórmula acima; maior valor = melhor posição.
