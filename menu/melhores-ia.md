@@ -27,7 +27,7 @@ eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço
 <div markdown="0" style="position: relative; background: #ffffff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); color: #222;">
 <h3 style="margin-top: 0; margin-bottom: 6px; font-size: 18px; font-weight: bold; border-bottom: none;">Matriz de Custo-Benefício dos Modelos</h3>
 <p style="color: #666; margin-top: 0; font-size: 14px; line-height: 1.4;">
-Coding Index (Y) × Preço por milhão de tokens (X, invertido). Quanto mais ao topo e à direita, melhor a relação capacidade/preço.
+Coding Index (Y) × Preço por milhão de tokens (X, invertido). Quanto mais ao topo e à direita, melhor a relação capacidade/preço. A matriz usa valores factuais sem nenhum cálculo. O corte de 60 pontos vs 4$ é empirico.
 </p>
 <div style="position: relative; height: 500px; width: 100%;">
 <canvas id="quadrantsChart"></canvas>
