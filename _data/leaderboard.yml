@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 28/08/2026 12:09
+updated_at: America/Sao Paulo - 28/08/2026 20:58
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -15,19 +15,19 @@ items:
   gasto_por_coding: '0.015'
   eficiencia: '70.475'
 - rank: 2
+  model: DeepSeek V4 Flash 0731 (Reasoning, Max Effort)
+  model_id: deepseek/deepseek-v4-flash-20260731
+  coding_index: '69.1'
+  price: '0.150'
+  gasto_por_coding: '0.002'
+  eficiencia: '68.350'
+- rank: 3
   model: GLM-5.3-Flash
   model_id: z-ai/glm-5.3-flash-20260826
   coding_index: '71.5'
   price: '0.650'
   gasto_por_coding: '0.009'
   eficiencia: '68.250'
-- rank: 3
-  model: DeepSeek V4 Flash 0731 (Reasoning, Max Effort)
-  model_id: deepseek/deepseek-v4-flash-20260731
-  coding_index: '69.1'
-  price: '0.210'
-  gasto_por_coding: '0.003'
-  eficiencia: '68.050'
 - rank: 4
   model: GPT-5.6 Luna (max)
   model_id: openai/gpt-5.6-luna-20260709
@@ -113,26 +113,26 @@ items:
   gasto_por_coding: '0.005'
   eficiencia: '49.400'
 - rank: 16
-  model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
-  model_id: deepseek/deepseek-v4-pro-20260813
-  coding_index: '68.8'
-  price: '3.900'
-  gasto_por_coding: '0.057'
-  eficiencia: '49.300'
+  model: GLM-5.3 (max)
+  model_id: z-ai/glm-5.3-20260816
+  coding_index: '74.8'
+  price: '5.220'
+  gasto_por_coding: '0.070'
+  eficiencia: '48.700'
 - rank: 17
+  model: DeepSeek V4 Pro (Reasoning, Max Effort)
+  model_id: deepseek/deepseek-v4-pro-20260423
+  coding_index: '59.4'
+  price: '2.221'
+  gasto_por_coding: '0.037'
+  eficiencia: '48.295'
+- rank: 18
   model: Qwen3.7 Plus
   model_id: qwen/qwen3.7-plus-20260602
   coding_index: '55.9'
   price: '1.600'
   gasto_por_coding: '0.029'
   eficiencia: '47.900'
-- rank: 18
-  model: DeepSeek V4 Pro (Reasoning, Max Effort)
-  model_id: deepseek/deepseek-v4-pro-20260423
-  coding_index: '59.4'
-  price: '2.373'
-  gasto_por_coding: '0.040'
-  eficiencia: '47.535'
 - rank: 19
   model: MiniMax-M2.7
   model_id: minimax/minimax-m2.7-20260318
@@ -141,61 +141,61 @@ items:
   gasto_por_coding: '0.024'
   eficiencia: '46.350'
 - rank: 20
-  model: GLM-5.3 (max)
-  model_id: z-ai/glm-5.3-20260816
-  coding_index: '74.8'
-  price: '5.800'
-  gasto_por_coding: '0.078'
-  eficiencia: '45.800'
-- rank: 21
   model: Muse Spark 1.2 (xhigh)
   model_id: meta/muse-spark-1.2-20260805
   coding_index: '72.2'
   price: '5.500'
   gasto_por_coding: '0.076'
   eficiencia: '44.700'
-- rank: 22
+- rank: 21
   model: Inkling Small
   model_id: thinkingmachines/inkling-small-20260730
   coding_index: '52.9'
   price: '1.650'
   gasto_por_coding: '0.031'
   eficiencia: '44.650'
-- rank: 23
+- rank: 22
   model: Gemini 3.6 Flash (high)
   model_id: google/gemini-3.6-flash-20260721
   coding_index: '69.2'
   price: '4.950'
   gasto_por_coding: '0.072'
   eficiencia: '44.450'
-- rank: 24
+- rank: 23
   model: Nex-N2-Pro
   model_id: nex-agi/nex-n2-pro
   coding_index: '59.1'
   price: '3.000'
   gasto_por_coding: '0.051'
   eficiencia: '44.100'
-- rank: 25
+- rank: 24
   model: Muse Spark 1.1 (xhigh)
   model_id: meta/muse-spark-1.1-20260709
   coding_index: '71.3'
   price: '5.500'
   gasto_por_coding: '0.077'
   eficiencia: '43.800'
-- rank: 26
+- rank: 25
   model: Qwen3.6 Plus
   model_id: qwen/qwen3.6-plus-04-02
   coding_index: '54.5'
   price: '2.275'
   gasto_por_coding: '0.042'
   eficiencia: '43.125'
-- rank: 27
+- rank: 26
   model: GPT-5.4 mini (xhigh)
   model_id: openai/gpt-5.4-mini-20260317
   coding_index: '56.1'
   price: '2.625'
   gasto_por_coding: '0.047'
   eficiencia: '42.975'
+- rank: 27
+  model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
+  model_id: deepseek/deepseek-v4-pro-20260813
+  coding_index: '68.8'
+  price: '5.280'
+  gasto_por_coding: '0.077'
+  eficiencia: '42.400'
 - rank: 28
   model: Qwen3.6 27B (Reasoning)
   model_id: qwen/qwen3.6-27b-20260422
@@ -442,33 +442,33 @@ items:
   gasto_por_coding: '0.380'
   eficiencia: '-46.900'
 - rank: 63
+  model: GPT-5.6 Sol (xhigh)
+  model_id: openai/gpt-5.6-sol-20260709
+  coding_index: '78.3'
+  price: '26.400'
+  gasto_por_coding: '0.337'
+  eficiencia: '-53.700'
+- rank: 64
   model: Claude Opus 5 (Adaptive Reasoning, Max Effort)
   model_id: anthropic/claude-opus-5-20260723
   coding_index: '78.0'
   price: '33.000'
   gasto_por_coding: '0.423'
   eficiencia: '-87.000'
-- rank: 64
+- rank: 65
   model: Claude Opus 4.8 (Adaptive Reasoning, Max Effort)
   model_id: anthropic/claude-4.8-opus-20260528
   coding_index: '74.3'
   price: '33.000'
   gasto_por_coding: '0.444'
   eficiencia: '-90.700'
-- rank: 65
+- rank: 66
   model: Claude Opus 4.7 (Adaptive Reasoning, Max Effort)
   model_id: anthropic/claude-4.7-opus-20260416
   coding_index: '73.6'
   price: '33.000'
   gasto_por_coding: '0.448'
   eficiencia: '-91.400'
-- rank: 66
-  model: GPT-5.6 Sol (xhigh)
-  model_id: openai/gpt-5.6-sol-20260709
-  coding_index: '78.3'
-  price: '38.500'
-  gasto_por_coding: '0.492'
-  eficiencia: '-114.200'
 - rank: 67
   model: GPT-5.5 (xhigh)
   model_id: openai/gpt-5.5-20260423
