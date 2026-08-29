@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 28/08/2026 20:58",
+  "updated_at": "America/Sao Paulo - 29/08/2026 06:51",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -22,9 +22,9 @@
       "model": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-flash-20260731",
       "coding_index": "69.1",
-      "price": "0.150",
+      "price": "0.135",
       "gasto_por_coding": "0.002",
-      "eficiencia": "68.350"
+      "eficiencia": "68.425"
     },
     {
       "rank": 3,
@@ -136,6 +136,15 @@
     },
     {
       "rank": 15,
+      "model": "DeepSeek V4 Pro (Reasoning, Max Effort)",
+      "model_id": "deepseek/deepseek-v4-pro-20260423",
+      "coding_index": "59.4",
+      "price": "1.977",
+      "gasto_por_coding": "0.033",
+      "eficiencia": "49.515"
+    },
+    {
+      "rank": 16,
       "model": "Ling 3.0 Flash",
       "model_id": "inclusionai/ling-3.0-flash-20260723",
       "coding_index": "50.6",
@@ -144,22 +153,13 @@
       "eficiencia": "49.400"
     },
     {
-      "rank": 16,
+      "rank": 17,
       "model": "GLM-5.3 (max)",
       "model_id": "z-ai/glm-5.3-20260816",
       "coding_index": "74.8",
       "price": "5.220",
       "gasto_por_coding": "0.070",
       "eficiencia": "48.700"
-    },
-    {
-      "rank": 17,
-      "model": "DeepSeek V4 Pro (Reasoning, Max Effort)",
-      "model_id": "deepseek/deepseek-v4-pro-20260423",
-      "coding_index": "59.4",
-      "price": "2.221",
-      "gasto_por_coding": "0.037",
-      "eficiencia": "48.295"
     },
     {
       "rank": 18,
