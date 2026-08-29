@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 29/08/2026 06:51",
+  "updated_at": "America/Sao Paulo - 29/08/2026 15:15",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -127,21 +127,21 @@
     },
     {
       "rank": 14,
+      "model": "DeepSeek V4 Pro (Reasoning, Max Effort)",
+      "model_id": "deepseek/deepseek-v4-pro-20260423",
+      "coding_index": "59.4",
+      "price": "1.734",
+      "gasto_por_coding": "0.029",
+      "eficiencia": "50.730"
+    },
+    {
+      "rank": 15,
       "model": "GLM-5.2 (max)",
       "model_id": "z-ai/glm-5.2-20260616",
       "coding_index": "68.8",
       "price": "3.650",
       "gasto_por_coding": "0.053",
       "eficiencia": "50.550"
-    },
-    {
-      "rank": 15,
-      "model": "DeepSeek V4 Pro (Reasoning, Max Effort)",
-      "model_id": "deepseek/deepseek-v4-pro-20260423",
-      "coding_index": "59.4",
-      "price": "1.977",
-      "gasto_por_coding": "0.033",
-      "eficiencia": "49.515"
     },
     {
       "rank": 16,
@@ -154,15 +154,6 @@
     },
     {
       "rank": 17,
-      "model": "GLM-5.3 (max)",
-      "model_id": "z-ai/glm-5.3-20260816",
-      "coding_index": "74.8",
-      "price": "5.220",
-      "gasto_por_coding": "0.070",
-      "eficiencia": "48.700"
-    },
-    {
-      "rank": 18,
       "model": "Qwen3.7 Plus",
       "model_id": "qwen/qwen3.7-plus-20260602",
       "coding_index": "55.9",
@@ -171,13 +162,22 @@
       "eficiencia": "47.900"
     },
     {
-      "rank": 19,
+      "rank": 18,
       "model": "MiniMax-M2.7",
       "model_id": "minimax/minimax-m2.7-20260318",
       "coding_index": "52.6",
       "price": "1.250",
       "gasto_por_coding": "0.024",
       "eficiencia": "46.350"
+    },
+    {
+      "rank": 19,
+      "model": "GLM-5.3 (max)",
+      "model_id": "z-ai/glm-5.3-20260816",
+      "coding_index": "74.8",
+      "price": "5.800",
+      "gasto_por_coding": "0.078",
+      "eficiencia": "45.800"
     },
     {
       "rank": 20,
