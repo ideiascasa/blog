@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 30/08/2026 06:02",
+  "updated_at": "America/Sao Paulo - 30/08/2026 15:31",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -73,21 +73,21 @@
     },
     {
       "rank": 8,
+      "model": "DeepSeek V4 Pro (Reasoning, Max Effort)",
+      "model_id": "deepseek/deepseek-v4-pro-20260423",
+      "coding_index": "59.4",
+      "price": "1.278",
+      "gasto_por_coding": "0.022",
+      "eficiencia": "53.010"
+    },
+    {
+      "rank": 9,
       "model": "MiMo-V2.5",
       "model_id": "xiaomi/mimo-v2.5-20260422",
       "coding_index": "56.8",
       "price": "0.780",
       "gasto_por_coding": "0.014",
       "eficiencia": "52.900"
-    },
-    {
-      "rank": 9,
-      "model": "DeepSeek V4 Pro (Reasoning, Max Effort)",
-      "model_id": "deepseek/deepseek-v4-pro-20260423",
-      "coding_index": "59.4",
-      "price": "1.369",
-      "gasto_por_coding": "0.023",
-      "eficiencia": "52.555"
     },
     {
       "rank": 10,
