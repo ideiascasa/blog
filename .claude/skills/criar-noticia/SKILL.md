@@ -70,3 +70,4 @@ git push
 - **Atribua a imagem** no rodapé (artista, fonte, licença)
 - Siga o formato dos posts existentes em `_posts/`
 - Use a data atual no nome do arquivo (YYYY-MM-DD)
+- Use Swarm para executar multiplas tarefas
