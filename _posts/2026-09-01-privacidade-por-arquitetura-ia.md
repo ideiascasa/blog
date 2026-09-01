@@ -48,3 +48,5 @@ Ao contrário da economia de publicidade na internet, onde privacidade e lucro m
 ---
 
 > **Fonte original:** [Privacy by Architecture Makes AI Compliance Work](https://www.techpolicy.press/privacy-by-architecture-makes-ai-compliance-work/) - Tech Policy Press, por Isabel Hahn e Aaron Alva, 31 de agosto de 2026.
+>
+> **Imagem:** *Silicon Landscapes* por Sinem Görücü, via [Better Images of AI](https://betterimagesofai.org), licenciada sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
