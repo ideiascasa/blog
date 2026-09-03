@@ -37,7 +37,7 @@ Os programas **Fairwind** (Google), os programas de acesso confiável da Anthrop
 
 Defensores podem usar esses modelos para revisar código, priorizar vulnerabilidades, escrever regras de detecção e testar configurações. Mas a execução de exploits, alterações em produção, escalonamento de privilégios e acesso a sistemas de terceiros devem permanecer atrás de aprovação humana explícita até que as avaliações mostrem que o modelo respeita esses limites sob pressão.
 
-A escalada desses programas de acesso restrito reflete uma mudança estratégica: à medida que a IA cibernética se torna um ativo estratégico ligado à defesa nacional, o acesso a esses modelos pode passar a depender dos padrões de triagem de empresas estrangeiras — o que reforça a necessidade de desenvolver capacidades independentes de defesa cibernética.
+A escalada desses programas de acesso restrito reflete uma mudança estratégica: à medida que a IA cibernética se torna um ativo estratégico ligado à defesa nacional, o acesso a esses modelos pode passar a depender dos padrões de triagem de empresas estrangeiras — o que reforça a necessidade de desenvolver capacidades independentes de defesa cibernética. Para quem busca se orientar nesse cenário de rápida evolução, nossa [análise comparativa dos melhores modelos de IA](https://blog.ideias.casa/melhores-ia) acompanha e avalia as principais opções disponíveis no mercado.
 
 ---
 
