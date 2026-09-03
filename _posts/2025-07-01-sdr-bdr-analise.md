@@ -3,7 +3,7 @@ layout: post
 title: "Guia Completo: Como Melhorar o Trabalho de SDR e BDR"
 author: "Davi"
 categories: blog
-tags: [analise]
+tags: [blog,analise,vendas,prospeccao]
 image: tablet-sentada.jpg
 ---
 

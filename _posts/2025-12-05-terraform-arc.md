@@ -3,7 +3,7 @@ layout: post
 title: "Terraform ARC para Bancos de Dados Postgres e MongoDB em Ambiente com Auto Scale"
 author: "Davi"
 categories: blog
-tags: [blog,sample]
+tags: [blog,infraestrutura,devops,terraform]
 image: forest.jpg
 ---
 

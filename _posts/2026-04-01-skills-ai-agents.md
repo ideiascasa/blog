@@ -3,7 +3,7 @@ layout: post
 title: "Desenvolvimento de Aplicações Java Assistido por IA com Agent Skills"
 author: "Siva Katamreddy"
 categories: blog
-tags: [blog,ai,ai-agents,junie,spring-boot]
+tags: [blog,ia,agentes-ia,desenvolvimento,spring-boot,java]
 image: skills-ai-agents-featured.png
 ---
 

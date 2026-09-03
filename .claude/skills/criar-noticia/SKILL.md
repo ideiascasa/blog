@@ -85,7 +85,7 @@ Se o artigo for sobre **inteligência artificial**, **modelos de IA**, **ferrame
 👉 **Exemplo de encaixe natural:**
 > "Para quem busca se orientar nesse cenário de rápida evolução, nossa [análise comparativa dos melhores modelos de IA](https://blog.ideias.casa/melhores-ia) acompanha e avalia as principais opções disponíveis no mercado."
 
-**Fallback:** apenas se não houver um encaixe contextual natural no texto, insira o link ao final do post, após o rodapé da fonte e imagem:
+Insira, tambem, o link ao final do post, após o rodapé da fonte e imagem:
 
 ```markdown
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "O Grande Ranking das IAs para Engenharia de Software: SWE-Bench vs. Eficiência de Custo em 2026"
 author: "Davi"
 categories: blog
-tags: [blog,analise,ai]
+tags: [blog,ia,analise,ranking]
 image: coding.jpg
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Multiplataforma com Neutralino"
 author: "Davi"
 categories: blog
-tags: [blog,sample]
+tags: [blog,desenvolvimento,desktop,typescript,neutralino]
 image: neutra.png
 ---
 

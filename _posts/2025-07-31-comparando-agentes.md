@@ -3,7 +3,7 @@ layout: post
 title: "Comparando Agentes: Perplexity, Gems e GPTs"
 author: "Davi"
 categories: blog
-tags: [blog,ai]
+tags: [blog,ia,analise,agentes-ia]
 image: cutting.jpg
 ---
 

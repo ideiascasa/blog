@@ -3,7 +3,7 @@ layout: post
 title: "Ferramentas SAST"
 author: "Davi"
 categories: blog
-tags: [blog,sec]
+tags: [blog,seguranca,sec,analise,desenvolvimento]
 image: spools.jpg
 ---
 

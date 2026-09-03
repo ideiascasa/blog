@@ -3,7 +3,7 @@ layout: post
 title: "Automatizando Desenvolvimento com Cursor AI: Guia Completo para React, Svelte e TypeScript"
 author: "Davi"
 categories: blog
-tags: [blog,sample]
+tags: [blog, ia, automacao, desenvolvimento]
 image: industry-coding.webp
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Como Fazer um Servidor MCP e um Cliente em Spring Boot Java 21"
 author: "Davi"
 categories: blog
-tags: [blog,sample]
+tags: [blog, spring-boot, desenvolvimento, ia]
 image: mcp-server.png
 ---
 

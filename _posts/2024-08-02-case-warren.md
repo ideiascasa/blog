@@ -3,7 +3,7 @@ layout: post
 title: "Case Warren"
 author: "Davi"
 categories: case
-tags: [case,sample]
+tags: [case,ia]
 image: case-vida.png
 ---
 

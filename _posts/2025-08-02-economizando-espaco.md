@@ -3,7 +3,7 @@ layout: post
 title: "Economizando espaço com fotos"
 author: "Davi"
 categories: blog
-tags: [blog,sample]
+tags: [blog,ia,python,automacao]
 image: compare.png
 ---
 

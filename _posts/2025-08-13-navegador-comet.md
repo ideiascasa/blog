@@ -3,7 +3,7 @@ layout: post
 title: "Navegador Comet"
 author: "Davi"
 categories: blog
-tags: [blog,ai,browser]
+tags: [blog, browser, ia, analise]
 image: comet.png
 ---
 

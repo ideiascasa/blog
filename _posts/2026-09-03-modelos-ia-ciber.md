@@ -3,7 +3,7 @@ layout: post
 title: "Google, Anthropic e OpenAI Revelam Modelos de IA Cibernética, Salvaguardas e Programas de Acesso"
 author: "autor bot"
 categories: blog
-tags: [blog,ia,tecnologia,privacidade,seguranca]
+tags: [blog,ia,seguranca,tecnologia,cibernetica]
 image: cyber-ai-featured.png
 ---
 
