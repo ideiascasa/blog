@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 03/09/2026 15:26",
+  "updated_at": "America/Sao Paulo - 04/09/2026 04:50",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -46,6 +46,15 @@
     },
     {
       "rank": 5,
+      "model": "Qwen3.8 27B (xhigh)",
+      "model_id": "qwen/qwen3.8-27b-20260814",
+      "coding_index": "68.1",
+      "price": "2.640",
+      "gasto_por_coding": "0.039",
+      "eficiencia": "54.900"
+    },
+    {
+      "rank": 6,
       "model": "MiMo-V2.5",
       "model_id": "xiaomi/mimo-v2.5-20260422",
       "coding_index": "56.8",
@@ -54,22 +63,13 @@
       "eficiencia": "54.280"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "model": "DeepSeek V4 Flash (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-flash-20260423",
       "coding_index": "56.2",
       "price": "0.420",
       "gasto_por_coding": "0.007",
       "eficiencia": "54.100"
-    },
-    {
-      "rank": 7,
-      "model": "Qwen3.8 27B (xhigh)",
-      "model_id": "qwen/qwen3.8-27b-20260814",
-      "coding_index": "68.1",
-      "price": "2.900",
-      "gasto_por_coding": "0.043",
-      "eficiencia": "53.600"
     },
     {
       "rank": 8,
@@ -181,15 +181,6 @@
     },
     {
       "rank": 20,
-      "model": "Kimi K2.7 Code",
-      "model_id": "moonshotai/kimi-k2.7-code-20260612",
-      "coding_index": "60.8",
-      "price": "3.712",
-      "gasto_por_coding": "0.061",
-      "eficiencia": "42.240"
-    },
-    {
-      "rank": 21,
       "model": "Qwen3.6 35B A3B (Reasoning)",
       "model_id": "qwen/qwen3.6-35b-a3b-20260415",
       "coding_index": "41.9",
@@ -198,7 +189,7 @@
       "eficiencia": "38.150"
     },
     {
-      "rank": 22,
+      "rank": 21,
       "model": "LongCat 2.0",
       "model_id": "meituan/longcat-2.0-20260720",
       "coding_index": "45.3",
@@ -207,7 +198,7 @@
       "eficiencia": "37.800"
     },
     {
-      "rank": 23,
+      "rank": 22,
       "model": "Kimi K2.6",
       "model_id": "moonshotai/kimi-k2.6-20260420",
       "coding_index": "61.8",
@@ -216,7 +207,7 @@
       "eficiencia": "37.050"
     },
     {
-      "rank": 24,
+      "rank": 23,
       "model": "GLM-5.2 (max)",
       "model_id": "z-ai/glm-5.2-20260616",
       "coding_index": "68.8",
@@ -225,7 +216,7 @@
       "eficiencia": "36.900"
     },
     {
-      "rank": 25,
+      "rank": 24,
       "model": "DeepSeek V3.1 Terminus (Reasoning)",
       "model_id": "deepseek/deepseek-v3.1-terminus",
       "coding_index": "43.5",
@@ -234,7 +225,7 @@
       "eficiencia": "36.645"
     },
     {
-      "rank": 26,
+      "rank": 25,
       "model": "Gemma 4 31B (Reasoning)",
       "model_id": "google/gemma-4-31b-it-20260402",
       "coding_index": "43.4",
@@ -243,13 +234,22 @@
       "eficiencia": "36.600"
     },
     {
-      "rank": 27,
+      "rank": 26,
       "model": "Qwen3.7 Max",
       "model_id": "qwen/qwen3.7-max-20260520",
       "coding_index": "66.0",
       "price": "5.900",
       "gasto_por_coding": "0.089",
       "eficiencia": "36.500"
+    },
+    {
+      "rank": 27,
+      "model": "Kimi K2.7 Code",
+      "model_id": "moonshotai/kimi-k2.7-code-20260612",
+      "coding_index": "60.8",
+      "price": "4.950",
+      "gasto_por_coding": "0.081",
+      "eficiencia": "36.050"
     },
     {
       "rank": 28,
@@ -325,15 +325,6 @@
     },
     {
       "rank": 36,
-      "model": "Qwen3.8 Max",
-      "model_id": "qwen/qwen3.8-max-20260803",
-      "coding_index": "71.8",
-      "price": "8.000",
-      "gasto_por_coding": "0.111",
-      "eficiencia": "31.800"
-    },
-    {
-      "rank": 37,
       "model": "GLM-5.3 (max)",
       "model_id": "z-ai/glm-5.3-20260816",
       "coding_index": "74.8",
@@ -342,13 +333,22 @@
       "eficiencia": "31.300"
     },
     {
-      "rank": 38,
+      "rank": 37,
       "model": "GLM-4.7 (Reasoning)",
       "model_id": "z-ai/glm-4.7-20251222",
       "coding_index": "45.3",
       "price": "3.200",
       "gasto_por_coding": "0.071",
       "eficiencia": "29.300"
+    },
+    {
+      "rank": 38,
+      "model": "Qwen3.8 Max",
+      "model_id": "qwen/qwen3.8-max-20260803",
+      "coding_index": "68.9",
+      "price": "8.000",
+      "gasto_por_coding": "0.116",
+      "eficiencia": "28.900"
     },
     {
       "rank": 39,
@@ -388,6 +388,15 @@
     },
     {
       "rank": 43,
+      "model": "Grok 4.3 (high)",
+      "model_id": "x-ai/grok-4.3-20260430",
+      "coding_index": "42.2",
+      "price": "3.000",
+      "gasto_por_coding": "0.071",
+      "eficiencia": "27.200"
+    },
+    {
+      "rank": 44,
       "model": "Inkling (xhigh)",
       "model_id": "thinkingmachines/inkling-20260715",
       "coding_index": "52.1",
@@ -396,7 +405,7 @@
       "eficiencia": "26.850"
     },
     {
-      "rank": 44,
+      "rank": 45,
       "model": "Mistral Medium 3.5",
       "model_id": "mistralai/mistral-medium-3.5-20260430",
       "coding_index": "46.9",
@@ -405,7 +414,7 @@
       "eficiencia": "24.400"
     },
     {
-      "rank": 45,
+      "rank": 46,
       "model": "Gemini 3.5 Flash-Lite",
       "model_id": "google/gemini-3.5-flash-lite-20260721",
       "coding_index": "49.3",
@@ -414,7 +423,7 @@
       "eficiencia": "24.100"
     },
     {
-      "rank": 46,
+      "rank": 47,
       "model": "Grok Build 0.1 0616",
       "model_id": "x-ai/grok-build-0.1-20260520",
       "coding_index": "51.5",
@@ -423,7 +432,7 @@
       "eficiencia": "21.500"
     },
     {
-      "rank": 47,
+      "rank": 48,
       "model": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)",
       "model_id": "anthropic/claude-sonnet-5-20260630",
       "coding_index": "71.5",
@@ -432,7 +441,7 @@
       "eficiencia": "11.500"
     },
     {
-      "rank": 48,
+      "rank": 49,
       "model": "Claude 4.5 Haiku (Reasoning)",
       "model_id": "anthropic/claude-4.5-haiku-20251001",
       "coding_index": "43.9",
@@ -441,22 +450,13 @@
       "eficiencia": "10.900"
     },
     {
-      "rank": 49,
+      "rank": 50,
       "model": "DeepSeek V3.2 (Reasoning)",
       "model_id": "deepseek/deepseek-v3.2-20251201",
       "coding_index": "44.2",
       "price": "7.500",
       "gasto_por_coding": "0.170",
       "eficiencia": "6.700"
-    },
-    {
-      "rank": 50,
-      "model": "Grok 4.3 (high)",
-      "model_id": "x-ai/grok-4.3-20260430",
-      "coding_index": "42.2",
-      "price": "7.500",
-      "gasto_por_coding": "0.178",
-      "eficiencia": "4.700"
     },
     {
       "rank": 51,
