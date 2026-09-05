@@ -9,3 +9,5 @@ Gemfile.lock
 teste.md
 openrouter-response.json
 openrouter-display-names.txt
+venv/
+.venv-bimi/
