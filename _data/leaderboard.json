@@ -1,10 +1,10 @@
 {
-  "updated_at": "America/Sao Paulo - 05/09/2026 04:31",
+  "updated_at": "America/Sao Paulo - 05/09/2026 14:14",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
   "points_per_dollar": 5,
-  "as_of": "2026-09-05T00:00:47.291Z",
+  "as_of": "2026-09-05T12:00:45.122Z",
   "citation": "Source: Artificial Analysis (artificialanalysis.ai) via OpenRouter (openrouter.ai/rankings).",
   "source_url": "https://artificialanalysis.ai",
   "items": [
@@ -37,20 +37,20 @@
     },
     {
       "rank": 4,
+      "model": "Qwen3.8 27B (xhigh)",
+      "model_id": "qwen/qwen3.8-27b-20260814",
+      "coding_index": "68.1",
+      "price": "2.400",
+      "gasto_por_coding": "0.035",
+      "eficiencia": "56.100"
+    },
+    {
+      "rank": 5,
       "model": "Hy3",
       "model_id": "tencent/hy3-preview-20260421",
       "coding_index": "58.8",
       "price": "0.780",
       "gasto_por_coding": "0.013",
-      "eficiencia": "54.900"
-    },
-    {
-      "rank": 5,
-      "model": "Qwen3.8 27B (xhigh)",
-      "model_id": "qwen/qwen3.8-27b-20260814",
-      "coding_index": "68.1",
-      "price": "2.640",
-      "gasto_por_coding": "0.039",
       "eficiencia": "54.900"
     },
     {
@@ -543,10 +543,10 @@
       "rank": 60,
       "model": "Gemini 3.1 Pro Preview",
       "model_id": "google/gemini-3.1-pro-preview-20260219",
-      "coding_index": "68.7",
+      "coding_index": "68.8",
       "price": "25.200",
-      "gasto_por_coding": "0.367",
-      "eficiencia": "-57.300"
+      "gasto_por_coding": "0.366",
+      "eficiencia": "-57.200"
     },
     {
       "rank": 61,
