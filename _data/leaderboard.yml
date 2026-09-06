@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 05/09/2026 14:14
+updated_at: America/Sao Paulo - 06/09/2026 04:45
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -32,9 +32,9 @@ items:
   model: Qwen3.8 27B (xhigh)
   model_id: qwen/qwen3.8-27b-20260814
   coding_index: '68.1'
-  price: '2.400'
-  gasto_por_coding: '0.035'
-  eficiencia: '56.100'
+  price: '2.150'
+  gasto_por_coding: '0.032'
+  eficiencia: '57.350'
 - rank: 5
   model: Hy3
   model_id: tencent/hy3-preview-20260421
