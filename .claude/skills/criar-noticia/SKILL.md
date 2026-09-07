@@ -113,3 +113,31 @@ git push
 - **Categorias e tags devem ser dinâmicas**, analisando o conteúdo do artigo — nunca use valores fixos
 - Reaproveite tags existentes sempre que possível para criar relacionamento entre posts
 - Use Swarm para executar multiplas tarefas
+
+### 3.5. Revisão de formatação (obrigatório antes do commit)
+
+Antes de fazer commit, **revise o arquivo do post** verificando os seguintes pontos:
+
+1. **Caracteres especiais corrompidos** — verifique se não há caracteres Unicode quebrados (como travessões `—` transformados em `e2 80 94` não interpretados, ou hífens `‑` aparecendo como `e2 80 91`). Use travessão padrão `—` (U+2014, HTML `&mdash;`) ou hífen comum `-`.
+2. **Anglicismos** — substitua termos como "unprecedented" por "sem precedentes", "endurecido" por "protegido" (quando não for jargão técnico), etc.
+3. **Símbolo de cifrão (`$`) — nunca use `$` ou `US$` no markdown do post**, pois o cifrão conflita com a sintaxe matemática/LaTeX do Jekyll (pode renderizar como "US
+10
+p
+o
+r
+"). Em vez disso, **escreva o nome da moeda por extenso**: "10 dólares", "50 dólares", etc. Se o artigo não deixar clara a moeda, assuma "dólares".
+4. **Preços numéricos** — verifique se números com unidades não estão quebrados em linhas separadas.
+5. **Hífens e travessões** — use `—` (travessão) para separar orações, não hífen simples `-`.
+6. **Leia o post completo em voz alta no terminal** (ou mentalmente) para detectar problemas de fluxo ou quebra de linha inesperada.
+
+Se encontrar problemas, corrija-os antes de prosseguir para o commit.
+
+### 6. Verificação de colisão de slug
+
+Antes de criar o arquivo, verifique se já existe um post com slug semelhante no diretório `_posts/`:
+
+```bash
+ls _posts/*<slug>* 2>/dev/null || echo "slug livre"
+```
+
+Se houver colisão, use um slug diferente (ex: adicione um sufixo descritivo como `-ciberseguranca-critico`).
