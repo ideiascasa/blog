@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 10/09/2026 10:53
+updated_at: America/Sao Paulo - 10/09/2026 15:14
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -263,9 +263,9 @@ items:
   model: DeepSeek V4 Pro (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-pro-20260423
   coding_index: '59.4'
-  price: '5.742'
-  gasto_por_coding: '0.097'
-  eficiencia: '30.690'
+  price: '6.000'
+  gasto_por_coding: '0.101'
+  eficiencia: '29.400'
 - rank: 38
   model: GLM-4.7 (Reasoning)
   model_id: z-ai/glm-4.7-20251222
