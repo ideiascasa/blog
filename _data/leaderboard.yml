@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 10/09/2026 21:30
+updated_at: America/Sao Paulo - 11/09/2026 04:54
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -29,82 +29,82 @@ items:
   gasto_por_coding: '0.039'
   eficiencia: '57.400'
 - rank: 4
+  model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
+  model_id: deepseek/deepseek-v4-pro-20260813
+  coding_index: '68.8'
+  price: '2.640'
+  gasto_por_coding: '0.038'
+  eficiencia: '55.600'
+- rank: 5
   model: Hy3
   model_id: tencent/hy3-preview-20260421
   coding_index: '58.8'
   price: '0.780'
   gasto_por_coding: '0.013'
   eficiencia: '54.900'
-- rank: 5
+- rank: 6
   model: MiMo-V2.5
   model_id: xiaomi/mimo-v2.5-20260422
   coding_index: '56.8'
   price: '0.504'
   gasto_por_coding: '0.009'
   eficiencia: '54.280'
-- rank: 6
+- rank: 7
   model: DeepSeek V4 Flash (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-flash-20260423
   coding_index: '56.2'
   price: '0.500'
   gasto_por_coding: '0.009'
   eficiencia: '53.700'
-- rank: 7
+- rank: 8
   model: Qwen3.8 27B (xhigh)
   model_id: qwen/qwen3.8-27b-20260814
   coding_index: '68.1'
   price: '3.025'
   gasto_por_coding: '0.044'
   eficiencia: '52.975'
-- rank: 8
+- rank: 9
   model: GPT-5.4 nano (xhigh)
   model_id: openai/gpt-5.4-nano-20260317
   coding_index: '56.1'
   price: '0.725'
   gasto_por_coding: '0.013'
   eficiencia: '52.475'
-- rank: 9
+- rank: 10
   model: MiMo-V2.5-Pro
   model_id: xiaomi/mimo-v2.5-pro-20260422
   coding_index: '60.2'
   price: '1.566'
   gasto_por_coding: '0.026'
   eficiencia: '52.370'
-- rank: 10
+- rank: 11
   model: KAT Coder Pro V2
   model_id: kwaipilot/kat-coder-pro-v2-20260327
   coding_index: '59.5'
   price: '1.500'
   gasto_por_coding: '0.025'
   eficiencia: '52.000'
-- rank: 11
+- rank: 12
   model: Solar Pro 4
   model_id: upstage/solar-pro4-20260810
   coding_index: '52.7'
   price: '0.450'
   gasto_por_coding: '0.009'
   eficiencia: '50.450'
-- rank: 12
+- rank: 13
   model: Ling 3.0 Flash
   model_id: inclusionai/ling-3.0-flash-20260723
   coding_index: '50.6'
   price: '0.084'
   gasto_por_coding: '0.002'
   eficiencia: '50.180'
-- rank: 13
+- rank: 14
   model: Qwen3.7 Plus
   model_id: qwen/qwen3.7-plus-20260602
   coding_index: '55.9'
   price: '1.600'
   gasto_por_coding: '0.029'
   eficiencia: '47.900'
-- rank: 14
-  model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
-  model_id: deepseek/deepseek-v4-pro-20260813
-  coding_index: '68.8'
-  price: '4.400'
-  gasto_por_coding: '0.064'
-  eficiencia: '46.800'
 - rank: 15
   model: GLM-5.3 (max)
   model_id: z-ai/glm-5.3-20260816
@@ -162,47 +162,47 @@ items:
   gasto_por_coding: '0.056'
   eficiencia: '38.600'
 - rank: 23
-  model: Qwen3.6 35B A3B (Reasoning)
-  model_id: qwen/qwen3.6-35b-a3b-20260415
-  coding_index: '41.9'
-  price: '0.750'
-  gasto_por_coding: '0.018'
-  eficiencia: '38.150'
-- rank: 24
   model: LongCat 2.0
   model_id: meituan/longcat-2.0-20260720
   coding_index: '45.3'
   price: '1.500'
   gasto_por_coding: '0.033'
   eficiencia: '37.800'
-- rank: 25
+- rank: 24
   model: Kimi K2.6
   model_id: moonshotai/kimi-k2.6-20260420
   coding_index: '61.8'
   price: '4.950'
   gasto_por_coding: '0.080'
   eficiencia: '37.050'
-- rank: 26
+- rank: 25
   model: DeepSeek V3.1 Terminus (Reasoning)
   model_id: deepseek/deepseek-v3.1-terminus
   coding_index: '43.5'
   price: '1.371'
   gasto_por_coding: '0.032'
   eficiencia: '36.645'
-- rank: 27
+- rank: 26
   model: Gemma 4 31B (Reasoning)
   model_id: google/gemma-4-31b-it-20260402
   coding_index: '43.4'
   price: '1.360'
   gasto_por_coding: '0.031'
   eficiencia: '36.600'
-- rank: 28
+- rank: 27
   model: Qwen3.7 Max
   model_id: qwen/qwen3.7-max-20260520
   coding_index: '66.0'
   price: '5.900'
   gasto_por_coding: '0.089'
   eficiencia: '36.500'
+- rank: 28
+  model: Qwen3.6 35B A3B (Reasoning)
+  model_id: qwen/qwen3.6-35b-a3b-20260415
+  coding_index: '41.9'
+  price: '1.130'
+  gasto_por_coding: '0.027'
+  eficiencia: '36.250'
 - rank: 29
   model: Kimi K2.7 Code
   model_id: moonshotai/kimi-k2.7-code-20260612
