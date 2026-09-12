@@ -1,9 +1,9 @@
-updated_at: America/Sao Paulo - 11/09/2026 15:18
+updated_at: America/Sao Paulo - 12/09/2026 04:46
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
 points_per_dollar: 5
-as_of: '2026-09-11T00:00:06.787Z'
+as_of: '2026-09-12T00:00:31.656Z'
 citation: 'Source: Artificial Analysis (artificialanalysis.ai) via OpenRouter (openrouter.ai/rankings).'
 source_url: https://artificialanalysis.ai
 items:
@@ -60,9 +60,9 @@ items:
   model: Qwen3.8 27B (xhigh)
   model_id: qwen/qwen3.8-27b-20260814
   coding_index: '68.1'
-  price: '3.025'
+  price: '3.000'
   gasto_por_coding: '0.044'
-  eficiencia: '52.975'
+  eficiencia: '53.100'
 - rank: 9
   model: GPT-5.4 nano (xhigh)
   model_id: openai/gpt-5.4-nano-20260317
@@ -207,9 +207,9 @@ items:
   model: Qwen3.6 35B A3B (Reasoning)
   model_id: qwen/qwen3.6-35b-a3b-20260415
   coding_index: '41.9'
-  price: '1.130'
-  gasto_por_coding: '0.027'
-  eficiencia: '36.250'
+  price: '1.100'
+  gasto_por_coding: '0.026'
+  eficiencia: '36.400'
 - rank: 30
   model: Kimi K2.7 Code
   model_id: moonshotai/kimi-k2.7-code-20260612
