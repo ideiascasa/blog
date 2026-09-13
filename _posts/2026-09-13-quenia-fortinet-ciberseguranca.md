@@ -95,11 +95,9 @@ Para quem busca se orientar nesse cenário de rápida evolução, nossa [anális
 
 ---
 
-> **Fontes originais:**
+> **Fonte original:** [Kenya and Fortinet Discuss Stronger Cybersecurity and AI-Driven Threat Defence](https://techafricanews.com/2026/09/11/kenya-and-fortinet-discuss-stronger-cybersecurity-and-ai-driven-threat-defence/) - techafricanews.com, por Joyce Onyeagoro.
 >
-> [Kenya and Fortinet Discuss Stronger Cybersecurity and AI-Driven Threat Defence](https://techafricanews.com/2026/09/11/kenya-and-fortinet-discuss-stronger-cybersecurity-and-ai-driven-threat-defence/) — techafricanews.com, por Joyce Onyeagoro.
->
-> [Fortinet auth holes, China distills AI, Mythos human bottleneck](https://cisoseries.com/cybersecurity-news-september-10-2026/) — cisoseries.com, por Sarah Lane.
+> **Fonte original:** [Fortinet auth holes, China distills AI, Mythos human bottleneck](https://cisoseries.com/cybersecurity-news-september-10-2026/) - cisoseries.com, por Sarah Lane.
 >
 > **Imagem:** Vista aérea do centro de Nairóbi ao pôr do sol, a partir do terraço do KICC, por Lebu Ayiga, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Nairobi_skyline_from_the_KICC_rooftop_at_golden_hour.jpg), licenciada sob [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
