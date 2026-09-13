@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 12/09/2026 14:43",
+  "updated_at": "America/Sao Paulo - 13/09/2026 05:08",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -55,6 +55,15 @@
     },
     {
       "rank": 6,
+      "model": "Qwen3.8 27B (xhigh)",
+      "model_id": "qwen/qwen3.8-27b-20260814",
+      "coding_index": "68.1",
+      "price": "2.700",
+      "gasto_por_coding": "0.040",
+      "eficiencia": "54.600"
+    },
+    {
+      "rank": 7,
       "model": "DeepSeek V4 Flash (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-flash-20260423",
       "coding_index": "56.2",
@@ -63,22 +72,13 @@
       "eficiencia": "54.450"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "model": "MiMo-V2.5",
       "model_id": "xiaomi/mimo-v2.5-20260422",
       "coding_index": "56.8",
       "price": "0.504",
       "gasto_por_coding": "0.009",
       "eficiencia": "54.280"
-    },
-    {
-      "rank": 8,
-      "model": "Qwen3.8 27B (xhigh)",
-      "model_id": "qwen/qwen3.8-27b-20260814",
-      "coding_index": "68.1",
-      "price": "3.000",
-      "gasto_por_coding": "0.044",
-      "eficiencia": "53.100"
     },
     {
       "rank": 9,
@@ -451,6 +451,15 @@
     },
     {
       "rank": 50,
+      "model": "Kimi K3 (max)",
+      "model_id": "moonshotai/kimi-k3-20260715",
+      "coding_index": "76.2",
+      "price": "13.050",
+      "gasto_por_coding": "0.171",
+      "eficiencia": "10.950"
+    },
+    {
+      "rank": 51,
       "model": "Claude 4.5 Haiku (Reasoning)",
       "model_id": "anthropic/claude-4.5-haiku-20251001",
       "coding_index": "43.9",
@@ -459,7 +468,7 @@
       "eficiencia": "10.900"
     },
     {
-      "rank": 51,
+      "rank": 52,
       "model": "DeepSeek V3.2 (Reasoning)",
       "model_id": "deepseek/deepseek-v3.2-20251201",
       "coding_index": "44.2",
@@ -468,7 +477,7 @@
       "eficiencia": "6.700"
     },
     {
-      "rank": 52,
+      "rank": 53,
       "model": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)",
       "model_id": "anthropic/claude-sonnet-5-20260630",
       "coding_index": "71.5",
@@ -477,7 +486,7 @@
       "eficiencia": "5.500"
     },
     {
-      "rank": 53,
+      "rank": 54,
       "model": "GPT-5.4 mini (xhigh)",
       "model_id": "openai/gpt-5.4-mini-20260317",
       "coding_index": "56.1",
@@ -486,7 +495,7 @@
       "eficiencia": "3.600"
     },
     {
-      "rank": 54,
+      "rank": 55,
       "model": "Grok 4.6 (high)",
       "model_id": "x-ai/grok-4.6-20260810",
       "coding_index": "76.8",
@@ -495,7 +504,7 @@
       "eficiencia": "-3.200"
     },
     {
-      "rank": 55,
+      "rank": 56,
       "model": "Grok 4.5 (high)",
       "model_id": "x-ai/grok-4.5-20260708",
       "coding_index": "72.4",
@@ -504,22 +513,13 @@
       "eficiencia": "-7.600"
     },
     {
-      "rank": 56,
+      "rank": 57,
       "model": "GPT-5.5 (xhigh)",
       "model_id": "openai/gpt-5.5-20260423",
       "coding_index": "74.9",
       "price": "17.500",
       "gasto_por_coding": "0.234",
       "eficiencia": "-12.600"
-    },
-    {
-      "rank": 57,
-      "model": "Kimi K3 (max)",
-      "model_id": "moonshotai/kimi-k3-20260715",
-      "coding_index": "76.2",
-      "price": "18.000",
-      "gasto_por_coding": "0.236",
-      "eficiencia": "-13.800"
     },
     {
       "rank": 58,
