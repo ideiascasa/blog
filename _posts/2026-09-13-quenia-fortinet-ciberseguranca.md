@@ -101,7 +101,7 @@ Para quem busca se orientar nesse cenário de rápida evolução, nossa [anális
 >
 > [Fortinet auth holes, China distills AI, Mythos human bottleneck](https://cisoseries.com/cybersecurity-news-september-10-2026/) — cisoseries.com, por Sarah Lane.
 >
-> **Imagem:** "A clash of worlds — Nairobi skyline from the Nairobi National Park" (recorte da imagem) por Shadychiri, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:A_clash_of_worlds_-_Nairobi_skyline_from_the_Nairobi_National_park.jpg), licenciada sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+> **Imagem:** "Cyber keyhole" — fechadura gigante com chaves e credenciais roubadas, desenho de Elio Reichert para o *Cybersecurity Visuals Challenge* (OpenIDEO, 2019), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:IDEO-CVC-2019-Elio_Reichert3.png), licenciado sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ---
 
