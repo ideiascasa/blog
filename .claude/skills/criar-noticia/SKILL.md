@@ -19,46 +19,47 @@ Quando o usuário pedir para criar uma notícia no blog a partir de uma URL, sig
 
 ### 0. Verificar se a notícia JÁ FOI PUBLICADA (obrigatório, primeiro passo)
 
-Antes de qualquer outra coisa, rode o script de verificação da skill:
+Antes de qualquer outra coisa, verifique se a URL já foi publicada. **Não baixe imagem nem traduza texto antes disso** — publicar duplicata não tem desfazer fácil.
+
+Rode estes três comandos a partir da raiz do repositório:
 
 ```bash
+# 1) MESMA URL DE FONTE? compara só o trecho final da URL (sem esquema/query/barra)
+CHAVE=$(echo "<url>" | sed -e 's|^https*://||' -e 's|^www\.||' -e 's|?.*||' -e 's|#.*||' -e 's|/*$||')
+grep -rn "$CHAVE" _posts/ && echo ">>> JA PUBLICADO" || echo ">>> url livre"
+
+# 2) MESMO SLUG? (nome de arquivo, com e sem data)
+ls _posts/*<slug>* 2>/dev/null && echo ">>> COLISAO DE SLUG" || echo ">>> slug livre"
+
+# 3) TITULO PARECIDO? (2-3 palavras-chave do título proposto)
+grep -ril "<palavra-chave-1>" _posts/ | head
+```
+
+**Se qualquer comando retornar arquivo, trate como duplicata e PARE.**
+
+Para uma comparação mais fina de título (fuzzy, ignorando acentos) e uma varredura
+completa do blog, há um script auxiliar local da skill (não versionado):
+
+```bash
+# checagem de um post novo: URL, título semelhante, slug e imagem destacada
 python3 .claude/skills/criar-noticia/verificar-duplicata.py \
-  --url "<url fornecida pelo usuário>" \
-  --slug "<slug proposto, sem data e sem .md>" \
-  --titulo "<título traduzido proposto>"
-```
+  --url "<url>" --slug "<slug>" --titulo "<título>"
 
-> Rode a partir da raiz do repositório. Aceita `--url`, `--slug` e/ou `--titulo`
-> (informe os três sempre que possível). Use `--listar` para ver todos os posts e suas fontes.
-
-Para uma varredura completa do blog (auditoria de duplicatas já existentes), use:
-
-```bash
+# auditoria: varre todos os posts e acha fontes repetidas
 python3 .claude/skills/criar-noticia/verificar-duplicata.py --auditar
+
+# listar todos os posts com suas fontes
+python3 .claude/skills/criar-noticia/verificar-duplicata.py --listar
 ```
 
-> **Limitação conhecida:** posts antigos (anterior a setembro/2026) não têm o rodapé
-> `> **Fonte original:**`. O script só consegue comparar a URL da fonte quando o rodapé
-> existe — nesses casos ele cai no título semelhante e na colisão de slug. Se o script
-> disser "nenhum rodapé encontrado", faça também a checagem manual do fallback.
-> A comparação usa **somente** a URL do rodapé de fonte; links do corpo, do ranking de IA
-> e de licenças (Creative Commons, Pexels) são ignorados de propósito, para não gerar
-> falso positivo em posts que citam a mesma referência.
-
-O script compara, em todos os arquivos de `_posts/`:
-
-1. **URL da fonte** — normalizada (ignora `http`/`https`, `www.`, `?query`, `#fragmento` e barra final),
-   de modo que variações da mesma URL são reconhecidas como a mesma fonte.
-2. **Título semelhante** — comparação fuzzy (sem acentos/pontuação), limiar de 80%.
-3. **Colisão de slug** — nome de arquivo já existente.
-4. **Imagem destacada** — `<slug>-featured.png` já usado em outro post.
-
-**Interprete o código de saída:**
-
-| Saída | Significado | O que fazer |
-|---|---|---|
-| `0` (`OK`) | Nada duplicado | Prossiga para o passo 1 |
-| `1` (`DUPLICATA DETECTADA`) | Fonte, título ou slug repetido | **PARE. Não crie o post.** Veja abaixo |
+> Se esse script não existir no ambiente, use apenas os comandos manuais acima —
+> eles cobrem o caso crítico (URL repetida e colisão de slug).
+> O script compara **apenas** a URL do rodapé `**Fonte original:**`; links do corpo, do
+> ranking de IA e de licenças (Creative Commons, Pexels) são ignorados de propósito,
+> para não gerar falso positivo em posts que citam a mesma referência.
+> Ele também só enxerga a URL quando o post tem o rodapé — posts antigos
+> (anteriores a setembro/2026) não têm, então nesses casos valem os comandos manuais e a
+> comparação de título.
 
 **Se houver duplicata, NÃO crie um `_posts/` novo.** Avise o usuário, mostre qual post
 já cobre a fonte e ofereça exatamente estas três opções:
@@ -71,21 +72,6 @@ já cobre a fonte e ofereça exatamente estas três opções:
 **Não decida sozinho por criar um post novo.** Casos reais: uma mesma matéria
 (coletânea semanal de produtos, rodada de anúncios) pode ser reenviada semanas depois
 com o mesmo link; republicar gera duplicata no site, no índice e no feed RSS.
-
-**Fallback (se o script não puder ser executado):** faça a checagem manualmente:
-
-```bash
-# mesma URL fonte?
-grep -rl "<url>" _posts/ 2>/dev/null || echo "url livre"
-
-# mesmo slug (com e sem data)?
-ls _posts/*<slug>* 2>/dev/null || echo "slug livre"
-
-# título parecido? (busque por 2-3 palavras-chave do título)
-grep -ril "<palavra-chave>" _posts/ | head
-```
-
-Se qualquer um dos comandos retornar arquivo, trate como duplicata e pare.
 
 ### 1. Obter conteúdo da URL
 
@@ -187,17 +173,12 @@ Se encontrar problemas, corrija-os antes de prosseguir para o commit.
 
 ### 5. Reverificação de duplicata (obrigatório antes do commit)
 
-O passo 0 foi executado com o *título e slug propostos*. Se o título ou o slug
-mudaram durante a redação, o resultado pode ter ficado desatualizado. Rode o script
-**de novo**, agora com os valores finais:
+O passo 0 foi feito com o *título e slug propostos*. Se o título, o slug ou a URL de
+fonte mudaram durante a redação, o resultado pode ter ficado desatualizado. Rode a
+verificação **de novo**, agora com os valores finais (os mesmos comandos do passo 0).
 
-```bash
-python3 .claude/skills/criar-noticia/verificar-duplicata.py \
-  --url "<url>" --slug "<slug final>" --titulo "<título final>"
-```
-
-Só prossiga para o commit se o resultado for `OK` (código de saída `0`). Se retornar
-`DUPLICATA DETECTADA`, volte ao passo 0 e siga as opções descritas lá — não commite.
+Só prossiga para o commit se a fonte continuar livre e o slug não colidir. Se aparecer
+duplicata, volte ao passo 0 e siga as opções descritas lá — não commite.
 
 ### 6. Commit e push
 
