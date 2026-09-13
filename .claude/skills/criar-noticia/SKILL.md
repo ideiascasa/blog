@@ -4,7 +4,7 @@ description: Criar uma notícia em português do Brasil no blog
   a partir de um link, citando a fonte, extraindo autor e imagem.
 metadata:
   author: zot-blog
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Skill: Criar Notícia no Blog
@@ -12,6 +12,80 @@ metadata:
 Quando o usuário pedir para criar uma notícia no blog a partir de uma URL, siga o workflow abaixo.
 
 ## Fluxo completo
+
+> **Ordem importa:** execute o **passo 0 (verificação de duplicata) ANTES de tudo**.
+> Nunca baixe imagem, traduza texto nem crie arquivo antes de saber que a notícia
+> não foi publicada. O passo 0 é barato; publicar duplicata não tem desfazer fácil.
+
+### 0. Verificar se a notícia JÁ FOI PUBLICADA (obrigatório, primeiro passo)
+
+Antes de qualquer outra coisa, rode o script de verificação da skill:
+
+```bash
+python3 .claude/skills/criar-noticia/verificar-duplicata.py \
+  --url "<url fornecida pelo usuário>" \
+  --slug "<slug proposto, sem data e sem .md>" \
+  --titulo "<título traduzido proposto>"
+```
+
+> Rode a partir da raiz do repositório. Aceita `--url`, `--slug` e/ou `--titulo`
+> (informe os três sempre que possível). Use `--listar` para ver todos os posts e suas fontes.
+
+Para uma varredura completa do blog (auditoria de duplicatas já existentes), use:
+
+```bash
+python3 .claude/skills/criar-noticia/verificar-duplicata.py --auditar
+```
+
+> **Limitação conhecida:** posts antigos (anterior a setembro/2026) não têm o rodapé
+> `> **Fonte original:**`. O script só consegue comparar a URL da fonte quando o rodapé
+> existe — nesses casos ele cai no título semelhante e na colisão de slug. Se o script
+> disser "nenhum rodapé encontrado", faça também a checagem manual do fallback.
+> A comparação usa **somente** a URL do rodapé de fonte; links do corpo, do ranking de IA
+> e de licenças (Creative Commons, Pexels) são ignorados de propósito, para não gerar
+> falso positivo em posts que citam a mesma referência.
+
+O script compara, em todos os arquivos de `_posts/`:
+
+1. **URL da fonte** — normalizada (ignora `http`/`https`, `www.`, `?query`, `#fragmento` e barra final),
+   de modo que variações da mesma URL são reconhecidas como a mesma fonte.
+2. **Título semelhante** — comparação fuzzy (sem acentos/pontuação), limiar de 80%.
+3. **Colisão de slug** — nome de arquivo já existente.
+4. **Imagem destacada** — `<slug>-featured.png` já usado em outro post.
+
+**Interprete o código de saída:**
+
+| Saída | Significado | O que fazer |
+|---|---|---|
+| `0` (`OK`) | Nada duplicado | Prossiga para o passo 1 |
+| `1` (`DUPLICATA DETECTADA`) | Fonte, título ou slug repetido | **PARE. Não crie o post.** Veja abaixo |
+
+**Se houver duplicata, NÃO crie um `_posts/` novo.** Avise o usuário, mostre qual post
+já cobre a fonte e ofereça exatamente estas três opções:
+
+1. **Manter como está** — o conteúdo já está no ar; nada a fazer.
+2. **Expandir o post existente** — acrescentar seções/ângulo novo ao arquivo já publicado.
+3. **Criar um ângulo realmente novo** — só se o usuário confirmar; use slug diferente
+   (ex.: `<slug>-analise-critica`) e deixe claro no texto que deriva da mesma fonte.
+
+**Não decida sozinho por criar um post novo.** Casos reais: uma mesma matéria
+(coletânea semanal de produtos, rodada de anúncios) pode ser reenviada semanas depois
+com o mesmo link; republicar gera duplicata no site, no índice e no feed RSS.
+
+**Fallback (se o script não puder ser executado):** faça a checagem manualmente:
+
+```bash
+# mesma URL fonte?
+grep -rl "<url>" _posts/ 2>/dev/null || echo "url livre"
+
+# mesmo slug (com e sem data)?
+ls _posts/*<slug>* 2>/dev/null || echo "slug livre"
+
+# título parecido? (busque por 2-3 palavras-chave do título)
+grep -ril "<palavra-chave>" _posts/ | head
+```
+
+Se qualquer um dos comandos retornar arquivo, trate como duplicata e pare.
 
 ### 1. Obter conteúdo da URL
 
@@ -93,28 +167,7 @@ Insira, tambem, o link ao final do post, após o rodapé da fonte e imagem:
 👉 **Veja também nossa análise comparativa dos melhores modelos de IA em:** [blog.ideias.casa/melhores-ia](https://blog.ideias.casa/melhores-ia)
 ```
 
-### 4. Commit e push
-
-Após criar os arquivos:
-
-```bash
-git add _posts/<data>-<slug>.md assets/img/<slug>-featured.png
-git commit -m "Novo post: <título>"
-git push
-```
-
-## Regras obrigatórias
-
-- Todo o conteúdo do post deve ser em **português do Brasil**
-- **Cite a fonte** no rodapé (URL original, domínio, autor)
-- **Atribua a imagem** no rodapé (artista, fonte, licença)
-- Siga o formato dos posts existentes em `_posts/`
-- Use a data atual no nome do arquivo (YYYY-MM-DD)
-- **Categorias e tags devem ser dinâmicas**, analisando o conteúdo do artigo — nunca use valores fixos
-- Reaproveite tags existentes sempre que possível para criar relacionamento entre posts
-- Use Swarm para executar multiplas tarefas
-
-### 3.5. Revisão de formatação (obrigatório antes do commit)
+### 4. Revisão de formatação (obrigatório antes do commit)
 
 Antes de fazer commit, **revise o arquivo do post** verificando os seguintes pontos:
 
@@ -132,12 +185,41 @@ r
 
 Se encontrar problemas, corrija-os antes de prosseguir para o commit.
 
-### 6. Verificação de colisão de slug
+### 5. Reverificação de duplicata (obrigatório antes do commit)
 
-Antes de criar o arquivo, verifique se já existe um post com slug semelhante no diretório `_posts/`:
+O passo 0 foi executado com o *título e slug propostos*. Se o título ou o slug
+mudaram durante a redação, o resultado pode ter ficado desatualizado. Rode o script
+**de novo**, agora com os valores finais:
 
 ```bash
-ls _posts/*<slug>* 2>/dev/null || echo "slug livre"
+python3 .claude/skills/criar-noticia/verificar-duplicata.py \
+  --url "<url>" --slug "<slug final>" --titulo "<título final>"
 ```
 
-Se houver colisão, use um slug diferente (ex: adicione um sufixo descritivo como `-ciberseguranca-critico`).
+Só prossiga para o commit se o resultado for `OK` (código de saída `0`). Se retornar
+`DUPLICATA DETECTADA`, volte ao passo 0 e siga as opções descritas lá — não commite.
+
+### 6. Commit e push
+
+Após criar os arquivos (e só depois do passo 5 retornar `OK`):
+
+```bash
+git add _posts/<data>-<slug>.md assets/img/<slug>-featured.png
+git commit -m "Novo post: <título>"
+git push
+```
+
+## Regras obrigatórias
+
+- Todo o conteúdo do post deve ser em **português do Brasil**
+- **Cite a fonte** no rodapé (URL original, domínio, autor)
+- **Atribua a imagem** no rodapé (artista, fonte, licença)
+- Siga o formato dos posts existentes em `_posts/`
+- Use a data atual no nome do arquivo (YYYY-MM-DD)
+- **Categorias e tags devem ser dinâmicas**, analisando o conteúdo do artigo — nunca use valores fixos
+- Reaproveite tags existentes sempre que possível para criar relacionamento entre posts
+- Use Swarm para executar multiplas tarefas
+- **Nunca publique a mesma fonte duas vezes** — rode o passo 0 e o passo 5 antes de commitar
+- **Duplicata não é só slug repetido**: a mesma URL de origem publicada duas vezes gera
+  notícia duplicada no site, no índice e no feed RSS, mesmo com arquivos e títulos diferentes
+- Se o script de verificação acusar duplicata, **pare e pergunte ao usuário** — não decida sozinho
