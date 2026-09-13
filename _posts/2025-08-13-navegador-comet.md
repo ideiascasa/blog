@@ -68,7 +68,7 @@ O Comet **aprende como você pensa e trabalha**, adaptando-se ao seu estilo e pr
 
 ## Preço e Disponibilidade: O Elefante na Sala
 
-Aqui chegamos ao ponto mais controverso: o **preço**. Atualmente, o Comet está disponível apenas para assinantes do **Perplexity Max**, que custa **US\$ 200 por mês** (aproximadamente **R\$ 1.100** na cotação atual).[^1_2][^1_14][^1_15][^1_16]
+Aqui chegamos ao ponto mais controverso: o **preço**. Atualmente, o Comet está disponível apenas para assinantes do **Perplexity Max**, que custa **200 dólares por mês** (aproximadamente **1.100 reais** na cotação atual).[^1_2][^1_14][^1_15][^1_16]
 
 ### Por Que Esse Preço?
 
@@ -96,7 +96,7 @@ A comparison image showing Comet browser and Google Chrome logos with text indic
 | **IA Nativa** | Integrada desde o core | Recursos adicionais (Gemini) |
 | **Automação** | Execução completa de tarefas | Limitada a sugestões |
 | **Busca** | Perplexity integrado | Google Search |
-| **Preço** | US\$ 200/mês | Gratuito |
+| **Preço** | 200 dólares/mês | Gratuito |
 | **Disponibilidade** | Windows/Mac apenas | Multiplataforma |
 
 ### Outros Concorrentes

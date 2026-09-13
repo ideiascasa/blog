@@ -25,29 +25,29 @@ Este artigo desvenda o ranking completo dos modelos que alcançaram ao menos 63%
 
 Os dados abaixo refletem o leaderboard do SWE-Bench Verified de fevereiro de 2026, consolidando as melhores versões de cada modelo. Eis o ranking completo por performance pura:
 
-| Rank | Modelo | Criador | SWE-Bench (%) | Contexto (tokens) | Preço Input/1M | Preço Output/1M | Eficiência |
+| Rank | Modelo | Criador | SWE-Bench (%) | Contexto (tokens) | Preço Input (dólares/1M) | Preço Output (dólares/1M) | Eficiência |
 |------|--------|---------|---------------|-------------------|-----------------|-----------------|-----------:|
-| 1 | MiniMax M2.5 | MiniMax | **80.2%** | 100K | $0.15 | $1.20 | 67 |
-| 2 | Claude Opus 4.6 (Thinking) | Anthropic | **79.2%** | 200K | $5.00 | $25.00 | 3 |
-| 3 | GLM-5 | Zhipu / Z.ai | **77.8%** | 128K | $1.00 | $3.20 | 24 |
-| 4 | Claude 4.5 Opus | Anthropic | **76.8%** | 200K | $5.00 | $25.00 | 3 |
-| 5 | Claude Sonnet 4.6 | Anthropic | **76.2%** | 200K | $3.00 | $15.00 | 5 |
-| 6 | Gemini 3 Flash | Google | **76.2%** | 1M | $0.50 | $3.00 | 25 |
-| 7 | GPT-5.2 | OpenAI | **75.4%** | 200K | $1.75 | $14.00 | 5 |
-| 8 | Grok 4 | xAI | **75.0%** | 256K | $3.00 | $15.00 | 5 |
-| 9 | GLM-4.7 | Zhipu / Z.ai | **73.8%** | 128K | $0.60 | $2.20 | 34 |
-| 10 | Gemini 3 Pro | Google | **71.6%** | 1M | $2.00 | $12.00 | 6 |
-| 11 | Kimi K2.5 | Moonshot | **70.8%** | 256K | $0.60 | $2.50 | 28 |
-| 12 | DeepSeek V3.2 | DeepSeek | **70.0%** | 128K | $0.28 | $0.42 | 167 |
-| 13 | Gemini 2.5 Pro | Google | **63.8%** | 1M | $1.25 | $10.00 | 6 |
-| 14 | Kimi K2 Thinking | Moonshot | **63.4%** | 256K | $0.60 | $2.50 | 25 |
-| 15 | Gemini 2.5 Flash | Google | **63.2%** | 1M | $0.30 | $2.50 | 25 |
+| 1 | MiniMax M2.5 | MiniMax | **80.2%** | 100K | 0.15 dólares | 1.20 dólares | 67 |
+| 2 | Claude Opus 4.6 (Thinking) | Anthropic | **79.2%** | 200K | 5.00 dólares | 25.00 dólares | 3 |
+| 3 | GLM-5 | Zhipu / Z.ai | **77.8%** | 128K | 1.00 dólares | 3.20 dólares | 24 |
+| 4 | Claude 4.5 Opus | Anthropic | **76.8%** | 200K | 5.00 dólares | 25.00 dólares | 3 |
+| 5 | Claude Sonnet 4.6 | Anthropic | **76.2%** | 200K | 3.00 dólares | 15.00 dólares | 5 |
+| 6 | Gemini 3 Flash | Google | **76.2%** | 1M | 0.50 dólares | 3.00 dólares | 25 |
+| 7 | GPT-5.2 | OpenAI | **75.4%** | 200K | 1.75 dólares | 14.00 dólares | 5 |
+| 8 | Grok 4 | xAI | **75.0%** | 256K | 3.00 dólares | 15.00 dólares | 5 |
+| 9 | GLM-4.7 | Zhipu / Z.ai | **73.8%** | 128K | 0.60 dólares | 2.20 dólares | 34 |
+| 10 | Gemini 3 Pro | Google | **71.6%** | 1M | 2.00 dólares | 12.00 dólares | 6 |
+| 11 | Kimi K2.5 | Moonshot | **70.8%** | 256K | 0.60 dólares | 2.50 dólares | 28 |
+| 12 | DeepSeek V3.2 | DeepSeek | **70.0%** | 128K | 0.28 dólares | 0.42 dólares | 167 |
+| 13 | Gemini 2.5 Pro | Google | **63.8%** | 1M | 1.25 dólares | 10.00 dólares | 6 |
+| 14 | Kimi K2 Thinking | Moonshot | **63.4%** | 256K | 0.60 dólares | 2.50 dólares | 25 |
+| 15 | Gemini 2.5 Flash | Google | **63.2%** | 1M | 0.30 dólares | 2.50 dólares | 25 |
 
 ### O Campeão Surpresa: MiniMax M2.5 com 80.2%
 
 MiniMax M2.5, lançado em fevereiro de 2026, tornou-se o primeiro modelo a ultrapassar a marca de 80% no SWE-Bench Verified[4], superando inclusive o Claude Opus 4.6. Isso significa que consegue resolver **802 de cada 1000 problemas reais de engenharia de software** apresentados no benchmark.
 
-O mais surpreendente: faz isso a um custo de apenas **$0.15/1M tokens de entrada** — uma fração do custo dos concorrentes de topo.
+O mais surpreendente: faz isso a um custo de apenas **0.15 dólares por 1M tokens de entrada** — uma fração do custo dos concorrentes de topo.
 
 Porém — e este é um "porém" enormemente importante — a empresa que não pode permitir um erro resolve problemas muito diferentes de um desenvolvedor individual.
 
@@ -63,29 +63,29 @@ Definimos: **Efficiency Score = SWE-Bench Score (%) ÷ Preço Output por 1M toke
 
 Usamos apenas o preço de **output** por 1M tokens como base, pois é o custo mais representativo de uso real (geração de código é sempre output). Quanto mais alto o score, melhor o custo-benefício.
 
-| Rank | Modelo | SWE-Bench (%) | Output/1M | Efficiency Score | Categoria |
+| Rank | Modelo | SWE-Bench (%) | Output (dólares/1M) | Efficiency Score | Categoria |
 |------|--------|---------------|-----------|:----------------:|-----------|
-| 1 | **DeepSeek V3.2** | 70.0% | $0.42 | **167** | 🚀 Alto valor |
-| 2 | **MiniMax M2.5** | 80.2% | $1.20 | **67** | 🚀 Alto valor |
-| 3 | **Kimi K2.5** | 70.8% | $2.50 | **28** | ⭐ Bom valor |
-| 4 | **Gemini 3 Flash** | 76.2% | $3.00 | **25** | ⭐ Bom valor |
-| 5 | **Kimi K2 Thinking** | 63.4% | $2.50 | **25** | ⭐ Bom valor |
-| 6 | **Gemini 2.5 Flash** | 63.2% | $2.50 | **25** | ⭐ Bom valor |
-| 7 | **GLM-5** | 77.8% | $3.20 | **24** | ⭐ Bom valor |
-| 8 | **GLM-4.7** | 73.8% | $2.20 | **34** | ⭐ Bom valor |
-| 9 | **Gemini 2.5 Pro** | 63.8% | $10.00 | **6** | 💎 Premium |
-| 10 | **Gemini 3 Pro** | 71.6% | $12.00 | **6** | 💎 Premium |
-| 11 | **GPT-5.2** | 75.4% | $14.00 | **5** | 💎 Premium |
-| 12 | **Claude Sonnet 4.6** | 76.2% | $15.00 | **5** | 💎 Premium |
-| 13 | **Grok 4** | 75.0% | $15.00 | **5** | 💎 Premium |
-| 14 | **Claude Opus 4.6 (Thinking)** | 79.2% | $25.00 | **3** | 🏆 Supremo |
-| 15 | **Claude 4.5 Opus** | 76.8% | $25.00 | **3** | 🏆 Supremo |
+| 1 | **DeepSeek V3.2** | 70.0% | 0.42 dólares | **167** | 🚀 Alto valor |
+| 2 | **MiniMax M2.5** | 80.2% | 1.20 dólares | **67** | 🚀 Alto valor |
+| 3 | **Kimi K2.5** | 70.8% | 2.50 dólares | **28** | ⭐ Bom valor |
+| 4 | **Gemini 3 Flash** | 76.2% | 3.00 dólares | **25** | ⭐ Bom valor |
+| 5 | **Kimi K2 Thinking** | 63.4% | 2.50 dólares | **25** | ⭐ Bom valor |
+| 6 | **Gemini 2.5 Flash** | 63.2% | 2.50 dólares | **25** | ⭐ Bom valor |
+| 7 | **GLM-5** | 77.8% | 3.20 dólares | **24** | ⭐ Bom valor |
+| 8 | **GLM-4.7** | 73.8% | 2.20 dólares | **34** | ⭐ Bom valor |
+| 9 | **Gemini 2.5 Pro** | 63.8% | 10.00 dólares | **6** | 💎 Premium |
+| 10 | **Gemini 3 Pro** | 71.6% | 12.00 dólares | **6** | 💎 Premium |
+| 11 | **GPT-5.2** | 75.4% | 14.00 dólares | **5** | 💎 Premium |
+| 12 | **Claude Sonnet 4.6** | 76.2% | 15.00 dólares | **5** | 💎 Premium |
+| 13 | **Grok 4** | 75.0% | 15.00 dólares | **5** | 💎 Premium |
+| 14 | **Claude Opus 4.6 (Thinking)** | 79.2% | 25.00 dólares | **3** | 🏆 Supremo |
+| 15 | **Claude 4.5 Opus** | 76.8% | 25.00 dólares | **3** | 🏆 Supremo |
 
 ### A Revelação Surpreendente
 
 **DeepSeek V3.2 oferece ~52x mais performance por dólar de output que Claude Opus 4.6 (167 vs. 3).**
 
-Isso não é erro de cálculo. Um desenvolvedor independente gastaria **98.3% menos** em output usando DeepSeek enquanto resolveria 88.4% dos problemas que Claude resolveria. O campeão absoluto de performance — **MiniMax M2.5 com 80.2% SWE-Bench** — custa apenas $1.20/1M de output, resultando num score de eficiência de **67**.
+Isso não é erro de cálculo. Um desenvolvedor independente gastaria **98.3% menos** em output usando DeepSeek enquanto resolveria 88.4% dos problemas que Claude resolveria. O campeão absoluto de performance — **MiniMax M2.5 com 80.2% SWE-Bench** — custa apenas 1.20 dólares por 1M tokens de output, resultando num score de eficiência de **67**.
 
 ---
 
@@ -103,26 +103,26 @@ Isso não é erro de cálculo. Um desenvolvedor independente gastaria **98.3% me
 
 Custo estimado: 1.5M tokens/mês × preço de output (proxy conservador para custo de geração).
 
-| Modelo | SWE % | Output/1M | **Custo Mensal** | Economia vs. Opus 4.6 | Eficiência |
+| Modelo | SWE % | Output (dólares/1M) | **Custo Mensal (dólares)** | Economia vs. Opus 4.6 | Eficiência |
 |--------|-------|-----------|-----------------|----------------------|:----------:|
-| DeepSeek V3.2 | 70.0% | $0.42 | **$0.63** | -98.3% | 167 🚀 |
-| MiniMax M2.5 | 80.2% | $1.20 | **$1.80** | -95.2% | 67 🚀 |
-| GLM-4.7 | 73.8% | $2.20 | **$3.30** | -91.2% | 34 ⭐ |
-| Kimi K2.5 | 70.8% | $2.50 | **$3.75** | -90.0% | 28 ⭐ |
-| Kimi K2 Thinking | 63.4% | $2.50 | **$3.75** | -90.0% | 25 ⭐ |
-| Gemini 2.5 Flash | 63.2% | $2.50 | **$3.75** | -90.0% | 25 ⭐ |
-| Gemini 3 Flash | 76.2% | $3.00 | **$4.50** | -88.0% | 25 ⭐ |
-| GLM-5 | 77.8% | $3.20 | **$4.80** | -87.2% | 24 ⭐ |
-| GPT-5.2 | 75.4% | $14.00 | **$21.00** | -44.0% | 5 💎 |
-| Claude Sonnet 4.6 | 76.2% | $15.00 | **$22.50** | -40.0% | 5 💎 |
-| Grok 4 | 75.0% | $15.00 | **$22.50** | -40.0% | 5 💎 |
-| Claude Opus 4.6 | 79.2% | $25.00 | **$37.50** | - | 3 🏆 |
+| DeepSeek V3.2 | 70.0% | 0.42 dólares | **0.63 dólares** | -98.3% | 167 🚀 |
+| MiniMax M2.5 | 80.2% | 1.20 dólares | **1.80 dólares** | -95.2% | 67 🚀 |
+| GLM-4.7 | 73.8% | 2.20 dólares | **3.30 dólares** | -91.2% | 34 ⭐ |
+| Kimi K2.5 | 70.8% | 2.50 dólares | **3.75 dólares** | -90.0% | 28 ⭐ |
+| Kimi K2 Thinking | 63.4% | 2.50 dólares | **3.75 dólares** | -90.0% | 25 ⭐ |
+| Gemini 2.5 Flash | 63.2% | 2.50 dólares | **3.75 dólares** | -90.0% | 25 ⭐ |
+| Gemini 3 Flash | 76.2% | 3.00 dólares | **4.50 dólares** | -88.0% | 25 ⭐ |
+| GLM-5 | 77.8% | 3.20 dólares | **4.80 dólares** | -87.2% | 24 ⭐ |
+| GPT-5.2 | 75.4% | 14.00 dólares | **21.00 dólares** | -44.0% | 5 💎 |
+| Claude Sonnet 4.6 | 76.2% | 15.00 dólares | **22.50 dólares** | -40.0% | 5 💎 |
+| Grok 4 | 75.0% | 15.00 dólares | **22.50 dólares** | -40.0% | 5 💎 |
+| Claude Opus 4.6 | 79.2% | 25.00 dólares | **37.50 dólares** | - | 3 🏆 |
 
 ### O Resultado Prático
 
-Um desenvolvedor que escolhe **DeepSeek V3.2** gasta **$7.56 por ano** contra **$450 para Claude Opus 4.6** — uma economia de **$442.44 anuais** (98.3%) enquanto resolve 88% dos mesmos problemas[5].
+Um desenvolvedor que escolhe **DeepSeek V3.2** gasta **7.56 dólares por ano** contra **450 dólares para Claude Opus 4.6** — uma economia de **442.44 dólares anuais** (98.3%) enquanto resolve 88% dos mesmos problemas[5].
 
-Mas o verdadeiro destaque é o **MiniMax M2.5**: por apenas $21.60/ano em tokens de output, você obtém **80.2% no SWE-Bench** — performance no topo absoluto do ranking, com **95.2% de economia** em relação ao Claude Opus 4.6.
+Mas o verdadeiro destaque é o **MiniMax M2.5**: por apenas 21.60 dólares por ano em tokens de output, você obtém **80.2% no SWE-Bench** — performance no topo absoluto do ranking, com **95.2% de economia** em relação ao Claude Opus 4.6.
 
 ---
 
@@ -141,21 +141,21 @@ Por desenvolvedor (mix de junior/mid/senior):
 
 **Total de 50 devs: 212.5M tokens/mês**
 
-| Modelo | SWE % | Output/1M | **Custo Mensal** | **Custo Anual** | Economia vs. Opus 4.6 |
+| Modelo | SWE % | Output (dólares/1M) | **Custo Mensal (dólares)** | **Custo Anual (dólares)** | Economia vs. Opus 4.6 |
 |--------|-------|-----------|-----------------|-----------------|----------------------|
-| DeepSeek V3.2 | 70.0% | $0.42 | **$89,250** | **$1,071,000** | -99.3% |
-| MiniMax M2.5 | 80.2% | $1.20 | **$255,000** | **$3,060,000** | -98.1% |
-| GLM-5 | 77.8% | $3.20 | **$680,000** | **$8,160,000** | -87.2% |
-| GLM-4.7 | 73.8% | $2.20 | **$467,500** | **$5,610,000** | -91.2% |
-| Gemini 3 Flash | 76.2% | $3.00 | **$637,500** | **$7,650,000** | -95.2% |
-| Kimi K2.5 | 70.8% | $2.50 | **$531,250** | **$6,375,000** | -96.0% |
-| GPT-5.2 | 75.4% | $14.00 | **$2,975,000** | **$35,700,000** | -77.8% |
-| Claude Sonnet 4.6 | 76.2% | $15.00 | **$3,187,500** | **$38,250,000** | -76.2% |
-| Claude Opus 4.6 | 79.2% | $25.00 | **$5,312,500** | **$63,750,000** | - |
+| DeepSeek V3.2 | 70.0% | 0.42 dólares | **89,250 dólares** | **1,071,000 dólares** | -99.3% |
+| MiniMax M2.5 | 80.2% | 1.20 dólares | **255,000 dólares** | **3,060,000 dólares** | -98.1% |
+| GLM-5 | 77.8% | 3.20 dólares | **680,000 dólares** | **8,160,000 dólares** | -87.2% |
+| GLM-4.7 | 73.8% | 2.20 dólares | **467,500 dólares** | **5,610,000 dólares** | -91.2% |
+| Gemini 3 Flash | 76.2% | 3.00 dólares | **637,500 dólares** | **7,650,000 dólares** | -95.2% |
+| Kimi K2.5 | 70.8% | 2.50 dólares | **531,250 dólares** | **6,375,000 dólares** | -96.0% |
+| GPT-5.2 | 75.4% | 14.00 dólares | **2,975,000 dólares** | **35,700,000 dólares** | -77.8% |
+| Claude Sonnet 4.6 | 76.2% | 15.00 dólares | **3,187,500 dólares** | **38,250,000 dólares** | -76.2% |
+| Claude Opus 4.6 | 79.2% | 25.00 dólares | **5,312,500 dólares** | **63,750,000 dólares** | - |
 
 ### O Choque da Realidade
 
-**A diferença anual entre usar DeepSeek V3.2 e Claude Opus 4.6 para um time de 50 devs é de $62,679,000.**
+**A diferença anual entre usar DeepSeek V3.2 e Claude Opus 4.6 para um time de 50 devs é de 62,679,000 dólares.**
 
 Isso é:
 
@@ -172,46 +172,46 @@ Uma decisão de IA pode ser **uma das maiores linhas orçamentárias da empresa*
 
 ### OpenAI: Competitiva em Custo-Benefício
 
-| Modelo | SWE % | Output/1M | Eficiência | Caso de Uso |
+| Modelo | SWE % | Output (dólares/1M) | Eficiência | Caso de Uso |
 |--------|-------|-----------|:----------:|-----------:|
-| GPT-5.2 | 75.4% | $14.00 | 5 | **Melhor relação qualidade-preço OpenAI** |
-| GPT-5 mini | ~65% | $2.00 | 32 | Muito barato, performance estimada |
+| GPT-5.2 | 75.4% | 14.00 dólares | 5 | **Melhor relação qualidade-preço OpenAI** |
+| GPT-5 mini | ~65% | 2.00 dólares | 32 | Muito barato, performance estimada |
 
 **Recomendação OpenAI**: GPT-5.2 é a escolha profissional — 75.4% de performance a preço razoável dentro do ecossistema OpenAI.
 
 ### Anthropic: Premium com Justificativa
 
-| Modelo | SWE % | Output/1M | Eficiência | Caso de Uso |
+| Modelo | SWE % | Output (dólares/1M) | Eficiência | Caso de Uso |
 |--------|-------|-----------|:----------:|-----------:|
-| Claude Opus 4.6 (Thinking) | 79.2% | $25.00 | 3 | 🏆 **Topo de performance, custo elevado** |
-| Claude 4.5 Opus | 76.8% | $25.00 | 3 | Versão anterior do Opus |
-| Claude Sonnet 4.6 | 76.2% | $15.00 | 5 | **Melhor custo-benefício Anthropic** |
-| Claude Haiku 4.5 | ~65% | $5.00 | 13 | Mais acessível, menor performance |
+| Claude Opus 4.6 (Thinking) | 79.2% | 25.00 dólares | 3 | 🏆 **Topo de performance, custo elevado** |
+| Claude 4.5 Opus | 76.8% | 25.00 dólares | 3 | Versão anterior do Opus |
+| Claude Sonnet 4.6 | 76.2% | 15.00 dólares | 5 | **Melhor custo-benefício Anthropic** |
+| Claude Haiku 4.5 | ~65% | 5.00 dólares | 13 | Mais acessível, menor performance |
 
-**Recomendação Anthropic**: Claude Sonnet 4.6 — performance quase igual ao Opus a $15/1M output (vs $25 do Opus). Para times com budget, o melhor ponto de entrada do ecossistema Anthropic.
+**Recomendação Anthropic**: Claude Sonnet 4.6 — performance quase igual ao Opus a 15 dólares por 1M tokens output (vs 25 dólares do Opus). Para times com budget, o melhor ponto de entrada do ecossistema Anthropic.
 
 ### Google: O Equilíbrio Inteligente
 
-| Modelo | SWE % | Output/1M | Eficiência | Caso de Uso |
+| Modelo | SWE % | Output (dólares/1M) | Eficiência | Caso de Uso |
 |--------|-------|-----------|:----------:|-----------:|
-| Gemini 3 Flash | 76.2% | $3.00 | 25 | 🚀 **Campeão de eficiência Google** |
-| Gemini 3 Pro | 71.6% | $12.00 | 6 | Contexto 1M, útil para projetos grandes |
-| Gemini 2.5 Flash | 63.2% | $2.50 | 25 | ⭐ Ainda competitivo, preço menor |
-| Gemini 2.5 Pro | 63.8% | $10.00 | 6 | 💎 Performance abaixo dos novos modelos |
+| Gemini 3 Flash | 76.2% | 3.00 dólares | 25 | 🚀 **Campeão de eficiência Google** |
+| Gemini 3 Pro | 71.6% | 12.00 dólares | 6 | Contexto 1M, útil para projetos grandes |
+| Gemini 2.5 Flash | 63.2% | 2.50 dólares | 25 | ⭐ Ainda competitivo, preço menor |
+| Gemini 2.5 Pro | 63.8% | 10.00 dólares | 6 | 💎 Performance abaixo dos novos modelos |
 
-**Recomendação Google**: Gemini 3 Flash é a máquina de eficiência — 76.2% SWE-Bench a $3.00/1M output, com janela de contexto de 1M tokens. Ideal para repositórios gigantes.
+**Recomendação Google**: Gemini 3 Flash é a máquina de eficiência — 76.2% SWE-Bench a 3.00 dólares por 1M tokens output, com janela de contexto de 1M tokens. Ideal para repositórios gigantes.
 
 ### Outros: Os Guerrilheiros e Surpresas
 
-| Modelo | SWE % | Output/1M | Eficiência | Criador | Destaque |
+| Modelo | SWE % | Output (dólares/1M) | Eficiência | Criador | Destaque |
 |--------|-------|-----------|:----------:|---------|---------:|
-| DeepSeek V3.2 | 70.0% | $0.42 | **167** | DeepSeek | 🚀 **Campeão absoluto de eficiência** |
-| MiniMax M2.5 | 80.2% | $1.20 | **67** | MiniMax | 🚀 **Campeão absoluto de performance** |
-| GLM-5 | 77.8% | $3.20 | **24** | Zhipu/Z.ai | 🚀 Open-source eficiente |
-| GLM-4.7 | 73.8% | $2.20 | **34** | Zhipu/Z.ai | 🚀 Open-source (anterior) |
-| Kimi K2.5 | 70.8% | $2.50 | **28** | Moonshot | ⭐ Excelente reasoning |
-| Grok 4 | 75.0% | $15.00 | **5** | xAI | 💎 Contexto 256K |
-| Kimi K2 Thinking | 63.4% | $2.50 | **25** | Moonshot | ⭐ Mais barato com reasoning |
+| DeepSeek V3.2 | 70.0% | 0.42 dólares | **167** | DeepSeek | 🚀 **Campeão absoluto de eficiência** |
+| MiniMax M2.5 | 80.2% | 1.20 dólares | **67** | MiniMax | 🚀 **Campeão absoluto de performance** |
+| GLM-5 | 77.8% | 3.20 dólares | **24** | Zhipu/Z.ai | 🚀 Open-source eficiente |
+| GLM-4.7 | 73.8% | 2.20 dólares | **34** | Zhipu/Z.ai | 🚀 Open-source (anterior) |
+| Kimi K2.5 | 70.8% | 2.50 dólares | **28** | Moonshot | ⭐ Excelente reasoning |
+| Grok 4 | 75.0% | 15.00 dólares | **5** | xAI | 💎 Contexto 256K |
+| Kimi K2 Thinking | 63.4% | 2.50 dólares | **25** | Moonshot | ⭐ Mais barato com reasoning |
 
 **Recomendação**: MiniMax M2.5 é a virada de jogo de 2026 — topo de performance com custo ultra-baixo. DeepSeek V3.2 ainda lidera em eficiência pura.
 
@@ -221,9 +221,9 @@ Uma decisão de IA pode ser **uma das maiores linhas orçamentárias da empresa*
 
 ### O Paradoxo: Performance Máxima Agora Acessível
 
-2026 marcou uma virada histórica: **MiniMax M2.5 provou que o topo de performance (80.2% SWE-Bench) é alcançável a custo de modelo médio** ($0.15 input / $1.20 output por 1M tokens).
+2026 marcou uma virada histórica: **MiniMax M2.5 provou que o topo de performance (80.2% SWE-Bench) é alcançável a custo de modelo médio** (0.15 dólares input / 1.20 dólares output por 1M tokens).
 
-O modelo que até 2025 exigia $15-75/1M tokens para performance de topo agora custa centavos. A barreira entre "o melhor" e "o mais barato" está desmoronando rapidamente.
+O modelo que até 2025 exigia 15 a 75 dólares por 1M tokens para performance de topo agora custa centavos. A barreira entre "o melhor" e "o mais barato" está desmoronando rapidamente.
 
 ### Os Vencedores de 2026
 
@@ -252,13 +252,13 @@ Isso cria oportunidade: **uma empresa pode implementar a mesma qualidade de dese
 ### A Minha Recomendação Honesta
 
 **Para desenvolvedores individuais:**
-Use **MiniMax M2.5 ou DeepSeek V3.2**. Performance 70-80% com custo negligenciável. MiniMax hoje tem a melhor performance do mercado a $1/mês para uso individual.
+Use **MiniMax M2.5 ou DeepSeek V3.2**. Performance 70-80% com custo negligenciável. MiniMax hoje tem a melhor performance do mercado a 1 dólar/mês para uso individual.
 
 **Para pequenas startups (até 10 devs):**
-Use **Gemini 3 Flash + MiniMax M2.5**. Alternar conforme a tarefa. Custo: menos de $100/mês para o time inteiro.
+Use **Gemini 3 Flash + MiniMax M2.5**. Alternar conforme a tarefa. Custo: menos de 100 dólares/mês para o time inteiro.
 
 **Para empresas médias (50+ devs):**
-Use **GPT-5.2 ou Gemini 3 Flash como backbone**, com Claude Sonnet 4.6 para trabalhos críticos. Custo: $4-20M/ano.
+Use **GPT-5.2 ou Gemini 3 Flash como backbone**, com Claude Sonnet 4.6 para trabalhos críticos. Custo: 4 a 20 milhões de dólares por ano.
 
 **Para empresas que podem pagar premium:**
 Considere **Claude Opus 4.6 ou MiniMax M2.5 (High Reasoning)** para repositórios mission-critical. MiniMax oferece performance equivalente com custo 22x menor.
@@ -269,7 +269,7 @@ Considere **Claude Opus 4.6 ou MiniMax M2.5 (High Reasoning)** para repositório
 
 2026 marca o fim definitivo da ilusão de que "melhor = mais caro".
 
-MiniMax M2.5 quebrou o teto do SWE-Bench (80.2%) enquanto cobra **~21x menos** que Claude Opus 4.6 por token de output ($1.20 vs $25.00). DeepSeek V3.2 mantém 70% de performance ao menor custo absoluto do mercado.
+MiniMax M2.5 quebrou o teto do SWE-Bench (80.2%) enquanto cobra **~21x menos** que Claude Opus 4.6 por token de output (1.20 dólares vs 25.00 dólares). DeepSeek V3.2 mantém 70% de performance ao menor custo absoluto do mercado.
 
 Os melhores engenheiros de software de 2026 não serão aqueles com acesso aos modelos mais caros — serão aqueles que descobriram que **podem fazer 90% do trabalho com 1-5% do custo** usando os modelos certos para cada tarefa.
 
@@ -294,38 +294,38 @@ A pergunta para 2026 não é mais "qual IA é melhor?" — é "qual IA eu precis
 | 9 | GLM-4.7 | 73.8% | Zhipu/Z.ai |
 | 10 | Gemini 3 Pro | 71.6% | Google |
 
-### Tabela A2: Top 10 por Eficiência — Fórmula: SWE% ÷ Output/1M
+### Tabela A2: Top 10 por Eficiência — Fórmula: SWE% ÷ Output (dólares/1M)
 
-| Rank | Modelo | Efficiency Score | SWE-Bench | Output/1M |
+| Rank | Modelo | Efficiency Score | SWE-Bench | Output (dólares/1M) |
 |------|--------|:----------------:|-----------|:---------:|
-| 1 | DeepSeek V3.2 | **167** | 70.0% | $0.42 |
-| 2 | MiniMax M2.5 | **67** | 80.2% | $1.20 |
-| 3 | GLM-4.7 | **34** | 73.8% | $2.20 |
-| 4 | Kimi K2.5 | **28** | 70.8% | $2.50 |
-| 5 | Gemini 3 Flash | **25** | 76.2% | $3.00 |
-| 6 | Kimi K2 Thinking | **25** | 63.4% | $2.50 |
-| 7 | Gemini 2.5 Flash | **25** | 63.2% | $2.50 |
-| 8 | GLM-5 | **24** | 77.8% | $3.20 |
-| 9 | Gemini 2.5 Pro | **6** | 63.8% | $10.00 |
-| 10 | Gemini 3 Pro | **6** | 71.6% | $12.00 |
-| 11 | GPT-5.2 | **5** | 75.4% | $14.00 |
-| 12 | Claude Sonnet 4.6 | **5** | 76.2% | $15.00 |
-| 13 | Grok 4 | **5** | 75.0% | $15.00 |
-| 14 | Claude Opus 4.6 | **3** | 79.2% | $25.00 |
-| 15 | Claude 4.5 Opus | **3** | 76.8% | $25.00 |
+| 1 | DeepSeek V3.2 | **167** | 70.0% | 0.42 dólares |
+| 2 | MiniMax M2.5 | **67** | 80.2% | 1.20 dólares |
+| 3 | GLM-4.7 | **34** | 73.8% | 2.20 dólares |
+| 4 | Kimi K2.5 | **28** | 70.8% | 2.50 dólares |
+| 5 | Gemini 3 Flash | **25** | 76.2% | 3.00 dólares |
+| 6 | Kimi K2 Thinking | **25** | 63.4% | 2.50 dólares |
+| 7 | Gemini 2.5 Flash | **25** | 63.2% | 2.50 dólares |
+| 8 | GLM-5 | **24** | 77.8% | 3.20 dólares |
+| 9 | Gemini 2.5 Pro | **6** | 63.8% | 10.00 dólares |
+| 10 | Gemini 3 Pro | **6** | 71.6% | 12.00 dólares |
+| 11 | GPT-5.2 | **5** | 75.4% | 14.00 dólares |
+| 12 | Claude Sonnet 4.6 | **5** | 76.2% | 15.00 dólares |
+| 13 | Grok 4 | **5** | 75.0% | 15.00 dólares |
+| 14 | Claude Opus 4.6 | **3** | 79.2% | 25.00 dólares |
+| 15 | Claude 4.5 Opus | **3** | 76.8% | 25.00 dólares |
 
 ### Tabela A3: Custo Anual — 50 Desenvolvedores (212.5M tokens/mês)
 
 | Modelo | Custo Anual | vs. Claude Opus 4.6 | Eficiência |
 |--------|------------|:-------------------:|-----------:|
-| DeepSeek V3.2 | **$1,071,000** | -98.3% | 167 🚀 |
-| MiniMax M2.5 | **$3,060,000** | -95.2% | 67 🚀 |
-| GLM-5 | **$8,160,000** | -87.2% | 24 ⭐ |
-| GLM-4.7 | **$5,610,000** | -91.2% | 34 ⭐ |
-| Gemini 3 Flash | **$7,650,000** | -88.0% | 25 ⭐ |
-| GPT-5.2 | **$35,700,000** | -44.0% | 5 💎 |
-| Claude Sonnet 4.6 | **$38,250,000** | -40.0% | 5 💎 |
-| Claude Opus 4.6 | **$63,750,000** | - | 3 🏆 |
+| DeepSeek V3.2 | **1,071,000 dólares** | -98.3% | 167 🚀 |
+| MiniMax M2.5 | **3,060,000 dólares** | -95.2% | 67 🚀 |
+| GLM-5 | **8,160,000 dólares** | -87.2% | 24 ⭐ |
+| GLM-4.7 | **5,610,000 dólares** | -91.2% | 34 ⭐ |
+| Gemini 3 Flash | **7,650,000 dólares** | -88.0% | 25 ⭐ |
+| GPT-5.2 | **35,700,000 dólares** | -44.0% | 5 💎 |
+| Claude Sonnet 4.6 | **38,250,000 dólares** | -40.0% | 5 💎 |
+| Claude Opus 4.6 | **63,750,000 dólares** | - | 3 🏆 |
 
 ---
 

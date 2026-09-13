@@ -93,7 +93,7 @@ Com **700 milhões de usuários semanais**, o GPT-5 promete revolucionar a produ
 ## Disponibilidade e Acesso
 O GPT-5 está sendo **gradualmente disponibilizado para todos os usuários** do ChatGPT, incluindo usuários gratuitos, embora estes tenham limitações de uso. Usuários Plus têm acesso expandido, enquanto usuários Pro obtêm acesso ilimitado ao GPT-5 e ao GPT-5 Pro.[1][15]
 
-Na API, o modelo está disponível em três versões: **gpt-5, gpt-5-mini e gpt-5-nano**, com preços de $1,25 por milhão de tokens de entrada e $10 por milhão de tokens de saída.[3]
+Na API, o modelo está disponível em três versões: **gpt-5, gpt-5-mini e gpt-5-nano**, com preços de 1,25 dólares por milhão de tokens de entrada e 10 dólares por milhão de tokens de saída.[3]
 
 ## Conclusão
 O GPT-5 representa um marco definitivo na evolução da inteligência artificial, combinando avanços técnicos significativos com uma abordagem mais responsável e acessível. Com melhorias substanciais em confiabilidade, capacidades especializadas e uma nova família de modelos open-source, a OpenAI consolida sua posição de liderança enquanto democratiza o acesso a tecnologias de IA de ponta.
