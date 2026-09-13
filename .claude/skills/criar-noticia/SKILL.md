@@ -2,9 +2,11 @@
 name: criar-noticia
 description: Criar uma notícia em português do Brasil no blog
   a partir de um link, citando a fonte, extraindo autor e imagem.
+  Também verifica (por julgamento, não por script) se a notícia já foi
+  publicada antes de criar o post.
 metadata:
   author: zot-blog
-  version: "1.1"
+  version: "1.2"
 ---
 
 # Skill: Criar Notícia no Blog
@@ -16,62 +18,97 @@ Quando o usuário pedir para criar uma notícia no blog a partir de uma URL, sig
 > **Ordem importa:** execute o **passo 0 (verificação de duplicata) ANTES de tudo**.
 > Nunca baixe imagem, traduza texto nem crie arquivo antes de saber que a notícia
 > não foi publicada. O passo 0 é barato; publicar duplicata não tem desfazer fácil.
+> A decisão de duplicata é **semântica** — leia os posts candidatos e julgue, não
+> confie apenas em busca por texto.
 
 ### 0. Verificar se a notícia JÁ FOI PUBLICADA (obrigatório, primeiro passo)
 
-Antes de qualquer outra coisa, verifique se a URL já foi publicada. **Não baixe imagem nem traduza texto antes disso** — publicar duplicata não tem desfazer fácil.
+Antes de qualquer outra coisa, verifique se a notícia já está no blog. **Não baixe imagem
+nem escreva o post antes disso** — publicar duplicata não tem desfazer fácil.
 
-Rode estes três comandos a partir da raiz do repositório:
+> **O veredito é seu, por julgamento.** Comandos de busca servem apenas para **levantar
+> candidatos** em `_posts/`. A decisão de "isto é a mesma notícia" é **semântica** e deve
+> ser tomada lendo os candidatos — nunca delegue a decisão a um `grep` ou a um script.
+> Igualdade de texto é só o caso mais óbvio; o caso perigoso é o que se parece diferente.
+
+#### 0.1. Levantar candidatos (busca mecânica — só rascunho)
+
+Rode a partir da raiz do repositório:
 
 ```bash
-# 1) MESMA URL DE FONTE? compara só o trecho final da URL (sem esquema/query/barra)
+# mesma URL de fonte? (sem esquema, www, query, fragmento e barra final)
 CHAVE=$(echo "<url>" | sed -e 's|^https*://||' -e 's|^www\.||' -e 's|?.*||' -e 's|#.*||' -e 's|/*$||')
-grep -rn "$CHAVE" _posts/ && echo ">>> JA PUBLICADO" || echo ">>> url livre"
+grep -rn "$CHAVE" _posts/
 
-# 2) MESMO SLUG? (nome de arquivo, com e sem data)
-ls _posts/*<slug>* 2>/dev/null && echo ">>> COLISAO DE SLUG" || echo ">>> slug livre"
+# mesmo slug? (arquivo, com e sem data)
+ls _posts/*<slug>* 2>/dev/null
 
-# 3) TITULO PARECIDO? (2-3 palavras-chave do título proposto)
-grep -ril "<palavra-chave-1>" _posts/ | head
+# palavras-chave do assunto — nomes de empresas, produtos, pessoas, eventos
+# é aqui que se acham duplicatas que NÃO compartilham a URL
+for t in "<entidade-1>" "<entidade-2>" "<entidade-3>"; do
+  grep -ril "$t" _posts/ 2>/dev/null
+done | sort -u
+
+# quem publicou por último neste blog (contexto do que é recente)
+ls -t _posts/ | head -15
 ```
 
-**Se qualquer comando retornar arquivo, trate como duplicata e PARE.**
+#### 0.2. Julgar (a parte que a IA faz)
 
-Para uma comparação mais fina de título (fuzzy, ignorando acentos) e uma varredura
-completa do blog, há um script auxiliar local da skill (não versionado):
+Para **cada candidato** retornado, leia o `title` e a **primeira linha do corpo** do arquivo
+(e o rodapé de fonte, se existir) e responda a estas perguntas:
 
-```bash
-# checagem de um post novo: URL, título semelhante, slug e imagem destacada
-python3 .claude/skills/criar-noticia/verificar-duplicata.py \
-  --url "<url>" --slug "<slug>" --titulo "<título>"
+1. **Mesma matéria?** Os dois posts cobrem *o mesmo fato* — o mesmo anúncio, o mesmo
+   incidente, o mesmo estudo, o mesmo lançamento?
+2. **Mesma origem editorial?** O texto deriva do mesmo artigo-fonte, mesmo quando a URL é
+   outra (sindicagem, republicação, mesmo *press release* distribuído a vários veículos)?
+3. **Mesmo recorte?** Ou são fatos distintos que apenas compartilham empresas ou tema?
 
-# auditoria: varre todos os posts e acha fontes repetidas
-python3 .claude/skills/criar-noticia/verificar-duplicata.py --auditar
+**Considere duplicata quando: o fato central é o mesmo E o post novo não acrescenta
+ângulo, dados ou análise.** Mesmo com URL diferente, dois posts que traduzem o mesmo
+anúncio de fornecedor são duplicata.
 
-# listar todos os posts com suas fontes
-python3 .claude/skills/criar-noticia/verificar-duplicata.py --listar
-```
+**Não é duplicata** (e não deve ser bloqueado) quando:
 
-> Se esse script não existir no ambiente, use apenas os comandos manuais acima —
-> eles cobrem o caso crítico (URL repetida e colisão de slug).
-> O script compara **apenas** a URL do rodapé `**Fonte original:**`; links do corpo, do
-> ranking de IA e de licenças (Creative Commons, Pexels) são ignorados de propósito,
-> para não gerar falso positivo em posts que citam a mesma referência.
-> Ele também só enxerga a URL quando o post tem o rodapé — posts antigos
-> (anteriores a setembro/2026) não têm, então nesses casos valem os comandos manuais e a
-> comparação de título.
+- o post existente apenas **cita** a mesma empresa, modelo ou referência em outro contexto;
+- o fato é **novo** mas o tema é recorrente (ex.: *a coletânea semanal de produtos* muda a
+  cada semana — mesmo domínio, URLs e conteúdo diferentes = post novo legítimo);
+- o post novo **aprofunda ou analisa** o que o existente só noticiou — aí vale seguir como
+  *actualização* ou oferecer a expansão do post antigo.
 
-**Se houver duplicata, NÃO crie um `_posts/` novo.** Avise o usuário, mostre qual post
-já cobre a fonte e ofereça exatamente estas três opções:
+#### 0.3. Decidir
+
+**Se for duplicata, NÃO crie um `_posts/` novo.** Avise o usuário, diga qual post já cobre
+o fato, explique por que você considera duplicata e ofereça as opções:
 
 1. **Manter como está** — o conteúdo já está no ar; nada a fazer.
 2. **Expandir o post existente** — acrescentar seções/ângulo novo ao arquivo já publicado.
 3. **Criar um ângulo realmente novo** — só se o usuário confirmar; use slug diferente
    (ex.: `<slug>-analise-critica`) e deixe claro no texto que deriva da mesma fonte.
 
-**Não decida sozinho por criar um post novo.** Casos reais: uma mesma matéria
-(coletânea semanal de produtos, rodada de anúncios) pode ser reenviada semanas depois
-com o mesmo link; republicar gera duplicata no site, no índice e no feed RSS.
+**Não decida sozinho por criar um post novo**, e **não decida sozinho por bloquear** quando
+houver dúvida — dúvida é motivo para perguntar, não para presumir.
+
+**Registre a conclusão em uma linha** (ex.: `Duplicata verificada em 2026-09-13: candidatos
+A, B lidos; mesma notícia de SEP-11 = duplicata` ou `sem correspondência, tema novo`) logo
+antes do passo 1, para que o raciocínio fique auditável.
+
+#### 0.4. Exemplo de julgamento (caso real deste blog)
+
+Buscar `"agentes de IA"` em `_posts/` retorna vários candidatos, entre eles:
+
+- `2026-09-09-agentes-ia-soc-credenciais.md` — Zscaler lança SOC agêntico
+- `2026-09-11-identidade-agentes-ia.md` — coletânea semanal de produtos (Akeyless, Orchid, Scytale, Securin)
+
+**Isto NÃO é duplicata.** Mesmo tema, mesmas semanas, mesmas expressões de busca — mas são
+**fatos diferentes** (um lançamento específico vs. uma rodada de anúncios). Bloquear por
+coincidência de palavras-chave seria falso positivo.
+
+Compare com o caso que **é** duplicata: reapresentar a URL
+`helpnetsecurity.com/2026/09/11/new-infosec-products-of-the-week-september-11-2026`
+identifica o **mesmo fato** já publicado — aí sim, pare.
+
+A diferença não está no texto da busca: está em **ler os dois posts e julgar o fato**.
 
 ### 1. Obter conteúdo da URL
 
@@ -173,12 +210,13 @@ Se encontrar problemas, corrija-os antes de prosseguir para o commit.
 
 ### 5. Reverificação de duplicata (obrigatório antes do commit)
 
-O passo 0 foi feito com o *título e slug propostos*. Se o título, o slug ou a URL de
-fonte mudaram durante a redação, o resultado pode ter ficado desatualizado. Rode a
-verificação **de novo**, agora com os valores finais (os mesmos comandos do passo 0).
+O passo 0 julgou o *título e slug propostos*. Se o título, o slug, a URL de fonte ou o
+**recorte da notícia** mudaram durante a redação, o julgamento pode ter ficado
+desatualizado. **Repita o passo 0 inteiro** — candidatos e julgamento — com os valores finais.
 
-Só prossiga para o commit se a fonte continuar livre e o slug não colidir. Se aparecer
-duplicata, volte ao passo 0 e siga as opções descritas lá — não commite.
+Só prossiga para o commit se você concluir que é notícia nova. Se no meio da redação você
+perceber que o post ficou muito próximo de outro já publicado, volte ao passo 0.3 e ofereça
+as opções ao usuário — não commite por conta própria.
 
 ### 6. Commit e push
 
@@ -200,7 +238,12 @@ git push
 - **Categorias e tags devem ser dinâmicas**, analisando o conteúdo do artigo — nunca use valores fixos
 - Reaproveite tags existentes sempre que possível para criar relacionamento entre posts
 - Use Swarm para executar multiplas tarefas
-- **Nunca publique a mesma fonte duas vezes** — rode o passo 0 e o passo 5 antes de commitar
-- **Duplicata não é só slug repetido**: a mesma URL de origem publicada duas vezes gera
-  notícia duplicada no site, no índice e no feed RSS, mesmo com arquivos e títulos diferentes
-- Se o script de verificação acusar duplicata, **pare e pergunte ao usuário** — não decida sozinho
+- **Nunca publique a mesma notícia duas vezes** — julgue no passo 0 e reavalie no passo 5
+- **A verificação de duplicata é um julgamento, não um `grep`**: buscas mecânicas apenas
+  levantam candidatos; a decisão é ler os posts e comparar o fato, o recorte e a origem
+- **Duplicata não é só slug repetido**: a mesma notícia publicada duas vezes gera
+  duplicata no site, no índice e no feed RSS, mesmo com arquivos, URLs e títulos diferentes
+- **Duplicata semântica também conta**: o mesmo anúncio ou *press release* republicado por
+  outro veículo é a mesma notícia — compare o fato relatado, não apenas o link
+- Em caso de **dúvida**, pergunte ao usuário — não decida sozinho nem por criar, nem por bloquear
+- Se concluir que é duplicata, **pare e pergunte** antes de escrever qualquer arquivo

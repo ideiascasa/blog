@@ -11,4 +11,3 @@ openrouter-response.json
 openrouter-display-names.txt
 venv/
 .venv-bimi/
-.claude/skills/criar-noticia/verificar-duplicata.py
