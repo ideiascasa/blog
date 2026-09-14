@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 14/09/2026 05:42
+updated_at: America/Sao Paulo - 14/09/2026 16:47
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -85,26 +85,26 @@ items:
   gasto_por_coding: '0.025'
   eficiencia: '52.000'
 - rank: 12
-  model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
-  model_id: deepseek/deepseek-v4-pro-20260813
-  coding_index: '68.8'
-  price: '3.520'
-  gasto_por_coding: '0.051'
-  eficiencia: '51.200'
-- rank: 13
   model: Solar Pro 4
   model_id: upstage/solar-pro4-20260810
   coding_index: '52.7'
   price: '0.450'
   gasto_por_coding: '0.009'
   eficiencia: '50.450'
-- rank: 14
+- rank: 13
   model: Ling 3.0 Flash
   model_id: inclusionai/ling-3.0-flash-20260723
   coding_index: '50.6'
   price: '0.084'
   gasto_por_coding: '0.002'
   eficiencia: '50.180'
+- rank: 14
+  model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
+  model_id: deepseek/deepseek-v4-pro-20260813
+  coding_index: '68.8'
+  price: '3.840'
+  gasto_por_coding: '0.056'
+  eficiencia: '49.600'
 - rank: 15
   model: Qwen3.7 Plus
   model_id: qwen/qwen3.7-plus-20260602
@@ -295,19 +295,19 @@ items:
   gasto_por_coding: '0.117'
   eficiencia: '28.700'
 - rank: 42
+  model: GLM-5.1 (Reasoning)
+  model_id: z-ai/glm-5.1-20260406
+  coding_index: '55.8'
+  price: '5.510'
+  gasto_por_coding: '0.099'
+  eficiencia: '28.250'
+- rank: 43
   model: Qwen3.5 397B A17B (Reasoning)
   model_id: qwen/qwen3.5-397b-a17b-20260216
   coding_index: '48.2'
   price: '4.050'
   gasto_por_coding: '0.084'
   eficiencia: '27.950'
-- rank: 43
-  model: GLM-5.1 (Reasoning)
-  model_id: z-ai/glm-5.1-20260406
-  coding_index: '55.8'
-  price: '5.600'
-  gasto_por_coding: '0.100'
-  eficiencia: '27.800'
 - rank: 44
   model: Grok 4.3 (high)
   model_id: x-ai/grok-4.3-20260430
