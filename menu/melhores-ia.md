@@ -229,3 +229,5 @@ eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço
 - **Preço**: soma de input + output por milhão de tokens.
 - **Gasto**: preço dividido pelo índice de coding (desempate; menor = melhor).
 - **Eficiência**: a fórmula acima; maior valor = melhor posição.
+
+Obs: O cálculo também é empírico.
