@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 16/09/2026 21:17",
+  "updated_at": "America/Sao Paulo - 17/09/2026 05:29",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -235,6 +235,15 @@
     },
     {
       "rank": 26,
+      "model": "Qwen3.6 35B A3B (Reasoning)",
+      "model_id": "qwen/qwen3.6-35b-a3b-20260415",
+      "coding_index": "41.9",
+      "price": "0.750",
+      "gasto_por_coding": "0.018",
+      "eficiencia": "38.150"
+    },
+    {
+      "rank": 27,
       "model": "LongCat 2.0",
       "model_id": "meituan/longcat-2.0-20260720",
       "coding_index": "45.3",
@@ -243,7 +252,7 @@
       "eficiencia": "37.800"
     },
     {
-      "rank": 27,
+      "rank": 28,
       "model": "Kimi K2.6",
       "model_id": "moonshotai/kimi-k2.6-20260420",
       "coding_index": "61.8",
@@ -252,7 +261,7 @@
       "eficiencia": "37.050"
     },
     {
-      "rank": 28,
+      "rank": 29,
       "model": "DeepSeek V3.1 Terminus (Reasoning)",
       "model_id": "deepseek/deepseek-v3.1-terminus",
       "coding_index": "43.5",
@@ -261,22 +270,13 @@
       "eficiencia": "36.645"
     },
     {
-      "rank": 29,
+      "rank": 30,
       "model": "Qwen3.7 Max",
       "model_id": "qwen/qwen3.7-max-20260520",
       "coding_index": "66.0",
       "price": "5.900",
       "gasto_por_coding": "0.089",
       "eficiencia": "36.500"
-    },
-    {
-      "rank": 30,
-      "model": "Qwen3.6 35B A3B (Reasoning)",
-      "model_id": "qwen/qwen3.6-35b-a3b-20260415",
-      "coding_index": "41.9",
-      "price": "1.100",
-      "gasto_por_coding": "0.026",
-      "eficiencia": "36.400"
     },
     {
       "rank": 31,
