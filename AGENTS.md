@@ -47,8 +47,16 @@ Simétrico à regra acima: não apague o que você não instalou. Em particular:
 
 Este blog publica via GitHub Pages no branch `gh-pages`. Um push em `gh-pages` publica em produção.
 
-- Não faça `push` sem que o usuário peça.
-- Antes de commitar, verifique `git status` e não inclua arquivos gerados/untracked alheios à tarefa (ex.: `__pycache__/`, caches).
+**Você pode e deve fazer `push` quando a tarefa envolver publicar um post.** Não peça permissão para cada envio: se o usuário pediu para criar/publicar a notícia, o push faz parte da entrega. Anuncie no resumo final o que foi enviado (commit, arquivos, destino), para que a publicação fique auditável.
+
+Antes de qualquer push:
+
+1. Verifique `git status` — não inclua arquivos gerados/untracked alheios à tarefa (ex.: `__pycache__/`, caches).
+2. Rode `git fetch origin` e confira se está `behind`. O branch recebe commits automáticos (`chore: atualiza leaderboard [skip ci]` em `_data/leaderboard.*`); publique sempre sobre o topo mais recente.
+   - Se estiver `[ahead N, behind M]`, faça `git rebase origin/gh-pages` antes do push. Se houver conflito, **pare e resolva com o usuário** — nunca use `push --force` em `gh-pages`.
+3. Confirme que o build do Jekyll não quebrou (front matter válido, `image:` apontando para arquivo existente em `assets/img/`).
+
+Só **não** faça push quando o usuário pedir explicitamente para segurar, ou quando o post estiver em revisão aguardando aprovação de conteúdo.
 
 ## Ordenação de posts (Jekyll)
 
