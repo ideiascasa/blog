@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 18/09/2026 21:25",
+  "updated_at": "America/Sao Paulo - 19/09/2026 04:54",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -229,9 +229,9 @@
       "model": "Qwen3.6 35B A3B (Reasoning)",
       "model_id": "qwen/qwen3.6-35b-a3b-20260415",
       "coding_index": "41.9",
-      "price": "0.750",
+      "price": "0.740",
       "gasto_por_coding": "0.018",
-      "eficiencia": "38.150"
+      "eficiencia": "38.200"
     },
     {
       "rank": 26,
