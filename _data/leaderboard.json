@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 18/09/2026 15:14",
+  "updated_at": "America/Sao Paulo - 18/09/2026 21:25",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -31,9 +31,9 @@
       "model": "GLM-5.3 (max)",
       "model_id": "z-ai/glm-5.3-20260816",
       "coding_index": "74.8",
-      "price": "3.724",
-      "gasto_por_coding": "0.050",
-      "eficiencia": "56.180"
+      "price": "3.695",
+      "gasto_por_coding": "0.049",
+      "eficiencia": "56.325"
     },
     {
       "rank": 4,
