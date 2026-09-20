@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 20/09/2026 05:24
+updated_at: America/Sao Paulo - 20/09/2026 15:09
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -22,19 +22,19 @@ items:
   gasto_por_coding: '0.006'
   eficiencia: '66.900'
 - rank: 3
+  model: GLM-5.3 (max)
+  model_id: z-ai/glm-5.3-20260816
+  coding_index: '74.8'
+  price: '3.445'
+  gasto_por_coding: '0.046'
+  eficiencia: '57.575'
+- rank: 4
   model: GPT-5.6 Luna (max)
   model_id: openai/gpt-5.6-luna-20260709
   coding_index: '71.4'
   price: '2.800'
   gasto_por_coding: '0.039'
   eficiencia: '57.400'
-- rank: 4
-  model: GLM-5.3 (max)
-  model_id: z-ai/glm-5.3-20260816
-  coding_index: '74.8'
-  price: '3.497'
-  gasto_por_coding: '0.047'
-  eficiencia: '57.315'
 - rank: 5
   model: Ling-3.0-flash-VL
   model_id: inclusionai/ling-3.0-flash-vl-20260910
@@ -46,9 +46,9 @@ items:
   model: DeepSeek V4 Flash 0420 (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-flash-20260423
   coding_index: '56.2'
-  price: '0.240'
+  price: '0.200'
   gasto_por_coding: '0.004'
-  eficiencia: '55.000'
+  eficiencia: '55.200'
 - rank: 7
   model: Hy3
   model_id: tencent/hy3-preview-20260421
