@@ -127,6 +127,41 @@ Downloads possíveis:
 
 Baixe a imagem com `curl -L -o assets/img/<slug>-featured.png <url>`.
 
+### 2.1. Normalizar a imagem para 1024x600 (obrigatório, sem exceção)
+
+**Toda imagem de destaque deste blog tem exatamente 1024x600 px** — a proporção da
+referência `assets/img/spools.jpg`. Nenhum post pode ser publicado com imagem em outra
+medida, seja porque o download veio em outra proporção ou porque o arquivo é reaproveitado.
+
+```bash
+# ajusta o conteúdo, preservando nome e caminho do arquivo (cover fit, corte central)
+scripts/normalize_post_image.sh assets/img/<slug>-featured.png
+```
+
+Regras:
+
+- **Escopo: só a imagem de capa.** Imagens usadas **dentro** do corpo do post
+  (`![...](assets/img/x.png)`) **não** são cortadas para 1024x600 — há diagramas verticais
+  no acervo (ex.: `f2c2076f.png`, 784x3000) que seriam destruídos. Para essas, apenas
+  preserve a proporção; o CSS (`img { max-width: 100% }`) já limita a largura.
+- **Cover fit, nunca distorção**: redimensiona proporcionalmente e corta o excesso no
+  centro. Não estique, não comprima e **não** coloque barras/letterbox.
+- **Preserve o nome do arquivo** — ele faz parte da URL publicada. Normalizar é sobrescrever
+  o conteúdo; nunca renomeie para `...-1024x600.png`.
+- Escolha na origem uma imagem **paisagem e com pelo menos 1024 px de largura** (ideal
+  1600 px ou mais). Imagens menores são ampliadas e perdem nitidez.
+- Ao usar imagem que **já existe** em `assets/img` (reaproveitada de outro post), normalize
+  antes: pode estar fora do padrão.
+- Ao final, confirme o resultado:
+
+  ```bash
+  sips -g pixelWidth -g pixelHeight assets/img/<slug>-featured.png   # deve dizer 1024 e 600
+  ```
+
+- O `sips` **não grava WebP**. Se a imagem baixada for `.webp`, o script converte o conteúdo
+  para JPEG **mantendo o mesmo nome** — o arquivo continua servido normalmente, então o
+  `image:` do post continua igual. Prefira baixar em `.jpg`/`.png` quando possível.
+
 ### 3. Criar o post em markdown
 
 Crie o arquivo em `_posts/<data>-<slug>.md` seguindo este formato exato.
@@ -161,7 +196,7 @@ title: "<título traduzido>"
 author: "<autor extraído ou 'autor bot'>"
 categories: <categoria>
 tags: [<tag1>,<tag2>,...]
-image: <slug>-featured.png
+image: <slug>-featured.png   # arquivo 1024x600 obrigatoriamente (ver passo 2.1)
 ---
 
 <conteúdo do artigo em português do Brasil>
@@ -208,6 +243,26 @@ r
 
 Se encontrar problemas, corrija-os antes de prosseguir para o commit.
 
+### 4.1. Reverificação do padrão de imagem (obrigatório antes do commit)
+
+Rode o auditor do repositório e garanta que ele termina com **exit code 0**:
+
+```bash
+scripts/check_post_images.sh
+```
+
+O script (somente leitura) lista todos os posts com a imagem declarada, as dimensões reais
+em `assets/img/` e o status de cada uma. Qualquer linha `DIVERGENTE`, `AUSENTE` ou
+`SEM IMAGEM` significa post fora do padrão: rode `scripts/normalize_post_image.sh` no
+arquivo indicado e verifique de novo. **Não commite enquanto o auditor não retornar OK.**
+
+Para conferir visualmente antes de publicar (folha de contato em PDF, com miniaturas e
+dimensões, destacando o que está fora do padrão):
+
+```bash
+python3 scripts/review_post_images.py   # grava /tmp/review_post_images.pdf
+```
+
 ### 5. Reverificação de duplicata (obrigatório antes do commit)
 
 O passo 0 julgou o *título e slug propostos*. Se o título, o slug, a URL de fonte ou o
@@ -228,12 +283,20 @@ git commit -m "Novo post: <título>"
 git push
 ```
 
+O `git status` deste ponto em diante não pode mostrar imagens modificadas — se mostrar, é
+sinal de que alguma imagem ainda está fora de 1024x600 (rode o passo 4.1 de novo).
+
 ## Regras obrigatórias
 
 - Todo o conteúdo do post deve ser em **português do Brasil**
 - **Cite a fonte** no rodapé (URL original, domínio, autor)
 - **Atribua a imagem** no rodapé (artista, fonte, licença)
 - Siga o formato dos posts existentes em `_posts/`
+- **Toda imagem de destaque tem exatamente 1024x600 px** (proporção da referência
+  `assets/img/spools.jpg`), sempre por cover fit — nunca esticada, nunca com barras
+- **Nunca renomeie a imagem para ajustar o padrão**: preserve o nome (a URL é pública) e
+  sobrescreva só o conteúdo, com `scripts/normalize_post_image.sh`
+- **Valide com `scripts/check_post_images.sh` (exit 0) antes de commit/push**
 - Use a data atual no nome do arquivo (YYYY-MM-DD)
 - **Categorias e tags devem ser dinâmicas**, analisando o conteúdo do artigo — nunca use valores fixos
 - Reaproveite tags existentes sempre que possível para criar relacionamento entre posts
