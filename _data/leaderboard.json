@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 21/09/2026 12:45",
+  "updated_at": "America/Sao Paulo - 21/09/2026 16:55",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -118,6 +118,15 @@
     },
     {
       "rank": 13,
+      "model": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
+      "model_id": "deepseek/deepseek-v4-pro-20260813",
+      "coding_index": "68.8",
+      "price": "3.460",
+      "gasto_por_coding": "0.050",
+      "eficiencia": "51.500"
+    },
+    {
+      "rank": 14,
       "model": "Solar Pro 4",
       "model_id": "upstage/solar-pro4-20260810",
       "coding_index": "52.7",
@@ -126,22 +135,13 @@
       "eficiencia": "50.450"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "model": "Ling 3.0 Flash",
       "model_id": "inclusionai/ling-3.0-flash-20260723",
       "coding_index": "50.6",
       "price": "0.084",
       "gasto_por_coding": "0.002",
       "eficiencia": "50.180"
-    },
-    {
-      "rank": 15,
-      "model": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
-      "model_id": "deepseek/deepseek-v4-pro-20260813",
-      "coding_index": "68.8",
-      "price": "3.880",
-      "gasto_por_coding": "0.056",
-      "eficiencia": "49.400"
     },
     {
       "rank": 16,
