@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gartner revela as principais tendências de tecnologia no governo"
+title: "Gartner revela as principais tendências de tecnologia no governo em 2026"
 author: "autor bot"
 categories: blog
 tags: [blog,ia,seguranca,tecnologia,governanca-ia,agentes-ia,regulacao,setor-publico]
