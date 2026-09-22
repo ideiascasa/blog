@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 22/09/2026 05:22
+updated_at: America/Sao Paulo - 22/09/2026 15:40
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -11,9 +11,9 @@ items:
   model: GLM 5.3 Flash
   model_id: z-ai/glm-5.3-flash-20260826
   coding_index: '71.5'
-  price: '0.650'
-  gasto_por_coding: '0.009'
-  eficiencia: '68.250'
+  price: '0.260'
+  gasto_por_coding: '0.004'
+  eficiencia: '70.200'
 - rank: 2
   model: DeepSeek V4 Flash 0731 (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-flash-20260731
@@ -22,96 +22,96 @@ items:
   gasto_por_coding: '0.006'
   eficiencia: '67.000'
 - rank: 3
+  model: GLM-5.3 (max)
+  model_id: z-ai/glm-5.3-20260816
+  coding_index: '74.8'
+  price: '3.120'
+  gasto_por_coding: '0.042'
+  eficiencia: '59.200'
+- rank: 4
   model: GPT-5.6 Luna (max)
   model_id: openai/gpt-5.6-luna-20260709
   coding_index: '71.4'
   price: '2.800'
   gasto_por_coding: '0.039'
   eficiencia: '57.400'
-- rank: 4
+- rank: 5
   model: Ling-3.0-flash-VL
   model_id: inclusionai/ling-3.0-flash-vl-20260910
   coding_index: '57.0'
   price: '0.240'
   gasto_por_coding: '0.004'
   eficiencia: '55.800'
-- rank: 5
+- rank: 6
   model: Qwen3.8 27B (xhigh)
   model_id: qwen/qwen3.8-27b-20260814
   coding_index: '68.1'
   price: '2.620'
   gasto_por_coding: '0.038'
   eficiencia: '55.000'
-- rank: 6
+- rank: 7
   model: Hy3
   model_id: tencent/hy3-preview-20260421
   coding_index: '58.8'
   price: '0.780'
   gasto_por_coding: '0.013'
   eficiencia: '54.900'
-- rank: 7
+- rank: 8
   model: Ling-3.0-flash-Fin
   model_id: inclusionai/ling-3.0-flash-fin-20260827
   coding_index: '55.6'
   price: '0.240'
   gasto_por_coding: '0.004'
   eficiencia: '54.400'
-- rank: 8
+- rank: 9
   model: DeepSeek V4 Flash 0420 (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-flash-20260423
   coding_index: '56.2'
   price: '0.540'
   gasto_por_coding: '0.010'
   eficiencia: '53.500'
-- rank: 9
+- rank: 10
   model: GPT-5.4 nano (xhigh)
   model_id: openai/gpt-5.4-nano-20260317
   coding_index: '56.1'
   price: '0.725'
   gasto_por_coding: '0.013'
   eficiencia: '52.475'
-- rank: 10
+- rank: 11
   model: MiMo-V2.5-Pro
   model_id: xiaomi/mimo-v2.5-pro-20260422
   coding_index: '60.2'
   price: '1.566'
   gasto_por_coding: '0.026'
   eficiencia: '52.370'
-- rank: 11
+- rank: 12
   model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-pro-20260813
   coding_index: '68.8'
-  price: '3.540'
+  price: '3.480'
   gasto_por_coding: '0.051'
-  eficiencia: '51.100'
-- rank: 12
+  eficiencia: '51.400'
+- rank: 13
   model: Solar Pro 4
   model_id: upstage/solar-pro4-20260810
   coding_index: '52.7'
   price: '0.450'
   gasto_por_coding: '0.009'
   eficiencia: '50.450'
-- rank: 13
+- rank: 14
   model: Ling 3.0 Flash
   model_id: inclusionai/ling-3.0-flash-20260723
   coding_index: '50.6'
   price: '0.084'
   gasto_por_coding: '0.002'
   eficiencia: '50.180'
-- rank: 14
+- rank: 15
   model: Qwen3.7 Plus
   model_id: qwen/qwen3.7-plus-20260602
   coding_index: '55.9'
   price: '1.600'
   gasto_por_coding: '0.029'
   eficiencia: '47.900'
-- rank: 15
-  model: GLM-5.3 (max)
-  model_id: z-ai/glm-5.3-20260816
-  coding_index: '74.8'
-  price: '5.800'
-  gasto_por_coding: '0.078'
-  eficiencia: '45.800'
 - rank: 16
   model: MiniMax-M2.7
   model_id: minimax/minimax-m2.7-20260318
@@ -274,96 +274,96 @@ items:
   gasto_por_coding: '0.111'
   eficiencia: '31.900'
 - rank: 39
-  model: Kimi K3 (max)
-  model_id: moonshotai/kimi-k3-20260715
-  coding_index: '76.2'
-  price: '9.000'
-  gasto_por_coding: '0.118'
-  eficiencia: '31.200'
-- rank: 40
   model: GLM-4.7 (Reasoning)
   model_id: z-ai/glm-4.7-20251222
   coding_index: '45.3'
   price: '3.200'
   gasto_por_coding: '0.071'
   eficiencia: '29.300'
-- rank: 41
+- rank: 40
   model: Kimi K2.5 (Reasoning)
   model_id: moonshotai/kimi-k2.5-0127
   coding_index: '46.8'
   price: '3.600'
   gasto_por_coding: '0.077'
   eficiencia: '28.800'
-- rank: 42
+- rank: 41
   model: Gemini 3.6 Flash (high)
   model_id: google/gemini-3.6-flash-20260721
   coding_index: '69.2'
   price: '8.100'
   gasto_por_coding: '0.117'
   eficiencia: '28.700'
-- rank: 43
+- rank: 42
   model: GLM-5.1 (Reasoning)
   model_id: z-ai/glm-5.1-20260406
   coding_index: '55.8'
   price: '5.510'
   gasto_por_coding: '0.099'
   eficiencia: '28.250'
-- rank: 44
+- rank: 43
   model: Qwen3.5 397B A17B (Reasoning)
   model_id: qwen/qwen3.5-397b-a17b-20260216
   coding_index: '48.2'
   price: '4.050'
   gasto_por_coding: '0.084'
   eficiencia: '27.950'
-- rank: 45
+- rank: 44
   model: Grok 4.3 (high)
   model_id: x-ai/grok-4.3-20260430
   coding_index: '42.2'
   price: '3.000'
   gasto_por_coding: '0.071'
   eficiencia: '27.200'
-- rank: 46
+- rank: 45
   model: Inkling (xhigh)
   model_id: thinkingmachines/inkling-20260715
   coding_index: '52.1'
   price: '5.050'
   gasto_por_coding: '0.097'
   eficiencia: '26.850'
-- rank: 47
+- rank: 46
   model: Mistral Medium 3.5
   model_id: mistralai/mistral-medium-3.5-20260430
   coding_index: '46.9'
   price: '4.500'
   gasto_por_coding: '0.096'
   eficiencia: '24.400'
-- rank: 48
+- rank: 47
   model: Gemini 3.5 Flash-Lite
   model_id: google/gemini-3.5-flash-lite-20260721
   coding_index: '49.3'
   price: '5.040'
   gasto_por_coding: '0.102'
   eficiencia: '24.100'
-- rank: 49
+- rank: 48
   model: Grok Build 0.1 0616
   model_id: x-ai/grok-build-0.1-20260520
   coding_index: '51.5'
   price: '6.000'
   gasto_por_coding: '0.117'
   eficiencia: '21.500'
-- rank: 50
+- rank: 49
   model: GLM-5.2 (max)
   model_id: z-ai/glm-5.2-20260616
   coding_index: '68.8'
   price: '10.250'
   gasto_por_coding: '0.149'
   eficiencia: '17.550'
-- rank: 51
+- rank: 50
   model: Claude 4.5 Haiku (Reasoning)
   model_id: anthropic/claude-4.5-haiku-20251001
   coding_index: '43.9'
   price: '6.600'
   gasto_por_coding: '0.150'
   eficiencia: '10.900'
+- rank: 51
+  model: Kimi K3 (max)
+  model_id: moonshotai/kimi-k3-20260715
+  coding_index: '76.2'
+  price: '13.680'
+  gasto_por_coding: '0.180'
+  eficiencia: '7.800'
 - rank: 52
   model: DeepSeek V3.2 (Reasoning)
   model_id: deepseek/deepseek-v3.2-20251201
