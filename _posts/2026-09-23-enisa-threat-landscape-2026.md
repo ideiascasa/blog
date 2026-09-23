@@ -165,7 +165,7 @@ Para quem quiser ir além do resumo — e a leitura vale muito — o PDF oficial
 >
 > Os denominadores e as categorias não são os mesmos entre as duas publicações, e os números se contradizem. A própria cobertura de imprensa herdou a mistura: o texto da Industrial Cyber abre atribuindo 36%/40%/31%/19% ao relatório e, mais adiante no mesmo artigo, reproduz corretamente os 29,3% do resumo executivo. **Este post segue os números do documento final**, que é a fonte primária — mas quem citar a ENISA deve indicar qual das duas fontes está usando.
 >
-> **Imagem:** Captura de tela de um ataque de ransomware exibindo mensagem de resgate, por Motormille2, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ransomware-pic.jpg), em domínio público.
+> **Imagem:** Globo terrestre suspenso sobre uma mão, com o Brasil e a América do Sul em destaque, por Maurício Mascaro, via [Pexels](https://www.pexels.com/photo/selective-focus-photo-of-globe-floating-over-a-hand-4870334/), licenciada sob a [Pexels License](https://www.pexels.com/license/).
 
 ---
 
