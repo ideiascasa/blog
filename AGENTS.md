@@ -43,6 +43,101 @@ Simétrico à regra acima: não apague o que você não instalou. Em particular:
 - O **Ruby do sistema macOS** (`/usr/bin/ruby`, `/System/Library/Frameworks/Ruby.framework`) é parte do sistema operacional. Nunca remova.
 - Remova apenas os diretórios/pacotes cuja criação você pode comprovar (por timestamp e caminho) que foram feitos pela sua própria instalação.
 
+## Pesquisa externa: use o `ketch`
+
+O sistema já tem o **`ketch`** instalado (`/opt/homebrew/bin/ketch`, Homebrew) — um CLI
+*stateless* de pesquisa para agentes: busca web, busca de código em OSS, documentação de
+bibliotecas e extração de páginas HTML/PDF para markdown. Um binário, sem daemon, sem
+servidor. Ele **substitui** `curl | pandoc`, abrir aba de navegador e, na maioria dos casos,
+as ferramentas genéricas de busca/fetch.
+
+**Regra de uso:** para qualquer pergunta que precise de fonte viva (notícia, opinião, preço,
+versão atual de software, código real em repositórios públicos, documentação de biblioteca),
+**tente primeiro o `ketch`** — mesma versão em qualquer sessão, saída limpa em markdown/YAML,
+`--json` em todo comando, cache local e códigos de saída documentados. Versão conferida
+nesta máquina: **v0.18.1** (MIT, Go, repo `1broseidon/ketch`, manual em `ketch.run`).
+
+**Quando o `ketch` estiver indisponível** (`command -v ketch` falha), retornar exit `4`
+(upstream fora do ar) ou exit `5` (falta configuração), **volte aos meios normais**:
+`openrouter_web_fetch` / `openrouter_web_search`, `curl`, ou o navegador — e diga no resumo
+que houve fallback e por quê. Não insista três vezes na mesma chamada que já falhou.
+
+```bash
+command -v ketch                 # confirma que existe antes de contar com ele
+ketch version                    # versão, commit e build (não usa config: nunca falha por env)
+ketch config                     # JSON com config efetiva e backends ativos — descoberta de capacidades
+ketch doctor                     # health check ao vivo de backends, browser e cache (exit 5 = algo quebrado)
+ketch search "termo" --limit 5   # busca web; backend padrão `auto` é uma cadeia keyless, funciona sem API key
+```
+
+### Comandos que importam
+
+| Comando | Para quê |
+|---|---|
+| `ketch search "q" --limit 5` | páginas/opiniões/notícias atuais. `--scrape` traz o conteúdo completo de cada resultado |
+| `ketch search "q" --multi` | federa backends com rank fusion. Lista explícita **exige** o `=` (`--multi=brave,exa`); `--random` funciona igual e ambos excluem `-b` |
+| `ketch scrape <url...>` | página → markdown. Aceita várias URLs, arquivo de URLs, array JSON ou stdin |
+| `ketch extract` | HTML já baixado via pipe (`curl -L <url> \| ketch extract`) — não faz fetch nem cache |
+| `ketch code "regex ou literal" --lang go` | código real em repositórios públicos, com repo e linha |
+| `ketch docs "assunto" --library /org/repo` | documentação versionada de biblioteca (Context7) |
+| `ketch crawl <url> --depth 2` | várias páginas de um site de uma vez (dedupe e streaming) |
+| `ketch tag show <tag>` | fontes salvas com `--tag` em sessões anteriores |
+
+- **PDFs funcionam** em `ketch scrape` (press releases e relatórios são extraídos para texto).
+- **Páginas que só renderizam com JS** caem automaticamente em Chrome headless — mesma saída.
+- **Domínio nu engatilha `/llms.txt`**: `ketch scrape https://exemplo.com` pode devolver o
+  `llms.txt` do site em vez da home. O campo `title` revela a troca; `--no-llms-txt` desliga.
+- `ketch code` é útil para a dica do próprio repo de **validar comportamento lendo o código-fonte
+  de uma dependência no GitHub** (mais barato que instalar a gem para testar).
+
+### Disciplina de uso (obrigatória)
+
+1. **Limite todo fetch.** `--max-chars 4000`–`8000` (mais `--trim` para tirar a sintaxe
+   markdown) em qualquer página que você não conhece: uma página sem limite pode custar ~25k
+   tokens. Pular o limite exige um motivo de uma linha.
+2. **Cite toda afirmação.** Síntese sem URL de origem não é entrega — vale em especial para
+   os posts do blog, cujo rodapé precisa de fonte (ver a skill `criar-noticia`).
+3. **Códigos de saída são fluxo de controle**, não texto para rezar:
+   `0` ok · `2` input inválido — inclui nome de backend inexistente (corrija a chamada;
+   repetir igual nunca funciona) ·
+   `3` nada encontrado (mude a query/seletor) · `4` falha de upstream/rede (rodeie para outro
+   backend ou tente **uma** vez mais) · `5` pré-requisito ausente (pare e configure —
+   `ketch doctor`) · `6` cancelado/timeout (refaça com escopo menor).
+4. **Proponha antes de mutar.** `ketch config set …`, `ketch browser install`, `cache clear`
+   e `ketch crawl --background` são **ações de operador** — caem na *Regra fundamental* lá em
+   cima: descreva o comando exato e espere um "sim". Nunca mexa num valor já configurado e
+   funcionando.
+5. **`--json` para parsear, `--minimal` para economizar.** Toda chamada devolve YAML
+   frontmatter + conteúdo; `--json` dá objeto estruturado e `--minimal` ~metade do tamanho.
+6. **`--tag <slug-do-post>`** em `search`/`scrape`/`code`/`docs` guarda as fontes de um post
+   para reuso posterior (`ketch tag show <slug>`), sobrevivendo à expiração do cache.
+
+### Pegadinhas conhecidas
+
+- **Scrape em lote reporta falha por URL dentro de uma chamada bem-sucedida**: o exit é `0`
+  com `error` no resultado individual. Confira **cada entrada**, não só o exit code.
+- **`ketch docs` resolve nunca volta vazio**: nome errado devolve correspondência difusa
+  confiante. Confira se o match corresponde mesmo à biblioteca pedida.
+- **Regex é por backend**: `grepapp` e `sourcegraph` aceitam, `github` rejeita.
+- **O cache de páginas (bbolt, TTL 72h) é compartilhado**: cada processo abre o arquivo só
+  por transação (corrigido na v0.18.1 — antes um `ketch mcp serve` segurava o lock a vida
+  toda). Em versões anteriores à v0.18.1, um servidor MCP antigo degrada o cache do CLI.
+- **Nesta máquina o fallback de browser está desligado**: `ketch doctor` aponta
+  `browser: chrome misconfigured` (não há `chrome` no `$PATH`). Scraping HTTP normal
+  funciona; páginas 100% renderizadas por JS podem vir incompletas — o `ketch scrape`
+  emite um `warn:` nesse caso. Ativar o browser é ação de operador (ver abaixo).
+- **`crawl` interrompido com SIGINT sai com `0`** e resultados parciais, por design.
+- **Config**: `ketch config path` aponta o arquivo (neste macOS,
+  `~/Library/Application Support/ketch/config.json`); flags > env `KETCH_*` > arquivo > padrão.
+
+### Nunca instale nem configure o `ketch` por conta própria
+
+O `ketch` já está instalado — verifique com `command -v ketch` **antes** de sugerir qualquer
+instalação. Se faltar, ou se um backend precisar de API key (`ketch doctor` mostra
+`no_key`/`misconfigured`), siga a *Regra fundamental* no topo: **pare, explique e pergunte**
+(comando exato e onde ele grava). `brew install ketch`, `ketch browser install` (baixa um
+Chromium) e `ketch config set …_api_key` **não** são executáveis sem autorização explícita.
+
 ## Padrão de imagem dos posts (obrigatório)
 
 Toda imagem de **destaque** de um post (campo `image:` no front matter) deve ter **exatamente
