@@ -17,24 +17,32 @@
 #   --verbose   Mostra também a lista completa de imagens de `assets/img` que
 #               não são referenciadas por nenhum post (e outras notas extras).
 #   --quiet     Mostra apenas o resumo e os problemas (DIVERGENTE/AUSENTE/
-#               SEM IMAGEM); omite as linhas OK, os avisos e as notas.
+#               SEM IMAGEM); omite as linhas OK e IGNORADA, os avisos e as notas.
 #   --help      Exibe esta ajuda.
 #
 #   Pode ser executado de qualquer diretório: a raiz do repositório é derivada
 #   da própria localização do script (com fallback para `git rev-parse`).
+#
+# EXCEÇÕES
+#   A variável IMAGENS_IGNORADAS (abaixo) lista nomes de arquivo cujo desvio do
+#   padrão é conhecido e tolerado (artefatos históricos cuja normalização
+#   danificaria o layout). Elas aparecem com status IGNORADA: não contam como
+#   DIVERGENTE e NÃO alteram o exit code. Hoje: bluebox.png (logo 300x134 do
+#   post de 2024, usada como imagem de capa).
 #
 # DEPENDÊNCIAS
 #   Somente ferramentas já presentes no macOS: bash, grep, awk, sed, sort, comm,
 #   mktemp, wc e `sips` (para ler as dimensões das imagens). Nada é instalado.
 #
 # EXIT CODES
-#   0  Todas as imagens declaradas existem e medem 1024x600.
+#   0  Todas as imagens declaradas existem e medem 1024x600 (as IGNORADAS não
+#      contam e podem estar fora do padrão).
 #   1  Existe pelo menos um status DIVERGENTE, AUSENTE ou SEM IMAGEM.
 #   2  Erro de uso (argumento inválido) ou dependência ausente (sips).
 #
 # SAÍDA
 #   Tabela alinhada: post | arquivo de imagem | existe? | dimensões | proporção | status
-#   Status possíveis: OK | DIVERGENTE | AUSENTE | SEM IMAGEM
+#   Status possíveis: OK | IGNORADA | DIVERGENTE | AUSENTE | SEM IMAGEM
 #   Ao final, um resumo com a contagem de cada status e avisos (não são erros):
 #   posts sem `image:` e imagens de `assets/img` não referenciadas.
 #
@@ -46,12 +54,28 @@ LARGURA_ESPERADA=1024
 ALTURA_ESPERADA=600
 DIR_IMG_REL="assets/img"
 
+# Imagens cujo desvio do padrão é conhecido e tolerado. Liste os nomes de
+# arquivo exatamente como aparecem no campo `image:` do front matter, separados
+# por espaço. Elas recebem status IGNORADA e não entram na contagem de
+# DIVERGENTE nem no exit code. Mantenha esta lista curta e justificada.
+IMAGENS_IGNORADAS="bluebox.png"
+
 VERBOSE=0
 QUIET=0
 
+# verifica se um nome de arquivo está em IMAGENS_IGNORADAS
+esta_ignorada() {
+  case " ${IMAGENS_IGNORADAS} " in
+    *" $1 "*) return 0 ;;
+    *)        return 1 ;;
+  esac
+}
+
 uso() {
-  # imprime o bloco de comentários do topo (ignora o shebang e a linha de shellcheck)
-  sed -n '2,45p' "$0" | grep '^#' | sed 's/^# \{0,1\}//' | sed '/./,$!d'
+  # imprime o bloco de comentários do topo (ignora o shebang), do começo até a
+  # primeira linha de código; o range é dinâmico para não truncar ao editar o header
+  awk 'NR == 1 { next } /^#/ { sub(/^# ?/, ""); print; next } { exit }' "$0" \
+    | awk 'NF { encontrou = 1 } encontrou'
 }
 
 # ------------------------------------------------------------------- argumentos
@@ -120,6 +144,7 @@ trap 'rm -f "$TMP_DADOS" "$TMP_REF" "$TMP_ARQS" "$TMP_ORFAS" "$TMP_SEMIMG"' EXIT
 total_posts=0
 n_ok=0
 n_divergente=0
+n_ignorada=0
 n_ausente=0
 n_sem_imagem=0
 
@@ -162,6 +187,12 @@ for POST in "$DIR_POSTS"/*.md; do
 
   caminho_img="$DIR_IMG/$imagem"
 
+  # --- imagem em exceção conhecida (não conta como DIVERGENTE) ------------------
+  ignorada=0
+  if esta_ignorada "$imagem"; then
+    ignorada=1
+  fi
+
   # --- imagem inexistente ------------------------------------------------------
   if [ ! -f "$caminho_img" ]; then
     n_ausente=$((n_ausente + 1))
@@ -178,10 +209,17 @@ for POST in "$DIR_POSTS"/*.md; do
   if ! printf '%s' "$largura" | grep -qE '^[0-9]+$' \
     || ! printf '%s' "$altura" | grep -qE '^[0-9]+$'; then
     # formato não raster (ex.: svg, webm) ou arquivo ilegível: sips devolve
-    # valores não inteiros (ex.: 626.000). Não é possível comparar; marca DIVERGENTE.
-    n_divergente=$((n_divergente + 1))
+    # valores não inteiros (ex.: 626.000). Não é possível comparar; marca DIVERGENTE
+    # (ou IGNORADA, se estiver na lista de exceções).
+    if [ "$ignorada" -eq 1 ]; then
+      status="IGNORADA"
+      n_ignorada=$((n_ignorada + 1))
+    else
+      status="DIVERGENTE"
+      n_divergente=$((n_divergente + 1))
+    fi
     printf '%s\t%s\t%s\t%s\t%s\t%s\n' \
-      "$nome_post" "$imagem" "sim" "?" "?" "DIVERGENTE" >> "$TMP_DADOS"
+      "$nome_post" "$imagem" "sim" "?" "?" "$status" >> "$TMP_DADOS"
     continue
   fi
 
@@ -189,7 +227,10 @@ for POST in "$DIR_POSTS"/*.md; do
   proporcao="$(awk -v w="$largura" -v h="$altura" \
     'BEGIN { if (h > 0) printf "%.3f", w / h; else print "?" }')"
 
-  if [ "$largura" -eq "$LARGURA_ESPERADA" ] && [ "$altura" -eq "$ALTURA_ESPERADA" ]; then
+  if [ "$ignorada" -eq 1 ]; then
+    status="IGNORADA"
+    n_ignorada=$((n_ignorada + 1))
+  elif [ "$largura" -eq "$LARGURA_ESPERADA" ] && [ "$altura" -eq "$ALTURA_ESPERADA" ]; then
     status="OK"
     n_ok=$((n_ok + 1))
   else
@@ -238,7 +279,7 @@ imprime_linhas() {
     [ -n "${st:-}" ] || continue
     if [ "$QUIET" -eq 1 ]; then
       case "$st" in
-        OK) continue ;;
+        OK|IGNORADA) continue ;;
       esac
     fi
     # shellcheck disable=SC2059
@@ -254,6 +295,7 @@ printf '\n'
 printf 'RESUMO\n'
 printf '  posts analisados ............................ %d\n' "$total_posts"
 printf '  OK (1024x600) ............................... %d\n' "$n_ok"
+printf '  IGNORADA (exceção conhecida) ................ %d\n' "$n_ignorada"
 printf '  DIVERGENTE .................................. %d\n' "$n_divergente"
 printf '  AUSENTE (não existe em %s) ... %d\n' "$DIR_IMG_REL" "$n_ausente"
 printf '  SEM IMAGEM (post sem `image:`) .............. %d\n' "$n_sem_imagem"
