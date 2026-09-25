@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 25/09/2026 05:38
+updated_at: America/Sao Paulo - 25/09/2026 16:11
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -162,68 +162,68 @@ items:
   gasto_por_coding: '0.042'
   eficiencia: '43.125'
 - rank: 23
+  model: Gemma 4 31B (Reasoning)
+  model_id: google/gemma-4-31b-it-20260402
+  coding_index: '43.4'
+  price: '0.430'
+  gasto_por_coding: '0.010'
+  eficiencia: '41.250'
+- rank: 24
   model: DeepSeek V4 Pro 0424 (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-pro-20260423
   coding_index: '59.4'
   price: '3.700'
   gasto_por_coding: '0.062'
   eficiencia: '40.900'
-- rank: 24
+- rank: 25
   model: Qwen3.6 27B (Reasoning)
   model_id: qwen/qwen3.6-27b-20260422
   coding_index: '53.7'
   price: '3.020'
   gasto_por_coding: '0.056'
   eficiencia: '38.600'
-- rank: 25
-  model: Gemma 4 31B (Reasoning)
-  model_id: google/gemma-4-31b-it-20260402
-  coding_index: '43.4'
-  price: '1.030'
-  gasto_por_coding: '0.024'
-  eficiencia: '38.250'
 - rank: 26
-  model: Qwen3.6 35B A3B (Reasoning)
-  model_id: qwen/qwen3.6-35b-a3b-20260415
-  coding_index: '41.9'
-  price: '0.750'
-  gasto_por_coding: '0.018'
-  eficiencia: '38.150'
-- rank: 27
   model: LongCat 2.0
   model_id: meituan/longcat-2.0-20260720
   coding_index: '45.3'
   price: '1.500'
   gasto_por_coding: '0.033'
   eficiencia: '37.800'
-- rank: 28
+- rank: 27
   model: Kimi K2.6
   model_id: moonshotai/kimi-k2.6-20260420
   coding_index: '61.8'
   price: '4.950'
   gasto_por_coding: '0.080'
   eficiencia: '37.050'
-- rank: 29
+- rank: 28
   model: DeepSeek V3.1 Terminus (Reasoning)
   model_id: deepseek/deepseek-v3.1-terminus
   coding_index: '43.5'
   price: '1.371'
   gasto_por_coding: '0.032'
   eficiencia: '36.645'
-- rank: 30
+- rank: 29
   model: Qwen3.7 Max
   model_id: qwen/qwen3.7-max-20260520
   coding_index: '66.0'
   price: '5.900'
   gasto_por_coding: '0.089'
   eficiencia: '36.500'
-- rank: 31
+- rank: 30
   model: Qwen3.8 Max (0902)
   model_id: qwen/qwen3.8-max-20260902
   coding_index: '76.2'
   price: '8.000'
   gasto_por_coding: '0.105'
   eficiencia: '36.200'
+- rank: 31
+  model: Qwen3.6 35B A3B (Reasoning)
+  model_id: qwen/qwen3.6-35b-a3b-20260415
+  coding_index: '41.9'
+  price: '1.150'
+  gasto_por_coding: '0.027'
+  eficiencia: '36.150'
 - rank: 32
   model: Kimi K2.7 Code
   model_id: moonshotai/kimi-k2.7-code-20260612
