@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 24/09/2026 15:56
+updated_at: America/Sao Paulo - 25/09/2026 05:38
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -11,9 +11,9 @@ items:
   model: GLM 5.3 Flash
   model_id: z-ai/glm-5.3-flash-20260826
   coding_index: '71.5'
-  price: '0.260'
-  gasto_por_coding: '0.004'
-  eficiencia: '70.200'
+  price: '0.650'
+  gasto_por_coding: '0.009'
+  eficiencia: '68.250'
 - rank: 2
   model: DeepSeek V4 Flash 0731 (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-flash-20260731
@@ -64,33 +64,33 @@ items:
   gasto_por_coding: '0.026'
   eficiencia: '52.370'
 - rank: 9
-  model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
-  model_id: deepseek/deepseek-v4-pro-20260813
-  coding_index: '68.8'
-  price: '3.290'
-  gasto_por_coding: '0.048'
-  eficiencia: '52.350'
-- rank: 10
-  model: DeepSeek V4 Flash 0420 (Reasoning, Max Effort)
-  model_id: deepseek/deepseek-v4-flash-20260423
-  coding_index: '56.2'
-  price: '0.840'
-  gasto_por_coding: '0.015'
-  eficiencia: '52.000'
-- rank: 11
   model: Solar Pro 4
   model_id: upstage/solar-pro4-20260810
   coding_index: '52.7'
   price: '0.450'
   gasto_por_coding: '0.009'
   eficiencia: '50.450'
-- rank: 12
+- rank: 10
   model: Ling 3.0 Flash
   model_id: inclusionai/ling-3.0-flash-20260723
   coding_index: '50.6'
   price: '0.084'
   gasto_por_coding: '0.002'
   eficiencia: '50.180'
+- rank: 11
+  model: DeepSeek V4 Flash 0420 (Reasoning, Max Effort)
+  model_id: deepseek/deepseek-v4-flash-20260423
+  coding_index: '56.2'
+  price: '1.310'
+  gasto_por_coding: '0.023'
+  eficiencia: '49.650'
+- rank: 12
+  model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
+  model_id: deepseek/deepseek-v4-pro-20260813
+  coding_index: '68.8'
+  price: '3.850'
+  gasto_por_coding: '0.056'
+  eficiencia: '49.550'
 - rank: 13
   model: Qwen3.7 Plus
   model_id: qwen/qwen3.7-plus-20260602
@@ -109,9 +109,9 @@ items:
   model: Qwen3.8 27B (xhigh)
   model_id: qwen/qwen3.8-27b-20260814
   coding_index: '68.1'
-  price: '4.499'
+  price: '4.493'
   gasto_por_coding: '0.066'
-  eficiencia: '45.605'
+  eficiencia: '45.635'
 - rank: 16
   model: MiniMax-M2.7
   model_id: minimax/minimax-m2.7-20260318
@@ -200,9 +200,9 @@ items:
   model: Kimi K2.6
   model_id: moonshotai/kimi-k2.6-20260420
   coding_index: '61.8'
-  price: '5.000'
-  gasto_por_coding: '0.081'
-  eficiencia: '36.800'
+  price: '4.950'
+  gasto_por_coding: '0.080'
+  eficiencia: '37.050'
 - rank: 29
   model: DeepSeek V3.1 Terminus (Reasoning)
   model_id: deepseek/deepseek-v3.1-terminus
