@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 27/09/2026 06:04
+updated_at: America/Sao Paulo - 27/09/2026 15:56
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -39,9 +39,9 @@ items:
   model: Qwen3.8 27B (xhigh)
   model_id: qwen/qwen3.8-27b-20260814
   coding_index: '68.1'
-  price: '2.530'
+  price: '2.533'
   gasto_por_coding: '0.037'
-  eficiencia: '55.450'
+  eficiencia: '55.435'
 - rank: 6
   model: Hy3
   model_id: tencent/hy3-preview-20260421
@@ -88,9 +88,9 @@ items:
   model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-pro-20260813
   coding_index: '68.8'
-  price: '3.745'
-  gasto_por_coding: '0.054'
-  eficiencia: '50.075'
+  price: '3.793'
+  gasto_por_coding: '0.055'
+  eficiencia: '49.835'
 - rank: 13
   model: DeepSeek V4 Flash 0420 (Reasoning, Max Effort)
   model_id: deepseek/deepseek-v4-flash-20260423
