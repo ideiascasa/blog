@@ -6,7 +6,7 @@ description: Criar uma notícia em português do Brasil no blog
   publicada antes de criar o post.
 metadata:
   author: zot-blog
-  version: "1.3"
+  version: "1.4"
 ---
 
 # Skill: Criar Notícia no Blog
@@ -114,6 +114,11 @@ A diferença não está no texto da busca: está em **ler os dois posts e julgar
 
 Use a ferramenta `openrouter_web_fetch` para navegar até a URL fornecida pelo usuário e obter o conteúdo completo da página, incluindo título, autor(es) e data de publicação.
 
+> **Apuração com dossiê:** quando o tema pedir mais que o resumo da fonte única (contexto,
+> concorrentes, números, céticos), construa primeiro um **dossiê autossuficiente** no workspace —
+> ver a seção **3.2 (Construir e usar o dossiê de pesquisa)**. A URL inicial é o lead de partida, não
+> o limite da apuração.
+
 Se não conseguir identificar o autor, use **"autor bot"**.
 
 ### 2. Encontrar imagem destacada
@@ -208,20 +213,34 @@ image: <slug>-featured.png   # arquivo 1024x600 obrigatoriamente (ver passo 2.1)
 > **Imagem:** <descrição da imagem> por <artista>, via [<fonte>](<url da fonte>), licenciada sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (ou licença aplicável).
 ```
 
-### 3.2. Redação a partir de dossiê de pesquisa (quando houver)
+### 3.2. Construir e usar o dossiê de pesquisa
 
-Quando a notícia vier acompanhada de um **dossiê de pesquisa** (ex.: `proxima.md`, com fontes
-e textos incorporados, comparações e checklist de verificação), a redação muda de patamar:
+Quando a tarefa chega apenas como uma **URL, uma dica ou um tema**, o agente **constrói primeiro o
+dossiê** — um arquivo único e autossuficiente no workspace (ex.: `dossie-<slug>.md`; `proxima.md` é
+só um nome possível). O dossiê é o que permite escrever uma matéria completa, com contexto,
+concorrentes e céticos — não apenas o resumo da fonte original.
+
+**O que o dossiê deve conter (para ser autossuficiente):**
+
+- **Lead de partida**: a URL/tema que originou a apuração.
+- **Cada fonte com URL, veículo, autor, data e o trecho/sumário que a sustenta** (não só o link).
+- **Textos incorporados**: o que foi apurado, não apenas referenciado.
+- **Comparações**: concorrentes, números com fonte nomeada, vozes céticas.
+- **Checklist de contradições e lacunas** — a lista final que o redator precisa respeitar.
+
+Salve as fontes vivas com `ketch search/scrape ... --tag <slug>` para reuso (`ketch tag show
+<slug>`). Nada fica fora deste diretório.
+
+Com o dossiê pronto, a redação segue estas regras:
 
 - **Cada fato no corpo do post recebe citação inline** — link para a fonte que o sustenta
   (veículo + URL), não apenas no rodapé.
 - **Incorpore o que torna a matéria completa**: contexto (outros projetos do setor), números
   com fonte nomeada, concorrentes, vozes céticas e fechamento analítico.
-- **As ressalvas do dossiê são lei.** Todo dossiê bem-feito traz um checklist de contradições
-  e lacunas (ex.: "alegação do desenvolvedor, não verificada", "ambiguidade entre resolução e
-  abertura", "não comparar X com Y"). Nenhuma dessas ressalvas pode virar afirmação no post;
-  onde aplicável, qualifique no próprio texto ("segundo o desenvolvedor…", "não há número
-  público de…").
+- **As ressalvas do checklist são lei.** O dossiê traz contradições e lacunas (ex.: "alegação do
+  desenvolvedor, não verificada", "ambiguidade entre resolução e abertura", "não comparar X com
+  Y"). Nenhuma pode virar afirmação no post; onde aplicável, qualifique no próprio texto
+  ("segundo o desenvolvedor…", "não há número público de…").
 - **Não confirme link criado "de cabeça"**: todo URL citado precisa existir no dossiê OU ser
   verificado antes do commit (`ketch scrape <url> --max-chars 3000`, ou `curl -sIL` para código
   HTTP). Link morto ou que não suporta o fato atribuído é trocado por fonte equivalente.
@@ -263,7 +282,7 @@ r
 
 Se encontrar problemas, corrija-os antes de prosseguir para o commit.
 
-### 4.1. Revisão por sub-agentes (obrigatória para posts baseados em dossiê)
+### 4.1. Revisão por sub-agentes (obrigatória para matérias apuradas, com ou sem dossiê pré-existente)
 
 Com o rascunho fechado, dispare **quatro sub-agentes em paralelo** (`swarm_spawn`), cada um
 com um brief autossuficiente (o sub-agente não vê esta conversa):

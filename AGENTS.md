@@ -212,16 +212,24 @@ Para mudar a ordenação **sem** quebrar a URL publicada, defina `slug:` no fron
 
 ## Guia de publicação de notícia (workflow completo)
 
-Este é o guia para publicar notícias no blog — em especial as que vêm de um **dossiê de pesquisa**
-(ex.: um arquivo `proxima.md` com fontes, textos incorporados e contradições documentadas). A skill
+Este é o guia para publicar notícias no blog. O fluxo **não depende de um dossiê pronto**: quando a
+tarefa chega apenas como uma **URL, uma dica ou um tema**, o próprio agente **constrói o dossiê e a
+lista de tarefas** (passo 0) antes de escrever. A skill
 [`.claude/skills/criar-noticia/SKILL.md`](.claude/skills/criar-noticia/SKILL.md) formaliza o fluxo
 comando a comando; aqui fica a lista-mestra, na ordem de execução:
 
+0. **Construir o dossiê e a lista de tarefas — se ainda não existirem.** Quando só há uma URL, uma
+   dica ou um tema, é o agente que monta o dossiê: um arquivo único e **autossuficiente** no
+   workspace (ex.: `proxima.md`, ou `dossie-<slug>.md`). Ele deve conter: a URL/lead de partida;
+   **cada fonte com URL, veículo, autor, data e o trecho/sumário que a sustenta**; os textos
+   incorporados; as comparações (concorrentes, números, céticos); e um **checklist de contradições
+   e lacunas**. Salve as fontes vivas com `ketch ... --tag <slug>` para reuso. A lista de tarefas
+   (§"Publicar a noticia") sai do mesmo material e é o que ordena os passos abaixo. **Nada fora
+   deste diretório** — a fonte viva fica incorporada no dossiê, não só referenciada.
 1. **Analisar o arquivo do dossiê** conforme a skill `criar-noticia` pede — incluindo o passo 0
    (verificação de duplicata) antes de qualquer outra coisa.
-2. **Trazer fontes e textos para o workspace** — nada fora deste diretório. Toda fonte viva fica
-   **incorporada no arquivo do dossiê** (URL, veículo, autor, data e trecho/sumário), de modo que o
-   dossiê seja autossuficiente.
+2. **Conferir que o dossiê está completo** — toda fonte com URL/veículo/autor/data/trecho; todo
+   fato que o post vai afirmar tem lastro ali. Se faltar, volte ao passo 0.
 3. **Escrever o artigo incorporando fontes e textos externos** — cada fato citado no texto com
    link para a fonte que o sustenta (citação inline), não só no rodapé.
 4. **Rever o início da matéria** para garantir coerência entre título e abertura: o lead entrega
@@ -240,9 +248,8 @@ comando a comando; aqui fica a lista-mestra, na ordem de execução:
 8. **Ao fechar o arquivo, revisão final minuciosa**: tudo revisado, tudo com fonte, bem informado —
    incluindo `scripts/check_post_images.sh` (exit 0) e a re-leitura do checklist do dossiê.
 9. **Só depois de tudo isso: commit e push** (regras de *Publicação*, acima), com a reverificação
-   de duplicata usando título/slug finais. *(Nota: o item 9 da lista original — "colocar esta lista
-   no AGENTS.md e incrementar a SKILL" — é a instrução que gerou esta própria seção e a seção 3.2/
-   3.3 da skill; já cumprido.)*
+   de duplicata usando título/slug finais.
 
-**Origem:** lista de tarefas do dossiê `proxima.md` (publicação do satélite Supercomputing-1,
-28/09/2026), generalizada como guia permanente.
+**Autossuficiência:** nem o AGENTS.md nem a skill pressupõem um dossiê existente — eles descrevem
+como **criá-lo** a partir de uma URL/tema e como conduzir a tarefa do começo ao fim. Um arquivo
+`proxima.md` é só um *exemplo* de dossiê já pronto, nunca um pré-requisito.
