@@ -209,3 +209,40 @@ Posts são ordenados por data e, em caso de **empate de data**, pelo nome do arq
 Consequência: **o nome de arquivo alfabeticamente MAIOR aparece primeiro.** Para um post subir ao topo entre empatados, use um prefixo maior (ex.: `z-`), não `a-`.
 
 Para mudar a ordenação **sem** quebrar a URL publicada, defina `slug:` no front matter — o permalink `/:title` usa esse campo, não o nome do arquivo.
+
+## Guia de publicação de notícia (workflow completo)
+
+Este é o guia para publicar notícias no blog — em especial as que vêm de um **dossiê de pesquisa**
+(ex.: um arquivo `proxima.md` com fontes, textos incorporados e contradições documentadas). A skill
+[`.claude/skills/criar-noticia/SKILL.md`](.claude/skills/criar-noticia/SKILL.md) formaliza o fluxo
+comando a comando; aqui fica a lista-mestra, na ordem de execução:
+
+1. **Analisar o arquivo do dossiê** conforme a skill `criar-noticia` pede — incluindo o passo 0
+   (verificação de duplicata) antes de qualquer outra coisa.
+2. **Trazer fontes e textos para o workspace** — nada fora deste diretório. Toda fonte viva fica
+   **incorporada no arquivo do dossiê** (URL, veículo, autor, data e trecho/sumário), de modo que o
+   dossiê seja autossuficiente.
+3. **Escrever o artigo incorporando fontes e textos externos** — cada fato citado no texto com
+   link para a fonte que o sustenta (citação inline), não só no rodapé.
+4. **Rever o início da matéria** para garantir coerência entre título e abertura: o lead entrega
+   o que o título promete (quem, quando, onde, o quê, por quê).
+5. **Incorporar as informações relevantes do dossiê** para que a matéria seja completa: contexto,
+   números, concorrentes, céticos — e as ressalvas do checklist do dossiê (contradições e lacunas
+   NÃO viram afirmação no post).
+6. **Revisão minuciosa de fontes e gramática por sub-agentes** (`swarm_spawn`, em paralelo): um
+   verificador de fontes/fatos e um revisor de gramática pt-BR. Os sub-agentes não devem falhar:
+   têm métodos alternativos (ketch scrape/search, curl, leitura do dossiê) e reportam findings com
+   severidade, trecho citado e correção pronta. Findings severos/médios são corrigidos antes de
+   prosseguir.
+7. **Antes de fechar a matéria, mais dois sub-agentes**: revisão de **jornalismo** (lead, estrutura,
+   atribuição fato×alegação, equilíbrio) e revisão de **entendimento** (clareza para leigo, jargão
+   explicado, números contextualizados).
+8. **Ao fechar o arquivo, revisão final minuciosa**: tudo revisado, tudo com fonte, bem informado —
+   incluindo `scripts/check_post_images.sh` (exit 0) e a re-leitura do checklist do dossiê.
+9. **Só depois de tudo isso: commit e push** (regras de *Publicação*, acima), com a reverificação
+   de duplicata usando título/slug finais. *(Nota: o item 9 da lista original — "colocar esta lista
+   no AGENTS.md e incrementar a SKILL" — é a instrução que gerou esta própria seção e a seção 3.2/
+   3.3 da skill; já cumprido.)*
+
+**Origem:** lista de tarefas do dossiê `proxima.md` (publicação do satélite Supercomputing-1,
+28/09/2026), generalizada como guia permanente.

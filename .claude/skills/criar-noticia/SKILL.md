@@ -6,7 +6,7 @@ description: Criar uma notícia em português do Brasil no blog
   publicada antes de criar o post.
 metadata:
   author: zot-blog
-  version: "1.2"
+  version: "1.3"
 ---
 
 # Skill: Criar Notícia no Blog
@@ -208,6 +208,26 @@ image: <slug>-featured.png   # arquivo 1024x600 obrigatoriamente (ver passo 2.1)
 > **Imagem:** <descrição da imagem> por <artista>, via [<fonte>](<url da fonte>), licenciada sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (ou licença aplicável).
 ```
 
+### 3.2. Redação a partir de dossiê de pesquisa (quando houver)
+
+Quando a notícia vier acompanhada de um **dossiê de pesquisa** (ex.: `proxima.md`, com fontes
+e textos incorporados, comparações e checklist de verificação), a redação muda de patamar:
+
+- **Cada fato no corpo do post recebe citação inline** — link para a fonte que o sustenta
+  (veículo + URL), não apenas no rodapé.
+- **Incorpore o que torna a matéria completa**: contexto (outros projetos do setor), números
+  com fonte nomeada, concorrentes, vozes céticas e fechamento analítico.
+- **As ressalvas do dossiê são lei.** Todo dossiê bem-feito traz um checklist de contradições
+  e lacunas (ex.: "alegação do desenvolvedor, não verificada", "ambiguidade entre resolução e
+  abertura", "não comparar X com Y"). Nenhuma dessas ressalvas pode virar afirmação no post;
+  onde aplicável, qualifique no próprio texto ("segundo o desenvolvedor…", "não há número
+  público de…").
+- **Não confirme link criado "de cabeça"**: todo URL citado precisa existir no dossiê OU ser
+  verificado antes do commit (`ketch scrape <url> --max-chars 3000`, ou `curl -sIL` para código
+  HTTP). Link morto ou que não suporta o fato atribuído é trocado por fonte equivalente.
+- **Moeda e unidades**: escrever "dólares"/"yuans" por extenso (nunca `$`), e qualificar
+  estimativas com o nome de quem as fez ("a Wood Mackenzie estima…").
+
 ### 3.1. Menção ao ranking de IA (obrigatório para artigos sobre IA)
 
 Se o artigo for sobre **inteligência artificial**, **modelos de IA**, **ferramentas de IA** ou qualquer tema relacionado, você **deve incluir o link** `https://blog.ideias.casa/melhores-ia` no post.
@@ -243,7 +263,34 @@ r
 
 Se encontrar problemas, corrija-os antes de prosseguir para o commit.
 
-### 4.1. Reverificação do padrão de imagem (obrigatório antes do commit)
+### 4.1. Revisão por sub-agentes (obrigatória para posts baseados em dossiê)
+
+Com o rascunho fechado, dispare **quatro sub-agentes em paralelo** (`swarm_spawn`), cada um
+com um brief autossuficiente (o sub-agente não vê esta conversa):
+
+1. **Verificador de fontes e fatos** — compara cada afirmação do post com o dossiê e, quando
+   possível, valida cada URL na web (ketch scrape/search ou curl); reporta divergências de
+   número/nome/data/atribuição e links mortos ou que não suportam o fato citado.
+2. **Revisor de gramática (pt-BR)** — gramática, concordância, pontuação, anglicismos, cifrão,
+   caracteres corrompidos, markdown mal-fechado, front matter.
+3. **Revisor de jornalismo** — lead×título, estrutura, atribuição fato×alegação, equilíbrio,
+   tom, se o fechamento conversa com a abertura.
+4. **Revisor de entendimento** — clareza para leigo: jargão sem explicação, siglas, nomes
+   chineses/empresas confundíveis, números sem contexto, transições e densidade.
+
+Regras para os sub-agentes:
+
+- O brief precisa conter: caminhos absolutos do post e do dossiê, as regras do AGENTS.md
+  (não instalar nada; ketch com `--max-chars`; códigos de saída), as limitações de acesso
+  conhecidas (paywalls, 403, JS) e o formato de saída: `SEVERIDADE: trecho → problema →
+  correção sugerida`. Sub-agentes só leem e reportam; o orquestrador aplica.
+- **Findings críticos e médios são corrigidos no post** antes de prosseguir; baixos, a critério.
+- **Re-mandar é permitido**: um sub-agente que não verificar nada pode ser re-despachado com
+  instruções mais específicas. O que não pode é aceitar "não consegui" sem alternativa.
+- Se o sub-agente alegar ferramenta indisponível, confira: `ketch`, `curl`, `grep` e `python3`
+  existem na máquina; a falha normalmente é de instrução, não de ambiente.
+
+### 4.1-bis. Reverificação do padrão de imagem (obrigatório antes do commit)
 
 Rode o auditor do repositório e garanta que ele termina com **exit code 0**:
 
