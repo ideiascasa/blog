@@ -242,12 +242,13 @@ comando a comando; aqui fica a lista-mestra, na ordem de execução:
    têm métodos alternativos (ketch scrape/search, curl, leitura do dossiê) e reportam findings com
    severidade, trecho citado e correção pronta. Findings severos/médios são corrigidos antes de
    prosseguir.
-7. **Antes de fechar a matéria, mais dois sub-agentes**: revisão de **jornalismo** (lead, estrutura,
+7. **Revisor de entretedimento** — Analisar se esta dentro dos pametros atuais de noticias relacionadas a cultura pop, tecnologia, IA e curiosidades. A narrativa pode ser ajustada para ficar mais empolgante ou mais profissional dependendo do assunto.
+8. **Antes de fechar a matéria, mais dois sub-agentes**: revisão de **jornalismo** (lead, estrutura,
    atribuição fato×alegação, equilíbrio) e revisão de **entendimento** (clareza para leigo, jargão
    explicado, números contextualizados).
-8. **Ao fechar o arquivo, revisão final minuciosa**: tudo revisado, tudo com fonte, bem informado —
+9. **Ao fechar o arquivo, revisão final minuciosa**: tudo revisado, tudo com fonte, bem informado —
    incluindo `scripts/check_post_images.sh` (exit 0) e a re-leitura do checklist do dossiê.
-9. **Só depois de tudo isso: commit e push** (regras de *Publicação*, acima), com a reverificação
+10. **Só depois de tudo isso: commit e push** (regras de *Publicação*, acima), com a reverificação
    de duplicata usando título/slug finais.
 
 **Autossuficiência:** nem o AGENTS.md nem a skill pressupõem um dossiê existente — eles descrevem

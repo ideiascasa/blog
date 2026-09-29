@@ -296,6 +296,7 @@ com um brief autossuficiente (o sub-agente não vê esta conversa):
    tom, se o fechamento conversa com a abertura.
 4. **Revisor de entendimento** — clareza para leigo: jargão sem explicação, siglas, nomes
    chineses/empresas confundíveis, números sem contexto, transições e densidade.
+5. **Revisor de entretedimento** — Analisar se esta dentro dos pametros atuais de noticias relacionadas a cultura pop, tecnologia, IA e curiosidades. A narrativa pode ser ajustada para ficar mais empolgante ou mais profissional dependendo do assunto.
 
 Regras para os sub-agentes:
 
