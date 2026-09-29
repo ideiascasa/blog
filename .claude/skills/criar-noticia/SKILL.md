@@ -6,7 +6,7 @@ description: Criar uma notícia em português do Brasil no blog
   publicada antes de criar o post.
 metadata:
   author: zot-blog
-  version: "1.4"
+  version: "1.5"
 ---
 
 # Skill: Criar Notícia no Blog
@@ -264,6 +264,22 @@ Insira, tambem, o link ao final do post, após o rodapé da fonte e imagem:
 👉 **Veja também nossa análise comparativa dos melhores modelos de IA em:** [blog.ideias.casa/melhores-ia](https://blog.ideias.casa/melhores-ia)
 ```
 
+### 3.3. Link do produto/plataforma nas 5 primeiras linhas da notícia (obrigatório quando aplicável)
+
+Quando a notícia for sobre um **software, aplicativo, plataforma, biblioteca ou ferramenta que o
+leitor pode baixar ou usar**, o link para a **fonte primária de download** (repositório no GitHub,
+página oficial de download, registro do pacote) deve aparecer **dentro das 5 primeiras linhas da
+notícia**.
+
+- **Como contar as 5 linhas:** *front matter* (o bloco `---…---` inicial) e título **não entram na
+  contagem**. A linha 1 é a primeira linha do corpo — em geral o lead. Linhas em branco contam
+  como linha.
+- **Forma:** link markdown com âncora legível, ex.: `[GitHub](https://github.com/org/repo)`. Não
+  cole a URL crua.
+- **Onde mais:** o link pode reaparecer onde fizer sentido no corpo (seções "o que é", "como
+  começar", "o que vem depois"). Mas a **primeira ocorrência precisa estar nas 5 primeiras
+  linhas**.
+
 ### 4. Revisão de formatação (obrigatório antes do commit)
 
 Antes de fazer commit, **revise o arquivo do post** verificando os seguintes pontos:
@@ -364,6 +380,9 @@ sinal de que alguma imagem ainda está fora de 1024x600 (rode o passo 4.1 de nov
 - **Nunca renomeie a imagem para ajustar o padrão**: preserve o nome (a URL é pública) e
   sobrescreva só o conteúdo, com `scripts/normalize_post_image.sh`
 - **Valide com `scripts/check_post_images.sh` (exit 0) antes de commit/push**
+- **Link de download/produto no topo**: quando o post for sobre software, aplicativo ou plataforma
+  baixável, o link da fonte primária (GitHub, página oficial de download) deve estar **nas 5
+  primeiras linhas do corpo** — *front matter* e título não contam (ver 3.3)
 - Use a data atual no nome do arquivo (YYYY-MM-DD)
 - **Categorias e tags devem ser dinâmicas**, analisando o conteúdo do artigo — nunca use valores fixos
 - Reaproveite tags existentes sempre que possível para criar relacionamento entre posts
