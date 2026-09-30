@@ -1,10 +1,10 @@
 {
-  "updated_at": "America/Sao Paulo - 29/09/2026 16:53",
+  "updated_at": "America/Sao Paulo - 30/09/2026 06:28",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
   "points_per_dollar": 5,
-  "as_of": "2026-09-29T00:01:31.494Z",
+  "as_of": "2026-09-30T00:00:40.661Z",
   "citation": "Source: Artificial Analysis (artificialanalysis.ai) via OpenRouter (openrouter.ai/rankings).",
   "source_url": "https://artificialanalysis.ai",
   "items": [
@@ -85,9 +85,9 @@
       "model": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-pro-20260813",
       "coding_index": "68.8",
-      "price": "3.650",
+      "price": "3.634",
       "gasto_por_coding": "0.053",
-      "eficiencia": "50.550"
+      "eficiencia": "50.630"
     },
     {
       "rank": 10,
@@ -112,9 +112,9 @@
       "model": "DeepSeek V4 Flash 0420 (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-flash-20260423",
       "coding_index": "56.2",
-      "price": "1.310",
+      "price": "1.289",
       "gasto_por_coding": "0.023",
-      "eficiencia": "49.650"
+      "eficiencia": "49.755"
     },
     {
       "rank": 13,
@@ -130,18 +130,18 @@
       "model": "GLM-5.2 (max)",
       "model_id": "z-ai/glm-5.2-20260616",
       "coding_index": "68.8",
-      "price": "4.200",
+      "price": "4.180",
       "gasto_por_coding": "0.061",
-      "eficiencia": "47.800"
+      "eficiencia": "47.900"
     },
     {
       "rank": 15,
       "model": "Qwen3.8 27B (xhigh)",
       "model_id": "qwen/qwen3.8-27b-20260814",
       "coding_index": "68.1",
-      "price": "4.425",
-      "gasto_por_coding": "0.065",
-      "eficiencia": "45.975"
+      "price": "4.375",
+      "gasto_por_coding": "0.064",
+      "eficiencia": "46.225"
     },
     {
       "rank": 16,
@@ -211,18 +211,18 @@
       "model": "Gemma 4 31B (Reasoning)",
       "model_id": "google/gemma-4-31b-it-20260402",
       "coding_index": "43.4",
-      "price": "0.380",
+      "price": "0.390",
       "gasto_por_coding": "0.009",
-      "eficiencia": "41.500"
+      "eficiencia": "41.450"
     },
     {
       "rank": 24,
       "model": "DeepSeek V4 Pro 0424 (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-pro-20260423",
       "coding_index": "59.4",
-      "price": "3.750",
-      "gasto_por_coding": "0.063",
-      "eficiencia": "40.650"
+      "price": "3.900",
+      "gasto_por_coding": "0.066",
+      "eficiencia": "39.900"
     },
     {
       "rank": 25,
