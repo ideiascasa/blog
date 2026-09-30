@@ -1,10 +1,10 @@
 {
-  "updated_at": "America/Sao Paulo - 30/09/2026 06:28",
+  "updated_at": "America/Sao Paulo - 30/09/2026 16:54",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
   "points_per_dollar": 5,
-  "as_of": "2026-09-30T00:00:40.661Z",
+  "as_of": "2026-09-30T12:00:56.392Z",
   "citation": "Source: Artificial Analysis (artificialanalysis.ai) via OpenRouter (openrouter.ai/rankings).",
   "source_url": "https://artificialanalysis.ai",
   "items": [
@@ -85,9 +85,9 @@
       "model": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-pro-20260813",
       "coding_index": "68.8",
-      "price": "3.634",
+      "price": "3.623",
       "gasto_por_coding": "0.053",
-      "eficiencia": "50.630"
+      "eficiencia": "50.685"
     },
     {
       "rank": 10,
@@ -112,26 +112,26 @@
       "model": "DeepSeek V4 Flash 0420 (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-flash-20260423",
       "coding_index": "56.2",
-      "price": "1.289",
+      "price": "1.284",
       "gasto_por_coding": "0.023",
-      "eficiencia": "49.755"
+      "eficiencia": "49.780"
     },
     {
       "rank": 13,
+      "model": "GLM-5.2 (max)",
+      "model_id": "z-ai/glm-5.2-20260616",
+      "coding_index": "68.8",
+      "price": "4.135",
+      "gasto_por_coding": "0.060",
+      "eficiencia": "48.125"
+    },
+    {
+      "rank": 14,
       "model": "Qwen3.7 Plus",
       "model_id": "qwen/qwen3.7-plus-20260602",
       "coding_index": "55.9",
       "price": "1.600",
       "gasto_por_coding": "0.029",
-      "eficiencia": "47.900"
-    },
-    {
-      "rank": 14,
-      "model": "GLM-5.2 (max)",
-      "model_id": "z-ai/glm-5.2-20260616",
-      "coding_index": "68.8",
-      "price": "4.180",
-      "gasto_por_coding": "0.061",
       "eficiencia": "47.900"
     },
     {
@@ -211,9 +211,9 @@
       "model": "Gemma 4 31B (Reasoning)",
       "model_id": "google/gemma-4-31b-it-20260402",
       "coding_index": "43.4",
-      "price": "0.390",
-      "gasto_por_coding": "0.009",
-      "eficiencia": "41.450"
+      "price": "0.430",
+      "gasto_por_coding": "0.010",
+      "eficiencia": "41.250"
     },
     {
       "rank": 24,
