@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 01/10/2026 17:15",
+  "updated_at": "America/Sao Paulo - 02/10/2026 06:31",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -13,9 +13,9 @@
       "model": "GLM 5.3 Flash",
       "model_id": "z-ai/glm-5.3-flash-20260826",
       "coding_index": "71.5",
-      "price": "0.650",
-      "gasto_por_coding": "0.009",
-      "eficiencia": "68.250"
+      "price": "0.500",
+      "gasto_por_coding": "0.007",
+      "eficiencia": "69.000"
     },
     {
       "rank": 2,
@@ -37,15 +37,6 @@
     },
     {
       "rank": 4,
-      "model": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
-      "model_id": "deepseek/deepseek-v4-pro-20260813",
-      "coding_index": "68.8",
-      "price": "2.323",
-      "gasto_por_coding": "0.034",
-      "eficiencia": "57.185"
-    },
-    {
-      "rank": 5,
       "model": "Ling-3.0-flash-VL",
       "model_id": "inclusionai/ling-3.0-flash-vl-20260910",
       "coding_index": "57.0",
@@ -54,7 +45,7 @@
       "eficiencia": "56.585"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "model": "Hy3",
       "model_id": "tencent/hy3-preview-20260421",
       "coding_index": "58.8",
@@ -63,7 +54,7 @@
       "eficiencia": "54.900"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "model": "Ling-3.0-flash-Fin",
       "model_id": "inclusionai/ling-3.0-flash-fin-20260827",
       "coding_index": "55.6",
@@ -72,7 +63,7 @@
       "eficiencia": "54.775"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "model": "GPT-5.4 nano (xhigh)",
       "model_id": "openai/gpt-5.4-nano-20260317",
       "coding_index": "56.1",
@@ -81,7 +72,7 @@
       "eficiencia": "52.475"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "model": "MiMo-V2.5-Pro",
       "model_id": "xiaomi/mimo-v2.5-pro-20260422",
       "coding_index": "60.2",
@@ -90,13 +81,22 @@
       "eficiencia": "52.370"
     },
     {
+      "rank": 9,
+      "model": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
+      "model_id": "deepseek/deepseek-v4-pro-20260813",
+      "coding_index": "68.8",
+      "price": "3.600",
+      "gasto_por_coding": "0.052",
+      "eficiencia": "50.800"
+    },
+    {
       "rank": 10,
       "model": "GLM-5.2 (max)",
       "model_id": "z-ai/glm-5.2-20260616",
       "coding_index": "68.8",
-      "price": "3.306",
-      "gasto_por_coding": "0.048",
-      "eficiencia": "52.270"
+      "price": "3.608",
+      "gasto_por_coding": "0.052",
+      "eficiencia": "50.760"
     },
     {
       "rank": 11,
@@ -121,9 +121,9 @@
       "model": "DeepSeek V4 Flash 0420 (Reasoning, Max Effort)",
       "model_id": "deepseek/deepseek-v4-flash-20260423",
       "coding_index": "56.2",
-      "price": "1.284",
+      "price": "1.282",
       "gasto_por_coding": "0.023",
-      "eficiencia": "49.780"
+      "eficiencia": "49.790"
     },
     {
       "rank": 14,
@@ -172,15 +172,6 @@
     },
     {
       "rank": 19,
-      "model": "DeepSeek V4 Pro 0424 (Reasoning, Max Effort)",
-      "model_id": "deepseek/deepseek-v4-pro-20260423",
-      "coding_index": "59.4",
-      "price": "3.000",
-      "gasto_por_coding": "0.051",
-      "eficiencia": "44.400"
-    },
-    {
-      "rank": 20,
       "model": "Muse Spark 1.1 (xhigh)",
       "model_id": "meta/muse-spark-1.1-20260709",
       "coding_index": "71.3",
@@ -189,7 +180,7 @@
       "eficiencia": "43.800"
     },
     {
-      "rank": 21,
+      "rank": 20,
       "model": "MiniMax-M3",
       "model_id": "minimax/minimax-m3-20260531",
       "coding_index": "58.6",
@@ -198,7 +189,7 @@
       "eficiencia": "43.600"
     },
     {
-      "rank": 22,
+      "rank": 21,
       "model": "Qwen3.6 Plus",
       "model_id": "qwen/qwen3.6-plus-04-02",
       "coding_index": "54.5",
@@ -207,13 +198,22 @@
       "eficiencia": "43.125"
     },
     {
-      "rank": 23,
+      "rank": 22,
       "model": "GLM-5.3 (Max)",
       "model_id": "z-ai/glm-5.3-20260816",
       "coding_index": "74.8",
       "price": "6.380",
       "gasto_por_coding": "0.085",
       "eficiencia": "42.900"
+    },
+    {
+      "rank": 23,
+      "model": "DeepSeek V4 Pro 0424 (Reasoning, Max Effort)",
+      "model_id": "deepseek/deepseek-v4-pro-20260423",
+      "coding_index": "59.4",
+      "price": "3.600",
+      "gasto_por_coding": "0.061",
+      "eficiencia": "41.400"
     },
     {
       "rank": 24,
