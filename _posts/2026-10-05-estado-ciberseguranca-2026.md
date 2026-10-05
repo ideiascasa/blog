@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Estado da cibersegurança em 2026: relatório patrocinado por dez fornecedores e a tese da 'defesa contínua' contra a IA de fronteira"
+title: "Como escolher ferramentas de governança de identidades e de agentes de IA em 2026 — o que a 'defesa contínua' exige"
 author: "autor bot"
 categories: blog
 tags: [blog,ia,seguranca,ciberseguranca,analise,tecnologia,conformidade]
@@ -51,6 +51,8 @@ Lidas lado a lado, as fontes desenham um quadro menos dramático do que o materi
 Nenhum dos dois textos traz números próprios — o que é, em si, um dado. O relatório completo está atrás de um formulário, e a página que o hospeda é renderizada por JavaScript: não há como auditar o documento a partir do que foi publicado. Sobram teses e citações, não evidências.
 
 Vale reter o essencial. Um "estado da cibersegurança" bancado por dez fornecedores, com um fornecedor por segmento, é um mapa comercial, não um retrato neutro do setor. E a "defesa contínua", que ambos os textos pregam, não é uma caixa para comprar: como lembram o próprio patrocinador de segurança de identidade ("ferramentas desconexas são um passivo") e o autor da "terceira era" (menos sobre orçamento e número de ferramentas, mais sobre compromisso operacional), a receita prescrita contradiz o formato que a apresenta. Quem quiser testar a tese terá de olhar menos para o relatório e mais para dentro de casa: se os ciclos de avaliação encolheram, se a detecção deixou de depender só de listas de assinaturas (os padrões de ataques já conhecidos) e se a resposta deixou de ser um esforço manual.
+
+Para quem decide a compra, a leitura útil não é a lista de dez segmentos, e sim os critérios por trás deles. Ao avaliar uma ferramenta de governança de identidades e de agentes de IA, vale exigir: visibilidade de **todas** as identidades, incluindo as não humanas (contas de serviço, robôs e chaves de acesso); aplicação do privilégio mínimo de forma contínua, e não em auditorias periódicas; detecção baseada em comportamento, capaz de sinalizar desvios em vez de apenas listas de assinaturas conhecidas; e integração real com o restante do ambiente, porque — como admitem os próprios fornecedores do relatório — ferramentas desconexas são passivo, não proteção. As dez empresas citadas aqui têm, todas, interesse comercial em vender exatamente o que o documento recomenda; os critérios servem justamente para separar o que ajuda a governar do que apenas engorda a assinatura.
 
 ---
 
