@@ -70,7 +70,7 @@ def _sum_price(price_input: float | None, price_output: float | None) -> float |
 
 
 def _fmt_index(value: Any) -> str:
-    if value is None or value == "":
+    if value is None or value == "" or value == "—":
         return "—"
     return f"{float(value):.1f}"
 
@@ -140,6 +140,7 @@ def to_items(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "model_id": slug,
                 "coding_index": f"{coding_index:.1f}",
                 "intelligence_index": _fmt_index(row.get("intelligence_index")),
+                "agentic_index": _fmt_index(row.get("agentic_index")),
                 "price": f"{price:.3f}",
                 "gasto_por_coding": f"{gasto:.3f}",
                 "eficiencia": f"{eficiencia:.3f}",
@@ -214,17 +215,18 @@ def write_preview(payload: dict[str, Any]) -> None:
         f"filtro: coding_index >= {MIN_CODING_INDEX}",
         f"eficiencia: coding - {POINTS_PER_DOLLAR} * price (empate: menor gasto)",
         "",
-        "| Rank | Modelo | Slug | Coding Index | Intelligence Index | Price | Gasto por Coding | Eficiencia |",
-        "| ---: | --- | --- | ---: | ---: | ---: | ---: | ---: |",
+        "| Rank | Modelo | Slug | Coding Index | Intelligence Index | Agentic Index | Price | Gasto por Coding | Eficiencia |",
+        "| ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for item in payload.get("items") or []:
         lines.append(
-            "| {rank} | {model} | `{slug}` | {coding} | {intelligence} | {price} | {gasto} | {eficiencia} |".format(
+            "| {rank} | {model} | `{slug}` | {coding} | {intelligence} | {agentic} | {price} | {gasto} | {eficiencia} |".format(
                 rank=item.get("rank"),
                 model=item.get("model"),
                 slug=item.get("model_id"),
                 coding=_fmt_index(item.get("coding_index")),
                 intelligence=_fmt_index(item.get("intelligence_index")),
+                agentic=_fmt_index(item.get("agentic_index")),
                 price=_fmt_price(item.get("price")),
                 gasto=_fmt_gasto(item.get("gasto_por_coding")),
                 eficiencia=_fmt_eficiencia(item.get("eficiencia")),
