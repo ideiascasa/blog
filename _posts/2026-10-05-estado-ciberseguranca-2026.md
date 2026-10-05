@@ -1,0 +1,65 @@
+---
+layout: post
+title: "Estado da cibersegurança em 2026: relatório patrocinado por dez fornecedores e a tese da 'defesa contínua' contra a IA de fronteira"
+author: "autor bot"
+categories: blog
+tags: [blog,ia,seguranca,ciberseguranca,analise,tecnologia,conformidade]
+image: estado-ciberseguranca-2026-featured.jpg
+---
+
+Dez fornecedores de cibersegurança aparecem num mesmo relatório para dizer, cada um, que o setor precisa mudar — e que a resposta passa pelo produto que cada um vende. Publicado no The Hacker News em 3 de outubro de 2026, o *State of Cybersecurity in 2026* é conteúdo patrocinado: o próprio veículo avisa, ao final, que o texto é "uma peça contribuída de um de nossos parceiros". O download do documento completo fica em [report.papryon.com/thehackernews](https://report.papryon.com/thehackernews), mas o que a página revela de mais concreto talvez seja o jeito como o setor passou a falar de si mesmo. Na mesma semana, um artigo assinado por outro fornecedor deu nome ao enquadramento que atravessa essas peças: a "defesa contínua" contra a **IA de fronteira** — os modelos de inteligência artificial mais avançados disponíveis a cada momento.
+
+O formato é explícito. O relatório divide a cibersegurança em dez "segmentos-chave" e, para cada um, apresenta um fornecedor diferente, com citação do executivo e links de site e LinkedIn. Não há números próprios na versão publicada pelo veículo — nem metas, nem percentuais de adoção. O que existe é uma tese comum, ainda que genérica: segurança não pode mais ser um evento periódico, e sim uma disciplina contínua de visibilidade e resposta. A edição anterior, de janeiro de 2026, seguiu exatamente o mesmo desenho, com boa parte de outra equipe de patrocinadores ([The Hacker News](https://thehackernews.com/2026/01/the-state-of-cybersecurity-in-2025key.html)). O "estado da cibersegurança" virou, na prática, um gênero anual de marketing de conteúdo — assinado, no caso, pela Papryon, braço de relatórios executivos da agência de marketing B2B [ReyScale](https://reyscale.com/papryon), que hospeda o documento.
+
+## Quem fala, e sobre o quê
+
+Os dez segmentos, com os respectivos fornecedores, seguem o mesmo roteiro: um problema, uma citação, um produto ([The Hacker News](https://thehackernews.com/2026/10/the-state-of-cybersecurity-in-2026key.html)). Alguns exemplos bastam para dar o tom.
+
+- **Segurança de identidade — Keeper Security.** Gestão contínua de identidades humanas e **não humanas** (as contas de máquina, robôs e chaves de acesso que existem sem uma pessoa por trás), com **privilégio mínimo** (cada um com o menor acesso possível para fazer seu trabalho). "Gerenciar várias ferramentas desconexas é, em si, um passivo de segurança", diz o CEO e cofundador Darren Guccione.
+- **Inteligência de risco humano — Nisos.** **Atribuição digital** (descobrir quem está por trás de uma conta ou de um ataque) e investigação sobre funcionários, executivos e terceiros. "Integridade de identidade é o novo firewall", diz o CEO Ryan LaSalle.
+- **Operações de segurança nativas de IA — SentinelOne.** Uso de IA no SOC (o centro que monitora e responde a incidentes) para automatizar investigação. "A IA acelera, apoia e sugere, mas não substitui o julgamento humano", ressalva Paolo Cecchi, vice-presidente de vendas para a região do Mediterrâneo.
+- **Segurança em nuvem — CrowdStrike.** Proteção unificada de identidade, endpoint (cada dispositivo conectado) e nuvem em tempo real. "As capacidades tradicionais de detecção e resposta na nuvem, que dependem de modelos estáticos de risco e do processamento de registros em lote, são simplesmente lentas demais para o cenário de ameaças atual...", diz Kartik Shahani, vice-presidente para a Índia e para a SAARC (Associação Sul-Asiática para Cooperação Regional).
+
+Os outros seis capítulos repetem a fórmula: Cribl (telemetria e gestão de dados — a telemetria são os registros que máquinas e sistemas geram sobre o que fazem), Automox (gestão de endpoints e correção contínua de falhas), Adaptive Security (segurança humana contra a engenharia social, os golpes que manipulam pessoas), Surf AI (gestão de exposição), Red Sift (segurança de e-mail e domínio) e Asimily (segurança de dispositivos conectados). Cada um termina numa frase de efeito de seu executivo.
+
+Nenhuma dessas falas é fato verificado: são alegações de fornecedores sobre o próprio mercado em que vendem. Lidas em conjunto, porém, elas convergem para um argumento que também circula em artigos assinados por fornecedores.
+
+## A "terceira era" da cibersegurança
+
+Esse argumento tem uma versão mais articulada, publicada também em outubro, no [Security Boulevard](https://securityboulevard.com/2026/10/the-third-era-of-cybersecurity-why-frontier-ai-demands-continuous-defense/), por **Varun Iravatham**, CEO da **NopalCyber** (Nopal Cyber). Ele divide a história em três eras. A primeira foi a **do perímetro**: firewalls e controles de acesso para manter o de fora do lado de fora. A segunda foi a **da detecção e resposta**: dissolvido o perímetro pela nuvem e pelo trabalho remoto, o setor passou a aceitar que invasões acontecem e a investir em centros de operações, plataformas de correlação de eventos e detecção em dispositivos. A terceira, agora, é a **da velocidade, escala e continuidade**.
+
+O que muda não é o *tipo* de ataque, diz ele, mas sua **economia**. Segundo Iravatham, tarefas que exigiam semanas de trabalho manual — reconhecimento contínuo, engenharia social hiperpersonalizada, descoberta acelerada de falhas, execução que se adapta às defesas — passam a caber em horas. Com isso, alvos antes considerados pequenos demais para valer o esforço se tornam viáveis, porque a automação torna o ataque em massa economicamente razoável. A resposta proposta é uma mudança de disciplina: em vez do ciclo "avaliar, corrigir e esperar", um regime permanente de monitorar, detectar, validar, responder e aprender, sem estado de repouso entre ciclos.
+
+Vale declarar o interesse em jogo. Iravatham é [CEO da NopalCyber](https://www.nopalcyber.com/leadership-team/varun-(ira)-iravatham), empresa que vende justamente detecção e resposta gerenciadas — e o artigo conclui defendendo que as organizações contem com parceiros externos. A tese e a oferta comercial caminham juntas, como as dez do relatório patrocinado caminham com seus patrocinadores.
+
+## O que é "IA de fronteira" — e o que ela não é
+
+O termo *frontier AI*, a **IA de fronteira**, vem do artigo assinado por Iravatham e de agências públicas — não do relatório patrocinado, que fala apenas de visibilidade e resposta contínuas. Ela designa os modelos mais avançados e capazes disponíveis a cada momento. Não há definição única e vinculante para a expressão — é de mercado e de política, não uma categoria técnica fechada. Duas agências públicas, porém, ajudam a fixar o sentido.
+
+O **NCSC**, o centro de cibersegurança do Reino Unido, descreve a IA de fronteira como "os sistemas de IA mais avançados", que tornam ataques sofisticados "mais fáceis, mais rápidos e mais baratos" até para criminosos de baixa qualificação. O NCSC acrescenta duas ressalvas que contrariam o clima publicitário: a IA avançada "não muda fundamentalmente o risco cibernético", apenas aumenta a velocidade e a escala com que fraquezas já existentes são encontradas e exploradas — e os fundamentos de segurança continuam sendo a melhor proteção. A agência diz que, no fim, a IA tende a ser um saldo líquido positivo para a defesa, mas que o caminho até lá exige ação imediata e participação da diretoria ([NCSC](https://www.ncsc.gov.uk/frontier-ai)).
+
+O **Centro Canadense de Cibersegurança** vai no mesmo sentido: chama de IA de fronteira os modelos "mais recentes, capazes e avançados" e observa que alguns já exibem desempenho "sem precedentes" em descoberta autônoma de vulnerabilidades, geração de código de exploração (os *exploits*, programas que atacam a falha) para falhas zero-day (ainda sem correção) e orquestração de ataques em várias etapas. A recomendação, sobretudo para infraestrutura crítica, é preparar-se para **operar em estado comprometido ou desconectado** — uma postura bem mais dura que a promessa de comprar a ferramenta certa ([Centro Canadense de Cibersegurança](https://www.cyber.gc.ca/en/guidance/frontier-artificial-intelligence)).
+
+## O outro lado da conta
+
+O enquadramento "a IA muda tudo" tem ceticismo dentro do próprio setor. Em um post da série CISO Circle (voltada a CISOs, os executivos-chefes de segurança), a **Splunk** argumenta que não existe um "LLM sombrio" — um modelo de linguagem, tipo ChatGPT, secreto — otimizado para ataques: os adversários usam os mesmos modelos públicos que os defensores. A diferença, diz a empresa, está no **contexto e nos dados** — e aí os defensores levam vantagem, por operarem sobre dados privilegiados e estruturados, enquanto o atacante trabalha com visão parcial. A provocação final é direta: modelos de linguagem "não descobrem zero-days nem inventam exploits; apenas preveem texto plausível" ([Splunk](https://www.splunk.com/en_us/blog/ciso-circle/generative-ai-cybersecurity-threats-defenses.html)).
+
+Lidas lado a lado, as fontes desenham um quadro menos dramático do que o material patrocinado sugere. As próprias vozes mais céticas reconhecem que a IA baixou o custo de atacar. Mas a alegação de que isso inaugura uma era inteiramente nova convive com a leitura mais sóbria de que o efeito principal é **acelerar** falhas que já existiam — e que a defesa depende menos de uma arma nova do que de fundamentos bem executados. Para quem também precisa escolher modelos de IA nesse cenário que muda rápido, nossa [análise comparativa dos melhores modelos de IA](https://blog.ideias.casa/melhores-ia) acompanha e avalia as principais opções disponíveis no mercado.
+
+## O que observar
+
+Nenhum dos dois textos traz números próprios — o que é, em si, um dado. O relatório completo está atrás de um formulário, e a página que o hospeda é renderizada por JavaScript: não há como auditar o documento a partir do que foi publicado. Sobram teses e citações, não evidências.
+
+Vale reter o essencial. Um "estado da cibersegurança" bancado por dez fornecedores, com um fornecedor por segmento, é um mapa comercial, não um retrato neutro do setor. E a "defesa contínua", que ambos os textos pregam, não é uma caixa para comprar: como lembram o próprio patrocinador de segurança de identidade ("ferramentas desconexas são um passivo") e o autor da "terceira era" (menos sobre orçamento e número de ferramentas, mais sobre compromisso operacional), a receita prescrita contradiz o formato que a apresenta. Quem quiser testar a tese terá de olhar menos para o relatório e mais para dentro de casa: se os ciclos de avaliação encolheram, se a detecção deixou de depender só de listas de assinaturas (os padrões de ataques já conhecidos) e se a resposta deixou de ser um esforço manual.
+
+---
+
+> **Fonte original:** [The State of Cybersecurity in 2026: Key Segments, Insights, and Innovations](https://thehackernews.com/2026/10/the-state-of-cybersecurity-in-2026key.html) — The Hacker News (conteúdo patrocinado), 3 de outubro de 2026. Relatório completo: [report.papryon.com/thehackernews](https://report.papryon.com/thehackernews) (Papryon, braço de marketing de conteúdo B2B da [ReyScale](https://reyscale.com/papryon)).
+>
+> **Fontes complementares:** [The Third Era of Cybersecurity: Why Frontier AI Demands Continuous Defense](https://securityboulevard.com/2026/10/the-third-era-of-cybersecurity-why-frontier-ai-demands-continuous-defense/) — Security Boulevard, por Varun Iravatham (CEO da NopalCyber), 5 de outubro de 2026; [The State of Cybersecurity in 2025](https://thehackernews.com/2026/01/the-state-of-cybersecurity-in-2025key.html) — The Hacker News, 5 de janeiro de 2026; [Frontier AI: what you need to know](https://www.ncsc.gov.uk/frontier-ai) — NCSC (Reino Unido); [Frontier artificial intelligence (ITSAP.10.050)](https://www.cyber.gc.ca/en/guidance/frontier-artificial-intelligence) — Centro Canadense de Cibersegurança, maio de 2026; [Separating AI Hype from Reality for Defenders and Adversaries](https://www.splunk.com/en_us/blog/ciso-circle/generative-ai-cybersecurity-threats-defenses.html) — Splunk CISO Circle, por Shannon Davis, 12 de fevereiro de 2026.
+>
+> **Imagem:** Rack de rede com iluminação azul numa sala de servidores, por panumas nikhomkhai, via [Pexels](https://www.pexels.com/photo/network-rack-17323801/), sob a [Licença Pexels](https://www.pexels.com/license/).
+
+---
+
+👉 **Veja também nossa análise comparativa dos melhores modelos de IA em:** [blog.ideias.casa/melhores-ia](https://blog.ideias.casa/melhores-ia)
