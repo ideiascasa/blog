@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 05/10/2026 18:55",
+  "updated_at": "America/Sao Paulo - 05/10/2026 19:42",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -13,6 +13,7 @@
       "model": "DeepSeek V4 Flash 0731 (Max)",
       "model_id": "deepseek/deepseek-v4-flash-20260731",
       "coding_index": "69.1",
+      "intelligence_index": "34.3",
       "price": "0.420",
       "gasto_por_coding": "0.006",
       "eficiencia": "67.000"
@@ -22,6 +23,7 @@
       "model": "GLM 5.3 Flash",
       "model_id": "z-ai/glm-5.3-flash-20260826",
       "coding_index": "71.5",
+      "intelligence_index": "41.8",
       "price": "1.100",
       "gasto_por_coding": "0.015",
       "eficiencia": "66.000"
@@ -31,6 +33,7 @@
       "model": "GPT-5.6 Luna (Max)",
       "model_id": "openai/gpt-5.6-luna-20260709",
       "coding_index": "71.4",
+      "intelligence_index": "37.3",
       "price": "2.800",
       "gasto_por_coding": "0.039",
       "eficiencia": "57.400"
@@ -40,6 +43,7 @@
       "model": "Ling-3.0-flash-VL",
       "model_id": "inclusionai/ling-3.0-flash-vl-20260910",
       "coding_index": "57.0",
+      "intelligence_index": "24.6",
       "price": "0.083",
       "gasto_por_coding": "0.001",
       "eficiencia": "56.585"
@@ -49,6 +53,7 @@
       "model": "DeepSeek V4 Flash Vision (Max)",
       "model_id": "deepseek/deepseek-v4-flash-vision-exp-20260821",
       "coding_index": "65.0",
+      "intelligence_index": "34.8",
       "price": "1.760",
       "gasto_por_coding": "0.027",
       "eficiencia": "56.200"
@@ -58,6 +63,7 @@
       "model": "Hy3",
       "model_id": "tencent/hy3-preview-20260421",
       "coding_index": "58.8",
+      "intelligence_index": "25.3",
       "price": "0.780",
       "gasto_por_coding": "0.013",
       "eficiencia": "54.900"
@@ -67,6 +73,7 @@
       "model": "Ling-3.0-flash-Fin",
       "model_id": "inclusionai/ling-3.0-flash-fin-20260827",
       "coding_index": "55.6",
+      "intelligence_index": "22.6",
       "price": "0.165",
       "gasto_por_coding": "0.003",
       "eficiencia": "54.775"
@@ -76,6 +83,7 @@
       "model": "GPT-5.4 nano (Xhigh)",
       "model_id": "openai/gpt-5.4-nano-20260317",
       "coding_index": "56.1",
+      "intelligence_index": "20.7",
       "price": "0.725",
       "gasto_por_coding": "0.013",
       "eficiencia": "52.475"
@@ -85,6 +93,7 @@
       "model": "MiMo-V2.5-Pro (Reasoning)",
       "model_id": "xiaomi/mimo-v2.5-pro-20260422",
       "coding_index": "60.2",
+      "intelligence_index": "26.0",
       "price": "1.566",
       "gasto_por_coding": "0.026",
       "eficiencia": "52.370"
@@ -94,6 +103,7 @@
       "model": "Solar Pro 4",
       "model_id": "upstage/solar-pro4-20260810",
       "coding_index": "52.7",
+      "intelligence_index": "28.2",
       "price": "0.450",
       "gasto_por_coding": "0.009",
       "eficiencia": "50.450"
@@ -103,6 +113,7 @@
       "model": "Ling 3.0 Flash",
       "model_id": "inclusionai/ling-3.0-flash-20260723",
       "coding_index": "50.6",
+      "intelligence_index": "20.1",
       "price": "0.084",
       "gasto_por_coding": "0.002",
       "eficiencia": "50.180"
@@ -112,6 +123,7 @@
       "model": "Muse Spark 1.3 (Xhigh)",
       "model_id": "meta/muse-spark-1.3-20260902",
       "coding_index": "76.5",
+      "intelligence_index": "45.1",
       "price": "5.500",
       "gasto_por_coding": "0.072",
       "eficiencia": "49.000"
@@ -121,6 +133,7 @@
       "model": "Qwen3.7 Plus",
       "model_id": "qwen/qwen3.7-plus-20260602",
       "coding_index": "55.9",
+      "intelligence_index": "25.2",
       "price": "1.600",
       "gasto_por_coding": "0.029",
       "eficiencia": "47.900"
@@ -130,6 +143,7 @@
       "model": "DeepSeek V4 Flash 0420 (Max)",
       "model_id": "deepseek/deepseek-v4-flash-20260423",
       "coding_index": "56.2",
+      "intelligence_index": "24.2",
       "price": "1.760",
       "gasto_por_coding": "0.031",
       "eficiencia": "47.400"
@@ -139,6 +153,7 @@
       "model": "DeepSeek V4 Pro 0813 (Max)",
       "model_id": "deepseek/deepseek-v4-pro-20260813",
       "coding_index": "68.8",
+      "intelligence_index": "36.0",
       "price": "4.478",
       "gasto_por_coding": "0.065",
       "eficiencia": "46.410"
@@ -148,6 +163,7 @@
       "model": "Qwen3.8 27B (Xhigh)",
       "model_id": "qwen/qwen3.8-27b-20260814",
       "coding_index": "68.1",
+      "intelligence_index": "33.7",
       "price": "4.374",
       "gasto_por_coding": "0.064",
       "eficiencia": "46.230"
@@ -157,6 +173,7 @@
       "model": "MiniMax-M2.7",
       "model_id": "minimax/minimax-m2.7-20260318",
       "coding_index": "52.6",
+      "intelligence_index": "22.8",
       "price": "1.500",
       "gasto_por_coding": "0.029",
       "eficiencia": "45.100"
@@ -166,6 +183,7 @@
       "model": "MiMo-V2.5",
       "model_id": "xiaomi/mimo-v2.5-20260422",
       "coding_index": "56.8",
+      "intelligence_index": "25.2",
       "price": "2.400",
       "gasto_por_coding": "0.042",
       "eficiencia": "44.800"
@@ -175,6 +193,7 @@
       "model": "Muse Spark 1.2 (Xhigh)",
       "model_id": "meta/muse-spark-1.2-20260805",
       "coding_index": "72.2",
+      "intelligence_index": "39.6",
       "price": "5.500",
       "gasto_por_coding": "0.076",
       "eficiencia": "44.700"
@@ -184,6 +203,7 @@
       "model": "Muse Spark 1.1 (Xhigh)",
       "model_id": "meta/muse-spark-1.1-20260709",
       "coding_index": "71.3",
+      "intelligence_index": "33.7",
       "price": "5.500",
       "gasto_por_coding": "0.077",
       "eficiencia": "43.800"
@@ -193,6 +213,7 @@
       "model": "MiniMax-M3",
       "model_id": "minimax/minimax-m3-20260531",
       "coding_index": "58.6",
+      "intelligence_index": "29.2",
       "price": "3.000",
       "gasto_por_coding": "0.051",
       "eficiencia": "43.600"
@@ -202,6 +223,7 @@
       "model": "Qwen3.6 Plus",
       "model_id": "qwen/qwen3.6-plus-04-02",
       "coding_index": "54.5",
+      "intelligence_index": "27.0",
       "price": "2.275",
       "gasto_por_coding": "0.042",
       "eficiencia": "43.125"
@@ -211,6 +233,7 @@
       "model": "Muse Glimmer (High)",
       "model_id": "meta/muse-glimmer-30b-20260810",
       "coding_index": "49.0",
+      "intelligence_index": "17.5",
       "price": "1.400",
       "gasto_por_coding": "0.029",
       "eficiencia": "42.000"
@@ -220,6 +243,7 @@
       "model": "Kimi K2.6 (Reasoning)",
       "model_id": "moonshotai/kimi-k2.6-20260420",
       "coding_index": "61.8",
+      "intelligence_index": "27.0",
       "price": "4.455",
       "gasto_por_coding": "0.072",
       "eficiencia": "39.525"
@@ -229,6 +253,7 @@
       "model": "Qwen3.6 35B A3B (Reasoning)",
       "model_id": "qwen/qwen3.6-35b-a3b-20260415",
       "coding_index": "41.9",
+      "intelligence_index": "18.2",
       "price": "0.750",
       "gasto_por_coding": "0.018",
       "eficiencia": "38.150"
@@ -238,6 +263,7 @@
       "model": "LongCat 2.0",
       "model_id": "meituan/longcat-2.0-20260720",
       "coding_index": "45.3",
+      "intelligence_index": "19.1",
       "price": "1.500",
       "gasto_por_coding": "0.033",
       "eficiencia": "37.800"
@@ -247,6 +273,7 @@
       "model": "DeepSeek V3.1 Terminus (Reasoning)",
       "model_id": "deepseek/deepseek-v3.1-terminus",
       "coding_index": "43.5",
+      "intelligence_index": "14.8",
       "price": "1.371",
       "gasto_por_coding": "0.032",
       "eficiencia": "36.645"
@@ -256,6 +283,7 @@
       "model": "Qwen3.7 Max",
       "model_id": "qwen/qwen3.7-max-20260520",
       "coding_index": "66.0",
+      "intelligence_index": "29.5",
       "price": "5.900",
       "gasto_por_coding": "0.089",
       "eficiencia": "36.500"
@@ -265,6 +293,7 @@
       "model": "Qwen3.8 Max (0902)",
       "model_id": "qwen/qwen3.8-max-20260902",
       "coding_index": "76.2",
+      "intelligence_index": "45.4",
       "price": "8.000",
       "gasto_por_coding": "0.105",
       "eficiencia": "36.200"
@@ -274,6 +303,7 @@
       "model": "Gemma 4 31B (Reasoning)",
       "model_id": "google/gemma-4-31b-it-20260402",
       "coding_index": "43.4",
+      "intelligence_index": "14.7",
       "price": "1.454",
       "gasto_por_coding": "0.034",
       "eficiencia": "36.130"
@@ -283,6 +313,7 @@
       "model": "Kimi K2.7 Code",
       "model_id": "moonshotai/kimi-k2.7-code-20260612",
       "coding_index": "60.8",
+      "intelligence_index": "25.8",
       "price": "4.950",
       "gasto_por_coding": "0.081",
       "eficiencia": "36.050"
@@ -292,6 +323,7 @@
       "model": "Qwen3.6 27B (Reasoning)",
       "model_id": "qwen/qwen3.6-27b-20260422",
       "coding_index": "53.7",
+      "intelligence_index": "21.4",
       "price": "3.570",
       "gasto_por_coding": "0.066",
       "eficiencia": "35.850"
@@ -301,6 +333,7 @@
       "model": "Gemini 3.8 Flash (High)",
       "model_id": "google/gemini-3.8-flash-20260902",
       "coding_index": "76.3",
+      "intelligence_index": "40.9",
       "price": "8.100",
       "gasto_por_coding": "0.106",
       "eficiencia": "35.800"
@@ -310,6 +343,7 @@
       "model": "Gemini 3.7 Flash (High)",
       "model_id": "google/gemini-3.7-flash-20260813",
       "coding_index": "76.1",
+      "intelligence_index": "39.1",
       "price": "8.100",
       "gasto_por_coding": "0.106",
       "eficiencia": "35.600"
@@ -319,6 +353,7 @@
       "model": "GLM-4.6 (Reasoning)",
       "model_id": "z-ai/glm-4.6",
       "coding_index": "45.8",
+      "intelligence_index": "18.5",
       "price": "2.180",
       "gasto_por_coding": "0.048",
       "eficiencia": "34.900"
@@ -328,6 +363,7 @@
       "model": "Nemotron 3 Ultra 550B A55B (Reasoning)",
       "model_id": "nvidia/nemotron-3-ultra-550b-a55b-20260604",
       "coding_index": "49.3",
+      "intelligence_index": "22.9",
       "price": "3.000",
       "gasto_por_coding": "0.061",
       "eficiencia": "34.300"
@@ -337,6 +373,7 @@
       "model": "Qwen3.5 122B A10B (Reasoning)",
       "model_id": "qwen/qwen3.5-122b-a10b-20260224",
       "coding_index": "45.7",
+      "intelligence_index": "15.6",
       "price": "2.340",
       "gasto_por_coding": "0.051",
       "eficiencia": "34.000"
@@ -346,6 +383,7 @@
       "model": "Grok 4.6 (High)",
       "model_id": "x-ai/grok-4.6-20260810",
       "coding_index": "76.8",
+      "intelligence_index": "44.3",
       "price": "8.800",
       "gasto_por_coding": "0.115",
       "eficiencia": "32.800"
@@ -355,6 +393,7 @@
       "model": "Qwen3.8 2.4T A95B",
       "model_id": "qwen/qwen3.8-2.4t-a95b-20260812",
       "coding_index": "71.9",
+      "intelligence_index": "39.9",
       "price": "8.000",
       "gasto_por_coding": "0.111",
       "eficiencia": "31.900"
@@ -364,6 +403,7 @@
       "model": "GLM-5.3 (Max)",
       "model_id": "z-ai/glm-5.3-20260816",
       "coding_index": "74.8",
+      "intelligence_index": "44.8",
       "price": "8.700",
       "gasto_por_coding": "0.116",
       "eficiencia": "31.300"
@@ -373,6 +413,7 @@
       "model": "GLM-4.7 (Reasoning)",
       "model_id": "z-ai/glm-4.7-20251222",
       "coding_index": "45.3",
+      "intelligence_index": "22.2",
       "price": "3.200",
       "gasto_por_coding": "0.071",
       "eficiencia": "29.300"
@@ -382,6 +423,7 @@
       "model": "Kimi K2.5 (Reasoning)",
       "model_id": "moonshotai/kimi-k2.5-0127",
       "coding_index": "46.8",
+      "intelligence_index": "23.5",
       "price": "3.600",
       "gasto_por_coding": "0.077",
       "eficiencia": "28.800"
@@ -391,6 +433,7 @@
       "model": "Gemini 3.6 Flash (High)",
       "model_id": "google/gemini-3.6-flash-20260721",
       "coding_index": "69.2",
+      "intelligence_index": "34.0",
       "price": "8.100",
       "gasto_por_coding": "0.117",
       "eficiencia": "28.700"
@@ -400,6 +443,7 @@
       "model": "GLM-5.1 (Reasoning)",
       "model_id": "z-ai/glm-5.1-20260406",
       "coding_index": "55.8",
+      "intelligence_index": "26.1",
       "price": "5.510",
       "gasto_por_coding": "0.099",
       "eficiencia": "28.250"
@@ -409,6 +453,7 @@
       "model": "Qwen3.5 397B A17B (Reasoning)",
       "model_id": "qwen/qwen3.5-397b-a17b-20260216",
       "coding_index": "48.2",
+      "intelligence_index": "18.4",
       "price": "4.050",
       "gasto_por_coding": "0.084",
       "eficiencia": "27.950"
@@ -418,6 +463,7 @@
       "model": "Grok 4.3 (High)",
       "model_id": "x-ai/grok-4.3-20260430",
       "coding_index": "42.2",
+      "intelligence_index": "24.9",
       "price": "3.000",
       "gasto_por_coding": "0.071",
       "eficiencia": "27.200"
@@ -427,6 +473,7 @@
       "model": "GLM-5.2 (Max)",
       "model_id": "z-ai/glm-5.2-20260616",
       "coding_index": "68.8",
+      "intelligence_index": "33.7",
       "price": "8.543",
       "gasto_por_coding": "0.124",
       "eficiencia": "26.085"
@@ -436,6 +483,7 @@
       "model": "Mistral Medium 3.5",
       "model_id": "mistralai/mistral-medium-3.5-20260430",
       "coding_index": "46.9",
+      "intelligence_index": "14.2",
       "price": "4.500",
       "gasto_por_coding": "0.096",
       "eficiencia": "24.400"
@@ -445,6 +493,7 @@
       "model": "Gemini 3.5 Flash-Lite",
       "model_id": "google/gemini-3.5-flash-lite-20260721",
       "coding_index": "49.3",
+      "intelligence_index": "22.2",
       "price": "5.040",
       "gasto_por_coding": "0.102",
       "eficiencia": "24.100"
@@ -454,6 +503,7 @@
       "model": "DeepSeek V4 Pro 0424 (Max)",
       "model_id": "deepseek/deepseek-v4-pro-20260423",
       "coding_index": "59.4",
+      "intelligence_index": "30.4",
       "price": "7.200",
       "gasto_por_coding": "0.121",
       "eficiencia": "23.400"
@@ -463,6 +513,7 @@
       "model": "Grok Build 0.1 0616",
       "model_id": "x-ai/grok-build-0.1-20260520",
       "coding_index": "51.5",
+      "intelligence_index": "27.2",
       "price": "6.000",
       "gasto_por_coding": "0.117",
       "eficiencia": "21.500"
@@ -472,6 +523,7 @@
       "model": "Claude 4.5 Haiku (Reasoning)",
       "model_id": "anthropic/claude-4.5-haiku-20251001",
       "coding_index": "43.9",
+      "intelligence_index": "16.9",
       "price": "6.600",
       "gasto_por_coding": "0.150",
       "eficiencia": "10.900"
@@ -481,6 +533,7 @@
       "model": "DeepSeek V3.2 (Reasoning)",
       "model_id": "deepseek/deepseek-v3.2-20251201",
       "coding_index": "44.2",
+      "intelligence_index": "21.5",
       "price": "7.500",
       "gasto_por_coding": "0.170",
       "eficiencia": "6.700"
@@ -490,6 +543,7 @@
       "model": "Claude Sonnet 5 (Max)",
       "model_id": "anthropic/claude-sonnet-5-20260630",
       "coding_index": "71.5",
+      "intelligence_index": "38.2",
       "price": "13.200",
       "gasto_por_coding": "0.185",
       "eficiencia": "5.500"
@@ -499,6 +553,7 @@
       "model": "GPT-5.4 mini (Xhigh)",
       "model_id": "openai/gpt-5.4-mini-20260317",
       "coding_index": "56.1",
+      "intelligence_index": "24.1",
       "price": "10.500",
       "gasto_por_coding": "0.187",
       "eficiencia": "3.600"
@@ -508,6 +563,7 @@
       "model": "Grok 4.5 (High)",
       "model_id": "x-ai/grok-4.5-20260708",
       "coding_index": "72.4",
+      "intelligence_index": "38.8",
       "price": "16.000",
       "gasto_por_coding": "0.221",
       "eficiencia": "-7.600"
@@ -517,6 +573,7 @@
       "model": "GPT-5.5 (Xhigh)",
       "model_id": "openai/gpt-5.5-20260423",
       "coding_index": "74.9",
+      "intelligence_index": "38.4",
       "price": "17.500",
       "gasto_por_coding": "0.234",
       "eficiencia": "-12.600"
@@ -526,6 +583,7 @@
       "model": "Kimi K3 (Max)",
       "model_id": "moonshotai/kimi-k3-20260715",
       "coding_index": "76.2",
+      "intelligence_index": "43.6",
       "price": "18.950",
       "gasto_por_coding": "0.249",
       "eficiencia": "-18.550"
@@ -535,6 +593,7 @@
       "model": "Gemini 3.5 Flash (High)",
       "model_id": "google/gemini-3.5-flash-20260519",
       "coding_index": "70.1",
+      "intelligence_index": "32.6",
       "price": "18.900",
       "gasto_por_coding": "0.270",
       "eficiencia": "-24.400"
@@ -544,6 +603,7 @@
       "model": "Claude Sonnet 4.6 (Max)",
       "model_id": "anthropic/claude-4.6-sonnet-20260217",
       "coding_index": "63.0",
+      "intelligence_index": "30.1",
       "price": "18.000",
       "gasto_por_coding": "0.286",
       "eficiencia": "-27.000"
@@ -553,6 +613,7 @@
       "model": "Claude 4.5 Sonnet (Reasoning)",
       "model_id": "anthropic/claude-4.5-sonnet-20250929",
       "coding_index": "52.1",
+      "intelligence_index": "20.7",
       "price": "18.000",
       "gasto_por_coding": "0.345",
       "eficiencia": "-37.900"
@@ -562,6 +623,7 @@
       "model": "GPT-5.6 Sol (Xhigh)",
       "model_id": "openai/gpt-5.6-sol-20260709",
       "coding_index": "78.3",
+      "intelligence_index": "44.0",
       "price": "24.000",
       "gasto_por_coding": "0.307",
       "eficiencia": "-41.700"
@@ -571,6 +633,7 @@
       "model": "Gemini 3.1 Pro Preview",
       "model_id": "google/gemini-3.1-pro-preview-20260219",
       "coding_index": "68.8",
+      "intelligence_index": "29.7",
       "price": "25.200",
       "gasto_por_coding": "0.366",
       "eficiencia": "-57.200"
@@ -580,6 +643,7 @@
       "model": "GPT-5.1 (High)",
       "model_id": "openai/gpt-5.1-20251113",
       "coding_index": "49.4",
+      "intelligence_index": "24.7",
       "price": "22.500",
       "gasto_por_coding": "0.455",
       "eficiencia": "-63.100"
@@ -589,6 +653,7 @@
       "model": "GPT-5.6 Terra (Max)",
       "model_id": "openai/gpt-5.6-terra-20260709",
       "coding_index": "76.7",
+      "intelligence_index": "42.1",
       "price": "28.000",
       "gasto_por_coding": "0.365",
       "eficiencia": "-63.300"
@@ -598,6 +663,7 @@
       "model": "Claude Fable 5.1 (Max, Default Fallback)",
       "model_id": "anthropic/claude-fable-5.1-20260831",
       "coding_index": "81.6",
+      "intelligence_index": "53.4",
       "price": "30.000",
       "gasto_por_coding": "0.368",
       "eficiencia": "-68.400"
@@ -607,6 +673,7 @@
       "model": "Claude Opus 4.7 (Max)",
       "model_id": "anthropic/claude-4.7-opus-20260416",
       "coding_index": "73.6",
+      "intelligence_index": "40.7",
       "price": "30.000",
       "gasto_por_coding": "0.408",
       "eficiencia": "-76.400"
@@ -616,6 +683,7 @@
       "model": "Claude Opus 5 (Max)",
       "model_id": "anthropic/claude-opus-5-20260723",
       "coding_index": "78.0",
+      "intelligence_index": "50.8",
       "price": "33.000",
       "gasto_por_coding": "0.423",
       "eficiencia": "-87.000"
@@ -625,6 +693,7 @@
       "model": "GPT-5.4 (Xhigh)",
       "model_id": "openai/gpt-5.4-20260305",
       "coding_index": "71.1",
+      "intelligence_index": "39.0",
       "price": "35.000",
       "gasto_por_coding": "0.492",
       "eficiencia": "-103.900"
@@ -634,6 +703,7 @@
       "model": "Claude Fable 5 (Max, Opus 4.8 Fallback)",
       "model_id": "anthropic/claude-5-fable-20260609",
       "coding_index": "76.5",
+      "intelligence_index": "49.6",
       "price": "60.000",
       "gasto_por_coding": "0.784",
       "eficiencia": "-223.500"
@@ -643,6 +713,7 @@
       "model": "Claude Opus 4.8 (Max)",
       "model_id": "anthropic/claude-4.8-opus-20260528",
       "coding_index": "74.3",
+      "intelligence_index": "41.8",
       "price": "60.000",
       "gasto_por_coding": "0.808",
       "eficiencia": "-225.700"
@@ -652,6 +723,7 @@
       "model": "GPT-6 Astra (High)",
       "model_id": "openai/gpt-6-astra-20260903",
       "coding_index": "77.1",
+      "intelligence_index": "50.9",
       "price": "360.000",
       "gasto_por_coding": "4.669",
       "eficiencia": "-1722.900"
