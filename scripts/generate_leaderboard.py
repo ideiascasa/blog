@@ -5,14 +5,27 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
+import urllib.parse
+import urllib.request
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
-import requests
-import yaml
+# Estas dependências existem no CI (instaladas pelo workflow). No ambiente local
+# evitamos exigir instalação: se faltarem, usamos a stdlib (urllib) e um
+# emissor YAML mínimo que reproduz a saída usada no projeto.
+try:
+    import requests
+except ImportError:  # pragma: no cover - ambiente local sem requests
+    requests = None  # type: ignore[assignment]
+
+try:
+    import yaml
+except ImportError:  # pragma: no cover - ambiente local sem PyYAML
+    yaml = None  # type: ignore[assignment]
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "_data" / "leaderboard.yml"
@@ -81,14 +94,16 @@ def _fmt_eficiencia(value: Any) -> str:
 
 
 def fetch_benchmarks(api_key: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-    response = requests.get(
-        API_URL,
-        headers={"Authorization": f"Bearer {api_key}"},
-        params=PARAMS,
-        timeout=60,
-    )
-    response.raise_for_status()
-    payload = response.json()
+    headers = {"Authorization": f"Bearer {api_key}"}
+    if requests is not None:
+        response = requests.get(API_URL, headers=headers, params=PARAMS, timeout=60)
+        response.raise_for_status()
+        payload = response.json()
+    else:
+        url = f"{API_URL}?{urllib.parse.urlencode(PARAMS)}"
+        request = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(request, timeout=60) as response:
+            payload = json.loads(response.read().decode("utf-8"))
     data = payload.get("data") or []
     meta = payload.get("meta") or {}
     if not isinstance(data, list):
@@ -124,6 +139,7 @@ def to_items(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "model": row.get("display_name") or slug,
                 "model_id": slug,
                 "coding_index": f"{coding_index:.1f}",
+                "intelligence_index": _fmt_index(row.get("intelligence_index")),
                 "price": f"{price:.3f}",
                 "gasto_por_coding": f"{gasto:.3f}",
                 "eficiencia": f"{eficiencia:.3f}",
@@ -141,6 +157,53 @@ def to_items(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return items
 
 
+_NUMERIC_RE = re.compile(r"^[+-]?(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?$")
+_TIMESTAMP_RE = re.compile(r"^\d{4}-\d{2}-\d{2}([Tt ].*)?$")
+_BOOL_NULL = {"true", "false", "null", "yes", "no", "on", "off", "~", ""}
+
+
+def _yaml_scalar(value: Any) -> str:
+    """Emissor mínimo de escalares YAML compatível com a saída do PyYAML aqui."""
+    if value is None:
+        return "null"
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, int):
+        return str(value)
+    if isinstance(value, float):
+        return repr(value)
+    text = str(value)
+    needs_quote = (
+        text == ""
+        or text != text.strip()
+        or _NUMERIC_RE.match(text) is not None
+        or _TIMESTAMP_RE.match(text) is not None
+        or text.lower() in _BOOL_NULL
+        or text[0] in "-?:,[]{}#&*!|>'\"%@`"
+        or ": " in text
+        or text.endswith(":")
+        or " #" in text
+    )
+    if needs_quote:
+        return "'" + text.replace("'", "''") + "'"
+    return text
+
+
+def _dump_yaml(payload: dict[str, Any]) -> str:
+    """Fallback de serialização usado apenas quando PyYAML não está disponível."""
+    lines: list[str] = []
+    for key, value in payload.items():
+        if key == "items":
+            continue
+        lines.append(f"{key}: {_yaml_scalar(value)}")
+    lines.append("items:")
+    for item in payload.get("items") or []:
+        for index, (key, value) in enumerate(item.items()):
+            prefix = "- " if index == 0 else "  "
+            lines.append(f"{prefix}{key}: {_yaml_scalar(value)}")
+    return "\n".join(lines) + "\n"
+
+
 def write_preview(payload: dict[str, Any]) -> None:
     lines = [
         "# Melhores IA — preview local",
@@ -151,16 +214,17 @@ def write_preview(payload: dict[str, Any]) -> None:
         f"filtro: coding_index >= {MIN_CODING_INDEX}",
         f"eficiencia: coding - {POINTS_PER_DOLLAR} * price (empate: menor gasto)",
         "",
-        "| Rank | Modelo | Slug | Coding Index | Price | Gasto por Coding | Eficiencia |",
-        "| ---: | --- | --- | ---: | ---: | ---: | ---: |",
+        "| Rank | Modelo | Slug | Coding Index | Intelligence Index | Price | Gasto por Coding | Eficiencia |",
+        "| ---: | --- | --- | ---: | ---: | ---: | ---: | ---: |",
     ]
     for item in payload.get("items") or []:
         lines.append(
-            "| {rank} | {model} | `{slug}` | {coding} | {price} | {gasto} | {eficiencia} |".format(
+            "| {rank} | {model} | `{slug}` | {coding} | {intelligence} | {price} | {gasto} | {eficiencia} |".format(
                 rank=item.get("rank"),
                 model=item.get("model"),
                 slug=item.get("model_id"),
                 coding=_fmt_index(item.get("coding_index")),
+                intelligence=_fmt_index(item.get("intelligence_index")),
                 price=_fmt_price(item.get("price")),
                 gasto=_fmt_gasto(item.get("gasto_por_coding")),
                 eficiencia=_fmt_eficiencia(item.get("eficiencia")),
@@ -189,13 +253,16 @@ def main() -> None:
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", encoding="utf-8") as handle:
-        yaml.dump(
-            payload,
-            handle,
-            allow_unicode=True,
-            default_flow_style=False,
-            sort_keys=False,
-        )
+        if yaml is not None:
+            yaml.dump(
+                payload,
+                handle,
+                allow_unicode=True,
+                default_flow_style=False,
+                sort_keys=False,
+            )
+        else:
+            handle.write(_dump_yaml(payload))
 
     with OUTPUT_JSON.open("w", encoding="utf-8") as handle:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
