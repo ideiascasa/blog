@@ -1,26 +1,26 @@
-updated_at: America/Sao Paulo - 04/10/2026 15:34
+updated_at: America/Sao Paulo - 05/10/2026 07:10
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
 points_per_dollar: 5
-as_of: '2026-10-01T12:00:40.401Z'
+as_of: '2026-10-05T00:00:15.055Z'
 citation: 'Source: Artificial Analysis (artificialanalysis.ai) via OpenRouter (openrouter.ai/rankings).'
 source_url: https://artificialanalysis.ai
 items:
 - rank: 1
-  model: GLM 5.3 Flash
-  model_id: z-ai/glm-5.3-flash-20260826
-  coding_index: '71.5'
-  price: '0.650'
-  gasto_por_coding: '0.009'
-  eficiencia: '68.250'
-- rank: 2
-  model: DeepSeek V4 Flash 0731 (Reasoning, Max Effort)
+  model: DeepSeek V4 Flash 0731 (Max)
   model_id: deepseek/deepseek-v4-flash-20260731
   coding_index: '69.1'
   price: '0.420'
   gasto_por_coding: '0.006'
   eficiencia: '67.000'
+- rank: 2
+  model: GLM 5.3 Flash
+  model_id: z-ai/glm-5.3-flash-20260826
+  coding_index: '71.5'
+  price: '1.100'
+  gasto_por_coding: '0.015'
+  eficiencia: '66.000'
 - rank: 3
   model: GPT-5.6 Luna (Max)
   model_id: openai/gpt-5.6-luna-20260709
@@ -50,14 +50,14 @@ items:
   gasto_por_coding: '0.003'
   eficiencia: '54.775'
 - rank: 7
-  model: GPT-5.4 nano (xhigh)
+  model: GPT-5.4 nano (Xhigh)
   model_id: openai/gpt-5.4-nano-20260317
   coding_index: '56.1'
   price: '0.725'
   gasto_por_coding: '0.013'
   eficiencia: '52.475'
 - rank: 8
-  model: MiMo-V2.5-Pro
+  model: MiMo-V2.5-Pro (Reasoning)
   model_id: xiaomi/mimo-v2.5-pro-20260422
   coding_index: '60.2'
   price: '1.566'
@@ -78,47 +78,47 @@ items:
   gasto_por_coding: '0.002'
   eficiencia: '50.180'
 - rank: 11
-  model: GLM-5.2 (max)
-  model_id: z-ai/glm-5.2-20260616
-  coding_index: '68.8'
-  price: '4.130'
-  gasto_por_coding: '0.060'
-  eficiencia: '48.150'
-- rank: 12
   model: Qwen3.7 Plus
   model_id: qwen/qwen3.7-plus-20260602
   coding_index: '55.9'
   price: '1.600'
   gasto_por_coding: '0.029'
   eficiencia: '47.900'
-- rank: 13
-  model: DeepSeek V4 Flash 0420 (Reasoning, Max Effort)
+- rank: 12
+  model: DeepSeek V4 Flash 0420 (Max)
   model_id: deepseek/deepseek-v4-flash-20260423
   coding_index: '56.2'
   price: '1.760'
   gasto_por_coding: '0.031'
   eficiencia: '47.400'
-- rank: 14
-  model: DeepSeek V4 Pro 0424 (Reasoning, Max Effort)
-  model_id: deepseek/deepseek-v4-pro-20260423
-  coding_index: '59.4'
-  price: '2.438'
-  gasto_por_coding: '0.041'
-  eficiencia: '47.210'
-- rank: 15
-  model: DeepSeek V4 Pro 0813 (Reasoning, Max Effort)
+- rank: 13
+  model: DeepSeek V4 Pro 0813 (Max)
   model_id: deepseek/deepseek-v4-pro-20260813
   coding_index: '68.8'
   price: '4.390'
   gasto_por_coding: '0.064'
   eficiencia: '46.850'
-- rank: 16
+- rank: 14
   model: Qwen3.8 27B (Xhigh)
   model_id: qwen/qwen3.8-27b-20260814
   coding_index: '68.1'
   price: '4.374'
   gasto_por_coding: '0.064'
   eficiencia: '46.230'
+- rank: 15
+  model: MiniMax-M2.7
+  model_id: minimax/minimax-m2.7-20260318
+  coding_index: '52.6'
+  price: '1.500'
+  gasto_por_coding: '0.029'
+  eficiencia: '45.100'
+- rank: 16
+  model: DeepSeek V4 Pro 0424 (Max)
+  model_id: deepseek/deepseek-v4-pro-20260423
+  coding_index: '59.4'
+  price: '2.893'
+  gasto_por_coding: '0.049'
+  eficiencia: '44.935'
 - rank: 17
   model: MiMo-V2.5
   model_id: xiaomi/mimo-v2.5-20260422
@@ -127,14 +127,14 @@ items:
   gasto_por_coding: '0.042'
   eficiencia: '44.800'
 - rank: 18
-  model: Muse Spark 1.2 (xhigh)
+  model: Muse Spark 1.2 (Xhigh)
   model_id: meta/muse-spark-1.2-20260805
   coding_index: '72.2'
   price: '5.500'
   gasto_por_coding: '0.076'
   eficiencia: '44.700'
 - rank: 19
-  model: Muse Spark 1.1 (xhigh)
+  model: Muse Spark 1.1 (Xhigh)
   model_id: meta/muse-spark-1.1-20260709
   coding_index: '71.3'
   price: '5.500'
@@ -155,14 +155,14 @@ items:
   gasto_por_coding: '0.042'
   eficiencia: '43.125'
 - rank: 22
-  model: Gemma 4 31B (Reasoning)
-  model_id: google/gemma-4-31b-it-20260402
-  coding_index: '43.4'
-  price: '0.430'
-  gasto_por_coding: '0.010'
-  eficiencia: '41.250'
+  model: Kimi K2.7 Code
+  model_id: moonshotai/kimi-k2.7-code-20260612
+  coding_index: '60.8'
+  price: '3.850'
+  gasto_por_coding: '0.063'
+  eficiencia: '41.550'
 - rank: 23
-  model: Kimi K2.6
+  model: Kimi K2.6 (Reasoning)
   model_id: moonshotai/kimi-k2.6-20260420
   coding_index: '61.8'
   price: '4.455'
@@ -190,77 +190,77 @@ items:
   gasto_por_coding: '0.033'
   eficiencia: '37.800'
 - rank: 27
-  model: MiniMax-M2.7
-  model_id: minimax/minimax-m2.7-20260318
-  coding_index: '52.6'
-  price: '3.000'
-  gasto_por_coding: '0.057'
-  eficiencia: '37.600'
-- rank: 28
   model: DeepSeek V3.1 Terminus (Reasoning)
   model_id: deepseek/deepseek-v3.1-terminus
   coding_index: '43.5'
   price: '1.371'
   gasto_por_coding: '0.032'
   eficiencia: '36.645'
-- rank: 29
+- rank: 28
   model: Qwen3.7 Max
   model_id: qwen/qwen3.7-max-20260520
   coding_index: '66.0'
   price: '5.900'
   gasto_por_coding: '0.089'
   eficiencia: '36.500'
-- rank: 30
+- rank: 29
   model: Qwen3.8 Max (0902)
   model_id: qwen/qwen3.8-max-20260902
   coding_index: '76.2'
   price: '8.000'
   gasto_por_coding: '0.105'
   eficiencia: '36.200'
-- rank: 31
-  model: Kimi K2.7 Code
-  model_id: moonshotai/kimi-k2.7-code-20260612
-  coding_index: '60.8'
-  price: '4.950'
-  gasto_por_coding: '0.081'
-  eficiencia: '36.050'
-- rank: 32
-  model: Gemini 3.8 Flash (high)
+- rank: 30
+  model: Gemini 3.8 Flash (High)
   model_id: google/gemini-3.8-flash-20260902
   coding_index: '76.3'
   price: '8.100'
   gasto_por_coding: '0.106'
   eficiencia: '35.800'
-- rank: 33
-  model: Gemini 3.7 Flash (high)
+- rank: 31
+  model: Gemma 4 31B (Reasoning)
+  model_id: google/gemma-4-31b-it-20260402
+  coding_index: '43.4'
+  price: '1.530'
+  gasto_por_coding: '0.035'
+  eficiencia: '35.750'
+- rank: 32
+  model: Gemini 3.7 Flash (High)
   model_id: google/gemini-3.7-flash-20260813
   coding_index: '76.1'
   price: '8.100'
   gasto_por_coding: '0.106'
   eficiencia: '35.600'
-- rank: 34
+- rank: 33
   model: GLM-4.6 (Reasoning)
   model_id: z-ai/glm-4.6
   coding_index: '45.8'
   price: '2.180'
   gasto_por_coding: '0.048'
   eficiencia: '34.900'
-- rank: 35
+- rank: 34
   model: Nemotron 3 Ultra 550B A55B (Reasoning)
   model_id: nvidia/nemotron-3-ultra-550b-a55b-20260604
   coding_index: '49.3'
   price: '3.000'
   gasto_por_coding: '0.061'
   eficiencia: '34.300'
-- rank: 36
+- rank: 35
   model: Qwen3.5 122B A10B (Reasoning)
   model_id: qwen/qwen3.5-122b-a10b-20260224
   coding_index: '45.7'
   price: '2.340'
   gasto_por_coding: '0.051'
   eficiencia: '34.000'
+- rank: 36
+  model: GLM-5.2 (Max)
+  model_id: z-ai/glm-5.2-20260616
+  coding_index: '68.8'
+  price: '7.028'
+  gasto_por_coding: '0.102'
+  eficiencia: '33.660'
 - rank: 37
-  model: Grok 4.6 (high)
+  model: Grok 4.6 (High)
   model_id: x-ai/grok-4.6-20260810
   coding_index: '76.8'
   price: '8.800'
@@ -295,7 +295,7 @@ items:
   gasto_por_coding: '0.077'
   eficiencia: '28.800'
 - rank: 42
-  model: Gemini 3.6 Flash (high)
+  model: Gemini 3.6 Flash (High)
   model_id: google/gemini-3.6-flash-20260721
   coding_index: '69.2'
   price: '8.100'
@@ -316,7 +316,7 @@ items:
   gasto_por_coding: '0.084'
   eficiencia: '27.950'
 - rank: 45
-  model: Grok 4.3 (high)
+  model: Grok 4.3 (High)
   model_id: x-ai/grok-4.3-20260430
   coding_index: '42.2'
   price: '3.000'
@@ -358,63 +358,63 @@ items:
   gasto_por_coding: '0.170'
   eficiencia: '6.700'
 - rank: 51
-  model: Claude Sonnet 5 (Adaptive Reasoning, Max Effort)
+  model: Claude Sonnet 5 (Max)
   model_id: anthropic/claude-sonnet-5-20260630
   coding_index: '71.5'
   price: '13.200'
   gasto_por_coding: '0.185'
   eficiencia: '5.500'
 - rank: 52
-  model: GPT-5.4 mini (xhigh)
+  model: GPT-5.4 mini (Xhigh)
   model_id: openai/gpt-5.4-mini-20260317
   coding_index: '56.1'
   price: '10.500'
   gasto_por_coding: '0.187'
   eficiencia: '3.600'
 - rank: 53
-  model: Grok 4.5 (high)
+  model: Grok 4.5 (High)
   model_id: x-ai/grok-4.5-20260708
   coding_index: '72.4'
   price: '16.000'
   gasto_por_coding: '0.221'
   eficiencia: '-7.600'
 - rank: 54
-  model: GPT-5.5 (xhigh)
+  model: GPT-5.5 (Xhigh)
   model_id: openai/gpt-5.5-20260423
   coding_index: '74.9'
   price: '17.500'
   gasto_por_coding: '0.234'
   eficiencia: '-12.600'
 - rank: 55
-  model: Gemini 3.5 Flash (high)
+  model: Kimi K3 (Max)
+  model_id: moonshotai/kimi-k3-20260715
+  coding_index: '76.2'
+  price: '18.500'
+  gasto_por_coding: '0.243'
+  eficiencia: '-16.300'
+- rank: 56
+  model: Gemini 3.5 Flash (High)
   model_id: google/gemini-3.5-flash-20260519
   coding_index: '70.1'
   price: '18.900'
   gasto_por_coding: '0.270'
   eficiencia: '-24.400'
-- rank: 56
-  model: Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)
+- rank: 57
+  model: Claude Sonnet 4.6 (Max)
   model_id: anthropic/claude-4.6-sonnet-20260217
   coding_index: '63.0'
   price: '18.000'
   gasto_por_coding: '0.286'
   eficiencia: '-27.000'
-- rank: 57
+- rank: 58
   model: Claude 4.5 Sonnet (Reasoning)
   model_id: anthropic/claude-4.5-sonnet-20250929
   coding_index: '52.1'
   price: '18.000'
   gasto_por_coding: '0.345'
   eficiencia: '-37.900'
-- rank: 58
-  model: Kimi K3 (Max)
-  model_id: moonshotai/kimi-k3-20260715
-  coding_index: '76.2'
-  price: '22.990'
-  gasto_por_coding: '0.302'
-  eficiencia: '-38.750'
 - rank: 59
-  model: GPT-5.6 Sol (xhigh)
+  model: GPT-5.6 Sol (Xhigh)
   model_id: openai/gpt-5.6-sol-20260709
   coding_index: '78.3'
   price: '24.000'
@@ -428,56 +428,56 @@ items:
   gasto_por_coding: '0.366'
   eficiencia: '-57.200'
 - rank: 61
-  model: GPT-5.1 (high)
+  model: GPT-5.1 (High)
   model_id: openai/gpt-5.1-20251113
   coding_index: '49.4'
   price: '22.500'
   gasto_por_coding: '0.455'
   eficiencia: '-63.100'
 - rank: 62
-  model: GPT-5.6 Terra (max)
+  model: GPT-5.6 Terra (Max)
   model_id: openai/gpt-5.6-terra-20260709
   coding_index: '76.7'
   price: '28.000'
   gasto_por_coding: '0.365'
   eficiencia: '-63.300'
 - rank: 63
-  model: Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)
+  model: Claude Fable 5.1 (Max, Default Fallback)
   model_id: anthropic/claude-fable-5.1-20260831
   coding_index: '81.6'
   price: '30.000'
   gasto_por_coding: '0.368'
   eficiencia: '-68.400'
 - rank: 64
-  model: Claude Opus 4.7 (Adaptive Reasoning, Max Effort)
+  model: Claude Opus 4.7 (Max)
   model_id: anthropic/claude-4.7-opus-20260416
   coding_index: '73.6'
   price: '30.000'
   gasto_por_coding: '0.408'
   eficiencia: '-76.400'
 - rank: 65
-  model: Claude Opus 5 (Adaptive Reasoning, Max Effort)
+  model: Claude Opus 5 (Max)
   model_id: anthropic/claude-opus-5-20260723
   coding_index: '78.0'
   price: '33.000'
   gasto_por_coding: '0.423'
   eficiencia: '-87.000'
 - rank: 66
-  model: GPT-5.4 (xhigh)
+  model: GPT-5.4 (Xhigh)
   model_id: openai/gpt-5.4-20260305
   coding_index: '71.1'
   price: '35.000'
   gasto_por_coding: '0.492'
   eficiencia: '-103.900'
 - rank: 67
-  model: Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)
+  model: Claude Fable 5 (Max, Opus 4.8 Fallback)
   model_id: anthropic/claude-5-fable-20260609
   coding_index: '76.5'
   price: '60.000'
   gasto_por_coding: '0.784'
   eficiencia: '-223.500'
 - rank: 68
-  model: Claude Opus 4.8 (Adaptive Reasoning, Max Effort)
+  model: Claude Opus 4.8 (Max)
   model_id: anthropic/claude-4.8-opus-20260528
   coding_index: '74.3'
   price: '60.000'
