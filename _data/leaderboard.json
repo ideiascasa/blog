@@ -1,10 +1,10 @@
 {
-  "updated_at": "America/Sao Paulo - 06/10/2026 06:54",
+  "updated_at": "America/Sao Paulo - 06/10/2026 17:06",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
   "points_per_dollar": 5,
-  "as_of": "2026-10-05T16:15:44.885Z",
+  "as_of": "2026-10-06T12:00:32.677Z",
   "citation": "Source: Artificial Analysis (artificialanalysis.ai) via OpenRouter (openrouter.ai/rankings).",
   "source_url": "https://artificialanalysis.ai",
   "items": [
@@ -169,9 +169,9 @@
       "coding_index": "68.8",
       "intelligence_index": "36.0",
       "agentic_index": "41.3",
-      "price": "4.467",
+      "price": "4.451",
       "gasto_por_coding": "0.065",
-      "eficiencia": "46.465"
+      "eficiencia": "46.545"
     },
     {
       "rank": 16,
@@ -593,17 +593,6 @@
     },
     {
       "rank": 54,
-      "model": "DeepSeek V4 Pro 0424 (Max)",
-      "model_id": "deepseek/deepseek-v4-pro-20260423",
-      "coding_index": "59.4",
-      "intelligence_index": "30.4",
-      "agentic_index": "26.3",
-      "price": "11.000",
-      "gasto_por_coding": "0.185",
-      "eficiencia": "4.400"
-    },
-    {
-      "rank": 55,
       "model": "GPT-5.4 mini (Xhigh)",
       "model_id": "openai/gpt-5.4-mini-20260317",
       "coding_index": "56.1",
@@ -614,7 +603,7 @@
       "eficiencia": "3.600"
     },
     {
-      "rank": 56,
+      "rank": 55,
       "model": "Grok 4.5 (High)",
       "model_id": "x-ai/grok-4.5-20260708",
       "coding_index": "72.4",
@@ -625,7 +614,7 @@
       "eficiencia": "-7.600"
     },
     {
-      "rank": 57,
+      "rank": 56,
       "model": "GPT-5.5 (Xhigh)",
       "model_id": "openai/gpt-5.5-20260423",
       "coding_index": "74.9",
@@ -636,7 +625,7 @@
       "eficiencia": "-12.600"
     },
     {
-      "rank": 58,
+      "rank": 57,
       "model": "Kimi K3 (Max)",
       "model_id": "moonshotai/kimi-k3-20260715",
       "coding_index": "76.2",
@@ -645,6 +634,17 @@
       "price": "18.500",
       "gasto_por_coding": "0.243",
       "eficiencia": "-16.300"
+    },
+    {
+      "rank": 58,
+      "model": "DeepSeek V4 Pro 0424 (Max)",
+      "model_id": "deepseek/deepseek-v4-pro-20260423",
+      "coding_index": "59.4",
+      "intelligence_index": "30.4",
+      "agentic_index": "26.3",
+      "price": "16.500",
+      "gasto_por_coding": "0.278",
+      "eficiencia": "-23.100"
     },
     {
       "rank": 59,
