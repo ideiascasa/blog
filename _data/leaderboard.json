@@ -1,5 +1,5 @@
 {
-  "updated_at": "America/Sao Paulo - 07/10/2026 07:01",
+  "updated_at": "America/Sao Paulo - 07/10/2026 17:31",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
@@ -164,6 +164,17 @@
     },
     {
       "rank": 15,
+      "model": "DeepSeek V4 Pro 0813 (Max)",
+      "model_id": "deepseek/deepseek-v4-pro-20260813",
+      "coding_index": "68.8",
+      "intelligence_index": "36.0",
+      "agentic_index": "41.3",
+      "price": "4.487",
+      "gasto_por_coding": "0.065",
+      "eficiencia": "46.365"
+    },
+    {
+      "rank": 16,
       "model": "Qwen3.8 27B (Xhigh)",
       "model_id": "qwen/qwen3.8-27b-20260814",
       "coding_index": "68.1",
@@ -174,18 +185,18 @@
       "eficiencia": "46.230"
     },
     {
-      "rank": 16,
+      "rank": 17,
       "model": "GLM-5.2 (Max)",
       "model_id": "z-ai/glm-5.2-20260616",
       "coding_index": "68.8",
       "intelligence_index": "33.7",
       "agentic_index": "38.4",
-      "price": "4.600",
+      "price": "4.580",
       "gasto_por_coding": "0.067",
-      "eficiencia": "45.800"
+      "eficiencia": "45.900"
     },
     {
-      "rank": 17,
+      "rank": 18,
       "model": "MiniMax-M2.7",
       "model_id": "minimax/minimax-m2.7-20260318",
       "coding_index": "52.6",
@@ -196,7 +207,7 @@
       "eficiencia": "45.100"
     },
     {
-      "rank": 18,
+      "rank": 19,
       "model": "MiMo-V2.5",
       "model_id": "xiaomi/mimo-v2.5-20260422",
       "coding_index": "56.8",
@@ -207,7 +218,7 @@
       "eficiencia": "44.800"
     },
     {
-      "rank": 19,
+      "rank": 20,
       "model": "Muse Spark 1.2 (Xhigh)",
       "model_id": "meta/muse-spark-1.2-20260805",
       "coding_index": "72.2",
@@ -218,7 +229,7 @@
       "eficiencia": "44.700"
     },
     {
-      "rank": 20,
+      "rank": 21,
       "model": "Muse Spark 1.1 (Xhigh)",
       "model_id": "meta/muse-spark-1.1-20260709",
       "coding_index": "71.3",
@@ -229,7 +240,7 @@
       "eficiencia": "43.800"
     },
     {
-      "rank": 21,
+      "rank": 22,
       "model": "MiniMax-M3",
       "model_id": "minimax/minimax-m3-20260531",
       "coding_index": "58.6",
@@ -240,7 +251,7 @@
       "eficiencia": "43.600"
     },
     {
-      "rank": 22,
+      "rank": 23,
       "model": "Qwen3.6 Plus",
       "model_id": "qwen/qwen3.6-plus-04-02",
       "coding_index": "54.5",
@@ -251,7 +262,7 @@
       "eficiencia": "43.125"
     },
     {
-      "rank": 23,
+      "rank": 24,
       "model": "Muse Glimmer (High)",
       "model_id": "meta/muse-glimmer-30b-20260810",
       "coding_index": "49.0",
@@ -260,17 +271,6 @@
       "price": "1.400",
       "gasto_por_coding": "0.029",
       "eficiencia": "42.000"
-    },
-    {
-      "rank": 24,
-      "model": "DeepSeek V4 Pro 0813 (Max)",
-      "model_id": "deepseek/deepseek-v4-pro-20260813",
-      "coding_index": "68.8",
-      "intelligence_index": "36.0",
-      "agentic_index": "41.3",
-      "price": "5.400",
-      "gasto_por_coding": "0.078",
-      "eficiencia": "41.800"
     },
     {
       "rank": 25,
@@ -609,9 +609,9 @@
       "coding_index": "59.4",
       "intelligence_index": "30.4",
       "agentic_index": "26.3",
-      "price": "11.550",
-      "gasto_por_coding": "0.194",
-      "eficiencia": "1.650"
+      "price": "13.200",
+      "gasto_por_coding": "0.222",
+      "eficiencia": "-6.600"
     },
     {
       "rank": 56,
