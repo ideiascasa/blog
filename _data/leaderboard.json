@@ -1,10 +1,10 @@
 {
-  "updated_at": "America/Sao Paulo - 08/10/2026 07:13",
+  "updated_at": "America/Sao Paulo - 08/10/2026 17:36",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
   "points_per_dollar": 5,
-  "as_of": "2026-10-07T00:00:16.192Z",
+  "as_of": "2026-10-08T12:00:30.373Z",
   "citation": "Source: Artificial Analysis (artificialanalysis.ai) via OpenRouter (openrouter.ai/rankings).",
   "source_url": "https://artificialanalysis.ai",
   "items": [
@@ -252,6 +252,17 @@
     },
     {
       "rank": 23,
+      "model": "Qwen3.6 27B (Reasoning)",
+      "model_id": "qwen/qwen3.6-27b-20260422",
+      "coding_index": "53.7",
+      "intelligence_index": "21.4",
+      "agentic_index": "18.5",
+      "price": "2.240",
+      "gasto_por_coding": "0.042",
+      "eficiencia": "42.500"
+    },
+    {
+      "rank": 24,
       "model": "Muse Glimmer (High)",
       "model_id": "meta/muse-glimmer-30b-20260810",
       "coding_index": "49.0",
@@ -262,7 +273,7 @@
       "eficiencia": "42.000"
     },
     {
-      "rank": 24,
+      "rank": 25,
       "model": "Kimi K2.6 (Reasoning)",
       "model_id": "moonshotai/kimi-k2.6-20260420",
       "coding_index": "61.8",
@@ -273,7 +284,7 @@
       "eficiencia": "39.525"
     },
     {
-      "rank": 25,
+      "rank": 26,
       "model": "LongCat 2.0",
       "model_id": "meituan/longcat-2.0-20260720",
       "coding_index": "45.3",
@@ -284,7 +295,7 @@
       "eficiencia": "37.800"
     },
     {
-      "rank": 26,
+      "rank": 27,
       "model": "DeepSeek V3.1 Terminus (Reasoning)",
       "model_id": "deepseek/deepseek-v3.1-terminus",
       "coding_index": "43.5",
@@ -295,7 +306,7 @@
       "eficiencia": "36.645"
     },
     {
-      "rank": 27,
+      "rank": 28,
       "model": "Qwen3.7 Max",
       "model_id": "qwen/qwen3.7-max-20260520",
       "coding_index": "66.0",
@@ -306,7 +317,7 @@
       "eficiencia": "36.500"
     },
     {
-      "rank": 28,
+      "rank": 29,
       "model": "Qwen3.6 35B A3B (Reasoning)",
       "model_id": "qwen/qwen3.6-35b-a3b-20260415",
       "coding_index": "41.9",
@@ -317,7 +328,7 @@
       "eficiencia": "36.400"
     },
     {
-      "rank": 29,
+      "rank": 30,
       "model": "Qwen3.8 Max (0902)",
       "model_id": "qwen/qwen3.8-max-20260902",
       "coding_index": "76.2",
@@ -328,7 +339,7 @@
       "eficiencia": "36.200"
     },
     {
-      "rank": 30,
+      "rank": 31,
       "model": "Gemma 4 31B (Reasoning)",
       "model_id": "google/gemma-4-31b-it-20260402",
       "coding_index": "43.4",
@@ -339,7 +350,7 @@
       "eficiencia": "36.130"
     },
     {
-      "rank": 31,
+      "rank": 32,
       "model": "Kimi K2.7 Code",
       "model_id": "moonshotai/kimi-k2.7-code-20260612",
       "coding_index": "60.8",
@@ -348,17 +359,6 @@
       "price": "4.950",
       "gasto_por_coding": "0.081",
       "eficiencia": "36.050"
-    },
-    {
-      "rank": 32,
-      "model": "Qwen3.6 27B (Reasoning)",
-      "model_id": "qwen/qwen3.6-27b-20260422",
-      "coding_index": "53.7",
-      "intelligence_index": "21.4",
-      "agentic_index": "18.5",
-      "price": "3.570",
-      "gasto_por_coding": "0.066",
-      "eficiencia": "35.850"
     },
     {
       "rank": 33,
@@ -483,17 +483,6 @@
     },
     {
       "rank": 44,
-      "model": "DeepSeek V4 Pro 0813 (Max)",
-      "model_id": "deepseek/deepseek-v4-pro-20260813",
-      "coding_index": "68.8",
-      "intelligence_index": "36.0",
-      "agentic_index": "41.3",
-      "price": "8.108",
-      "gasto_por_coding": "0.118",
-      "eficiencia": "28.260"
-    },
-    {
-      "rank": 45,
       "model": "GLM-5.1 (Reasoning)",
       "model_id": "z-ai/glm-5.1-20260406",
       "coding_index": "55.8",
@@ -502,6 +491,17 @@
       "price": "5.510",
       "gasto_por_coding": "0.099",
       "eficiencia": "28.250"
+    },
+    {
+      "rank": 45,
+      "model": "DeepSeek V4 Pro 0813 (Max)",
+      "model_id": "deepseek/deepseek-v4-pro-20260813",
+      "coding_index": "68.8",
+      "intelligence_index": "36.0",
+      "agentic_index": "41.3",
+      "price": "8.127",
+      "gasto_por_coding": "0.118",
+      "eficiencia": "28.165"
     },
     {
       "rank": 46,
