@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 09/10/2026 17:02
+updated_at: America/Sao Paulo - 10/10/2026 06:35
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -22,9 +22,9 @@ items:
   coding_index: '69.1'
   intelligence_index: '34.3'
   agentic_index: '41.0'
-  price: '0.420'
-  gasto_por_coding: '0.006'
-  eficiencia: '67.000'
+  price: '1.496'
+  gasto_por_coding: '0.022'
+  eficiencia: '61.620'
 - rank: 3
   model: GPT-5.6 Luna (Max)
   model_id: openai/gpt-5.6-luna-20260709
@@ -49,9 +49,9 @@ items:
   coding_index: '68.1'
   intelligence_index: '33.7'
   agentic_index: '45.8'
-  price: '2.345'
+  price: '2.330'
   gasto_por_coding: '0.034'
-  eficiencia: '56.375'
+  eficiencia: '56.450'
 - rank: 6
   model: DeepSeek V4 Flash Vision (Max)
   model_id: deepseek/deepseek-v4-flash-vision-exp-20260821
@@ -80,6 +80,15 @@ items:
   gasto_por_coding: '0.003'
   eficiencia: '54.775'
 - rank: 9
+  model: DeepSeek V4 Flash 0420 (Max)
+  model_id: deepseek/deepseek-v4-flash-20260423
+  coding_index: '56.2'
+  intelligence_index: '24.2'
+  agentic_index: '22.2'
+  price: '0.450'
+  gasto_por_coding: '0.008'
+  eficiencia: '53.950'
+- rank: 10
   model: GPT-5.4 nano (Xhigh)
   model_id: openai/gpt-5.4-nano-20260317
   coding_index: '56.1'
@@ -88,7 +97,7 @@ items:
   price: '0.725'
   gasto_por_coding: '0.013'
   eficiencia: '52.475'
-- rank: 10
+- rank: 11
   model: MiMo-V2.5-Pro (Reasoning)
   model_id: xiaomi/mimo-v2.5-pro-20260422
   coding_index: '60.2'
@@ -97,7 +106,7 @@ items:
   price: '1.566'
   gasto_por_coding: '0.026'
   eficiencia: '52.370'
-- rank: 11
+- rank: 12
   model: Solar Pro 4
   model_id: upstage/solar-pro4-20260810
   coding_index: '52.7'
@@ -106,7 +115,7 @@ items:
   price: '0.450'
   gasto_por_coding: '0.009'
   eficiencia: '50.450'
-- rank: 12
+- rank: 13
   model: Ling 3.0 Flash
   model_id: inclusionai/ling-3.0-flash-20260723
   coding_index: '50.6'
@@ -115,7 +124,7 @@ items:
   price: '0.084'
   gasto_por_coding: '0.002'
   eficiencia: '50.180'
-- rank: 13
+- rank: 14
   model: Muse Spark 1.3 (Xhigh)
   model_id: meta/muse-spark-1.3-20260902
   coding_index: '76.5'
@@ -124,7 +133,7 @@ items:
   price: '5.500'
   gasto_por_coding: '0.072'
   eficiencia: '49.000'
-- rank: 14
+- rank: 15
   model: Qwen3.7 Plus
   model_id: qwen/qwen3.7-plus-20260602
   coding_index: '55.9'
@@ -133,24 +142,15 @@ items:
   price: '1.600'
   gasto_por_coding: '0.029'
   eficiencia: '47.900'
-- rank: 15
-  model: DeepSeek V4 Pro 0813 (Max)
-  model_id: deepseek/deepseek-v4-pro-20260813
-  coding_index: '68.8'
-  intelligence_index: '36.0'
-  agentic_index: '41.3'
-  price: '4.220'
-  gasto_por_coding: '0.061'
-  eficiencia: '47.700'
 - rank: 16
-  model: DeepSeek V4 Flash 0420 (Max)
-  model_id: deepseek/deepseek-v4-flash-20260423
-  coding_index: '56.2'
-  intelligence_index: '24.2'
-  agentic_index: '22.2'
-  price: '1.760'
-  gasto_por_coding: '0.031'
-  eficiencia: '47.400'
+  model: GLM-5.2 (Max)
+  model_id: z-ai/glm-5.2-20260616
+  coding_index: '68.8'
+  intelligence_index: '33.7'
+  agentic_index: '38.4'
+  price: '4.640'
+  gasto_por_coding: '0.067'
+  eficiencia: '45.600'
 - rank: 17
   model: MiniMax-M2.7
   model_id: minimax/minimax-m2.7-20260318
@@ -206,14 +206,14 @@ items:
   gasto_por_coding: '0.042'
   eficiencia: '43.125'
 - rank: 23
-  model: Qwen3.6 27B (Reasoning)
-  model_id: qwen/qwen3.6-27b-20260422
-  coding_index: '53.7'
-  intelligence_index: '21.4'
-  agentic_index: '18.5'
-  price: '2.240'
-  gasto_por_coding: '0.042'
-  eficiencia: '42.500'
+  model: DeepSeek V4 Pro 0813 (Max)
+  model_id: deepseek/deepseek-v4-pro-20260813
+  coding_index: '68.8'
+  intelligence_index: '36.0'
+  agentic_index: '41.3'
+  price: '5.280'
+  gasto_por_coding: '0.077'
+  eficiencia: '42.400'
 - rank: 24
   model: Muse Glimmer (High)
   model_id: meta/muse-glimmer-30b-20260810
@@ -224,6 +224,15 @@ items:
   gasto_por_coding: '0.029'
   eficiencia: '42.000'
 - rank: 25
+  model: Qwen3.6 27B (Reasoning)
+  model_id: qwen/qwen3.6-27b-20260422
+  coding_index: '53.7'
+  intelligence_index: '21.4'
+  agentic_index: '18.5'
+  price: '2.790'
+  gasto_por_coding: '0.052'
+  eficiencia: '39.750'
+- rank: 26
   model: Kimi K2.6 (Reasoning)
   model_id: moonshotai/kimi-k2.6-20260420
   coding_index: '61.8'
@@ -232,7 +241,7 @@ items:
   price: '4.455'
   gasto_por_coding: '0.072'
   eficiencia: '39.525'
-- rank: 26
+- rank: 27
   model: LongCat 2.0
   model_id: meituan/longcat-2.0-20260720
   coding_index: '45.3'
@@ -241,7 +250,7 @@ items:
   price: '1.500'
   gasto_por_coding: '0.033'
   eficiencia: '37.800'
-- rank: 27
+- rank: 28
   model: DeepSeek V3.1 Terminus (Reasoning)
   model_id: deepseek/deepseek-v3.1-terminus
   coding_index: '43.5'
@@ -250,15 +259,6 @@ items:
   price: '1.371'
   gasto_por_coding: '0.032'
   eficiencia: '36.645'
-- rank: 28
-  model: Qwen3.7 Max
-  model_id: qwen/qwen3.7-max-20260520
-  coding_index: '66.0'
-  intelligence_index: '29.5'
-  agentic_index: '22.5'
-  price: '5.900'
-  gasto_por_coding: '0.089'
-  eficiencia: '36.500'
 - rank: 29
   model: Qwen3.6 35B A3B (Reasoning)
   model_id: qwen/qwen3.6-35b-a3b-20260415
@@ -296,6 +296,15 @@ items:
   gasto_por_coding: '0.081'
   eficiencia: '36.050'
 - rank: 33
+  model: DeepSeek V4 Pro 0424 (Max)
+  model_id: deepseek/deepseek-v4-pro-20260423
+  coding_index: '59.4'
+  intelligence_index: '30.4'
+  agentic_index: '26.3'
+  price: '4.680'
+  gasto_por_coding: '0.079'
+  eficiencia: '36.000'
+- rank: 34
   model: Gemini 3.8 Flash (High)
   model_id: google/gemini-3.8-flash-20260902
   coding_index: '76.3'
@@ -304,7 +313,7 @@ items:
   price: '8.100'
   gasto_por_coding: '0.106'
   eficiencia: '35.800'
-- rank: 34
+- rank: 35
   model: Gemini 3.7 Flash (High)
   model_id: google/gemini-3.7-flash-20260813
   coding_index: '76.1'
@@ -313,7 +322,7 @@ items:
   price: '8.100'
   gasto_por_coding: '0.106'
   eficiencia: '35.600'
-- rank: 35
+- rank: 36
   model: GLM-4.6 (Reasoning)
   model_id: z-ai/glm-4.6
   coding_index: '45.8'
@@ -322,7 +331,7 @@ items:
   price: '2.180'
   gasto_por_coding: '0.048'
   eficiencia: '34.900'
-- rank: 36
+- rank: 37
   model: Nemotron 3 Ultra 550B A55B (Reasoning)
   model_id: nvidia/nemotron-3-ultra-550b-a55b-20260604
   coding_index: '49.3'
@@ -331,7 +340,7 @@ items:
   price: '3.000'
   gasto_por_coding: '0.061'
   eficiencia: '34.300'
-- rank: 37
+- rank: 38
   model: Qwen3.5 122B A10B (Reasoning)
   model_id: qwen/qwen3.5-122b-a10b-20260224
   coding_index: '45.7'
@@ -340,7 +349,7 @@ items:
   price: '2.340'
   gasto_por_coding: '0.051'
   eficiencia: '34.000'
-- rank: 38
+- rank: 39
   model: Grok 4.6 (High)
   model_id: x-ai/grok-4.6-20260810
   coding_index: '76.8'
@@ -349,7 +358,7 @@ items:
   price: '8.800'
   gasto_por_coding: '0.115'
   eficiencia: '32.800'
-- rank: 39
+- rank: 40
   model: Qwen3.8 2.4T A95B
   model_id: qwen/qwen3.8-2.4t-a95b-20260812
   coding_index: '71.9'
@@ -358,7 +367,7 @@ items:
   price: '8.000'
   gasto_por_coding: '0.111'
   eficiencia: '31.900'
-- rank: 40
+- rank: 41
   model: GLM-5.3 (Max)
   model_id: z-ai/glm-5.3-20260816
   coding_index: '74.8'
@@ -367,7 +376,7 @@ items:
   price: '8.700'
   gasto_por_coding: '0.116'
   eficiencia: '31.300'
-- rank: 41
+- rank: 42
   model: GLM-4.7 (Reasoning)
   model_id: z-ai/glm-4.7-20251222
   coding_index: '45.3'
@@ -376,7 +385,7 @@ items:
   price: '3.200'
   gasto_por_coding: '0.071'
   eficiencia: '29.300'
-- rank: 42
+- rank: 43
   model: Kimi K2.5 (Reasoning)
   model_id: moonshotai/kimi-k2.5-0127
   coding_index: '46.8'
@@ -385,7 +394,7 @@ items:
   price: '3.600'
   gasto_por_coding: '0.077'
   eficiencia: '28.800'
-- rank: 43
+- rank: 44
   model: Gemini 3.6 Flash (High)
   model_id: google/gemini-3.6-flash-20260721
   coding_index: '69.2'
@@ -394,15 +403,6 @@ items:
   price: '8.100'
   gasto_por_coding: '0.117'
   eficiencia: '28.700'
-- rank: 44
-  model: GLM-5.2 (Max)
-  model_id: z-ai/glm-5.2-20260616
-  coding_index: '68.8'
-  intelligence_index: '33.7'
-  agentic_index: '38.4'
-  price: '8.080'
-  gasto_por_coding: '0.117'
-  eficiencia: '28.400'
 - rank: 45
   model: GLM-5.1 (Reasoning)
   model_id: z-ai/glm-5.1-20260406
@@ -431,6 +431,15 @@ items:
   gasto_por_coding: '0.071'
   eficiencia: '27.200'
 - rank: 48
+  model: Qwen3.7 Max
+  model_id: qwen/qwen3.7-max-20260520
+  coding_index: '66.0'
+  intelligence_index: '29.5'
+  agentic_index: '22.5'
+  price: '8.000'
+  gasto_por_coding: '0.121'
+  eficiencia: '26.000'
+- rank: 49
   model: Mistral Medium 3.5
   model_id: mistralai/mistral-medium-3.5-20260430
   coding_index: '46.9'
@@ -439,7 +448,7 @@ items:
   price: '4.500'
   gasto_por_coding: '0.096'
   eficiencia: '24.400'
-- rank: 49
+- rank: 50
   model: Gemini 3.5 Flash-Lite
   model_id: google/gemini-3.5-flash-lite-20260721
   coding_index: '49.3'
@@ -448,7 +457,7 @@ items:
   price: '5.040'
   gasto_por_coding: '0.102'
   eficiencia: '24.100'
-- rank: 50
+- rank: 51
   model: Grok Build 0.1 0616
   model_id: x-ai/grok-build-0.1-20260520
   coding_index: '51.5'
@@ -457,7 +466,7 @@ items:
   price: '6.000'
   gasto_por_coding: '0.117'
   eficiencia: '21.500'
-- rank: 51
+- rank: 52
   model: Claude 4.5 Haiku (Reasoning)
   model_id: anthropic/claude-4.5-haiku-20251001
   coding_index: '43.9'
@@ -466,7 +475,7 @@ items:
   price: '6.600'
   gasto_por_coding: '0.150'
   eficiencia: '10.900'
-- rank: 52
+- rank: 53
   model: DeepSeek V3.2 (Reasoning)
   model_id: deepseek/deepseek-v3.2-20251201
   coding_index: '44.2'
@@ -475,7 +484,7 @@ items:
   price: '7.500'
   gasto_por_coding: '0.170'
   eficiencia: '6.700'
-- rank: 53
+- rank: 54
   model: Claude Sonnet 5 (Max)
   model_id: anthropic/claude-sonnet-5-20260630
   coding_index: '71.5'
@@ -484,7 +493,7 @@ items:
   price: '13.200'
   gasto_por_coding: '0.185'
   eficiencia: '5.500'
-- rank: 54
+- rank: 55
   model: GPT-5.4 mini (Xhigh)
   model_id: openai/gpt-5.4-mini-20260317
   coding_index: '56.1'
@@ -493,15 +502,6 @@ items:
   price: '10.500'
   gasto_por_coding: '0.187'
   eficiencia: '3.600'
-- rank: 55
-  model: DeepSeek V4 Pro 0424 (Max)
-  model_id: deepseek/deepseek-v4-pro-20260423
-  coding_index: '59.4'
-  intelligence_index: '30.4'
-  agentic_index: '26.3'
-  price: '11.550'
-  gasto_por_coding: '0.194'
-  eficiencia: '1.650'
 - rank: 56
   model: Grok 4.5 (High)
   model_id: x-ai/grok-4.5-20260708
