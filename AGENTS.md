@@ -226,6 +226,12 @@ comando a comando; aqui fica a lista-mestra, na ordem de execução:
    e lacunas**. Salve as fontes vivas com `ketch ... --tag <slug>` para reuso. A lista de tarefas
    (§"Publicar a noticia") sai do mesmo material e é o que ordena os passos abaixo. **Nada fora
    deste diretório** — a fonte viva fica incorporada no dossiê, não só referenciada.
+   **Um dossiê por tarefa — e uma notícia por dia.** Quando surgirem dois ou mais leads do mesmo dia,
+   tema ou evento (mesmo relatório, mesmo anúncio, mesma empresa), eles são **irmãos**: viram **um
+   único dossiê** (mesclado **antes de redigir** e, se a redação já começou, **antes de qualquer
+   revisor** e antes da publicação) e **um único post do dia**. Dois arquivos `dossie-*.md` de raiz
+   ou dois `_posts/<mesma-data>-*.md` sobre o mesmo fato indicam que a fusão foi pulada — ver o
+   passo 0.5 da skill `criar-noticia`.
 1. **Analisar o arquivo do dossiê** conforme a skill `criar-noticia` pede — incluindo o passo 0
    (verificação de duplicata) antes de qualquer outra coisa.
 2. **Conferir que o dossiê está completo** — toda fonte com URL/veículo/autor/data/trecho; todo
@@ -236,7 +242,8 @@ comando a comando; aqui fica a lista-mestra, na ordem de execução:
    o que o título promete (quem, quando, onde, o quê, por quê).
 5. **Incorporar as informações relevantes do dossiê** para que a matéria seja completa: contexto,
    números, concorrentes, céticos — e as ressalvas do checklist do dossiê (contradições e lacunas
-   NÃO viram afirmação no post).
+   NÃO viram afirmação no post). Antes de revisar, confirme que existe **um post só** do dia;
+   rascunhos irmãos são mesclados aqui, nunca revisados em paralelo.
 6. **Revisão minuciosa de fontes e gramática por sub-agentes** (`swarm_spawn`, em paralelo): um
    verificador de fontes/fatos e um revisor de gramática pt-BR. Os sub-agentes não devem falhar:
    têm métodos alternativos (ketch scrape/search, curl, leitura do dossiê) e reportam findings com

@@ -6,7 +6,7 @@ description: Criar uma notícia em português do Brasil no blog
   publicada antes de criar o post.
 metadata:
   author: zot-blog
-  version: "1.5"
+  version: "1.6"
 ---
 
 # Skill: Criar Notícia no Blog
@@ -110,6 +110,35 @@ identifica o **mesmo fato** já publicado — aí sim, pare.
 
 A diferença não está no texto da busca: está em **ler os dois posts e julgar o fato**.
 
+### 0.5. Uma notícia por dia — irmãos viram UM dossiê e UM post (obrigatório)
+
+**A regra deste blog é uma notícia publicada por dia.** Quando o trabalho gera — ou já gerou —
+**dois ou mais leads** do mesmo dia, assunto ou evento (mesma *família* de fato: o mesmo relatório,
+o mesmo anúncio, o mesmo fornecedor, o mesmo sindicato de notícia), eles **não são posts
+separados**: são **irmãos** e devem convergir para **um único dossiê** e **um único post do dia**.
+
+Sintomas de que você está prestes a violar a regra: dois `dossie-<algo>.md` para a mesma tarefa;
+dois `_posts/<mesma-data>-*.md` sobre o mesmo evento; dois sub-agentes escrevendo "cada um a sua"
+notícia; capas extras para o mesmo dia.
+
+**O que fazer (ordem obrigatória):**
+
+1. **Detecte o irmão cedo** — antes de escrever posts e antes de disparar revisores. Um link só (ou
+   um tema só) pressupõe **UMA notícia**: não abra frentes paralelas que gerem posts distintos no
+   mesmo dia. Dois recortes de um mesmo tema são **seções do mesmo post**, não dois posts.
+2. **Mescle os dossiês primeiro** — consolide os irmãos em **um único dossiê** autossuficiente na
+   raiz do workspace (ex.: `dossie-<slug>.md`), **antes de redigir** e, se a redação já começou,
+   **antes de qualquer revisor** e antes da publicação final. Mesclar não é colar lado a lado:
+   deduplique fontes, reconcilie números em conflito e junte os checklists de lacunas em um só.
+3. **Escreva um post só.** O material dos dois recortes entra como seções do mesmo post. Não
+   publique o segundo "só para não perder o trabalho": reaproveite no post único ou guarde em
+   `_arquivo/` (fora de `_posts/`), se o usuário pedir para preservar.
+4. **Só então os revisores** (passo 4.1) — sobre **o post único e o dossiê mesclado**.
+5. **Uma capa só** para o post único (ver passo 4.1-ter).
+
+**Exceção — só com autorização explícita do usuário:** 2 posts no mesmo dia. Sem esse pedido, a
+fusão é obrigatória.
+
 ### 1. Obter conteúdo da URL
 
 Use a ferramenta `openrouter_web_fetch` para navegar até a URL fornecida pelo usuário e obter o conteúdo completo da página, incluindo título, autor(es) e data de publicação.
@@ -131,6 +160,8 @@ Downloads possíveis:
 - **Better Images of AI** (https://betterimagesofai.org) — imagens CC-BY
 
 Baixe a imagem com `curl -L -o assets/img/<slug>-featured.png <url>`.
+
+> **Apenas um agente baixa a imagem.** Quando a busca de imagem roda em paralelo (swarm), coordenar antes: combinem um único nome de arquivo com o orquestrador — `<slug>-featured.ext` —, e só o agente designado escreve o arquivo em `assets/img/`. Agentes paralelos que baixam a mesma imagem em arquivos diferentes geram duplicatas de capa (ex.: um `secure-ai-gartner-featured.jpg` e um `gartner-hype-cycle-secure-ai-neuraltrust-featured.jpg` ao mesmo tempo), e a que não for usada vira lixo não referenciado no repositório.
 
 ### 2.1. Normalizar a imagem para 1024x600 (obrigatório, sem exceção)
 
@@ -220,6 +251,10 @@ dossiê** — um arquivo único e autossuficiente no workspace (ex.: `dossie-<sl
 só um nome possível). O dossiê é o que permite escrever uma matéria completa, com contexto,
 concorrentes e céticos — não apenas o resumo da fonte original.
 
+**Um dossiê por tarefa — irmãos são mesclados (ver passo 0.5).** Se apareceram dois ou mais dossiês
+para a mesma data/tema, **mescle-os em um único antes de escrever** (e, se já houver rascunho,
+antes de qualquer revisor e antes da publicação). O dossiê mesclado é a base do **post único**.
+
 **O que o dossiê deve conter (para ser autossuficiente):**
 
 - **Lead de partida**: a URL/tema que originou a apuração.
@@ -300,7 +335,10 @@ Se encontrar problemas, corrija-os antes de prosseguir para o commit.
 
 ### 4.1. Revisão por sub-agentes (obrigatória para matérias apuradas, com ou sem dossiê pré-existente)
 
-Com o rascunho fechado, dispare **quatro sub-agentes em paralelo** (`swarm_spawn`), cada um
+**Pré-requisito: um post só.** Se existir mais de um rascunho irmão do mesmo dia (ver passo 0.5),
+**mescle antes de revisar** — os revisores recebem **o post único e o dossiê mesclado**.
+
+Com o rascunho único fechado, dispare **cinco sub-agentes em paralelo** (`swarm_spawn`), cada um
 com um brief autossuficiente (o sub-agente não vê esta conversa):
 
 1. **Verificador de fontes e fatos** — compara cada afirmação do post com o dossiê e, quando
@@ -387,6 +425,9 @@ sinal de que alguma imagem ainda está fora de 1024x600 (rode o passo 4.1 de nov
 - **Categorias e tags devem ser dinâmicas**, analisando o conteúdo do artigo — nunca use valores fixos
 - Reaproveite tags existentes sempre que possível para criar relacionamento entre posts
 - Use Swarm para executar multiplas tarefas
+- **Uma notícia por dia**: leads irmãos do mesmo dia/tema/evento → **um dossiê** (mesclado antes de
+  redigir e antes de qualquer revisor) e **um post**. Nunca dois posts para o mesmo fato do dia;
+  exceção apenas com autorização explícita do usuário (ver passo 0.5)
 - **Nunca publique a mesma notícia duas vezes** — julgue no passo 0 e reavalie no passo 5
 - **A verificação de duplicata é um julgamento, não um `grep`**: buscas mecânicas apenas
   levantam candidatos; a decisão é ler os posts e comparar o fato, o recorte e a origem
