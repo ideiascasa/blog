@@ -6,7 +6,7 @@ description: Criar uma notícia em português do Brasil no blog
   publicada antes de criar o post.
 metadata:
   author: zot-blog
-  version: "1.5"
+  version: "1.7"
 ---
 
 # Skill: Criar Notícia no Blog
@@ -110,6 +110,38 @@ identifica o **mesmo fato** já publicado — aí sim, pare.
 
 A diferença não está no texto da busca: está em **ler os dois posts e julgar o fato**.
 
+### 0.5. Um fato, um dossiê, um post — leads irmãos não viram posts separados (obrigatório)
+
+**Leads irmãos do mesmo fato não viram posts separados.** Quando o trabalho gera — ou já gerou —
+**dois ou mais leads** do mesmo dia, assunto ou evento (mesma *família* de fato: o mesmo relatório,
+o mesmo anúncio, o mesmo fornecedor, o mesmo sindicato de notícia), eles **não são posts
+separados**: são **irmãos** e devem convergir para **um único dossiê**, com o material entrando como
+**seções de um único post**. O blog **pode** publicar mais de um post no mesmo dia — desde que sejam
+**fatos distintos**; o que não pode é dividir **o mesmo fato** em dois posts.
+
+Sintomas de que você está prestes a violar a regra: dois `dossie-<algo>.md` para a mesma tarefa;
+dois `_posts/<mesma-data>-*.md` sobre o mesmo evento; dois sub-agentes escrevendo "cada um a sua"
+notícia; capas extras para o mesmo dia.
+
+**O que fazer (ordem obrigatória):**
+
+1. **Detecte o irmão cedo** — antes de escrever posts e antes de disparar revisores. Quando a tarefa
+   parte de **um link só** (ou de um tema só), o pressuposto é **um fato**: não abra frentes paralelas
+   que acabem gerando posts distintos para o mesmo fato. Dois recortes do mesmo tema são **seções do
+   mesmo post**.
+2. **Mescle os dossiês primeiro** — consolide os irmãos em **um único dossiê** autossuficiente na
+   raiz do workspace (ex.: `dossie-<slug>.md`), **antes de redigir** e, se a redação já começou,
+   **antes de qualquer revisor** e antes da publicação final. Mesclar não é colar lado a lado:
+   deduplique fontes, reconcilie números em conflito e junte os checklists de lacunas em um só.
+3. **Escreva um post só.** O material dos dois recortes entra como seções do mesmo post. Não
+   publique o segundo "só para não perder o trabalho": reaproveite no post único ou guarde em
+   `_arquivo/` (fora de `_posts/`), se o usuário pedir para preservar.
+4. **Só então os revisores** (passo 4.1) — sobre **o post único e o dossiê mesclado**.
+5. **Uma capa só** para o post único (ver passo 4.1-ter).
+
+**Exceção — só com autorização explícita do usuário:** 2 posts no mesmo dia. Sem esse pedido, a
+fusão é obrigatória.
+
 ### 1. Obter conteúdo da URL
 
 Use a ferramenta `openrouter_web_fetch` para navegar até a URL fornecida pelo usuário e obter o conteúdo completo da página, incluindo título, autor(es) e data de publicação.
@@ -131,6 +163,8 @@ Downloads possíveis:
 - **Better Images of AI** (https://betterimagesofai.org) — imagens CC-BY
 
 Baixe a imagem com `curl -L -o assets/img/<slug>-featured.png <url>`.
+
+> **Apenas um agente baixa a imagem.** Quando a busca de imagem roda em paralelo (swarm), coordenar antes: combinem um único nome de arquivo com o orquestrador — `<slug>-featured.ext` —, e só o agente designado escreve o arquivo em `assets/img/`. Agentes paralelos que baixam a mesma imagem em arquivos diferentes geram duplicatas de capa (ex.: um `secure-ai-gartner-featured.jpg` e um `gartner-hype-cycle-secure-ai-neuraltrust-featured.jpg` ao mesmo tempo), e a que não for usada vira lixo não referenciado no repositório.
 
 ### 2.1. Normalizar a imagem para 1024x600 (obrigatório, sem exceção)
 
@@ -220,6 +254,10 @@ dossiê** — um arquivo único e autossuficiente no workspace (ex.: `dossie-<sl
 só um nome possível). O dossiê é o que permite escrever uma matéria completa, com contexto,
 concorrentes e céticos — não apenas o resumo da fonte original.
 
+**Um dossiê por tarefa — irmãos são mesclados (ver passo 0.5).** Se apareceram dois ou mais dossiês
+para a mesma data/tema, **mescle-os em um único antes de escrever** (e, se já houver rascunho,
+antes de qualquer revisor e antes da publicação). O dossiê mesclado é a base do **post único**.
+
 **O que o dossiê deve conter (para ser autossuficiente):**
 
 - **Lead de partida**: a URL/tema que originou a apuração.
@@ -300,7 +338,10 @@ Se encontrar problemas, corrija-os antes de prosseguir para o commit.
 
 ### 4.1. Revisão por sub-agentes (obrigatória para matérias apuradas, com ou sem dossiê pré-existente)
 
-Com o rascunho fechado, dispare **quatro sub-agentes em paralelo** (`swarm_spawn`), cada um
+**Pré-requisito: um post só.** Se existir mais de um rascunho irmão do mesmo dia (ver passo 0.5),
+**mescle antes de revisar** — os revisores recebem **o post único e o dossiê mesclado**.
+
+Com o rascunho único fechado, dispare **cinco sub-agentes em paralelo** (`swarm_spawn`), cada um
 com um brief autossuficiente (o sub-agente não vê esta conversa):
 
 1. **Verificador de fontes e fatos** — compara cada afirmação do post com o dossiê e, quando
@@ -356,18 +397,48 @@ Só prossiga para o commit se você concluir que é notícia nova. Se no meio da
 perceber que o post ficou muito próximo de outro já publicado, volte ao passo 0.3 e ofereça
 as opções ao usuário — não commite por conta própria.
 
+### 5-bis. Nunca altere notícias do passado (obrigatório)
+
+**Publicar uma notícia nova nunca autoriza editar notícias já publicadas.** O acervo (`_posts/` e
+`assets/img/`) é registro histórico, e a URL de cada post é pública.
+
+- **Não toque** em `_posts/` de datas anteriores, nem em `assets/img/` de posts existentes, para
+  "melhorar", normalizar, corrigir ou ajustar a notícia de hoje. O escopo do commit é **o post de
+  hoje e a capa dele** — nada mais.
+- **Não reescreva história no git**: nada de `rebase`, `commit --amend`, `push --force` nem `reset`
+  sobre commits **já publicados**. Se algo publicado precisa ser desfeito, o caminho é um **commit
+  novo** (`git revert <sha>`), que preserva o passado e deixa o rastro auditável.
+- **Não commite por conta própria** alterações fora do escopo da tarefa (skill, `AGENTS.md`,
+  `.gitignore`, `scripts/`). Se algo ali precisa mudar, **proponha e pergunte** antes.
+- **Sub-agentes não mudam o repositório**: eles **leem e reportam**. Não é função deles escrever
+  arquivos, rodar `git add`/`commit`/`push`, nem editar a skill ou o `AGENTS.md` — o brief precisa
+  dizer isso explicitamente.
+- **A única exceção** (e ainda assim só se o usuário pedir): o `image:` de um post existente que
+  aponte para arquivo **ausente**. Nesse caso, avise o usuário antes de mexer.
+
 ### 6. Commit e push
 
 Após criar os arquivos (e só depois do passo 5 retornar `OK`):
 
 ```bash
+# adicione SOMENTE os caminhos exatos do post e da sua única capa
+# (nunca `git add assets/img/`, `git add -A` ou `git add .`)
 git add _posts/<data>-<slug>.md assets/img/<slug>-featured.png
 git commit -m "Novo post: <título>"
 git push
 ```
 
+Antes de fechar o commit, confirme o que foi efetivamente adicionado:
+
+```bash
+git show --stat --oneline HEAD   # deve listar 1 post e 1 imagem, nada mais
+git status --short               # não pode sobrar imagem nova/untracked alheia à tarefa
+```
+
 O `git status` deste ponto em diante não pode mostrar imagens modificadas — se mostrar, é
-sinal de que alguma imagem ainda está fora de 1024x600 (rode o passo 4.1 de novo).
+sinal de que alguma imagem ainda está fora de 1024x600 (rode o passo 4.1-bis de novo). Imagem nova
+não referenciada por post nenhum é órfã: volte ao passo 4.1-ter. Alteração em post antigo é
+reescrita de história: volte ao passo 5-bis.
 
 ## Regras obrigatórias
 
@@ -387,6 +458,12 @@ sinal de que alguma imagem ainda está fora de 1024x600 (rode o passo 4.1 de nov
 - **Categorias e tags devem ser dinâmicas**, analisando o conteúdo do artigo — nunca use valores fixos
 - Reaproveite tags existentes sempre que possível para criar relacionamento entre posts
 - Use Swarm para executar multiplas tarefas
+- **Um fato, um post**: leads irmãos do mesmo fato/dia/tema → **um dossiê** (mesclado antes de
+  redigir e antes de qualquer revisor) e **um post**; nunca dois posts para o mesmo fato (ver passo 0.5)
+- **Uma capa por post**: cada post referencia exatamente um arquivo em `assets/img/`; imagens extras
+  baixadas por sub-agentes paralelos (swarm) são órfãs e **não** entram no commit (passo 4.1-ter)
+- **Nunca altere notícias do passado**: o commit traz **o post de hoje e a capa dele**, nada mais;
+  nada de editar post antigo nem reescrever história no git (passo 5-bis)
 - **Nunca publique a mesma notícia duas vezes** — julgue no passo 0 e reavalie no passo 5
 - **A verificação de duplicata é um julgamento, não um `grep`**: buscas mecânicas apenas
   levantam candidatos; a decisão é ler os posts e comparar o fato, o recorte e a origem

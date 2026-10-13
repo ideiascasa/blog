@@ -226,6 +226,12 @@ comando a comando; aqui fica a lista-mestra, na ordem de execução:
    e lacunas**. Salve as fontes vivas com `ketch ... --tag <slug>` para reuso. A lista de tarefas
    (§"Publicar a noticia") sai do mesmo material e é o que ordena os passos abaixo. **Nada fora
    deste diretório** — a fonte viva fica incorporada no dossiê, não só referenciada.
+   **Um dossiê por tarefa.** Quando surgirem dois ou mais leads do mesmo dia, tema ou evento
+   (mesmo relatório, mesmo anúncio, mesma empresa), eles são **irmãos**: viram **um único dossiê**
+   (mesclado **antes de redigir** e, se a redação já começou, **antes de qualquer revisor** e antes
+   da publicação), e o material entra como **seções de um único post**. Dois arquivos `dossie-*.md`
+   de raiz indicam que a fusão foi pulada — ver o passo 0.5 da skill `criar-noticia`. O blog **pode**
+   publicar mais de um post no mesmo dia; o que não pode é dividir **o mesmo fato** em dois posts.
 1. **Analisar o arquivo do dossiê** conforme a skill `criar-noticia` pede — incluindo o passo 0
    (verificação de duplicata) antes de qualquer outra coisa.
 2. **Conferir que o dossiê está completo** — toda fonte com URL/veículo/autor/data/trecho; todo
