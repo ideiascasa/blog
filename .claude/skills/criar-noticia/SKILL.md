@@ -135,12 +135,12 @@ notícia; capas extras para o mesmo dia.
    deduplique fontes, reconcilie números em conflito e junte os checklists de lacunas em um só.
 3. **Escreva um post só.** O material dos dois recortes entra como seções do mesmo post. Não
    publique o segundo "só para não perder o trabalho": reaproveite no post único ou guarde em
-   `_arquivo/` (fora de `_posts/`), se o usuário pedir para preservar.
+   `_arquivo/` (fora de `_posts/`) — só faça isso se o usuário pedir para preservar.
 4. **Só então os revisores** (passo 4.1) — sobre **o post único e o dossiê mesclado**.
 5. **Uma capa só** para o post único (ver passo 4.1-ter).
 
-**Exceção — só com autorização explícita do usuário:** 2 posts no mesmo dia. Sem esse pedido, a
-fusão é obrigatória.
+**Exceção — só com autorização explícita do usuário:** dividir **um mesmo tema** em dois posts. Fatos
+**distintos** não precisam de autorização: dois assuntos diferentes no mesmo dia são dois posts legítimos.
 
 ### 1. Obter conteúdo da URL
 
@@ -338,10 +338,11 @@ Se encontrar problemas, corrija-os antes de prosseguir para o commit.
 
 ### 4.1. Revisão por sub-agentes (obrigatória para matérias apuradas, com ou sem dossiê pré-existente)
 
-**Pré-requisito: um post só.** Se existir mais de um rascunho irmão do mesmo dia (ver passo 0.5),
-**mescle antes de revisar** — os revisores recebem **o post único e o dossiê mesclado**.
+**Pré-requisito: um post por fato.** Se existir mais de um rascunho sobre o **mesmo fato** (ver passo
+0.5), **mescle antes de revisar** — os revisores recebem **o post único e o dossiê mesclado**. Posts de
+**fatos distintos** são revisados normalmente, um a um.
 
-Com o rascunho único fechado, dispare **cinco sub-agentes em paralelo** (`swarm_spawn`), cada um
+Com o rascunho fechado, dispare **cinco sub-agentes em paralelo** (`swarm_spawn`), cada um
 com um brief autossuficiente (o sub-agente não vê esta conversa):
 
 1. **Verificador de fontes e fatos** — compara cada afirmação do post com o dossiê e, quando
@@ -356,6 +357,9 @@ com um brief autossuficiente (o sub-agente não vê esta conversa):
 5. **Revisor de entretedimento** — Analisar se esta dentro dos pametros atuais de noticias relacionadas a cultura pop, tecnologia, IA e curiosidades. A narrativa pode ser ajustada para ficar mais empolgante ou mais profissional dependendo do assunto.
 
 Regras para os sub-agentes:
+
+- **Sub-agentes só leem e reportam** — não escrevem arquivos, não rodam `git add`/`commit`/`push`,
+  não editam a skill nem o `AGENTS.md`. O brief precisa dizer isso explicitamente (ver passo 5-bis).
 
 - O brief precisa conter: caminhos absolutos do post e do dossiê, as regras do AGENTS.md
   (não instalar nada; ketch com `--max-chars`; códigos de saída), as limitações de acesso
@@ -386,6 +390,24 @@ dimensões, destacando o que está fora do padrão):
 ```bash
 python3 scripts/review_post_images.py   # grava /tmp/review_post_images.pdf
 ```
+
+### 4.1-ter. Uma imagem por post — caçar capas extras baixadas em swarm (obrigatório antes do commit)
+
+Quando a busca de imagem roda em **swarm**, cada sub-agente tende a baixar a **sua própria** capa.
+Já aconteceu neste repositório: dois arquivos `*-featured.*` para a **mesma** notícia, sendo que só um
+é declarado no `image:` do post — o outro fica como **lixo não referenciado** em `assets/img/`.
+
+```bash
+scripts/check_post_images.sh --verbose   # imagens de assets/img que nenhum post referencia
+git status --short assets/img/ _posts/   # o que o commit levaria junto
+```
+
+- **Uma capa por post**: cada post traz exatamente um `assets/img/<slug>-featured.<ext>` — o do `image:`.
+- **Nunca `git add assets/img/`**, `-A` ou `.`: adicione só o caminho exato da capa; é assim que a órfã
+  fica fora do commit.
+- Órfã **não vai para o commit**: remova com `rm` depois de confirmar por `ls -l` que o timestamp é de
+  hoje (baixada nesta sessão) e que não é usada no corpo de nenhum post (`grep -rn "<arquivo>" _posts/`).
+- Nunca apague imagem **já versionada** (`git ls-files assets/img/<arquivo>`) que você não sabe se é usada.
 
 ### 5. Reverificação de duplicata (obrigatório antes do commit)
 
