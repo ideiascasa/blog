@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 14/10/2026 11:13
+updated_at: America/Sao Paulo - 14/10/2026 16:14
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -548,15 +548,6 @@ items:
   gasto_por_coding: '0.345'
   eficiencia: '-37.900'
 - rank: 61
-  model: GPT-5.6 Sol (Xhigh)
-  model_id: openai/gpt-5.6-sol-20260709
-  coding_index: '78.3'
-  intelligence_index: '44.0'
-  agentic_index: '47.4'
-  price: '24.000'
-  gasto_por_coding: '0.307'
-  eficiencia: '-41.700'
-- rank: 62
   model: Gemini 3.1 Pro Preview
   model_id: google/gemini-3.1-pro-preview-20260219
   coding_index: '68.8'
@@ -565,7 +556,7 @@ items:
   price: '25.200'
   gasto_por_coding: '0.366'
   eficiencia: '-57.200'
-- rank: 63
+- rank: 62
   model: GPT-5.1 (High)
   model_id: openai/gpt-5.1-20251113
   coding_index: '49.4'
@@ -574,7 +565,7 @@ items:
   price: '22.500'
   gasto_por_coding: '0.455'
   eficiencia: '-63.100'
-- rank: 64
+- rank: 63
   model: GPT-5.6 Terra (Max)
   model_id: openai/gpt-5.6-terra-20260709
   coding_index: '76.7'
@@ -583,7 +574,7 @@ items:
   price: '28.000'
   gasto_por_coding: '0.365'
   eficiencia: '-63.300'
-- rank: 65
+- rank: 64
   model: Claude Fable 5.1 (Max, Default Fallback)
   model_id: anthropic/claude-fable-5.1-20260831
   coding_index: '81.6'
@@ -592,7 +583,7 @@ items:
   price: '30.000'
   gasto_por_coding: '0.368'
   eficiencia: '-68.400'
-- rank: 66
+- rank: 65
   model: Claude Opus 4.7 (Max)
   model_id: anthropic/claude-4.7-opus-20260416
   coding_index: '73.6'
@@ -601,7 +592,7 @@ items:
   price: '30.000'
   gasto_por_coding: '0.408'
   eficiencia: '-76.400'
-- rank: 67
+- rank: 66
   model: Claude Opus 5 (Max)
   model_id: anthropic/claude-opus-5-20260723
   coding_index: '78.0'
@@ -610,7 +601,7 @@ items:
   price: '33.000'
   gasto_por_coding: '0.423'
   eficiencia: '-87.000'
-- rank: 68
+- rank: 67
   model: GPT-5.4 (Xhigh)
   model_id: openai/gpt-5.4-20260305
   coding_index: '71.1'
@@ -619,6 +610,15 @@ items:
   price: '35.000'
   gasto_por_coding: '0.492'
   eficiencia: '-103.900'
+- rank: 68
+  model: GPT-5.6 Sol (Xhigh)
+  model_id: openai/gpt-5.6-sol-20260709
+  coding_index: '78.3'
+  intelligence_index: '44.0'
+  agentic_index: '47.4'
+  price: '48.000'
+  gasto_por_coding: '0.613'
+  eficiencia: '-161.700'
 - rank: 69
   model: Claude Fable 5 (Max, Opus 4.8 Fallback)
   model_id: anthropic/claude-5-fable-20260609
