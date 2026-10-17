@@ -38,15 +38,57 @@ Em design, a NVIDIA fala em máquinas a partir de 14 mm de espessura e 1,36 kg. 
 
 O RTX Spark não é um processador tradicional com uma GPU separada. A NVIDIA montou um único pacote com duas metades: uma CPU Grace de até 20 núcleos e uma GPU Blackwell RTX com até 6.144 núcleos CUDA — as unidades de cálculo da placa de vídeo, que não se comparam em número aos núcleos do processador. As duas metades são ligadas pela NVLink-C2C, a interconexão proprietária da NVIDIA, a 600 GB/s. A memória é um único bloco de LPDDR5X — o tipo de RAM de baixo consumo usado em notebooks finos — compartilhado entre CPU e GPU, que chega a 128 GB.
 
-A NVIDIA promete até 1 petaflop de desempenho de IA em FP4 — um petaflop equivale a mil trilhões de operações por segundo, e FP4 significa que cada número é guardado com apenas 4 bits, uma precisão reduzida que acelera a inferência (o uso de um modelo já treinado) mas não é comparável aos cálculos científicos em FP32. A arquitetura Arm é a mesma família usada em celulares e nos chips M da Apple; ela não executa nativamente os programas x86, feitos para processadores Intel e AMD.
+A NVIDIA promete até 1 petaflop de desempenho de IA em FP4 — um petaflop equivale a mil trilhões de operações por segundo, e FP4 significa que cada número é guardado com apenas 4 bits, uma precisão reduzida que acelera a inferência (o uso de um modelo já treinado) mas não é comparável aos cálculos científicos em FP32. O número é teórico e usa esparsidade, como a própria Microsoft anota nas letras miúdas do Surface. A arquitetura Arm é a mesma família usada em celulares e nos chips M da Apple; ela não executa nativamente os programas x86, feitos para processadores Intel e AMD.
+
+A ficha oficial, publicada pela [NVIDIA](https://www.nvidia.com/en-us/products/rtx-spark/specifications/), separa as três versões do chip:
+
+| Especificação | Laptop N1X (topo) | Laptop N1X (entrada) | Desktop N1X |
+|---|---|---|---|
+| GPU | Blackwell RTX, 6.144 núcleos CUDA | Blackwell RTX, 5.120 núcleos CUDA | Blackwell RTX, 6.144 núcleos CUDA |
+| CPU | Grace, 20 núcleos (10 Cortex-X925 + 10 Cortex-A725) | Grace, 18 núcleos | Grace, 20 núcleos |
+| NPU | NVIDIA NPU | NVIDIA NPU | não listada |
+| Memória unificada | até 128 GB LPDDR5X | até 32 GB LPDDR5X | até 128 GB LPDDR5X |
+| Barramento de memória | 256 bits | 256 bits | 256 bits |
+| Velocidade da memória | 9.400 MT/s (LPDDR5X-9400) | 9.400 MT/s | 9.400 MT/s |
+| Banda de memória | cerca de 300 GB/s | cerca de 300 GB/s | cerca de 300 GB/s |
+| Ligação entre CPU e GPU | NVLink-C2C, 600 GB/s | NVLink-C2C, 600 GB/s | NVLink-C2C, 600 GB/s |
+| Consumo (TDP) | 45 a 80 W | 45 a 80 W | 140 W |
+| Desempenho de IA | 1 petaflop FP4 (esparso) | 827 teraflops FP4 | 1 petaflop FP4 |
+| Sistema operacional | Windows 11 | Windows 11 | Windows 11 |
+
+Duas ressalvas sobre essa tabela. A primeira: a NVIDIA **não publica a velocidade em MT/s** na página de especificações — ela aparece nas fichas dos fabricantes, como a da [Dell](https://www.storagereview.com/news/dell-xps-16-creator-edition-rtx-spark-n1x-windows-gb300-pro-precision) e a da [Lenovo](https://psref.lenovo.com/syspool/Sys/PDF/Yoga/Yoga_Pro_9_15N1X11/Yoga_Pro_9_15N1X11_Spec.PDF), e no [guia de portabilidade da própria NVIDIA](https://docs.nvidia.com/rtx-spark/rtx-spark-porting-guide/latest/overview.html), que fala em 256 bits e 300 GB/s. O valor exato de 9.400 MT/s num barramento de 256 bits dá 300,8 GB/s; a NVIDIA arredonda para 300. A segunda: os **600 GB/s do NVLink-C2C não são banda de memória** — são a velocidade da ligação entre as duas metades do chip. É comum ver os dois números trocados nas manchetes.
 
 A MediaTek colaborou no desenvolvimento da CPU, e os 20 núcleos são 10 Cortex-X925 e 10 Cortex-A725 — núcleos Arm padrão licenciados, não um projeto próprio como o Oryon da Qualcomm. O processador como um todo, porém, foi codesenhado pela NVIDIA com a MediaTek, e é essa combinação com a GPU que a empresa vende. Nos testes independentes, a CPU fica atrás dos chips da Apple em tarefas de um e de vários núcleos — um desempenho aquém do preço, ainda que isso não meça o desempenho nas cargas de IA.
 
 A GPU é a parte mais forte: são 6.144 núcleos CUDA, a mesma contagem da RTX 5070 de mesa. Nos testes do The Verge, o desempenho em jogos ficou entre uma RTX 5070 e uma RTX 5060 para laptops. CUDA, a plataforma de software da NVIDIA para computação em GPU, é o que torna o ecossistema da empresa difícil de replicar.
 
-Há duas variantes do chip. A de entrada tem 18 núcleos de CPU e 5.120 núcleos CUDA, com 24 GB a 32 GB de memória nas configurações de lançamento. A de topo mantém os 20 núcleos de CPU e sobe para os 6.144 núcleos CUDA. Os modelos de 128 GB divulgados até agora — como o Surface Laptop Ultra e o ProArt P16 — usam a variante de topo; os Surface e ProArt P14 de 2.599 dólares trazem 24 GB. Essa distinção importa: a configuração de entrada não tem a mesma capacidade de rodar modelos grandes que a de 5.899 ou 6.999 dólares.
+Há duas variantes do chip. A de entrada tem 18 núcleos de CPU e 5.120 núcleos CUDA, com 24 GB a 32 GB de memória nas configurações de lançamento — a NVIDIA lista o teto de 32 GB, mas fichas de fabricantes como a Dell e a Lenovo chegam a citar 64 GB. A de topo mantém os 20 núcleos de CPU e sobe para os 6.144 núcleos CUDA. Os modelos de 128 GB divulgados até agora — como o Surface Laptop Ultra e o ProArt P16 — usam a variante de topo; os Surface e ProArt P14 de 2.599 dólares trazem 24 GB. Essa distinção importa: a configuração de entrada não tem a mesma capacidade de rodar modelos grandes que a de 5.899 ou 6.999 dólares.
 
 A memória unificada é o argumento central. Em um laptop comum, a CPU usa a RAM do sistema e a GPU usa a VRAM dedicada, a memória própria da placa de vídeo; carregar um modelo grande exige copiar dados entre as duas ou torcer para ele caber na VRAM. No RTX Spark, CPU e GPU endereçam o mesmo espaço — 128 GB, quatro a oito vezes a memória de um notebook comum. É a mesma ideia que a Apple usa nos chips da série M e que a AMD adotou no Ryzen AI Max. A diferença é que a NVIDIA traz para essa arquitetura o mesmo ecossistema de software que domina a IA em data centers.
+
+## A memória é o campo de batalha
+
+Com a memória unificada, a largura de banda passa a ser o número que separa as plataformas. Não adianta caber 128 GB se o modelo roda devagar porque a GPU espera pelos dados. A tabela abaixo compara a banda teórica — o máximo que o barramento entrega, não o que cada aplicativo consegue usar:
+
+| Plataforma | Memória unificada | Barramento | Velocidade | Banda teórica |
+|---|---|---|---|---|
+| NVIDIA RTX Spark N1X (laptop) | LPDDR5X, até 128 GB | 256 bits | 9.400 MT/s | cerca de 300 GB/s |
+| NVIDIA DGX Spark (GB10) | LPDDR5X, 128 GB | 256 bits | 8.533 MT/s | 273 GB/s |
+| AMD Ryzen AI Max+ 395 (Strix Halo) | LPDDR5X, até 128 GB | 256 bits | 8.000 MT/s | 256 GB/s |
+| AMD Ryzen AI Max+ Pro 495 (Gorgon Halo) | LPDDR5X, até 192 GB | 256 bits | 8.533 MT/s | cerca de 273 GB/s |
+| Qualcomm Snapdragon X2 Elite Extreme | LPDDR5X, até 128 GB | 192 bits | 9.523 MT/s | 228 GB/s |
+| Apple M5 | LPDDR5X | não divulgado | não divulgada | 153 GB/s |
+| Apple M5 Pro | LPDDR5X | não divulgado | não divulgada | 307 GB/s |
+| Apple M5 Max (GPU de 32 núcleos) | LPDDR5X | não divulgado | não divulgada | 460 GB/s |
+| Apple M5 Max (GPU de 40 núcleos) | LPDDR5X | não divulgado | não divulgada | 614 GB/s |
+
+Fontes: [NVIDIA](https://www.nvidia.com/en-us/products/rtx-spark/specifications/) e [guia de portabilidade do RTX Spark](https://docs.nvidia.com/rtx-spark/rtx-spark-porting-guide/latest/overview.html); [NVIDIA DGX Spark](https://docs.nvidia.com/dgx/dgx-spark/hardware.html); [AMD](https://www.amd.com/en/products/processors/desktops/ryzen/ryzen-ai-halo/ryzen-ai-max-plus-395.html) para o Strix Halo e [ficha do AI Max+ Pro 495](https://www.amd.com/en/products/processors/laptop/ryzen-pro/ai-max-pro-400-series/amd-ryzen-ai-max-plus-pro-495.html) — neste último, a AMD publica a velocidade (8.533 MT/s), não a banda em GB/s; os cerca de 273 GB/s são conta direta do barramento; [Product Brief do Snapdragon X2 Elite](https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-X2-Elite-Product-Brief.pdf); [especificações do MacBook Pro](https://www.apple.com/macbook-pro/specs/) para os chips M5.
+
+A leitura é direta. O RTX Spark tem a maior banda entre as plataformas Windows, cerca de 10% acima do DGX Spark anterior e perto de 17% acima do Strix Halo. Mas perde com folga para o Apple M5 Max, que chega a 614 GB/s na configuração de GPU de 40 núcleos — o dobro da banda do superchip da NVIDIA. O M5 Pro, com 307 GB/s, praticamente empata com o RTX Spark em banda de memória, embora custe muito menos. O Snapdragon X2 Elite Extreme, com barramento de 192 bits, é o mais lento do grupo em banda, o que combina com seu posicionamento em eficiência, não em desempenho bruto.
+
+Duas notas de leitura. A Qualcomm lista até 128 GB de capacidade na ficha do Snapdragon X2 Elite, mas a variante Extreme vem com 48 GB soldados junto ao processador — 128 GB é o teto do controlador, não a configuração de fábrica. E o Ryzen AI Max+ 395 e o DGX Spark têm o mesmo barramento de 256 bits: a diferença de banda entre eles vem só da velocidade da memória, 8.000 contra 8.533 MT/s.
+
+Não há, até agora, número oficial de banda por núcleo ou por SM em nenhuma dessas plataformas — qualquer divisão desse tipo é conta do analista, não especificação. E a Apple não divulga barramento nem velocidade dos chips M: publica apenas a banda resultante.
 
 ## A promessa da IA local — e o que os testes mostram
 
@@ -88,7 +130,7 @@ O sucesso do RTX Spark, porém, não será medido apenas em unidades vendidas. O
 >
 > **Fontes primárias e apuração:** [NVIDIA Newsroom, 16/10/2026](https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs); [NVIDIA Newsroom, 01/06/2026](https://nvidianews.nvidia.com/news/nvidia-microsoft-windows-pcs-agents-rtx-spark); [NVIDIA Blog, 07/10/2026](https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/); [HP, 07/10/2026](https://www.hp.com/us-en/newsroom/press-releases/2026/hp-leads-the-expansion-of-the-local-ai-era-from-gb300-ai-workstations-to-rtx-spark-windows-pcs.html); [The Verge, 16/10/2026](https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions); [The Verge — review do Surface Laptop Ultra](https://www.theverge.com/tech/1012628/microsoft-surface-laptop-ultra-review); [PCWorld, 08/10/2026](https://www.pcworld.com/article/3256085/here-are-all-the-rtx-spark-laptops-available-at-launch-going-up-to-7000.html); [Tom's Hardware, 16/10/2026](https://www.tomshardware.com/laptops/nvidia-rtx-spark-devices-are-now-officially-on-sale-secure-the-surface-laptop-ultra-or-other-rtx-spark-laptops-here-starting-at-usd2-599-where-to-buy-pricing-and-availability-revealed-on-several-models); [Engadget, 05/06/2026](https://www.engadget.com/2187889/nvidia-rtx-spark-chip-could-give-windows-its-true-apple-silicon-moment).
 >
-> **Imagem:** “The AI Race”, de Gloria Mendoza, via [Better Images of AI](https://betterimagesofai.org/images?artist=GloriaMendoza), licenciada sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). A obra mostra corredores formados por placas de circuito e componentes de hardware — metáfora da corrida da IA que a NVIDIA tenta liderar com o RTX Spark.
+> **Imagem:** notebook aberto com tela iluminada no escuro, por Ludovic Delot, via [Unsplash](https://unsplash.com/photos/a-laptop-computer-with-a-glowing-screen-in-the-dark-pW6Q2ifY87M), sob a [Licença Unsplash](https://unsplash.com/license).
 >
 > *Preços de varejo nos Estados Unidos, sem impostos, sujeitos a variação por configuração e região. Não há, até a publicação, data ou preço de lançamento no Brasil.*
 
