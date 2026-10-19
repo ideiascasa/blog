@@ -162,6 +162,27 @@ Vale para imagens novas e para as já publicadas quando forem tocadas.
   sem ganho de layout. Confirme com `check_post_images.sh` / `sips` antes. Não é preciso
   renomear, mover nem editar o `image:` do post — só o conteúdo muda.
 
+- **Opcional — recodificação de alta qualidade a partir do original** (para capas que
+  ficaram com o corte "macio" ou sobre-comprimido). O script de cima pode gerar perda
+  dupla (re-encoda um JPEG já re-encodado pelo próprio pipeline); quando a nitidez do
+  resultado importar, refaça a partir do **original intacto** em duas etapas limpas —
+  crop central com `formatOptions best` e resize final com qualidade alta:
+
+    ```bash
+    # 1) recodifica o crop central com a melhor qualidade intermediária
+    #    (use o CROP exato que o normalize_post_image.sh reportou: aqui, 5251x3076)
+    sips -c 3076 5251 -s format jpeg -s formatOptions best original.jpg -o /tmp/crop.jpg
+    # 2) resize final para 1024x600 em qualidade 90-95 e sobrescreve o conteúdo,
+    #    preservando nome e caminho (a URL publicada não muda)
+    sips -z 600 1024 -s format jpeg -s formatOptions 95 /tmp/crop.jpg -o assets/img/<arquivo>
+    ```
+
+    Confirme com `sips -g pixelWidth -g pixelHeight` (1024x600) e
+    `check_post_images.sh` (exit 0) antes de commitar. Custa ~15-20% a mais de
+    tamanho de arquivo (ex.: 205 KB -> 238 KB) e elimina a perda dupla — vale para
+    capas novas e para re-trabalhar uma capa já publicada quando a qualidade
+    visual incomodar.
+
 - Validar **todos** os posts antes de publicar (somente leitura):
 
   ```bash
