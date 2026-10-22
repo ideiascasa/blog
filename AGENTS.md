@@ -149,6 +149,19 @@ Vale para imagens novas e para as já publicadas quando forem tocadas.
   cortá-las para essa proporção destruiria conteúdo (há diagramas verticais no acervo).
   Para as inline, apenas preserve a proporção (`max-width: 100%` já cuida do layout).
 
+- **Primeira opção de capa: a imagem oficial do press release.** Quando a notícia parte de
+  um release, extraia do HTML da página (via `ketch scrape`
+  ou `curl`) o `og:image` e as imagens do corpo — costuma ser a ilustração oficial do
+  anúncio, tematicamente perfeita e com mais qualidade que uma foto genérica de banco
+  (caso real: post NVIDIA/Nokia AI-RAN de 2026-10-22, em que a ilustração "NVIDIA-Powered
+  Telecom Networks", 1600x900, substituiu uma foto de torre a pedido do usuário).
+  Escolha a maior variante (`prv`/`og:image` costuma superar `mid`/`s`), confirme dimensões
+  com `sips` e tema/proporção antes de baixar. Atribua no rodapé do post como imagem de
+  divulgação do veículo ("ilustração X — divulgação <empresa> no [press release](url),
+  © <empresa>, uso editorial") — não como foto livre. Se o release não tiver imagem de
+  qualidade (ou ela for um logo/banner sem apelo), volte ao banco de imagens livres
+  (Unsplash/Pexels/Better Images of AI) do passo 2 da skill `criar-noticia`.
+
 - O ajuste é **cover fit**: redimensiona proporcionalmente e **corta o excesso no centro**.
   Nunca distorça (esticar/comprimir) e nunca adicione barras ou letterbox.
 - Corrigir um arquivo:
