@@ -39,7 +39,7 @@ Se as promessas se confirmarem, o efeito será silencioso e invisível ao usuár
 
 > **Fonte original:** [NVIDIA, Nokia and Leading Telecom Operators Turn Networks Into Distributed Intelligence Platforms](https://nvidianews.nvidia.com/news/nvidia-nokia-and-leading-telecom-operators-turn-networks-into-distributed-intelligence-platforms) — nvidianews.nvidia.com, por NVIDIA Newsroom (comunicado corporativo).
 >
-> **Imagem:** fotografia de torre de telecomunicações ao pôr do sol (“A sunset with a cell phone tower in the foreground”) por Charlie Fitzgerald, via [Unsplash](https://unsplash.com/photos/wrJHm8jhO4E), licenciada sob a [Licença Unsplash](https://unsplash.com/license).
+> **Imagem:** ilustração “NVIDIA-Powered Telecom Networks” — divulgação NVIDIA no [press release](https://nvidianews.nvidia.com/news/nvidia-nokia-and-leading-telecom-operators-turn-networks-into-distributed-intelligence-platforms), © NVIDIA Corporation (uso editorial, atribuição à fonte).
 
 ---
 
