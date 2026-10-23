@@ -57,7 +57,7 @@ Para o leitor que mantém um site em WordPress ou qualquer outro sistema em PHP,
 
 > **Fonte original:** [Websites shut down globally after AI finds cybersecurity flaw affecting 70% of the internet](https://www.ctvnews.ca/sci-tech/article/websites-shut-down-globally-after-ai-finds-cybersecurity-flaw-affecting-70-of-the-internet/) — CTV News, por Lisa Eadicicco e Hanna Ziady (CNN), com apuração complementar de NPR (Kate Bartlett), The Register (Jessica Lyons), g1, InfoMoney (Marina Verenicz), euronews (Una Hajdari) e fontes primárias (Wiz Research, PHP Foundation).
 >
-> **Imagem:** "Computer screen displaying colorful code snippets", por Jakub Żerdzicki, via [Unsplash](https://unsplash.com/photos/computer-screen-displaying-colorful-code-snippets-2DkNX2wVVY4), licença [Unsplash](https://unsplash.com/license) (uso gratuito, inclusive comercial).
+> **Imagem:** Fachada do Supremo Tribunal Federal, em Brasília, por Pedro França/Agência Senado, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fachada_do_Supremo_Tribunal_Federal_%28STF%29_%2854333425092%29.jpg), licenciada sob [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
 
 ---
 
