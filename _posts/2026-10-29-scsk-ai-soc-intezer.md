@@ -23,8 +23,6 @@ segundo a empresa. O serviço opera 24 horas por dia, sete dias por semana, e pr
 mercado persegue há anos: transformar a montanha de alertas que se acumula em qualquer centro de
 operações em uma fila pequena de casos que realmente merecem atenção humana.
 
-![Diagrama oficial do fluxo do AI SOC Service: alertas dos ambientes do cliente passam pelas plataformas de detecção existentes, vão para a triagem automática por IA e, quando necessário, chegam aos analistas do SCSK Security SOC](../assets/img/scsk-ai-soc-fluxo.png)
-
 ## Como funciona: triagem automática sobre a infraestrutura que o cliente já tem
 
 O detalhe mais estratégico da arquitetura do serviço é o que ele **não** faz: ele não substitui o SIEM (a
@@ -120,9 +118,7 @@ de 1.500 casos em que a IA admitiu não poder decidir sozinha.
 >
 > **Fontes complementares:** [IT Leaders](https://it.impress.co.jp/articles/-/29945), por Yoshimi Hikawa, 29/10/2026; [Cloud Watch](https://cloud.watch.impress.co.jp/docs/news/2151873.html), por Hideki Mitsuyanagi, 29/10/2026; [BUSINESS NETWORK](https://businessnetwork.jp/article/38207), 28/10/2026.
 >
-> **Imagem de capa:** [NOC-Architel](https://commons.wikimedia.org/wiki/File:NOC-Architel.jpg), por Mike Reyher, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:NOC-Architel.jpg), licenciada sob [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
->
-> **Imagem no corpo:** diagrama "AI SOCサービスの提供イメージ" do [press release oficial da SCSK Security](https://scsksecurity.co.jp/press_release_aisoc/), © SCSK Security Co., Ltd., uso editorial.
+> **Imagem de capa:** [Goddard TV Control Room](https://commons.wikimedia.org/wiki/File:Goddard_TV_Control_Room_-_39040983012.jpg), por NASA Hubble, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Goddard_TV_Control_Room_-_39040983012.jpg), licenciada sob [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
 
 ---
 
