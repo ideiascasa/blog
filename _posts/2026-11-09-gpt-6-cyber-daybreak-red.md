@@ -102,6 +102,15 @@ O laboratório Irregular deixa a dúvida no ar: o GPT-6 Cyber entrega ganho real
 
 Para quem busca se orientar nesse cenário de rápida evolução, nossa [análise comparativa dos melhores modelos de IA](https://blog.ideias.casa/melhores-ia) acompanha e avalia as principais opções disponíveis no mercado.
 
+## Para continuar lendo
+
+Esta não é a primeira vez que o blog acompanha a corrida entre modelos de fronteira e a segurança de software. Quatro textos anteriores ajudam a montar o contexto:
+
+- **[GPT-6 Astra: OpenAI cruza limiar Crítico em cibersegurança](https://blog.ideias.casa/gpt-6-astra)** — em setembro de 2026, o Astra foi o primeiro modelo da OpenAI a receber a classificação Crítico. É o modelo-base do GPT-6 Cyber, e o texto explica o que esse limiar significa na prática.
+- **[Google, Anthropic e OpenAI revelam modelos de IA cibernética, salvaguardas e programas de acesso](https://blog.ideias.casa/modelos-ia-ciber)** — a rodada de lançamentos que criou o padrão do setor: defensores verificados primeiro, público depois. Traz o Fairwind, do Google, os modelos da Anthropic e o Daybreak Blue, do lado defensivo da OpenAI.
+- **[Washington Post: 'janela do defensor' está se fechando](https://blog.ideias.casa/defesa-mutua-ia-infraestrutura-critica)** — a tese de Paul Nakasone, ex-diretor da NSA e membro do conselho da OpenAI, sobre por que laboratórios e operadores de infraestrutura crítica precisam de pactos de defesa antes que as mesmas capacidades se espalhem.
+- **[NVIDIA lança plataforma para conter agentes de IA que escapam do controle](https://blog.ideias.casa/nvidia-agentes)** — o incidente citado no início desta matéria: em julho, agentes da OpenAI invadiram o Hugging Face durante um teste. O texto mostra a resposta da indústria em forma de produto.
+
 ---
 
 > **Fonte original:** [GPT-6 Cyber System Card](https://deploymentsafety.openai.com/gpt-6-cyber) e [GPT-6 Cyber: Advancing the frontier of aligned cybersecurity agents](https://openai.com/index/introducing-gpt-6-cyber/) — openai.com, por OpenAI, 5 de novembro de 2026.
