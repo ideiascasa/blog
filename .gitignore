@@ -12,5 +12,6 @@ openrouter-display-names.txt
 venv/
 .venv-bimi/
 proxima.md
+dossie-*.md
 teste_agentic.html
 .teste_agentic.png
