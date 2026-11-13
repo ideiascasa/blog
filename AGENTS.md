@@ -64,7 +64,7 @@ que houve fallback e por quê. Não insista três vezes na mesma chamada que já
 
 #### Escada de fallback para link bloqueado (403, paywall, JS, anti-bot)
 
-Nem todo site entregue conteúdo a um `curl`/`ketch`: portais grandes (Reuters, Bloomberg, WSJ,
+Nem todo site entrega conteúdo a um `curl`/`ketch`: portais grandes (Reuters, Bloomberg, WSJ,
 Cloudflare na frente) respondem `403`, `401`, *captcha* ou HTML de consentimento. Nesse caso,
 suba a escada **nesta ordem**, parando no primeiro degrau que trouxer o conteúdo:
 
