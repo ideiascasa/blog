@@ -62,6 +62,35 @@ nesta máquina: **v0.18.1** (MIT, Go, repo `1broseidon/ketch`, manual em `ketch.
 `openrouter_web_fetch` / `openrouter_web_search`, `curl`, ou o navegador — e diga no resumo
 que houve fallback e por quê. Não insista três vezes na mesma chamada que já falhou.
 
+#### Escada de fallback para link bloqueado (403, paywall, JS, anti-bot)
+
+Nem todo site entregue conteúdo a um `curl`/`ketch`: portais grandes (Reuters, Bloomberg, WSJ,
+Cloudflare na frente) respondem `403`, `401`, *captcha* ou HTML de consentimento. Nesse caso,
+suba a escada **nesta ordem**, parando no primeiro degrau que trouxer o conteúdo:
+
+1. **`ketch scrape --max-chars 8000`** — o padrão. Resolve a maioria; o cache evita repetir.
+2. **`curl -L -A '<user-agent de navegador>'`** — ou `curl -L <url> | ketch extract` para não
+   gastar fetch: ajuda em sites que só barram o *user-agent* do ketch. Serve também para ler
+   o HTML bruto e achar `og:image`/`og:description`.
+3. **`openrouter_web_fetch`** — **último recurso, e uma opção viável** (confirmado na prática:
+   já recuperou páginas que `ketch` e `curl` não abriram). Ele busca de um IP/infra diferente
+   e costuma passar por bloqueios de borda, paywall leve e páginas renderizadas por JS. Use
+   quando os degraus 1–2 falharem por **bloqueio**, não por conteúdo inexistente.
+4. **`openrouter_web_search`** — se nem o fetch entregar a página, colete o fato por trechos
+   de busca de veículos que reproduzam a fonte primária, citando o veículo que publicou.
+
+Regras da escada:
+
+- **Diga no resumo** que houve fallback, de qual degrau e por quê (bloqueio, 403, JS).
+- **Não pule direto para o degrau 3** por conveniência: `ketch` tem cache, limite de caracteres
+  e `--tag`; `openrouter_web_fetch` devolve a página inteira e custa contexto.
+- **Uma tentativa por degrau.** Se o degrau 1 falhou por timeout, siga para o 2; não repita a
+  mesma chamada três vezes.
+- **Conteúdo obtido por fallback continua valendo como fonte** — mas o link citado no post é o
+  da fonte original, e a atribuição (veículo, autor, data) não muda.
+- Se o bloqueio for de **pagamento** e o fallback trouxer só o *lede*, **não** escreva o que não
+  conseguiu ler: use a parte acessível e atribua o resto a quem o reproduziu.
+
 ```bash
 command -v ketch                 # confirma que existe antes de contar com ele
 ketch version                    # versão, commit e build (não usa config: nunca falha por env)

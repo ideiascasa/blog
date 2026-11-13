@@ -282,6 +282,12 @@ Com o dossiê pronto, a redação segue estas regras:
 - **Não confirme link criado "de cabeça"**: todo URL citado precisa existir no dossiê OU ser
   verificado antes do commit (`ketch scrape <url> --max-chars 3000`, ou `curl -sIL` para código
   HTTP). Link morto ou que não suporta o fato atribuído é trocado por fonte equivalente.
+- **Link bloqueado tem escada de fallback** (ver *AGENTS.md*, seção **Pesquisa externa**).
+  Se o `ketch` voltar `403`/paywall/HTML de consentimento, tente `curl -L -A '<user-agent>'`
+  e, **em último caso**, `openrouter_web_fetch` — que busca de outra infraestrutura e costuma
+  passar por bloqueio de borda e JS; já recuperou páginas que `ketch` e `curl` não abriram.
+  Registre no resumo qual degrau funcionou. O link citado no post continua sendo o da fonte
+  original. Fonte paga que só entregou o *lede* não vira afirmação do que não foi lido.
 - **Moeda e unidades**: escrever "dólares"/"yuans" por extenso (nunca `$`), e qualificar
   estimativas com o nome de quem as fez ("a Wood Mackenzie estima…").
 
@@ -365,6 +371,9 @@ Regras para os sub-agentes:
   (não instalar nada; ketch com `--max-chars`; códigos de saída), as limitações de acesso
   conhecidas (paywalls, 403, JS) e o formato de saída: `SEVERIDADE: trecho → problema →
   correção sugerida`. Sub-agentes só leem e reportam; o orquestrador aplica.
+  Inclua ainda a **escada de fallback para link bloqueado** — `ketch scrape` → `curl -L -A` →
+  `openrouter_web_fetch` (último recurso, viável e já validado) — para que o sub-agente não
+  desista de um link com `403` nem devolva "não consegui acessar".
 - **Findings críticos e médios são corrigidos no post** antes de prosseguir; baixos, a critério.
 - **Re-mandar é permitido**: um sub-agente que não verificar nada pode ser re-despachado com
   instruções mais específicas. O que não pode é aceitar "não consegui" sem alternativa.
