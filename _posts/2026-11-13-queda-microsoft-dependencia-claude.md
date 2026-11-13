@@ -66,6 +66,15 @@ O mesmo raciocínio vale para a camada de inteligência artificial. Quando uma o
 
 Como recomendou **James Owen**, sócio-diretor de Riscos Digitais da consultoria Control Risks, planos de continuidade reais exigem mais do que migrar para a nuvem: pedem backups manuais, protocolos que funcionem sem conexão à internet, ensaios de crise e diversificação de fornecedores ([CNBC](https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html)). Sem isso, basta uma falha de configuração em um servidor distante para transformar uma sexta-feira comum de trabalho em uma volta forçada ao fax, à impressora e ao papel.
 
+### Leia também
+
+Este post faz parte de uma série sobre confiabilidade de infraestrutura e o custo real da dependência de plataformas:
+
+* **[Governança de IA em missão crítica: monitorar o que não pode falhar, como fazemos com aviões](https://blog.ideias.casa/governanca-ia-missao-critica)** — a mesma lógica de tolerância a falhas que a aviação aplica há décadas e que quase nenhuma empresa aplica ao software de escritório que sustenta a operação.
+* **[Do substrato ao qubit: a escassez de computação virou o produto da nuvem](https://blog.ideias.casa/escassez-cpu-gpu-nuvem)** — por que a capacidade de nuvem deixou de ser commodity, um pano de fundo que ajuda a entender a dificuldade de retomar os servidores da Microsoft em larga escala.
+* **[Microsoft: com a IA, atacantes levam vantagem no curto prazo](https://blog.ideias.casa/microsoft-ddr-2026-ia-atacantes-soc)** — o outro lado da concentração: como a superfície de ataque cresce quando toda a produtividade de uma empresa mora num único provedor.
+* **[Google, Anthropic e OpenAI revelam modelos de IA cibernética e programas de acesso](https://blog.ideias.casa/modelos-ia-ciber)** — o contexto sobre os conectores e produtos da Anthropic que pararam justamente nesta semana.
+
 ---
 
 > **Fontes originais:** [Agência Brasil / Reuters](https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/outlook-teams-e-copilot-da-microsoft-ainda-estao-fora-do-ar), [The Guardian](https://www.theguardian.com/technology/2026/nov/13/microsoft-outage-outlook-teams-word-excel-reports), [CNBC](https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html), [SecurityWeek](https://www.securityweek.com/microsoft-365-outage-disrupts-outlook-exchange-online-and-teams/), [CNN Business](https://www.cnn.com/2026/11/12/business/live-news/microsoft-global-outage-intl-hnk), [BBC News](https://www.bbc.com/news/live/cq5y10ge3dp3t), [Al Jazeera](https://www.aljazeera.com/news/2026/11/13/microsoft-hit-by-global-outages-what-happened-and-why), [Claude Status (Anthropic)](https://status.claude.com/), [AI Weekly](https://aiweekly.co/alerts/anthropic-logs-login-outage-on-claudeai-and-claude-code) e [Times of India](https://timesofindia.indiatimes.com/technology/tech-news/microsoft-outage-hits-ai-tools-of-anthropic-and-openai-companies-status-page-give-details/articleshow/135797316.cms).
