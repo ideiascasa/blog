@@ -66,7 +66,7 @@ O mesmo raciocínio vale para a camada de inteligência artificial. Quando uma o
 
 Como recomendou **James Owen**, sócio-diretor de Riscos Digitais da consultoria Control Risks, planos de continuidade reais exigem mais do que migrar para a nuvem: pedem backups manuais, protocolos que funcionem sem conexão à internet, ensaios de crise e diversificação de fornecedores ([CNBC](https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html)). Sem isso, basta uma falha de configuração em um servidor distante para transformar uma sexta-feira comum de trabalho em uma volta forçada ao fax, à impressora e ao papel.
 
-### Leia também
+## Leia também
 
 Este post faz parte de uma série sobre confiabilidade de infraestrutura e o custo real da dependência de plataformas:
 
