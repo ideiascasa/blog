@@ -1,10 +1,10 @@
 {
-  "updated_at": "America/Sao Paulo - 13/11/2026 11:25",
+  "updated_at": "America/Sao Paulo - 15/11/2026 00:55",
   "source": "artificial-analysis",
   "task_type": "coding",
   "min_coding_index": 40.0,
   "points_per_dollar": 5,
-  "as_of": "2026-11-11T12:00:51.703Z",
+  "as_of": "2026-11-14T12:00:44.416Z",
   "citation": "Source: Artificial Analysis (artificialanalysis.ai) via OpenRouter (openrouter.ai/rankings).",
   "source_url": "https://artificialanalysis.ai",
   "items": [
@@ -15,9 +15,9 @@
       "coding_index": "71.5",
       "intelligence_index": "27.8",
       "agentic_index": "50.9",
-      "price": "0.600",
-      "gasto_por_coding": "0.008",
-      "eficiencia": "68.500"
+      "price": "0.325",
+      "gasto_por_coding": "0.005",
+      "eficiencia": "69.875"
     },
     {
       "rank": 2,
@@ -26,9 +26,9 @@
       "coding_index": "69.1",
       "intelligence_index": "—",
       "agentic_index": "41.0",
-      "price": "0.192",
-      "gasto_por_coding": "0.003",
-      "eficiencia": "68.140"
+      "price": "0.360",
+      "gasto_por_coding": "0.005",
+      "eficiencia": "67.300"
     },
     {
       "rank": 3,
@@ -43,14 +43,14 @@
     },
     {
       "rank": 4,
-      "model": "GLM-5.2 (Max)",
-      "model_id": "z-ai/glm-5.2-20260616",
-      "coding_index": "68.8",
+      "model": "DeepSeek V4 Flash Vision (Max)",
+      "model_id": "deepseek/deepseek-v4-flash-vision-exp-20260821",
+      "coding_index": "65.0",
       "intelligence_index": "—",
-      "agentic_index": "38.4",
-      "price": "1.311",
-      "gasto_por_coding": "0.019",
-      "eficiencia": "62.245"
+      "agentic_index": "47.5",
+      "price": "1.294",
+      "gasto_por_coding": "0.020",
+      "eficiencia": "58.530"
     },
     {
       "rank": 5,
@@ -65,17 +65,6 @@
     },
     {
       "rank": 6,
-      "model": "DeepSeek V4 Flash Vision (Max)",
-      "model_id": "deepseek/deepseek-v4-flash-vision-exp-20260821",
-      "coding_index": "65.0",
-      "intelligence_index": "—",
-      "agentic_index": "47.5",
-      "price": "1.760",
-      "gasto_por_coding": "0.027",
-      "eficiencia": "56.200"
-    },
-    {
-      "rank": 7,
       "model": "Motif 3",
       "model_id": "motif-technologies/motif-3",
       "coding_index": "63.5",
@@ -86,7 +75,7 @@
       "eficiencia": "56.000"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "model": "Ling-3.0-flash-VL",
       "model_id": "inclusionai/ling-3.0-flash-vl-20260910",
       "coding_index": "57.0",
@@ -97,7 +86,7 @@
       "eficiencia": "55.800"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "model": "Hy3",
       "model_id": "tencent/hy3-preview-20260421",
       "coding_index": "58.8",
@@ -108,18 +97,18 @@
       "eficiencia": "54.900"
     },
     {
-      "rank": 10,
+      "rank": 9,
       "model": "DeepSeek V4 Flash 0420 (Max)",
       "model_id": "deepseek/deepseek-v4-flash-20260423",
       "coding_index": "56.2",
       "intelligence_index": "—",
       "agentic_index": "22.2",
-      "price": "0.315",
-      "gasto_por_coding": "0.006",
-      "eficiencia": "54.625"
+      "price": "0.405",
+      "gasto_por_coding": "0.007",
+      "eficiencia": "54.175"
     },
     {
-      "rank": 11,
+      "rank": 10,
       "model": "MiMo-V2.5-Pro (Reasoning)",
       "model_id": "xiaomi/mimo-v2.5-pro-20260422",
       "coding_index": "60.2",
@@ -130,7 +119,7 @@
       "eficiencia": "53.675"
     },
     {
-      "rank": 12,
+      "rank": 11,
       "model": "Qwen3.8 Max (0902)",
       "model_id": "qwen/qwen3.8-max-20260902",
       "coding_index": "76.2",
@@ -141,7 +130,7 @@
       "eficiencia": "53.200"
     },
     {
-      "rank": 13,
+      "rank": 12,
       "model": "MiniMax-M3",
       "model_id": "minimax/minimax-m3-20260531",
       "coding_index": "58.6",
@@ -152,18 +141,7 @@
       "eficiencia": "53.080"
     },
     {
-      "rank": 14,
-      "model": "GLM-5.3 (Max)",
-      "model_id": "z-ai/glm-5.3-20260816",
-      "coding_index": "74.8",
-      "intelligence_index": "31.7",
-      "agentic_index": "53.1",
-      "price": "4.450",
-      "gasto_por_coding": "0.059",
-      "eficiencia": "52.550"
-    },
-    {
-      "rank": 15,
+      "rank": 13,
       "model": "GPT-5.4 nano (Xhigh)",
       "model_id": "openai/gpt-5.4-nano-20260317",
       "coding_index": "56.1",
@@ -174,7 +152,7 @@
       "eficiencia": "52.475"
     },
     {
-      "rank": 16,
+      "rank": 14,
       "model": "Gemini 3.8 Flash (High)",
       "model_id": "google/gemini-3.8-flash-20260902",
       "coding_index": "76.3",
@@ -185,7 +163,7 @@
       "eficiencia": "51.550"
     },
     {
-      "rank": 17,
+      "rank": 15,
       "model": "Gemini 3.7 Flash (High)",
       "model_id": "google/gemini-3.7-flash-20260813",
       "coding_index": "76.1",
@@ -196,7 +174,18 @@
       "eficiencia": "51.350"
     },
     {
-      "rank": 18,
+      "rank": 16,
+      "model": "GLM-5.2 (Max)",
+      "model_id": "z-ai/glm-5.2-20260616",
+      "coding_index": "68.8",
+      "intelligence_index": "—",
+      "agentic_index": "38.4",
+      "price": "3.544",
+      "gasto_por_coding": "0.052",
+      "eficiencia": "51.080"
+    },
+    {
+      "rank": 17,
       "model": "Ling 3.0 Flash",
       "model_id": "inclusionai/ling-3.0-flash-20260723",
       "coding_index": "50.6",
@@ -207,7 +196,7 @@
       "eficiencia": "50.180"
     },
     {
-      "rank": 19,
+      "rank": 18,
       "model": "Qwen3.7 Plus",
       "model_id": "qwen/qwen3.7-plus-20260602",
       "coding_index": "55.9",
@@ -218,7 +207,7 @@
       "eficiencia": "50.150"
     },
     {
-      "rank": 20,
+      "rank": 19,
       "model": "Muse Spark 1.3 (Xhigh)",
       "model_id": "meta/muse-spark-1.3-20260902",
       "coding_index": "76.5",
@@ -229,7 +218,7 @@
       "eficiencia": "49.000"
     },
     {
-      "rank": 21,
+      "rank": 20,
       "model": "MiniMax-M2.7",
       "model_id": "minimax/minimax-m2.7-20260318",
       "coding_index": "52.6",
@@ -240,7 +229,7 @@
       "eficiencia": "47.350"
     },
     {
-      "rank": 22,
+      "rank": 21,
       "model": "Inkling Small",
       "model_id": "thinkingmachines/inkling-small-20260730",
       "coding_index": "52.9",
@@ -249,6 +238,17 @@
       "price": "1.320",
       "gasto_por_coding": "0.025",
       "eficiencia": "46.300"
+    },
+    {
+      "rank": 22,
+      "model": "GLM-5.3 (Max)",
+      "model_id": "z-ai/glm-5.3-20260816",
+      "coding_index": "74.8",
+      "intelligence_index": "31.7",
+      "agentic_index": "53.1",
+      "price": "5.800",
+      "gasto_por_coding": "0.078",
+      "eficiencia": "45.800"
     },
     {
       "rank": 23,
@@ -340,17 +340,6 @@
     },
     {
       "rank": 31,
-      "model": "Kimi K2.6 (Reasoning)",
-      "model_id": "moonshotai/kimi-k2.6-20260420",
-      "coding_index": "61.8",
-      "intelligence_index": "—",
-      "agentic_index": "20.5",
-      "price": "4.060",
-      "gasto_por_coding": "0.066",
-      "eficiencia": "41.500"
-    },
-    {
-      "rank": 32,
       "model": "Gemma 4 31B (Reasoning)",
       "model_id": "google/gemma-4-31b-it-20260402",
       "coding_index": "43.4",
@@ -361,7 +350,7 @@
       "eficiencia": "41.200"
     },
     {
-      "rank": 33,
+      "rank": 32,
       "model": "DeepSeek V3.2 (Reasoning)",
       "model_id": "deepseek/deepseek-v3.2-20251201",
       "coding_index": "44.2",
@@ -372,18 +361,18 @@
       "eficiencia": "40.700"
     },
     {
-      "rank": 34,
-      "model": "Qwen3.6 35B A3B (Reasoning)",
-      "model_id": "qwen/qwen3.6-35b-a3b-20260415",
-      "coding_index": "41.9",
-      "intelligence_index": "—",
-      "agentic_index": "13.1",
-      "price": "0.639",
-      "gasto_por_coding": "0.015",
-      "eficiencia": "38.705"
+      "rank": 33,
+      "model": "DeepSeek V4 Pro 0813 (Max)",
+      "model_id": "deepseek/deepseek-v4-pro-20260813",
+      "coding_index": "68.8",
+      "intelligence_index": "23.1",
+      "agentic_index": "41.3",
+      "price": "5.850",
+      "gasto_por_coding": "0.085",
+      "eficiencia": "39.550"
     },
     {
-      "rank": 35,
+      "rank": 34,
       "model": "LongCat 2.0",
       "model_id": "meituan/longcat-2.0-20260720",
       "coding_index": "45.3",
@@ -394,7 +383,7 @@
       "eficiencia": "37.800"
     },
     {
-      "rank": 36,
+      "rank": 35,
       "model": "DeepSeek V3.1 Terminus (Reasoning)",
       "model_id": "deepseek/deepseek-v3.1-terminus",
       "coding_index": "43.5",
@@ -405,7 +394,7 @@
       "eficiencia": "37.150"
     },
     {
-      "rank": 37,
+      "rank": 36,
       "model": "GLM-4.7 (Reasoning)",
       "model_id": "z-ai/glm-4.7-20251222",
       "coding_index": "45.3",
@@ -416,18 +405,7 @@
       "eficiencia": "36.700"
     },
     {
-      "rank": 38,
-      "model": "DeepSeek V4 Pro 0424 (Max)",
-      "model_id": "deepseek/deepseek-v4-pro-20260423",
-      "coding_index": "59.4",
-      "intelligence_index": "—",
-      "agentic_index": "26.3",
-      "price": "4.680",
-      "gasto_por_coding": "0.079",
-      "eficiencia": "36.000"
-    },
-    {
-      "rank": 39,
+      "rank": 37,
       "model": "GLM-4.6 (Reasoning)",
       "model_id": "z-ai/glm-4.6",
       "coding_index": "45.8",
@@ -438,18 +416,18 @@
       "eficiencia": "35.800"
     },
     {
-      "rank": 40,
-      "model": "Nemotron 3 Ultra 550B A55B (Reasoning)",
-      "model_id": "nvidia/nemotron-3-ultra-550b-a55b-20260604",
-      "coding_index": "49.3",
-      "intelligence_index": "11.8",
-      "agentic_index": "20.1",
-      "price": "2.700",
-      "gasto_por_coding": "0.055",
-      "eficiencia": "35.800"
+      "rank": 38,
+      "model": "Qwen3.6 35B A3B (Reasoning)",
+      "model_id": "qwen/qwen3.6-35b-a3b-20260415",
+      "coding_index": "41.9",
+      "intelligence_index": "—",
+      "agentic_index": "13.1",
+      "price": "1.575",
+      "gasto_por_coding": "0.038",
+      "eficiencia": "34.025"
     },
     {
-      "rank": 41,
+      "rank": 39,
       "model": "Qwen3.5 122B A10B (Reasoning)",
       "model_id": "qwen/qwen3.5-122b-a10b-20260224",
       "coding_index": "45.7",
@@ -460,7 +438,7 @@
       "eficiencia": "34.000"
     },
     {
-      "rank": 42,
+      "rank": 40,
       "model": "Qwen3.8 2.4T A95B",
       "model_id": "qwen/qwen3.8-2.4t-a95b-20260812",
       "coding_index": "71.9",
@@ -471,15 +449,37 @@
       "eficiencia": "31.900"
     },
     {
+      "rank": 41,
+      "model": "DeepSeek V4 Pro 0424 (Max)",
+      "model_id": "deepseek/deepseek-v4-pro-20260423",
+      "coding_index": "59.4",
+      "intelligence_index": "—",
+      "agentic_index": "26.3",
+      "price": "5.850",
+      "gasto_por_coding": "0.098",
+      "eficiencia": "30.150"
+    },
+    {
+      "rank": 42,
+      "model": "Kimi K2.6 (Reasoning)",
+      "model_id": "moonshotai/kimi-k2.6-20260420",
+      "coding_index": "61.8",
+      "intelligence_index": "—",
+      "agentic_index": "20.5",
+      "price": "6.375",
+      "gasto_por_coding": "0.103",
+      "eficiencia": "29.925"
+    },
+    {
       "rank": 43,
-      "model": "DeepSeek V4 Pro 0813 (Max)",
-      "model_id": "deepseek/deepseek-v4-pro-20260813",
-      "coding_index": "68.8",
-      "intelligence_index": "23.1",
-      "agentic_index": "41.3",
-      "price": "7.920",
-      "gasto_por_coding": "0.115",
-      "eficiencia": "29.200"
+      "model": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "coding_index": "49.3",
+      "intelligence_index": "11.8",
+      "agentic_index": "20.1",
+      "price": "4.050",
+      "gasto_por_coding": "0.082",
+      "eficiencia": "29.050"
     },
     {
       "rank": 44,
@@ -516,6 +516,17 @@
     },
     {
       "rank": 47,
+      "model": "Qwen3.6 27B (Reasoning)",
+      "model_id": "qwen/qwen3.6-27b-20260422",
+      "coding_index": "53.7",
+      "intelligence_index": "—",
+      "agentic_index": "18.5",
+      "price": "5.280",
+      "gasto_por_coding": "0.098",
+      "eficiencia": "27.300"
+    },
+    {
+      "rank": 48,
       "model": "Grok 4.3 (High)",
       "model_id": "x-ai/grok-4.3-20260430",
       "coding_index": "42.2",
@@ -523,17 +534,6 @@
       "agentic_index": "15.5",
       "price": "3.000",
       "gasto_por_coding": "0.071",
-      "eficiencia": "27.200"
-    },
-    {
-      "rank": 48,
-      "model": "Qwen3.5 397B A17B (Reasoning)",
-      "model_id": "qwen/qwen3.5-397b-a17b-20260216",
-      "coding_index": "48.2",
-      "intelligence_index": "—",
-      "agentic_index": "8.3",
-      "price": "4.200",
-      "gasto_por_coding": "0.087",
       "eficiencia": "27.200"
     },
     {
@@ -582,6 +582,17 @@
     },
     {
       "rank": 53,
+      "model": "Qwen3.5 397B A17B (Reasoning)",
+      "model_id": "qwen/qwen3.5-397b-a17b-20260216",
+      "coding_index": "48.2",
+      "intelligence_index": "—",
+      "agentic_index": "8.3",
+      "price": "5.175",
+      "gasto_por_coding": "0.107",
+      "eficiencia": "22.325"
+    },
+    {
+      "rank": 54,
       "model": "Grok Build 0.1 0616",
       "model_id": "x-ai/grok-build-0.1-20260520",
       "coding_index": "51.5",
@@ -590,17 +601,6 @@
       "price": "6.000",
       "gasto_por_coding": "0.117",
       "eficiencia": "21.500"
-    },
-    {
-      "rank": 54,
-      "model": "Qwen3.6 27B (Reasoning)",
-      "model_id": "qwen/qwen3.6-27b-20260422",
-      "coding_index": "53.7",
-      "intelligence_index": "—",
-      "agentic_index": "18.5",
-      "price": "6.600",
-      "gasto_por_coding": "0.123",
-      "eficiencia": "20.700"
     },
     {
       "rank": 55,
