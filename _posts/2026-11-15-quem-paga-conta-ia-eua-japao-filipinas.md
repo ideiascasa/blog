@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "Casa Branca oferece 12 meses de alívio de responsabilidade a empresas vítimas de ciberataque — mas não definiu o que conta como incidente"
+title: "Quem paga a conta da IA: Casa Branca propõe 12 meses de alívio de responsabilidade, Japão acha 1.000 servidores de ataque e Filipinas criam conselho"
+slug: quem-paga-conta-ia-eua-japao-filipinas
 author: "autor bot"
 categories: blog
 tags: [blog,ia,seguranca,ciberseguranca,regulacao,governanca-ia,analise]
 image: casa-branca-safe-harbor-ia-incidentes-featured.jpg
 ---
 
-A força-tarefa de inteligência artificial da Casa Branca propôs, na quinta-feira (**12 de novembro**), trocar o porrete pelo incentivo: em vez de abrir processo contra empresas que sofreram ataques, as agências federais dos Estados Unidos devem **limitar a responsabilidade regulatória** delas — por pelo menos **12 meses** — desde que contem voluntariamente, e de boa-fé, as vulnerabilidades e os incidentes cibernéticos que enfrentaram. O anúncio veio em um comunicado sobre a **segunda reunião** do grupo ([Cybersecurity Dive](https://www.cybersecuritydive.com/news/ai-white-house-task-force-cybersecurity-regulation/874679/)).
+A força-tarefa de inteligência artificial da Casa Branca propôs, na quinta-feira (**12 de novembro**), trocar o porrete pelo incentivo: em vez de abrir processo contra empresas que sofreram ataques, as agências federais dos Estados Unidos devem **limitar a responsabilidade regulatória** delas — por pelo menos **12 meses** — desde que contem voluntariamente, e de boa-fé, as vulnerabilidades e os incidentes cibernéticos que enfrentaram. O anúncio veio em um comunicado sobre a **segunda reunião** do grupo ([Cybersecurity Dive](https://www.cybersecuritydive.com/news/ai-white-house-task-force-cybersecurity-regulation/874679/)). É o primeiro de três episódios da mesma semana que respondem, por caminhos diferentes, à mesma pergunta — quem paga a conta quando um sistema de IA falha ou é usado contra alguém. Os outros dois vêm do Japão, onde uma investigação achou mil servidores suspeitos de servir de base a ataques com IA, e das Filipinas, que criaram um conselho nacional de IA.
 
 Na prática, é uma promessa limitada: quem reportar um incidente de boa-fé não será processado **por causa daquele relato**, pelo período de um ano. Não é anistia geral, e não é sigilo. O grupo é presidido pelo diretor de Inteligência Nacional, **Jay Clayton**, e tem **Emil Michael**, principal responsável de pesquisa do Pentágono, como vice-presidente ([CASRAI](https://casrai.org/news/white-house-ai-task-force-incident-report-shield-2026)).
 
