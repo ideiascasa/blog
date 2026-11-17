@@ -1,4 +1,4 @@
-updated_at: America/Sao Paulo - 15/11/2026 16:55
+updated_at: America/Sao Paulo - 16/11/2026 22:06
 source: artificial-analysis
 task_type: coding
 min_coding_index: 40.0
@@ -13,9 +13,9 @@ items:
   coding_index: '71.5'
   intelligence_index: '27.8'
   agentic_index: '50.9'
-  price: '0.325'
-  gasto_por_coding: '0.005'
-  eficiencia: '69.875'
+  price: '0.315'
+  gasto_por_coding: '0.004'
+  eficiencia: '69.925'
 - rank: 2
   model: DeepSeek V4 Flash 0731 (Max)
   model_id: deepseek/deepseek-v4-flash-20260731
@@ -44,6 +44,15 @@ items:
   gasto_por_coding: '0.033'
   eficiencia: '62.550'
 - rank: 5
+  model: Qwen3.8 27B (Xhigh)
+  model_id: qwen/qwen3.8-27b-20260814
+  coding_index: '68.1'
+  intelligence_index: '20.1'
+  agentic_index: '45.8'
+  price: '1.900'
+  gasto_por_coding: '0.028'
+  eficiencia: '58.600'
+- rank: 6
   model: DeepSeek V4 Flash Vision (Max)
   model_id: deepseek/deepseek-v4-flash-vision-exp-20260821
   coding_index: '65.0'
@@ -52,15 +61,6 @@ items:
   price: '1.294'
   gasto_por_coding: '0.020'
   eficiencia: '58.530'
-- rank: 6
-  model: Qwen3.8 27B (Xhigh)
-  model_id: qwen/qwen3.8-27b-20260814
-  coding_index: '68.1'
-  intelligence_index: '20.1'
-  agentic_index: '45.8'
-  price: '2.160'
-  gasto_por_coding: '0.032'
-  eficiencia: '57.300'
 - rank: 7
   model: Motif 3
   model_id: motif-technologies/motif-3
@@ -260,15 +260,6 @@ items:
   gasto_por_coding: '0.042'
   eficiencia: '43.125'
 - rank: 29
-  model: Muse Glimmer (High)
-  model_id: meta/muse-glimmer-30b-20260810
-  coding_index: '49.0'
-  intelligence_index: '6.3'
-  agentic_index: '8.5'
-  price: '1.200'
-  gasto_por_coding: '0.024'
-  eficiencia: '43.000'
-- rank: 30
   model: Kimi K2.7 Code
   model_id: moonshotai/kimi-k2.7-code-20260612
   coding_index: '60.8'
@@ -277,6 +268,15 @@ items:
   price: '3.712'
   gasto_por_coding: '0.061'
   eficiencia: '42.240'
+- rank: 30
+  model: Muse Glimmer (High)
+  model_id: meta/muse-glimmer-30b-20260810
+  coding_index: '49.0'
+  intelligence_index: '6.3'
+  agentic_index: '8.5'
+  price: '1.500'
+  gasto_por_coding: '0.031'
+  eficiencia: '41.500'
 - rank: 31
   model: Gemma 4 31B (Reasoning)
   model_id: google/gemma-4-31b-it-20260402
