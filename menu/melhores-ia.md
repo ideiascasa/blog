@@ -12,7 +12,7 @@ permalink: /melhores-ia
 <div markdown="0" style="position: relative; background: #ffffff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); color: #222;">
 <h3 style="margin-top: 0; margin-bottom: 6px; font-size: 18px; font-weight: bold; border-bottom: none;">Matriz de Custo-Benefício dos Modelos</h3>
 <p style="color: #666; margin-top: 0; font-size: 14px; line-height: 1.4;">
-Coding Index (Y) × Preço por milhão de tokens (X, invertido). Quanto mais ao topo e à direita, melhor a relação capacidade/preço. A matriz usa valores factuais sem nenhum cálculo. O corte de 60 pontos vs 4$ é empirico.
+Coding Index (Y) × Preço por milhão de tokens (X, invertido). Quanto mais ao topo e à direita, melhor a relação capacidade/preço. O índice é calculado por regra de 3 sobre o Coding Elo da Design Arena (831 Elo = 0% e 1460 Elo = 100%). O corte de 60 pontos vs $4 é empírico.
 </p>
 <div style="position: relative; height: 500px; width: 100%;">
 <canvas id="quadrantsChart"></canvas>
@@ -220,15 +220,17 @@ Aqui listamos as melhores IAs para código, ranqueadas por critérios internos c
 Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding_index }}. O ranking usa a **eficiência**:
 
 ```text
+coding = ((elo − {{ site.data.leaderboard.elo_min }}) / ({{ site.data.leaderboard.elo_max }} − {{ site.data.leaderboard.elo_min }})) × 100
 eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço
 
 +$1.00 de preço vale +{{ site.data.leaderboard.points_per_dollar }} pontos de coding. Em caso de empate no score, vence o menor gasto (preço / coding).
 ```
 
-- **Coding**: índice de coding da Artificial Analysis via OpenRouter.
+- **Coding**: índice de 0 a 100 obtido por regra de 3 a partir do Elo na categoria *Code Categories* da Design Arena via OpenRouter ({{ site.data.leaderboard.elo_min }} Elo = 0% e {{ site.data.leaderboard.elo_max }} Elo = 100%), substituindo o antigo Coding Index aposentado pela Artificial Analysis.
+- **Elo**: pontuação Elo bruta na Design Arena (*Code Categories*, deduplicada pelo maior Elo de cada `model_permaslug`).
 - **Preço**: soma de input + output por milhão de tokens.
 - **Gasto**: preço dividido pelo índice de coding (desempate; menor = melhor).
 - **Eficiência**: a fórmula acima; maior valor = melhor posição.
-- **Metodologias dos Indices**: [Artificial Analysis — Intelligence Benchmarking](https://artificialanalysis.ai/methodology/intelligence-benchmarking#coding).
+- **Metodologia dos Índices**: [Design Arena — API & Categorias](https://docs.designarena.ai/api-reference/overview).
 
 Obs: O cálculo também é empírico.

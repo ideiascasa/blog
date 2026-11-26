@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "_data" / "leaderboard.json"
@@ -25,6 +24,7 @@ def main() -> None:
             "slug": it.get("model_id", ""),
             "x": float(it["price"]),
             "y": float(it["coding_index"]),
+            "elo": it.get("coding_elo", "—"),
             "gasto": it.get("gasto_por_coding", ""),
             "eficiencia": it.get("eficiencia", ""),
         }
@@ -89,7 +89,7 @@ def main() -> None:
 <div class="chart-container">
   <h2 style="margin-top: 0; margin-bottom: 6px;">Matriz de Eficiência de Modelos (Até $20.00)</h2>
   <p style="color: #666; margin-top: 0; font-size: 14px;">
-    Coding Index (Y) × Preço por milhão de tokens (X, invertido). Quanto mais ao topo e à direita, melhor a relação benefício/custo.
+    Coding Index (Y) × Preço por milhão de tokens (X, invertido). Regra de 3 sobre Design Arena (831 Elo = 0%, 1460 Elo = 100%).
   </p>
 
   <div class="chart-wrapper">
@@ -117,7 +117,6 @@ const DATA = __DATA_JSON__;
 const SPLIT_PRICE = __SPLIT_PRICE__;
 const SPLIT_CODING = __SPLIT_CODING__;
 
-// Plugin de quadrantes (baseado em https://www.chartjs.org/docs/latest/samples/plugins/quadrants.html)
 const quadrantsPlugin = {
   id: 'quadrants',
   beforeDraw(chart, args, options) {
@@ -126,24 +125,19 @@ const quadrantsPlugin = {
     const splitY = y.getPixelForValue(options.splitY);
 
     ctx.save();
-    
-    // Top Left (X > splitX, ou seja, mais caro pois é invertido, Y > splitY)
+
     ctx.fillStyle = options.topLeft || 'rgba(54, 162, 235, 0.08)';
     ctx.fillRect(left, top, splitX - left, splitY - top);
 
-    // Top Right (X < splitX, ou seja, mais barato, Y > splitY)
     ctx.fillStyle = options.topRight || 'rgba(75, 192, 192, 0.16)';
     ctx.fillRect(splitX, top, right - splitX, splitY - top);
 
-    // Bottom Left
     ctx.fillStyle = options.bottomLeft || 'rgba(255, 99, 132, 0.08)';
     ctx.fillRect(left, splitY, splitX - left, bottom - splitY);
 
-    // Bottom Right
     ctx.fillStyle = options.bottomRight || 'rgba(255, 205, 86, 0.14)';
     ctx.fillRect(splitX, splitY, right - splitX, bottom - splitY);
 
-    // Linhas pontilhadas divisórias
     ctx.strokeStyle = 'rgba(0, 0, 0, 0.25)';
     ctx.lineWidth = 1;
     ctx.setLineDash([5, 5]);
@@ -175,6 +169,7 @@ new Chart(ctx, {
         slug: item.slug,
         price: item.x,
         coding: item.y,
+        elo: item.elo,
         eficiencia: item.eficiencia,
         gasto: item.gasto
       })),
@@ -192,7 +187,7 @@ new Chart(ctx, {
     scales: {
       x: {
         type: 'linear',
-        reverse: true, // ESCALA X INVERTIDA (menor preço fica à direita!)
+        reverse: true,
         min: 0,
         max: 20,
         title: {
@@ -208,7 +203,7 @@ new Chart(ctx, {
       },
       y: {
         min: 35,
-        max: 85,
+        max: 105,
         title: {
           display: true,
           text: 'Coding Index (Capacidade)',
@@ -239,7 +234,7 @@ new Chart(ctx, {
           label: function(context) {
             const raw = context.raw;
             return [
-              `Coding Index: ${raw.coding.toFixed(2)}`,
+              `Coding Index: ${raw.coding.toFixed(1)} (Elo: ${raw.elo})`,
               `Preço: $${raw.price.toFixed(2)} / 1M tokens`,
               `Eficiência: ${raw.eficiencia}`,
               `Gasto por coding: ${raw.gasto}`
