@@ -220,17 +220,15 @@ Aqui listamos as melhores IAs para código, ranqueadas por critérios internos c
 Só entram modelos com índice de coding ≥ {{ site.data.leaderboard.min_coding_index }}. O ranking usa a **eficiência**:
 
 ```text
-coding = ((elo − {{ site.data.leaderboard.elo_min }}) / ({{ site.data.leaderboard.elo_max }} − {{ site.data.leaderboard.elo_min }})) × 100
 eficiencia = coding − {{ site.data.leaderboard.points_per_dollar }} × preço
 
 +$1.00 de preço vale +{{ site.data.leaderboard.points_per_dollar }} pontos de coding. Em caso de empate no score, vence o menor gasto (preço / coding).
 ```
 
-- **Coding**: índice de 0 a 100 obtido por regra de 3 a partir do Elo na categoria *Code Categories* da Design Arena via OpenRouter ({{ site.data.leaderboard.elo_min }} Elo = 0% e {{ site.data.leaderboard.elo_max }} Elo = 100%), substituindo o antigo Coding Index aposentado pela Artificial Analysis.
-- **Elo**: pontuação Elo bruta na Design Arena (*Code Categories*, deduplicada pelo maior Elo de cada `model_permaslug`).
-- **Preço**: soma de input + output por milhão de tokens.
+- **Coding**: BenchAlign Coding Score (escala 0–100) da [BenchLM](https://benchlm.ai/coding), consolidando benchmarks de programação (SWE-bench Pro, SWE-bench Verified, LiveCodeBench, CursorBench, HumanEval, entre outros), substituindo o antigo Coding Index aposentado pela Artificial Analysis.
+- **Preço**: soma de input + output por milhão de tokens (preços padrão de API verificados pela BenchLM).
 - **Gasto**: preço dividido pelo índice de coding (desempate; menor = melhor).
 - **Eficiência**: a fórmula acima; maior valor = melhor posição.
-- **Metodologia dos Índices**: [Design Arena — API & Categorias](https://docs.designarena.ai/api-reference/overview).
+- **Metodologia dos Índices**: [BenchLM Methodology](https://benchlm.ai/methodology).
 
 Obs: O cálculo também é empírico.

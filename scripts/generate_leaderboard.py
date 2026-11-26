@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Consulta OpenRouter Benchmarks e grava _data/leaderboard.yml."""
+"""Consulta BenchLM (API oficial ou fallback público) e grava _data/leaderboard.yml."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime
@@ -33,58 +34,37 @@ OUTPUT_JSON = ROOT / "_data" / "leaderboard.json"
 PREVIEW = ROOT / "teste.md"
 SAO_PAULO = ZoneInfo("America/Sao_Paulo")
 
-API_URL = "https://openrouter.ai/api/v1/benchmarks"
-# Design Arena (codecategories) devolve todos os modelos avaliados em geração
-# de código (Website, UI Component, Data Viz, Game Dev e 3D Design).
-PARAMS = {
-    "source": "design-arena",
-    "task_type": "coding",
-}
-ELO_MIN = 831.0
-ELO_MAX = 1460.0
+DATA_API_BASE = "https://data.benchlm.ai/v1"
+PUBLIC_API_URL = "https://benchlm.ai/api/data/leaderboard"
+USER_AGENT = "blog-leaderboard-updater/1.0"
+
 MIN_CODING_INDEX = 40.0
 # eficiencia = coding - POINTS_PER_DOLLAR * price
 # +$1.00 de preço ⇔ +5 pontos de coding. Empate: menor gasto (price/coding).
 POINTS_PER_DOLLAR = 5
 
 
-def _require_api_key() -> str:
-    key = os.environ.get("OR_KEY", "").strip()
-    if not key:
-        print("OR_KEY não definida. Configure o secret/env OR_KEY.", file=sys.stderr)
-        sys.exit(1)
-    return key
+def _slugify(name: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
 
-def _price_per_million(value: Any) -> float | None:
-    if value is None or value == "":
+def _sum_price(price_input: Any, price_output: Any) -> float | None:
+    if (price_input is None or price_input == "") and (
+        price_output is None or price_output == ""
+    ):
         return None
     try:
-        return round(float(value) * 1_000_000, 4)
+        inp = float(price_input or 0.0)
+        out = float(price_output or 0.0)
     except (TypeError, ValueError):
         return None
-
-
-def _sum_price(price_input: float | None, price_output: float | None) -> float | None:
-    if price_input is None and price_output is None:
-        return None
-    return round((price_input or 0.0) + (price_output or 0.0), 3)
-
-
-def _elo_to_coding_index(elo: float) -> float:
-    return round(((elo - ELO_MIN) / (ELO_MAX - ELO_MIN)) * 100.0, 1)
+    return round(inp + out, 3)
 
 
 def _fmt_index(value: Any) -> str:
     if value is None or value == "" or value == "—":
         return "—"
     return f"{float(value):.1f}"
-
-
-def _fmt_elo(value: Any) -> str:
-    if value is None or value == "" or value == "—":
-        return "—"
-    return f"{round(float(value))}"
 
 
 def _fmt_price(value: Any) -> str:
@@ -105,66 +85,149 @@ def _fmt_eficiencia(value: Any) -> str:
     return f"{float(value):.3f}"
 
 
-def fetch_benchmarks(api_key: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-    headers = {"Authorization": f"Bearer {api_key}"}
+def _http_get_json(url: str, headers: dict[str, str] | None = None) -> dict[str, Any]:
+    req_headers = {"User-Agent": USER_AGENT}
+    if headers:
+        req_headers.update(headers)
     if requests is not None:
-        response = requests.get(API_URL, headers=headers, params=PARAMS, timeout=60)
+        response = requests.get(url, headers=req_headers, timeout=60)
         response.raise_for_status()
         payload = response.json()
     else:
-        url = f"{API_URL}?{urllib.parse.urlencode(PARAMS)}"
-        request = urllib.request.Request(url, headers=headers)
+        request = urllib.request.Request(url, headers=req_headers)
         with urllib.request.urlopen(request, timeout=60) as response:
             payload = json.loads(response.read().decode("utf-8"))
-    data = payload.get("data") or []
-    meta = payload.get("meta") or {}
-    if not isinstance(data, list):
-        raise RuntimeError("Resposta inesperada: 'data' não é uma lista")
-    return data, meta
+    if not isinstance(payload, dict):
+        raise RuntimeError(f"Resposta inesperada de {url}: objeto JSON esperado")
+    return payload
+
+
+def fetch_from_data_api(api_key: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    headers = {"Authorization": f"Bearer {api_key}"}
+
+    rankings: list[dict[str, Any]] = []
+    meta: dict[str, Any] = {}
+    offset = 0
+    while True:
+        url = (
+            f"{DATA_API_BASE}/rankings/current?"
+            + urllib.parse.urlencode(
+                {"surface": "coding", "limit": 100, "offset": offset}
+            )
+        )
+        payload = _http_get_json(url, headers=headers)
+        if not meta:
+            methodology = payload.get("methodology") or {}
+            meta = {
+                "as_of": payload.get("dataAsOf"),
+                "methodology_version": methodology.get("version"),
+                "source_mode": payload.get("rankingMode"),
+            }
+        rankings.extend(payload.get("items") or [])
+        nxt = (payload.get("pagination") or {}).get("nextOffset")
+        if nxt is None:
+            break
+        offset = int(nxt)
+
+    pricing_by_key: dict[str, dict[str, Any]] = {}
+    offset = 0
+    while True:
+        url = (
+            f"{DATA_API_BASE}/pricing?"
+            + urllib.parse.urlencode({"limit": 100, "offset": offset})
+        )
+        payload = _http_get_json(url, headers=headers)
+        for entry in payload.get("items") or []:
+            cur = entry.get("current") or {}
+            if cur.get("unit") != "per-1m-tokens":
+                continue
+            key = (entry.get("modelKey") or "").strip()
+            if key:
+                pricing_by_key[key] = cur
+        nxt = (payload.get("pagination") or {}).get("nextOffset")
+        if nxt is None:
+            break
+        offset = int(nxt)
+
+    rows: list[dict[str, Any]] = []
+    for item in rankings:
+        slug = (item.get("modelKey") or item.get("slug") or "").strip()
+        cur = pricing_by_key.get(slug) or {}
+        rows.append(
+            {
+                "model": item.get("name") or slug,
+                "creator": item.get("creator") or "",
+                "model_id": slug,
+                "coding_index": item.get("score"),
+                "evidence_status": item.get("evidenceStatus") or "",
+                "input_price": cur.get("input"),
+                "output_price": cur.get("output"),
+            }
+        )
+    return rows, meta
+
+
+def fetch_from_public_api() -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    url = (
+        f"{PUBLIC_API_URL}?"
+        + urllib.parse.urlencode({"format": "json", "category": "coding", "limit": 1000})
+    )
+    payload = _http_get_json(url)
+    meta = {
+        "as_of": payload.get("lastUpdated"),
+        "methodology_version": payload.get("methodologyVersion"),
+        "source_mode": payload.get("mode"),
+    }
+    rows: list[dict[str, Any]] = []
+    for item in payload.get("models") or []:
+        name = (item.get("model") or "").strip()
+        if not name:
+            continue
+        scores = item.get("categoryScores") or {}
+        rows.append(
+            {
+                "model": name,
+                "creator": item.get("creator") or "",
+                "model_id": _slugify(name),
+                "coding_index": scores.get("coding"),
+                "evidence_status": item.get("evidenceStatus") or "",
+                "input_price": item.get("inputPrice"),
+                "output_price": item.get("outputPrice"),
+            }
+        )
+    return rows, meta
 
 
 def to_items(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    # Deduplica por model_permaslug mantendo a variante com maior Elo
-    # (desempate por total de batalhas e win_rate).
-    best_by_slug: dict[str, tuple[tuple[float, int, float], dict[str, Any], float]] = {}
+    items: list[dict[str, Any]] = []
+    seen_ids: set[str] = set()
     for row in rows:
-        elo_raw = row.get("elo")
-        slug = (row.get("model_permaslug") or "").strip()
-        if elo_raw is None or not slug:
+        raw_score = row.get("coding_index")
+        if raw_score is None or raw_score == "":
             continue
-        elo = float(elo_raw)
-        if _elo_to_coding_index(elo) < MIN_CODING_INDEX:
+        coding_index = round(float(raw_score), 1)
+        if coding_index < MIN_CODING_INDEX or coding_index <= 0:
             continue
-        pricing = row.get("pricing") or {}
-        price_input = _price_per_million(pricing.get("prompt"))
-        price_output = _price_per_million(pricing.get("completion"))
-        price = _sum_price(price_input, price_output)
+
+        price = _sum_price(row.get("input_price"), row.get("output_price"))
         if price is None or price <= 0:
             continue
 
-        battles = int((row.get("tournament_stats") or {}).get("total") or 0)
-        win_rate = float(row.get("win_rate") or 0.0)
-        quality_key = (elo, battles, win_rate)
-        current = best_by_slug.get(slug)
-        if current is None or quality_key > current[0]:
-            best_by_slug[slug] = (quality_key, row, price)
-
-    items: list[dict[str, Any]] = []
-    for slug, (_, row, price) in best_by_slug.items():
-        elo = float(row["elo"])
-        coding_index = _elo_to_coding_index(elo)
-        if coding_index <= 0:
+        model_id = (row.get("model_id") or "").strip()
+        if not model_id or model_id in seen_ids:
             continue
+        seen_ids.add(model_id)
+
         gasto = round(price / coding_index, 3)
         eficiencia = round(coding_index - POINTS_PER_DOLLAR * price, 3)
         items.append(
             {
                 "rank": 0,
-                "model": row.get("display_name") or slug,
-                "model_id": slug,
+                "model": row.get("model") or model_id,
+                "creator": row.get("creator") or "",
+                "model_id": model_id,
                 "coding_index": f"{coding_index:.1f}",
-                "coding_elo": _fmt_elo(elo),
-                "win_rate": _fmt_index(row.get("win_rate")),
+                "evidence_status": row.get("evidence_status") or "",
                 "price": f"{price:.3f}",
                 "gasto_por_coding": f"{gasto:.3f}",
                 "eficiencia": f"{eficiencia:.3f}",
@@ -235,23 +298,22 @@ def write_preview(payload: dict[str, Any]) -> None:
         "",
         f"Atualizado em: {payload.get('updated_at')}",
         f"as_of: {payload.get('as_of')}",
-        f"source: {payload.get('source')} / {payload.get('task_type')}",
-        f"escala: {ELO_MIN:.0f} Elo = 0.0% .. {ELO_MAX:.0f} Elo = 100.0% (regra de 3)",
-        f"filtro: coding_index >= {MIN_CODING_INDEX} (deduplicado por model_permaslug)",
+        f"source: {payload.get('source')} / {payload.get('task_type')} ({payload.get('methodology_version')})",
+        f"filtro: coding_index >= {MIN_CODING_INDEX}",
         f"eficiencia: coding - {POINTS_PER_DOLLAR} * price (empate: menor gasto)",
         "",
-        "| Rank | Modelo | Slug | Coding Index | Coding Elo | Win Rate (%) | Price | Gasto por Coding | Eficiencia |",
-        "| ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |",
+        "| Rank | Modelo | Criador | Slug | Coding Index | Evidência | Price | Gasto por Coding | Eficiencia |",
+        "| ---: | --- | --- | --- | ---: | --- | ---: | ---: | ---: |",
     ]
     for item in payload.get("items") or []:
         lines.append(
-            "| {rank} | {model} | `{slug}` | {coding} | {elo} | {win_rate} | {price} | {gasto} | {eficiencia} |".format(
+            "| {rank} | {model} | {creator} | `{slug}` | {coding} | {evidence} | {price} | {gasto} | {eficiencia} |".format(
                 rank=item.get("rank"),
                 model=item.get("model"),
+                creator=item.get("creator") or "—",
                 slug=item.get("model_id"),
                 coding=_fmt_index(item.get("coding_index")),
-                elo=_fmt_elo(item.get("coding_elo")),
-                win_rate=_fmt_index(item.get("win_rate")),
+                evidence=item.get("evidence_status") or "—",
                 price=_fmt_price(item.get("price")),
                 gasto=_fmt_gasto(item.get("gasto_por_coding")),
                 eficiencia=_fmt_eficiencia(item.get("eficiencia")),
@@ -261,13 +323,37 @@ def write_preview(payload: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    api_key = _require_api_key()
-    rows, meta = fetch_benchmarks(api_key)
+    api_key = os.environ.get("BENCHLM_KEY", "").strip()
+    rows: list[dict[str, Any]]
+    meta: dict[str, Any]
+    if api_key:
+        try:
+            rows, meta = fetch_from_data_api(api_key)
+            endpoint_used = "data.benchlm.ai/v1"
+        except Exception as exc:
+            status = getattr(getattr(exc, "response", None), "status_code", None) or getattr(exc, "code", None)
+            if status in (401, 403, 429):
+                print(
+                    f"Aviso: data.benchlm.ai/v1 retornou HTTP {status}; usando endpoint público sem chave.",
+                    file=sys.stderr,
+                )
+                rows, meta = fetch_from_public_api()
+                endpoint_used = "benchlm.ai/api/data/leaderboard"
+            else:
+                raise
+    else:
+        print(
+            "Aviso: BENCHLM_KEY não definida; usando endpoint público sem chave (benchlm.ai/api/data/leaderboard).",
+            file=sys.stderr,
+        )
+        rows, meta = fetch_from_public_api()
+        endpoint_used = "benchlm.ai/api/data/leaderboard"
+
     items = to_items(rows)
 
     if not items:
         print(
-            f"Erro: API retornou {len(rows)} linhas, mas 0 modelos válidos após filtro (coding_index >= {MIN_CODING_INDEX}). "
+            f"Erro: API ({endpoint_used}) retornou {len(rows)} linhas, mas 0 modelos válidos após filtro (coding_index >= {MIN_CODING_INDEX}). "
             "Arquivos _data/leaderboard.* preservados sem alteração.",
             file=sys.stderr,
         )
@@ -276,15 +362,14 @@ def main() -> None:
     now_sp = datetime.now(SAO_PAULO)
     payload = {
         "updated_at": now_sp.strftime("America/Sao Paulo - %d/%m/%Y %H:%M"),
-        "source": "design-arena",
+        "source": "benchlm",
         "task_type": "coding",
-        "elo_min": int(ELO_MIN),
-        "elo_max": int(ELO_MAX),
         "min_coding_index": MIN_CODING_INDEX,
         "points_per_dollar": POINTS_PER_DOLLAR,
         "as_of": meta.get("as_of"),
-        "citation": meta.get("citation") or "Source: Design Arena (www.designarena.ai) via OpenRouter (openrouter.ai/rankings).",
-        "source_url": meta.get("source_url") or "https://www.designarena.ai",
+        "methodology_version": meta.get("methodology_version"),
+        "citation": "Data from BenchLM.ai (benchlm.ai/coding), CC BY-NC 4.0.",
+        "source_url": "https://benchlm.ai/coding",
         "items": items,
     }
 
@@ -306,12 +391,12 @@ def main() -> None:
 
     write_preview(payload)
 
-    with_score = [r for r in rows if r.get("elo") is not None]
-    scores = [_elo_to_coding_index(float(r["elo"])) for r in with_score]
-    print(f"API retornou: {len(rows)} linhas (com elo: {len(with_score)})")
+    with_score = [r for r in rows if r.get("coding_index") is not None]
+    scores = [float(r["coding_index"]) for r in with_score]
+    print(f"Fonte ({endpoint_used}) retornou: {len(rows)} modelos (com coding_index: {len(with_score)})")
     if scores:
         print(f"Faixa coding_index na API: {min(scores)} .. {max(scores)}")
-    print(f"Após filtro coding_index >= {MIN_CODING_INDEX} e deduplicação: {len(items)} modelos")
+    print(f"Após filtro coding_index >= {MIN_CODING_INDEX} e preço > 0: {len(items)} modelos")
     if items:
         print(
             f"Faixa eficiencia: {items[0]['eficiencia']} .. {items[-1]['eficiencia']}"

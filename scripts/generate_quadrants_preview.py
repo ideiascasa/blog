@@ -24,7 +24,6 @@ def main() -> None:
             "slug": it.get("model_id", ""),
             "x": float(it["price"]),
             "y": float(it["coding_index"]),
-            "elo": it.get("coding_elo", "—"),
             "gasto": it.get("gasto_por_coding", ""),
             "eficiencia": it.get("eficiencia", ""),
         }
@@ -89,7 +88,7 @@ def main() -> None:
 <div class="chart-container">
   <h2 style="margin-top: 0; margin-bottom: 6px;">Matriz de Eficiência de Modelos (Até $20.00)</h2>
   <p style="color: #666; margin-top: 0; font-size: 14px;">
-    Coding Index (Y) × Preço por milhão de tokens (X, invertido). Regra de 3 sobre Design Arena (831 Elo = 0%, 1460 Elo = 100%).
+    Coding Index (Y) × Preço por milhão de tokens (X, invertido). Valores factuais da BenchLM (corte empírico de 60 pontos vs $4).
   </p>
 
   <div class="chart-wrapper">
@@ -169,7 +168,6 @@ new Chart(ctx, {
         slug: item.slug,
         price: item.x,
         coding: item.y,
-        elo: item.elo,
         eficiencia: item.eficiencia,
         gasto: item.gasto
       })),
@@ -203,7 +201,7 @@ new Chart(ctx, {
       },
       y: {
         min: 35,
-        max: 105,
+        max: 100,
         title: {
           display: true,
           text: 'Coding Index (Capacidade)',
@@ -234,7 +232,7 @@ new Chart(ctx, {
           label: function(context) {
             const raw = context.raw;
             return [
-              `Coding Index: ${raw.coding.toFixed(1)} (Elo: ${raw.elo})`,
+              `Coding Index: ${raw.coding.toFixed(1)}`,
               `Preço: $${raw.price.toFixed(2)} / 1M tokens`,
               `Eficiência: ${raw.eficiencia}`,
               `Gasto por coding: ${raw.gasto}`

@@ -24,7 +24,7 @@ jobs:
 
       - name: Gerar leaderboard
         env:
-          OR_KEY: ${{ secrets.OR_KEY }}
+          BENCHLM_KEY: ${{ secrets.BENCHLM_KEY }}
         run: python scripts/generate_leaderboard.py
 
       - name: Commit e Push das alterações
