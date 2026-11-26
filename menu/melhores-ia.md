@@ -134,7 +134,7 @@ return '$' + Number(value).toFixed(2);
 },
 y: {
 min: 35,
-max: 85,
+max: 105,
 title: {
 display: true,
 text: 'Coding Index (Capacidade)',
