@@ -1,9 +1,9 @@
-updated_at: America/Sao Paulo - 27/11/2026 20:14
+updated_at: America/Sao Paulo - 28/11/2026 08:00
 source: benchlm
 task_type: coding
 min_coding_index: 40.0
 points_per_dollar: 5
-as_of: '2026-11-23'
+as_of: '2026-11-27'
 methodology_version: bench-align-v6.0-2026-11-19
 citation: Data from BenchLM.ai (benchlm.ai/coding), CC BY-NC 4.0.
 source_url: https://benchlm.ai/coding
@@ -21,20 +21,20 @@ items:
   model: DeepSeek V4.1 Flash 1017
   creator: DeepSeek
   model_id: deepseek-v4-1-flash
-  coding_index: '76.7'
+  coding_index: '76.6'
   evidence_status: supported
   price: '1.500'
   gasto_por_coding: '0.020'
-  eficiencia: '69.200'
+  eficiencia: '69.100'
 - rank: 3
   model: Claude Haiku 5.5
   creator: Anthropic
   model_id: claude-haiku-5-5
-  coding_index: '68.1'
+  coding_index: '68.3'
   evidence_status: supported
   price: '0.600'
   gasto_por_coding: '0.009'
-  eficiencia: '65.100'
+  eficiencia: '65.300'
 - rank: 4
   model: MiMo-V2.6-Flash
   creator: Xiaomi
@@ -48,20 +48,20 @@ items:
   model: Ling 3.1 Flash
   creator: InclusionAI
   model_id: ling-3-1-flash
-  coding_index: '66.2'
+  coding_index: '66.1'
   evidence_status: estimated
   price: '1.200'
   gasto_por_coding: '0.018'
-  eficiencia: '60.200'
+  eficiencia: '60.100'
 - rank: 6
   model: MiMo-V2.6-Pro
   creator: Xiaomi
   model_id: mimo-v2-6-pro
-  coding_index: '66.7'
+  coding_index: '66.6'
   evidence_status: supported
   price: '1.305'
   gasto_por_coding: '0.020'
-  eficiencia: '60.175'
+  eficiencia: '60.075'
 - rank: 7
   model: GPT-6 Luna
   creator: OpenAI
@@ -153,24 +153,15 @@ items:
   gasto_por_coding: '0.044'
   eficiencia: '49.200'
 - rank: 17
-  model: Qwen4 Max
-  creator: Alibaba
-  model_id: qwen4-max
-  coding_index: '77.2'
-  evidence_status: supported
-  price: '6.000'
-  gasto_por_coding: '0.078'
-  eficiencia: '47.200'
-- rank: 18
   model: Laguna S 2.1
   creator: Poolside
   model_id: laguna-s-2-1
-  coding_index: '47.8'
+  coding_index: '47.7'
   evidence_status: estimated
   price: '0.300'
   gasto_por_coding: '0.006'
-  eficiencia: '46.300'
-- rank: 19
+  eficiencia: '46.200'
+- rank: 18
   model: MiMo-V2.5
   creator: Xiaomi
   model_id: mimo-v2-5
@@ -179,25 +170,25 @@ items:
   price: '0.420'
   gasto_por_coding: '0.009'
   eficiencia: '45.700'
-- rank: 20
+- rank: 19
   model: MiMo-V2.5-Pro
   creator: Xiaomi
   model_id: mimo-v2-5-pro
-  coding_index: '52.0'
+  coding_index: '51.9'
   evidence_status: estimated
   price: '1.305'
   gasto_por_coding: '0.025'
-  eficiencia: '45.475'
-- rank: 21
+  eficiencia: '45.375'
+- rank: 20
   model: Ling 3.0 Flash
   creator: InclusionAI
   model_id: ling-3-0-flash
-  coding_index: '46.0'
+  coding_index: '46.1'
   evidence_status: estimated
   price: '0.240'
   gasto_por_coding: '0.005'
-  eficiencia: '44.800'
-- rank: 22
+  eficiencia: '44.900'
+- rank: 21
   model: MiniMax M3
   creator: MiniMax
   model_id: minimax-m3
@@ -206,7 +197,7 @@ items:
   price: '1.500'
   gasto_por_coding: '0.029'
   eficiencia: '44.200'
-- rank: 23
+- rank: 22
   model: Step 3.5 Flash
   creator: StepFun
   model_id: step-3-5-flash
@@ -215,16 +206,16 @@ items:
   price: '0.400'
   gasto_por_coding: '0.009'
   eficiencia: '43.300'
-- rank: 24
+- rank: 23
   model: Gemini 3.8 Flash
   creator: Google
   model_id: gemini-3-8-flash
-  coding_index: '65.6'
+  coding_index: '65.5'
   evidence_status: supported
   price: '4.500'
   gasto_por_coding: '0.069'
-  eficiencia: '43.100'
-- rank: 25
+  eficiencia: '43.000'
+- rank: 24
   model: Nemotron 3.5 Super VL 120B A12B
   creator: NVIDIA
   model_id: nemotron-3-5-super-vl-120b-a12b
@@ -233,7 +224,7 @@ items:
   price: '0.650'
   gasto_por_coding: '0.014'
   eficiencia: '42.950'
-- rank: 26
+- rank: 25
   model: Gemini 3.7 Flash
   creator: Google
   model_id: gemini-3-7-flash
@@ -242,6 +233,15 @@ items:
   price: '4.500'
   gasto_por_coding: '0.069'
   eficiencia: '42.800'
+- rank: 26
+  model: Qwen4 Max
+  creator: Alibaba
+  model_id: qwen4-max
+  coding_index: '72.7'
+  evidence_status: supported
+  price: '6.000'
+  gasto_por_coding: '0.083'
+  eficiencia: '42.700'
 - rank: 27
   model: Qwen3.7 Plus
   creator: Alibaba
@@ -264,11 +264,11 @@ items:
   model: Step 3.7 Flash
   creator: StepFun
   model_id: step-3-7-flash
-  coding_index: '45.6'
+  coding_index: '45.5'
   evidence_status: estimated
   price: '1.350'
   gasto_por_coding: '0.030'
-  eficiencia: '38.850'
+  eficiencia: '38.750'
 - rank: 30
   model: MiniMax M2.7
   creator: MiniMax
@@ -279,6 +279,15 @@ items:
   gasto_por_coding: '0.033'
   eficiencia: '38.000'
 - rank: 31
+  model: GPT-OSS 120B
+  creator: OpenAI
+  model_id: gpt-oss-120b
+  coding_index: '41.4'
+  evidence_status: supported
+  price: '0.750'
+  gasto_por_coding: '0.018'
+  eficiencia: '37.650'
+- rank: 32
   model: Qwen3.8-27B
   creator: Alibaba
   model_id: qwen3-8-27b
@@ -287,15 +296,6 @@ items:
   price: '3.500'
   gasto_por_coding: '0.064'
   eficiencia: '37.600'
-- rank: 32
-  model: GPT-OSS 120B
-  creator: OpenAI
-  model_id: gpt-oss-120b
-  coding_index: '41.3'
-  evidence_status: supported
-  price: '0.750'
-  gasto_por_coding: '0.018'
-  eficiencia: '37.550'
 - rank: 33
   model: Gemma 4 31B
   creator: Google
@@ -399,11 +399,11 @@ items:
   model: GPT-5 mini
   creator: OpenAI
   model_id: gpt-5-mini
-  coding_index: '43.3'
+  coding_index: '43.4'
   evidence_status: supported
   price: '2.250'
   gasto_por_coding: '0.052'
-  eficiencia: '32.050'
+  eficiencia: '32.150'
 - rank: 45
   model: GLM-5.2
   creator: Z.AI
@@ -414,6 +414,15 @@ items:
   gasto_por_coding: '0.095'
   eficiencia: '32.000'
 - rank: 46
+  model: Gemini 3.1 Flash-Lite
+  creator: Google
+  model_id: gemini-3-1-flash-lite
+  coding_index: '40.6'
+  evidence_status: estimated
+  price: '1.750'
+  gasto_por_coding: '0.043'
+  eficiencia: '31.850'
+- rank: 47
   model: Gemini 4 Carbon
   creator: Google
   model_id: gemini-4-carbon
@@ -422,15 +431,6 @@ items:
   price: '12.000'
   gasto_por_coding: '0.131'
   eficiencia: '31.800'
-- rank: 47
-  model: Gemini 3.1 Flash-Lite
-  creator: Google
-  model_id: gemini-3-1-flash-lite
-  coding_index: '40.5'
-  evidence_status: estimated
-  price: '1.750'
-  gasto_por_coding: '0.043'
-  eficiencia: '31.750'
 - rank: 48
   model: Qwen3.6 Plus
   creator: Alibaba
@@ -462,11 +462,11 @@ items:
   model: Muse Spark 1.1
   creator: Meta
   model_id: muse-spark-1-1
-  coding_index: '57.6'
+  coding_index: '57.5'
   evidence_status: supported
   price: '5.500'
-  gasto_por_coding: '0.095'
-  eficiencia: '30.100'
+  gasto_por_coding: '0.096'
+  eficiencia: '30.000'
 - rank: 52
   model: GLM-4.7
   creator: Z.AI
@@ -480,11 +480,11 @@ items:
   model: Grok 4.20
   creator: xAI
   model_id: grok-4-20-beta
-  coding_index: '47.2'
+  coding_index: '47.3'
   evidence_status: estimated
   price: '3.750'
   gasto_por_coding: '0.079'
-  eficiencia: '28.450'
+  eficiencia: '28.550'
 - rank: 54
   model: Kimi K2.6
   creator: Moonshot AI
@@ -498,11 +498,11 @@ items:
   model: Qwen3.8 Max
   creator: Alibaba
   model_id: qwen3-8-max
-  coding_index: '67.7'
+  coding_index: '67.6'
   evidence_status: supported
   price: '8.000'
   gasto_por_coding: '0.118'
-  eficiencia: '27.700'
+  eficiencia: '27.600'
 - rank: 56
   model: Grok 4.6
   creator: xAI
@@ -588,11 +588,11 @@ items:
   model: GPT-6.2 Sol
   creator: OpenAI
   model_id: gpt-6-2-sol
-  coding_index: '83.6'
+  coding_index: '83.5'
   evidence_status: supported
   price: '12.000'
   gasto_por_coding: '0.144'
-  eficiencia: '23.600'
+  eficiencia: '23.500'
 - rank: 66
   model: Qwen3.6-27B
   creator: Alibaba
@@ -624,11 +624,11 @@ items:
   model: Grok 4.5
   creator: xAI
   model_id: grok-4-5
-  coding_index: '60.6'
+  coding_index: '60.5'
   evidence_status: supported
   price: '8.000'
   gasto_por_coding: '0.132'
-  eficiencia: '20.600'
+  eficiencia: '20.500'
 - rank: 70
   model: GPT-6.1 Sol
   creator: OpenAI
@@ -669,11 +669,11 @@ items:
   model: Inkling
   creator: Thinking Machines Lab
   model_id: inkling
-  coding_index: '41.4'
+  coding_index: '41.2'
   evidence_status: supported
   price: '5.050'
-  gasto_por_coding: '0.122'
-  eficiencia: '16.150'
+  gasto_por_coding: '0.123'
+  eficiencia: '15.950'
 - rank: 75
   model: GPT-6 Sol
   creator: OpenAI
@@ -687,11 +687,11 @@ items:
   model: Kimi K3.1 Pro
   creator: Moonshot AI
   model_id: kimi-3-1-pro
-  coding_index: '73.5'
+  coding_index: '73.4'
   evidence_status: supported
   price: '12.000'
   gasto_por_coding: '0.163'
-  eficiencia: '13.500'
+  eficiencia: '13.400'
 - rank: 77
   model: Qwen3.7 Max
   creator: Alibaba
@@ -729,24 +729,15 @@ items:
   gasto_por_coding: '0.195'
   eficiencia: '1.200'
 - rank: 81
-  model: Gemini 4 Neon
-  creator: Google
-  model_id: gemini-4-neon
-  coding_index: '90.3'
-  evidence_status: supported
-  price: '18.000'
-  gasto_por_coding: '0.199'
-  eficiencia: '0.300'
-- rank: 82
   model: GPT-5.6 Terra
   creator: OpenAI
   model_id: gpt-5-6-terra
-  coding_index: '68.6'
+  coding_index: '68.7'
   evidence_status: supported
   price: '14.000'
   gasto_por_coding: '0.204'
-  eficiencia: '-1.400'
-- rank: 83
+  eficiencia: '-1.300'
+- rank: 82
   model: Mistral Medium 3.5 128B
   creator: Mistral
   model_id: mistral-medium-3-5-128b
@@ -755,6 +746,15 @@ items:
   price: '9.000'
   gasto_por_coding: '0.216'
   eficiencia: '-3.300'
+- rank: 83
+  model: Gemini 4 Neon
+  creator: Google
+  model_id: gemini-4-neon
+  coding_index: '86.1'
+  evidence_status: supported
+  price: '18.000'
+  gasto_por_coding: '0.209'
+  eficiencia: '-3.900'
 - rank: 84
   model: GPT-5.1
   creator: OpenAI
@@ -774,6 +774,15 @@ items:
   gasto_por_coding: '0.240'
   eficiencia: '-9.350'
 - rank: 86
+  model: GPT-5
+  creator: OpenAI
+  model_id: gpt-5
+  coding_index: '46.8'
+  evidence_status: supported
+  price: '11.250'
+  gasto_por_coding: '0.240'
+  eficiencia: '-9.450'
+- rank: 87
   model: Gemini 3 Pro
   creator: Google
   model_id: gemini-3-pro
@@ -782,15 +791,6 @@ items:
   price: '14.000'
   gasto_por_coding: '0.231'
   eficiencia: '-9.500'
-- rank: 87
-  model: GPT-5
-  creator: OpenAI
-  model_id: gpt-5
-  coding_index: '46.7'
-  evidence_status: supported
-  price: '11.250'
-  gasto_por_coding: '0.241'
-  eficiencia: '-9.550'
 - rank: 88
   model: Gemini 2.5 Pro
   creator: Google
@@ -831,11 +831,11 @@ items:
   model: Kimi K3
   creator: Moonshot AI
   model_id: kimi-3
-  coding_index: '65.5'
+  coding_index: '65.4'
   evidence_status: supported
   price: '18.000'
   gasto_por_coding: '0.275'
-  eficiencia: '-24.500'
+  eficiencia: '-24.600'
 - rank: 93
   model: GPT-5.4
   creator: OpenAI
@@ -849,11 +849,11 @@ items:
   model: Claude Opus 5.5
   creator: Anthropic
   model_id: claude-opus-5-5
-  coding_index: '88.3'
+  coding_index: '88.2'
   evidence_status: supported
   price: '24.000'
   gasto_por_coding: '0.272'
-  eficiencia: '-31.700'
+  eficiencia: '-31.800'
 - rank: 95
   model: GPT-5.2-Codex
   creator: OpenAI
@@ -894,38 +894,38 @@ items:
   model: GPT-5.6 Sol
   creator: OpenAI
   model_id: gpt-5-6-sol
-  coding_index: '74.2'
+  coding_index: '74.1'
   evidence_status: supported
   price: '24.000'
-  gasto_por_coding: '0.323'
-  eficiencia: '-45.800'
+  gasto_por_coding: '0.324'
+  eficiencia: '-45.900'
 - rank: 100
   model: Grok 4
   creator: xAI
   model_id: grok-4
-  coding_index: '43.5'
+  coding_index: '43.6'
   evidence_status: supported
   price: '18.000'
-  gasto_por_coding: '0.414'
-  eficiencia: '-46.500'
+  gasto_por_coding: '0.413'
+  eficiencia: '-46.400'
 - rank: 101
   model: Muse Wonder
   creator: Meta
   model_id: muse-wonder
-  coding_index: '73.1'
+  coding_index: '73.3'
   evidence_status: supported
   price: '24.000'
-  gasto_por_coding: '0.328'
-  eficiencia: '-46.900'
+  gasto_por_coding: '0.327'
+  eficiencia: '-46.700'
 - rank: 102
   model: Claude 4 Sonnet
   creator: Anthropic
   model_id: claude-4-sonnet
-  coding_index: '42.7'
+  coding_index: '42.8'
   evidence_status: estimated
   price: '18.000'
-  gasto_por_coding: '0.422'
-  eficiencia: '-47.300'
+  gasto_por_coding: '0.421'
+  eficiencia: '-47.200'
 - rank: 103
   model: Claude Opus 5
   creator: Anthropic
@@ -1011,11 +1011,11 @@ items:
   model: GPT-6.2 Astra
   creator: OpenAI
   model_id: gpt-6-2-astra
-  coding_index: '91.8'
+  coding_index: '90.0'
   evidence_status: supported
   price: '48.000'
-  gasto_por_coding: '0.523'
-  eficiencia: '-148.200'
+  gasto_por_coding: '0.533'
+  eficiencia: '-150.000'
 - rank: 113
   model: GPT-6 Astra
   creator: OpenAI
@@ -1038,11 +1038,11 @@ items:
   model: Claude Fable 5
   creator: Anthropic
   model_id: claude-fable-5
-  coding_index: '78.0'
+  coding_index: '77.9'
   evidence_status: supported
   price: '60.000'
-  gasto_por_coding: '0.769'
-  eficiencia: '-222.000'
+  gasto_por_coding: '0.770'
+  eficiencia: '-222.100'
 - rank: 116
   model: o1
   creator: OpenAI
